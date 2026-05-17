@@ -1,0 +1,653 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<interface>
+  <!-- interface-requires gtk+ 3.17 -->
+  <object class="GtkShortcutsWindow" id="shortcuts-tilix">
+    <property name="modal">1</property>
+    <child>
+      <object class="GtkShortcutsSection">
+        <property name="visible">1</property>
+        <property name="section-name">app</property>
+        <property name="title" translatable="yes" context="shortcut window">Application</property>
+        <property name="max-height">12</property>
+        <child>
+          <object class="GtkShortcutsGroup">
+            <property name="visible">1</property>
+            <property name="title" translatable="yes" context="shortcut window">Application</property>
+            <child>
+              <object class="GtkShortcutsShortcut" id ="app-new-window">
+                <property name="visible">1</property>
+                <property name="title" translatable="yes" context="shortcut window">Open a new window</property>
+              </object>
+            </child>
+            <child>
+              <object class="GtkShortcutsShortcut" id ="app-new-session">
+                <property name="visible">1</property>
+                <property name="title" translatable="yes" context="shortcut window">Open a new session</property>
+              </object>
+            </child>
+            <child>
+              <object class="GtkShortcutsShortcut" id ="app-preferences">
+                <property name="visible">1</property>
+                <property name="title" translatable="yes" context="shortcut window">Open preferences</property>
+              </object>
+            </child>
+            <child>
+              <object class="GtkShortcutsShortcut" id ="app-shortcuts">
+                <property name="visible">1</property>
+                <property name="title" translatable="yes" context="shortcut window">Show keyboard shortcuts</property>
+              </object>
+            </child>
+          </object>
+        </child>
+        <child>
+          <object class="GtkShortcutsGroup">
+            <property name="visible">1</property>
+            <property name="title" translatable="yes" context="shortcut window">Window</property>
+            <child>
+              <object class="GtkShortcutsShortcut" id ="win-fullscreen">
+                <property name="visible">1</property>
+                <property name="title" translatable="yes" context="shortcut window">Toggle fullscreen mode</property>
+              </object>
+            </child>
+            <child>
+              <object class="GtkShortcutsShortcut" id ="win-view-sidebar">
+                <property name="visible">1</property>
+                <property name="title" translatable="yes" context="shortcut window">View session sidebar</property>
+              </object>
+            </child>
+            <child>
+              <object class="GtkShortcutsShortcut" id ="win-switch-to-next-session">
+                <property name="visible">1</property>
+                <property name="title" translatable="yes" context="shortcut window">Switch to next session</property>
+              </object>
+            </child>
+            <child>
+              <object class="GtkShortcutsShortcut" id ="win-switch-to-previous-session">
+                <property name="visible">1</property>
+                <property name="title" translatable="yes" context="shortcut window">Switch to previous session</property>
+              </object>
+            </child>
+            <child>
+              <object class="GtkShortcutsShortcut" id ="win-reorder-next-session">
+                <property name="visible">1</property>
+                <property name="title" translatable="yes" context="shortcut window">Reorder to next session</property>
+              </object>
+            </child>
+            <child>
+              <object class="GtkShortcutsShortcut" id ="win-reorder-previous-session">
+                <property name="visible">1</property>
+                <property name="title" translatable="yes" context="shortcut window">Reorder to previous session</property>
+              </object>
+            </child>
+            <child>
+              <object class="GtkShortcutsShortcut" id ="win-switch-to-session-1">
+                <property name="visible">1</property>
+                <property name="title" translatable="yes" context="shortcut window">Switch to session 1</property>
+              </object>
+            </child>
+            <child>
+              <object class="GtkShortcutsShortcut" id ="win-switch-to-session-2">
+                <property name="visible">1</property>
+                <property name="title" translatable="yes" context="shortcut window">Switch to session 2</property>
+              </object>
+            </child>
+            <child>
+              <object class="GtkShortcutsShortcut" id ="win-switch-to-session-3">
+                <property name="visible">1</property>
+                <property name="title" translatable="yes" context="shortcut window">Switch to session 3</property>
+              </object>
+            </child>
+            <child>
+              <object class="GtkShortcutsShortcut" id ="win-switch-to-session-4">
+                <property name="visible">1</property>
+                <property name="title" translatable="yes" context="shortcut window">Switch to session 4</property>
+              </object>
+            </child>
+            <child>
+              <object class="GtkShortcutsShortcut" id ="win-switch-to-session-5">
+                <property name="visible">1</property>
+                <property name="title" translatable="yes" context="shortcut window">Switch to session 5</property>
+              </object>
+            </child>
+            <child>
+              <object class="GtkShortcutsShortcut" id ="win-switch-to-session-6">
+                <property name="visible">1</property>
+                <property name="title" translatable="yes" context="shortcut window">Switch to session 6</property>
+              </object>
+            </child>
+            <child>
+              <object class="GtkShortcutsShortcut" id ="win-switch-to-session-7">
+                <property name="visible">1</property>
+                <property name="title" translatable="yes" context="shortcut window">Switch to session 7</property>
+              </object>
+            </child>
+            <child>
+              <object class="GtkShortcutsShortcut" id ="win-switch-to-session-8">
+                <property name="visible">1</property>
+                <property name="title" translatable="yes" context="shortcut window">Switch to session 8</property>
+              </object>
+            </child>
+            <child>
+              <object class="GtkShortcutsShortcut" id ="win-switch-to-session-9">
+                <property name="visible">1</property>
+                <property name="title" translatable="yes" context="shortcut window">Switch to session 9</property>
+              </object>
+            </child>
+            <child>
+              <object class="GtkShortcutsShortcut" id ="win-switch-to-session-0">
+                <property name="visible">1</property>
+                <property name="title" translatable="yes" context="shortcut window">Switch to session 10</property>
+              </object>
+            </child>
+          </object>
+        </child>
+      </object>
+    </child>
+    <child>
+      <object class="GtkShortcutsSection">
+        <property name="visible">1</property>
+        <property name="section-name">session</property>
+        <property name="title" translatable="yes" context="shortcut window">Session</property>
+        <property name="max-height">12</property>
+        <child>
+          <object class="GtkShortcutsGroup">
+            <property name="visible">1</property>
+            <property name="title" translatable="yes" context="shortcut window">File</property>
+            <child>
+              <object class="GtkShortcutsShortcut" id ="session-close">
+                <property name="visible">1</property>
+                <property name="title" translatable="yes" context="shortcut window">Close the current session</property>
+              </object>
+            </child>
+            <child>
+              <object class="GtkShortcutsShortcut" id ="session-save">
+                <property name="visible">1</property>
+                <property name="title" translatable="yes" context="shortcut window">Save the current session</property>
+              </object>
+            </child>
+            <child>
+              <object class="GtkShortcutsShortcut" id ="session-save-as">
+                <property name="visible">1</property>
+                <property name="title" translatable="yes" context="shortcut window">Save the current session with new filename</property>
+              </object>
+            </child>
+            <child>
+              <object class="GtkShortcutsShortcut" id ="session-open">
+                <property name="visible">1</property>
+                <property name="title" translatable="yes" context="shortcut window">Open a saved session</property>
+              </object>
+            </child>
+          </object>
+        </child>
+        <child>
+          <object class="GtkShortcutsGroup">
+            <property name="visible">1</property>
+            <property name="title" translatable="yes" context="shortcut window">Add</property>
+            <child>
+              <object class="GtkShortcutsShortcut" id ="session-add-right">
+                <property name="visible">1</property>
+                <property name="title" translatable="yes" context="shortcut window">Add terminal right</property>
+              </object>
+            </child>
+            <child>
+              <object class="GtkShortcutsShortcut" id ="session-add-down">
+                <property name="visible">1</property>
+                <property name="title" translatable="yes" context="shortcut window">Add terminal down</property>
+              </object>
+            </child>
+            <child>
+              <object class="GtkShortcutsShortcut" id ="session-add-auto">
+                <property name="visible">1</property>
+                <property name="title" translatable="yes" context="shortcut window">Add terminal automatically</property>
+              </object>
+            </child>
+          </object>
+        </child>
+        <child>
+          <object class="GtkShortcutsGroup">
+            <property name="visible">1</property>
+            <property name="title" translatable="yes" context="shortcut window">Resize</property>
+            <child>
+              <object class="GtkShortcutsShortcut" id ="session-resize-terminal-up">
+                <property name="visible">1</property>
+                <property name="title" translatable="yes" context="shortcut window">Resize the terminal up</property>
+              </object>
+            </child>
+            <child>
+              <object class="GtkShortcutsShortcut" id ="session-resize-terminal-down">
+                <property name="visible">1</property>
+                <property name="title" translatable="yes" context="shortcut window">Resize the terminal down</property>
+              </object>
+            </child>
+            <child>
+              <object class="GtkShortcutsShortcut" id ="session-resize-terminal-left">
+                <property name="visible">1</property>
+                <property name="title" translatable="yes" context="shortcut window">Resize the terminal left</property>
+              </object>
+            </child>
+            <child>
+              <object class="GtkShortcutsShortcut" id ="session-resize-terminal-right">
+                <property name="visible">1</property>
+                <property name="title" translatable="yes" context="shortcut window">Resize the terminal right</property>
+              </object>
+            </child>
+          </object>
+        </child>
+        <child>
+          <object class="GtkShortcutsGroup">
+            <property name="visible">1</property>
+            <property name="title" translatable="yes" context="shortcut window">Other</property>
+            <child>
+              <object class="GtkShortcutsShortcut" id ="session-name">
+                <property name="visible">1</property>
+                <property name="title" translatable="yes" context="shortcut window">Edit the session name</property>
+              </object>
+            </child>
+            <child>
+              <object class="GtkShortcutsShortcut" id ="session-synchronize-input">
+                <property name="visible">1</property>
+                <property name="title" translatable="yes" context="shortcut window">Synchronize the input</property>
+              </object>
+            </child>
+          </object>
+        </child>
+        <child>
+          <object class="GtkShortcutsGroup">
+            <property name="visible">1</property>
+            <property name="title" translatable="yes" context="shortcut window">Switch</property>
+            <child>
+              <object class="GtkShortcutsShortcut" id ="session-switch-to-next-terminal">
+                <property name="visible">1</property>
+                <property name="title" translatable="yes" context="shortcut window">Switch to next terminal</property>
+              </object>
+            </child>
+            <child>
+              <object class="GtkShortcutsShortcut" id ="session-switch-to-previous-terminal">
+                <property name="visible">1</property>
+                <property name="title" translatable="yes" context="shortcut window">Switch to previous terminal</property>
+              </object>
+            </child>
+            <child>
+              <object class="GtkShortcutsShortcut" id ="session-switch-to-terminal-up">
+                <property name="visible">1</property>
+                <property name="title" translatable="yes" context="shortcut window">Switch to the terminal up</property>
+              </object>
+            </child>
+            <child>
+              <object class="GtkShortcutsShortcut" id ="session-switch-to-terminal-down">
+                <property name="visible">1</property>
+                <property name="title" translatable="yes" context="shortcut window">Switch to the terminal down</property>
+              </object>
+            </child>
+            <child>
+              <object class="GtkShortcutsShortcut" id ="session-switch-to-terminal-left">
+                <property name="visible">1</property>
+                <property name="title" translatable="yes" context="shortcut window">Switch to the terminal left</property>
+              </object>
+            </child>
+            <child>
+              <object class="GtkShortcutsShortcut" id ="session-switch-to-terminal-right">
+                <property name="visible">1</property>
+                <property name="title" translatable="yes" context="shortcut window">Switch to the terminal right</property>
+              </object>
+            </child>
+          </object>
+        </child>
+        <child>
+          <object class="GtkShortcutsGroup">
+            <property name="visible">1</property>
+            <property name="title" translatable="yes" context="shortcut window">Switch</property>
+            <child>
+              <object class="GtkShortcutsShortcut" id ="session-switch-to-terminal-1">
+                <property name="visible">1</property>
+                <property name="title" translatable="yes" context="shortcut window">Switch to terminal 1</property>
+              </object>
+            </child>
+            <child>
+              <object class="GtkShortcutsShortcut" id ="session-switch-to-terminal-2">
+                <property name="visible">1</property>
+                <property name="title" translatable="yes" context="shortcut window">Switch to terminal 2</property>
+              </object>
+            </child>
+            <child>
+              <object class="GtkShortcutsShortcut" id ="session-switch-to-terminal-3">
+                <property name="visible">1</property>
+                <property name="title" translatable="yes" context="shortcut window">Switch to terminal 3</property>
+              </object>
+            </child>
+            <child>
+              <object class="GtkShortcutsShortcut" id ="session-switch-to-terminal-4">
+                <property name="visible">1</property>
+                <property name="title" translatable="yes" context="shortcut window">Switch to terminal 4</property>
+              </object>
+            </child>
+            <child>
+              <object class="GtkShortcutsShortcut" id ="session-switch-to-terminal-5">
+                <property name="visible">1</property>
+                <property name="title" translatable="yes" context="shortcut window">Switch to terminal 5</property>
+              </object>
+            </child>
+            <child>
+              <object class="GtkShortcutsShortcut" id ="session-switch-to-terminal-6">
+                <property name="visible">1</property>
+                <property name="title" translatable="yes" context="shortcut window">Switch to terminal 6</property>
+              </object>
+            </child>
+            <child>
+              <object class="GtkShortcutsShortcut" id ="session-switch-to-terminal-7">
+                <property name="visible">1</property>
+                <property name="title" translatable="yes" context="shortcut window">Switch to terminal 7</property>
+              </object>
+            </child>
+            <child>
+              <object class="GtkShortcutsShortcut" id ="session-switch-to-terminal-8">
+                <property name="visible">1</property>
+                <property name="title" translatable="yes" context="shortcut window">Switch to terminal 8</property>
+              </object>
+            </child>
+            <child>
+              <object class="GtkShortcutsShortcut" id ="session-switch-to-terminal-9">
+                <property name="visible">1</property>
+                <property name="title" translatable="yes" context="shortcut window">Switch to terminal 9</property>
+              </object>
+            </child>
+            <child>
+              <object class="GtkShortcutsShortcut" id ="session-switch-to-terminal-0">
+                <property name="visible">1</property>
+                <property name="title" translatable="yes" context="shortcut window">Switch to terminal 10</property>
+              </object>
+            </child>
+          </object>
+        </child>
+      </object>
+    </child>
+    <child>
+      <object class="GtkShortcutsSection">
+        <property name="visible">1</property>
+        <property name="section-name">terminal</property>
+        <property name="title" translatable="yes" context="shortcut window">Terminal</property>
+        <property name="max-height">12</property>
+        <child>
+          <object class="GtkShortcutsGroup">
+            <property name="visible">1</property>
+            <property name="title" translatable="yes" context="shortcut window">Find</property>
+            <child>
+              <object class="GtkShortcutsShortcut" id ="terminal-find">
+                <property name="visible">1</property>
+                <property name="title" translatable="yes" context="shortcut window">Find</property>
+              </object>
+            </child>
+            <child>
+              <object class="GtkShortcutsShortcut" id ="terminal-find-next">
+                <property name="visible">1</property>
+                <property name="title" translatable="yes" context="shortcut window">Find next</property>
+              </object>
+            </child>
+            <child>
+              <object class="GtkShortcutsShortcut" id ="terminal-find-previous">
+                <property name="visible">1</property>
+                <property name="title" translatable="yes" context="shortcut window">Find previous</property>
+              </object>
+            </child>
+          </object>
+        </child>
+        <child>
+          <object class="GtkShortcutsGroup">
+            <property name="visible">1</property>
+            <property name="title" translatable="yes" context="shortcut window">Clipboard</property>
+            <child>
+              <object class="GtkShortcutsShortcut" id ="terminal-copy">
+                <property name="visible">1</property>
+                <property name="title" translatable="yes" context="shortcut window">Copy</property>
+              </object>
+            </child>
+            <child>
+              <object class="GtkShortcutsShortcut" id ="terminal-copy-as-html">
+                <property name="visible">1</property>
+                <property name="title" translatable="yes" context="shortcut window">Copy As HTML</property>
+              </object>
+            </child>
+            <child>
+              <object class="GtkShortcutsShortcut" id ="terminal-paste">
+                <property name="visible">1</property>
+                <property name="title" translatable="yes" context="shortcut window">Paste</property>
+              </object>
+            </child>
+            <child>
+              <object class="GtkShortcutsShortcut" id ="terminal-paste-primary">
+                <property name="visible">1</property>
+                <property name="title" translatable="yes" context="shortcut window">Paste selection</property>
+              </object>
+            </child>
+            <child>
+              <object class="GtkShortcutsShortcut" id ="terminal-advanced-paste">
+                <property name="visible">1</property>
+                <property name="title" translatable="yes" context="shortcut window">Advanced paste</property>
+              </object>
+            </child>
+            <child>
+              <object class="GtkShortcutsShortcut" id ="terminal-select-all">
+                <property name="visible">1</property>
+                <property name="title" translatable="yes" context="shortcut window">Select all</property>
+              </object>
+            </child>
+            <child>
+              <object class="GtkShortcutsShortcut" id ="terminal-unselect-all">
+                <property name="visible">1</property>
+                <property name="title" translatable="yes" context="shortcut window">Unselect all</property>
+              </object>
+            </child>
+          </object>
+        </child>
+        <child>
+          <object class="GtkShortcutsGroup">
+            <property name="visible">1</property>
+            <property name="title" translatable="yes" context="shortcut window">Zoom</property>
+            <child>
+              <object class="GtkShortcutsShortcut" id ="terminal-zoom-in">
+                <property name="visible">1</property>
+                <property name="title" translatable="yes" context="shortcut window">Zoom in</property>
+              </object>
+            </child>
+            <child>
+              <object class="GtkShortcutsShortcut" id ="terminal-zoom-out">
+                <property name="visible">1</property>
+                <property name="title" translatable="yes" context="shortcut window">Zoom out</property>
+              </object>
+            </child>
+            <child>
+              <object class="GtkShortcutsShortcut" id ="terminal-zoom-normal">
+                <property name="visible">1</property>
+                <property name="title" translatable="yes" context="shortcut window">Zoom normal size</property>
+              </object>
+            </child>
+          </object>
+        </child>
+        <child>
+          <object class="GtkShortcutsGroup">
+            <property name="visible">1</property>
+            <property name="title" translatable="yes" context="shortcut window">Navigation</property>
+            <child>
+              <object class="GtkShortcutsShortcut" id ="terminal-scroll-up">
+                <property name="visible">1</property>
+                <property name="title" translatable="yes" context="shortcut window">Scroll up</property>
+              </object>
+            </child>
+            <child>
+              <object class="GtkShortcutsShortcut" id ="terminal-scroll-down">
+                <property name="visible">1</property>
+                <property name="title" translatable="yes" context="shortcut window">Scroll down</property>
+              </object>
+            </child>
+            <child>
+              <object class="GtkShortcutsShortcut" id ="terminal-page-up">
+                <property name="visible">1</property>
+                <property name="title" translatable="yes" context="shortcut window">Page up</property>
+              </object>
+            </child>
+            <child>
+              <object class="GtkShortcutsShortcut" id ="terminal-page-down">
+                <property name="visible">1</property>
+                <property name="title" translatable="yes" context="shortcut window">Page down</property>
+              </object>
+            </child>
+            <child>
+              <object class="GtkShortcutsShortcut" id ="terminal-previous-prompt">
+                <property name="visible">1</property>
+                <property name="title" translatable="yes" context="shortcut window">Previous prompt</property>
+              </object>
+            </child>
+            <child>
+              <object class="GtkShortcutsShortcut" id ="terminal-next-prompt">
+                <property name="visible">1</property>
+                <property name="title" translatable="yes" context="shortcut window">Next prompt</property>
+              </object>
+            </child>
+          </object>
+        </child>
+        <child>
+          <object class="GtkShortcutsGroup">
+            <property name="visible">1</property>
+            <property name="title" translatable="yes" context="shortcut window">Other</property>
+            <child>
+              <object class="GtkShortcutsShortcut" id ="terminal-save">
+                <property name="visible">1</property>
+                <property name="title" translatable="yes" context="shortcut window">Save terminal contents</property>
+              </object>
+            </child>
+            <child>
+              <object class="GtkShortcutsShortcut" id ="terminal-close">
+                <property name="visible">1</property>
+                <property name="title" translatable="yes" context="shortcut window">Close terminal</property>
+              </object>
+            </child>
+            <child>
+              <object class="GtkShortcutsShortcut" id ="terminal-maximize">
+                <property name="visible">1</property>
+                <property name="title" translatable="yes" context="shortcut window">Maximize terminal</property>
+              </object>
+            </child>
+            <child>
+              <object class="GtkShortcutsShortcut" id ="terminal-profile-preference">
+                <property name="visible">1</property>
+                <property name="title" translatable="yes" context="shortcut window">Current profile preferences</property>
+              </object>
+            </child>
+            <child>
+              <object class="GtkShortcutsShortcut" id ="terminal-reset">
+                <property name="visible">1</property>
+                <property name="title" translatable="yes" context="shortcut window">Reset the terminal</property>
+              </object>
+            </child>
+            <child>
+              <object class="GtkShortcutsShortcut" id ="terminal-reset-and-clear">
+                <property name="visible">1</property>
+                <property name="title" translatable="yes" context="shortcut window">Reset and clear the terminal</property>
+              </object>
+            </child>
+            <child>
+              <object class="GtkShortcutsShortcut" id ="terminal-read-only">
+                <property name="visible">1</property>
+                <property name="title" translatable="yes" context="shortcut window">Toggle read only</property>
+              </object>
+            </child>
+            <child>
+              <object class="GtkShortcutsShortcut" id ="terminal-layout">
+                <property name="visible">1</property>
+                <property name="title" translatable="yes" context="shortcut window">Layout options</property>
+              </object>
+            </child>
+            <child>
+              <object class="GtkShortcutsShortcut" id ="terminal-insert-number">
+                <property name="visible">1</property>
+                <property name="title" translatable="yes" context="shortcut window">Insert terminal number</property>
+              </object>
+            </child>
+            <child>
+              <object class="GtkShortcutsShortcut" id ="terminal-insert-password">
+                <property name="visible">1</property>
+                <property name="title" translatable="yes" context="shortcut window">Insert password</property>
+              </object>
+            </child>
+            <child>
+              <object class="GtkShortcutsShortcut" id ="terminal-select-bookmark">
+                <property name="visible">1</property>
+                <property name="title" translatable="yes" context="shortcut window">Select bookmark</property>
+              </object>
+            </child>
+            <child>
+              <object class="GtkShortcutsShortcut" id ="terminal-add-bookmark">
+                <property name="visible">1</property>
+                <property name="title" translatable="yes" context="shortcut window">Add bookmark</property>
+              </object>
+            </child>
+            <child>
+              <object class="GtkShortcutsShortcut" id ="terminal-title-style">
+                <property name="visible">1</property>
+                <property name="title" translatable="yes" context="shortcut window">Cycle title style</property>
+              </object>
+            </child>
+            <child>
+              <object class="GtkShortcutsShortcut" id ="terminal-monitor-silence">
+                <property name="visible">1</property>
+                <property name="title" translatable="yes" context="shortcut window">Monitor silence</property>
+              </object>
+            </child>
+            <child>
+              <object class="GtkShortcutsShortcut" id ="terminal-sync-input-override">
+                <property name="visible">1</property>
+                <property name="title" translatable="yes" context="shortcut window">Override input synchronization</property>
+              </object>
+            </child>
+            <child>
+              <object class="GtkShortcutsShortcut" id ="terminal-file-browser">
+                <property name="visible">1</property>
+                <property name="title" translatable="yes" context="shortcut window">Open file browser</property>
+              </object>
+            </child>
+            <child>
+              <object class="GtkShortcutsShortcut" id ="terminal-toggle-margin">
+                <property name="visible">1</property>
+                <property name="title" translatable="yes" context="shortcut window">Toggle margin</property>
+              </object>
+            </child>
+          </object>
+        </child>
+      </object>
+    </child>
+    <child>
+      <object class="GtkShortcutsSection">
+        <property name="visible">1</property>
+        <property name="section-name">nautilus</property>
+        <property name="title" translatable="yes" context="shortcut window">Nautilus</property>
+        <property name="max-height">12</property>
+        <child>
+          <object class="GtkShortcutsGroup">
+            <property name="visible">1</property>
+            <property name="title" translatable="yes" context="shortcut window">Open</property>
+            <child>
+              <object class="GtkShortcutsShortcut" id ="nautilus-open">
+                <property name="visible">1</property>
+                <property name="title" translatable="yes" context="shortcut window">Open in Tilix</property>
+              </object>
+            </child>
+          </object>
+        </child>
+      </object>
+    </child>
+    <child>
+      <object class="GtkShortcutsSection">
+        <property name="visible">1</property>
+        <property name="section-name">profile</property>
+        <property name="title" translatable="yes" context="shortcut window">Profile</property>
+        <property name="max-height">12</property>
+        <child>
+          <object class="GtkShortcutsGroup" id="profile">
+            <property name="visible">1</property>
+            <property name="title" translatable="yes" context="shortcut window">Profile</property>
+          </object>
+        </child>
+      </object>
+    </child>
+  </object>
+</interface>

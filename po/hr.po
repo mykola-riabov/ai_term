@@ -1,0 +1,3078 @@
+# SOME DESCRIPTIVE TITLE.
+# This file is put in the public domain.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: tilix\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-11-08 21:52+0100\n"
+"PO-Revision-Date: 2023-11-10 19:36+0000\n"
+"Last-Translator: Milo Ivir <mail@milotype.de>\n"
+"Language-Team: Croatian <https://hosted.weblate.org/projects/tilix/"
+"translations/hr/>\n"
+"Language: hr\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=n%10==1 && n%100!=11 ? 0 : n%10>=2 && "
+"n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
+"X-Generator: Weblate 5.2-dev\n"
+
+#: data/metainfo/com.gexperts.Tilix.appdata.xml.rel.in:4
+#: data/pkg/desktop/com.gexperts.Tilix.desktop.in:4
+#: source/gx/tilix/application.d:321 source/gx/tilix/appwindow.d:1694
+msgid "Tilix"
+msgstr "Tilix"
+
+#: data/metainfo/com.gexperts.Tilix.appdata.xml.rel.in:5
+#: data/pkg/desktop/com.gexperts.Tilix.desktop.in:5
+msgid "A tiling terminal for GNOME"
+msgstr "Pločasti terminal za GNOME"
+
+#: data/metainfo/com.gexperts.Tilix.appdata.xml.rel.in:9
+msgid "Tilix is a tiling terminal emulator."
+msgstr "Tilix je pločasti emulator terminala."
+
+#: data/metainfo/com.gexperts.Tilix.appdata.xml.rel.in:12
+msgid "It lets you:"
+msgstr "Omogućuje:"
+
+#: data/metainfo/com.gexperts.Tilix.appdata.xml.rel.in:14
+msgid ""
+"Layout terminals in any fashion by splitting them horizontally or vertically"
+msgstr ""
+"Raspoređivanje terminala na bilo koji način, dijeleći ih vodoravno ili "
+"okomito"
+
+#: data/metainfo/com.gexperts.Tilix.appdata.xml.rel.in:15
+msgid ""
+"Terminals can be re-arranged using drag and drop both within and between "
+"windows"
+msgstr ""
+"Terminali se mogu prerasporediti pomoću „povuci-i-ispusti” unutar i između "
+"prozora"
+
+#: data/metainfo/com.gexperts.Tilix.appdata.xml.rel.in:16
+msgid "Terminals can be detached into a new window via drag and drop"
+msgstr "Terminali se mogu odvojiti u novi prozor pomoću „povuci-i-ispusti”"
+
+#: data/metainfo/com.gexperts.Tilix.appdata.xml.rel.in:17
+msgid ""
+"Input can be synchronized between terminals so commands typed in one "
+"terminal are replicated to the others"
+msgstr ""
+"Unos se može sinkronizirati između terminala, tako da se upisane naredbe u "
+"jednom terminalu, repliciraju na ostale"
+
+#: data/metainfo/com.gexperts.Tilix.appdata.xml.rel.in:18
+msgid "The grouping of terminals can be saved and loaded from disk"
+msgstr "Grupiranje terminala može se spremiti i učitati s diska"
+
+#: data/metainfo/com.gexperts.Tilix.appdata.xml.rel.in:19
+msgid "Terminals support custom titles"
+msgstr "Terminali podržavaju prilagođene naslove"
+
+#: data/metainfo/com.gexperts.Tilix.appdata.xml.rel.in:20
+msgid ""
+"Color schemes are stored in files and custom color schemes can be created by "
+"simply creating a new file"
+msgstr ""
+"Sheme boja spremaju se u datoteke, a prilagođene sheme boja mogu se "
+"jednostavno stvoriti stvaranjem nove datoteke"
+
+#: data/metainfo/com.gexperts.Tilix.appdata.xml.rel.in:21
+msgid "Transparent background"
+msgstr "Prozirna pozadina"
+
+#: data/metainfo/com.gexperts.Tilix.appdata.xml.rel.in:22
+msgid "Supports notifications when processes are completed out of view"
+msgstr "Podržava obavještavanje kad neprikazani procesi završe"
+
+#: data/metainfo/com.gexperts.Tilix.appdata.xml.rel.in:24
+msgid ""
+"The application was written using GTK 3 and an effort was made to conform to "
+"GNOME Human Interface Guidelines (HIG). As a result, it does use client-side-"
+"decorations, though it can be disabled if necessary."
+msgstr ""
+"Program je napisan pomoću GTK 3 i nastojalo se uskladiti ga s GNOME-ovim "
+"smjernicama za ljudsko sučelje (HIG). Kao rezultat, koristi dizajn klijenta, "
+"ali se to po potrebi može deaktivirati."
+
+#: data/metainfo/com.gexperts.Tilix.appdata.xml.rel.in:28
+msgid "Tilix has been tested with GNOME and with Unity."
+msgstr "Tilix je testiran s okruženjima GNOME i Unity."
+
+#: data/metainfo/com.gexperts.Tilix.appdata.xml.rel.in:58
+msgid "Tilix is still looking for a new maintainer!"
+msgstr "Tilix još uvijek traži novog održavatelja!"
+
+#: data/metainfo/com.gexperts.Tilix.appdata.xml.rel.in:59
+#: data/metainfo/com.gexperts.Tilix.appdata.xml.rel.in:85
+msgid "This release adds the following features:"
+msgstr "Ovo izdanje dodaje sljedeće značajke:"
+
+#: data/metainfo/com.gexperts.Tilix.appdata.xml.rel.in:61
+msgid "Disable advanced paste when there is no linebreak like iTerm2"
+msgstr "Deaktiviraj napredno umetanje kad nema prekida retka kao što je iTerm2"
+
+#: data/metainfo/com.gexperts.Tilix.appdata.xml.rel.in:62
+msgid "Add environment variable when in quake mode"
+msgstr "Dodaj varijablu okruženja u „quake” modusu"
+
+#: data/metainfo/com.gexperts.Tilix.appdata.xml.rel.in:63
+msgid "Add possibility to configure always enabled regex"
+msgstr "Dodaj mogućnost konfiguriranja uvijek aktiviranog regularnog izraza"
+
+#: data/metainfo/com.gexperts.Tilix.appdata.xml.rel.in:65
+#: data/metainfo/com.gexperts.Tilix.appdata.xml.rel.in:91
+#: data/metainfo/com.gexperts.Tilix.appdata.xml.rel.in:120
+#: data/metainfo/com.gexperts.Tilix.appdata.xml.rel.in:130
+msgid "This release fixes the following bugs:"
+msgstr "Ovo izdanje ispravlja sljedeće greške:"
+
+#: data/metainfo/com.gexperts.Tilix.appdata.xml.rel.in:67
+msgid "More appdata -&gt; metainfo move"
+msgstr "Više premještanja podataka programa -&gt; metainformacije"
+
+#: data/metainfo/com.gexperts.Tilix.appdata.xml.rel.in:68
+msgid "Add meson target for man page translations"
+msgstr "Dodaj cilj mesona za prijevode stranice priručnika"
+
+#: data/metainfo/com.gexperts.Tilix.appdata.xml.rel.in:69
+msgid "Update flatpak manifest"
+msgstr "Aktualiziraj flatpak manifest"
+
+#: data/metainfo/com.gexperts.Tilix.appdata.xml.rel.in:70
+msgid "meson: drop unused argument for i18n.merge_file()"
+msgstr "meson: odbaci nekorišteni argument za i18n.merge_file()"
+
+#: data/metainfo/com.gexperts.Tilix.appdata.xml.rel.in:71
+msgid "Stop using deprecated Meson features"
+msgstr "Prestani koristiti zastarjele Meson značajke"
+
+#: data/metainfo/com.gexperts.Tilix.appdata.xml.rel.in:72
+msgid ""
+"Keep quake window open if focus is restored before timeout has been reached"
+msgstr ""
+"Zadrži quake prozor otvorenim ako se fokus obnovi prije dosezanja vremenskog "
+"ograničenja"
+
+#: data/metainfo/com.gexperts.Tilix.appdata.xml.rel.in:73
+msgid "Don't check GtkDragResult"
+msgstr "Nemoj provjeriti GtkDragResult"
+
+#: data/metainfo/com.gexperts.Tilix.appdata.xml.rel.in:74
+msgid "Don't add application/x-rootwindow-drop to dragSourceSet targets"
+msgstr "Nemoj dodati application/x-rootwindow-drop ciljevima dragSourceSet"
+
+#: data/metainfo/com.gexperts.Tilix.appdata.xml.rel.in:76
+msgid "With contributions from:"
+msgstr "Doprinositelji:"
+
+#: data/metainfo/com.gexperts.Tilix.appdata.xml.rel.in:77
+msgid ""
+"Alan Scherger, Antoine Belvire, David King, Jan Beich, kohnish, luk1337, "
+"matishadow, Winston Hoy, Matthias Klumpp"
+msgstr ""
+"Alan Scherger, Antoine Belvire, David King, Jan Beich, kohnish, luk1337, "
+"matishadow, Winston Hoy, Matthias Klumpp"
+
+#: data/metainfo/com.gexperts.Tilix.appdata.xml.rel.in:83
+msgid ""
+"Tilix is looking for maintainers! At the moment, only very minimal "
+"maintenance is done, no new features will be implemented and pull-requests "
+"may be reviewed very slowly."
+msgstr ""
+"Tilix traži održavatelje! Trenutačno se provodi samo vrlo minimalno "
+"održavanje, nove značajke se ne implementiraju, a zahtjevi za povlačenje se "
+"pregledavaju vrlo sporo."
+
+#: data/metainfo/com.gexperts.Tilix.appdata.xml.rel.in:84
+msgid "If you are interested in helping Tilix, please chime in!"
+msgstr "Ako želiš pomoći Tilixu, pridruži se projektu!"
+
+#: data/metainfo/com.gexperts.Tilix.appdata.xml.rel.in:87
+msgid "Actually install Yaru color scheme"
+msgstr "Stvarno instaliraj Yaru shemu boja"
+
+#: data/metainfo/com.gexperts.Tilix.appdata.xml.rel.in:88
+msgid "Give every tab the ${title}"
+msgstr "Svakoj kartici dodijeli ${title}"
+
+#: data/metainfo/com.gexperts.Tilix.appdata.xml.rel.in:89
+msgid "Add option to strip trailing whitespace on paste"
+msgstr ""
+"Dodaj opciju za uklanjanje nepotrebnih znakova razmaka, tabulatore i prekide "
+"redaka na kraju podataka tijekom umetanja"
+
+#: data/metainfo/com.gexperts.Tilix.appdata.xml.rel.in:93
+msgid "Fix saving of already saved session"
+msgstr "Ispravi spremanje već spremljene sesije"
+
+#: data/metainfo/com.gexperts.Tilix.appdata.xml.rel.in:94
+msgid "Add shortcut to \"Unselect all\""
+msgstr "Dodaj prečac za „Odznači sve”"
+
+#: data/metainfo/com.gexperts.Tilix.appdata.xml.rel.in:95
+msgid "Many Meson buildsystem fixes"
+msgstr "Mnogi ispravci Mesonovog sustava izgradnje"
+
+#: data/metainfo/com.gexperts.Tilix.appdata.xml.rel.in:96
+msgid "Avoid missing the previous command exit code when encoding URLs"
+msgstr ""
+"Izbjegni propuštanje prethodne naredbe izlaznog koda prilikom kodiranja URL-"
+"ova"
+
+#: data/metainfo/com.gexperts.Tilix.appdata.xml.rel.in:97
+msgid "Resolve some D deprecation messages"
+msgstr "Riješi neke D poruke o zastarjevanju"
+
+#: data/metainfo/com.gexperts.Tilix.appdata.xml.rel.in:98
+msgid "Mention powerline/fonts in README"
+msgstr "Spomeni powerline/fontove u README"
+
+#: data/metainfo/com.gexperts.Tilix.appdata.xml.rel.in:99
+msgid "Avoid calling `values()` on a shared object"
+msgstr "Izbjegni pozivanje `values()` na dijeljenom objektu"
+
+#: data/metainfo/com.gexperts.Tilix.appdata.xml.rel.in:100
+msgid "Update metainfo data"
+msgstr "Aktualiziraj podatke metainformacija"
+
+#: data/metainfo/com.gexperts.Tilix.appdata.xml.rel.in:101
+msgid "Drop compat code for older D frontend versions"
+msgstr "Ispusti kompatibilni kod za starije verzije D sučelja"
+
+#: data/metainfo/com.gexperts.Tilix.appdata.xml.rel.in:102
+msgid "Bump minimum VTE version to 0.46"
+msgstr "Postavi minimalnu VTE verziju na 0.46"
+
+#: data/metainfo/com.gexperts.Tilix.appdata.xml.rel.in:103
+msgid "Remove deprecated Autotools support"
+msgstr "Ukloni zastarjelu podršku za Autotools"
+
+#: data/metainfo/com.gexperts.Tilix.appdata.xml.rel.in:104
+msgid "Add release notes, NEWS file, automatic metainfo update"
+msgstr ""
+"Dodaj napomene o izdanju, datoteku VIJESTI, automatsko aktualizirnje "
+"metainformacija"
+
+#: data/metainfo/com.gexperts.Tilix.appdata.xml.rel.in:105
+msgid "Update to GtkD 3.9.0"
+msgstr "Aktualiziraj na GtkD 3.9.0"
+
+#: data/metainfo/com.gexperts.Tilix.appdata.xml.rel.in:107
+msgid "This release updates translations."
+msgstr "Ovo izdanje aktualizira prijevode."
+
+#: data/metainfo/com.gexperts.Tilix.appdata.xml.rel.in:112
+msgid "This release fixes the following bug:"
+msgstr "Ovo izdanje ispravlja sljedeće greške:"
+
+#: data/metainfo/com.gexperts.Tilix.appdata.xml.rel.in:114
+msgid ""
+"Fixes a problem with the session sidebar getting out of sync after having "
+"deleted a session. See issues #1680, #1637 and #1699."
+msgstr ""
+"Ispravlja problem prekida sinkronizacije bočne trake sesije nakon brisanja "
+"sesije. Vidi probleme #1680, #1637 i #1699."
+
+#: data/metainfo/com.gexperts.Tilix.appdata.xml.rel.in:122
+msgid "Remove app menu for gnome 3.32"
+msgstr "Ukloni izbornik aplikacije za gnome 3.32"
+
+#: data/metainfo/com.gexperts.Tilix.appdata.xml.rel.in:123
+msgid "Update icon"
+msgstr "Aktualiziraj ikonu"
+
+#: data/metainfo/com.gexperts.Tilix.appdata.xml.rel.in:124
+msgid "Minor fixes"
+msgstr "Manji ispravci"
+
+#: data/metainfo/com.gexperts.Tilix.appdata.xml.rel.in:132
+msgid "Small release to update localizations"
+msgstr "Malo izdanje za aktualiziranje lokalizacija"
+
+#: data/metainfo/com.gexperts.Tilix.appdata.xml.rel.in:133
+msgid "Update to GtkD 3.8.5 to fix library name in GtkD."
+msgstr "Aktualiziraj na GtkD 3.8.5 za ispravljanje imena biblioteke u GtkD-u."
+
+#: data/metainfo/com.gexperts.Tilix.appdata.xml.rel.in:139
+msgid "Some new features and bug fixes."
+msgstr "Neke nove značajke i ispravci grešaka."
+
+#: data/nautilus/open-tilix.py:119
+msgid "Open Remote Tilix"
+msgstr "Otvori udaljeni Tilix"
+
+#: data/nautilus/open-tilix.py:120
+msgid "Open Remote Tilix In {}"
+msgstr "Otvori udaljeni Tilix u {}"
+
+#: data/nautilus/open-tilix.py:126
+msgid "Open In Tilix"
+msgstr "Otvori u Tilixu"
+
+#: data/nautilus/open-tilix.py:127
+msgid "Open Tilix In {}"
+msgstr "Otvori Tilix u {}"
+
+#: data/nautilus/open-tilix.py:138
+msgid "Open Remote Tilix Here"
+msgstr "Otvori udaljeni Tilix ovdje"
+
+#: data/nautilus/open-tilix.py:139
+msgid "Open Remote Tilix In This Directory"
+msgstr "Otvori udaljeni Tilix u ovoj mapi"
+
+#: data/nautilus/open-tilix.py:144
+msgid "Open Tilix Here"
+msgstr "Otvori Tilix ovdje"
+
+#: data/nautilus/open-tilix.py:145
+msgid "Open Tilix In This Directory"
+msgstr "Otvori Tilix u ovoj mapi"
+
+#: data/pkg/desktop/com.gexperts.Tilix.desktop.in:6
+msgid "shell;prompt;command;commandline;cmd;"
+msgstr "ljuska;upit;naredba;naredbeni redak;cmd;"
+
+#: data/pkg/desktop/com.gexperts.Tilix.desktop.in:17
+#: source/gx/tilix/appwindow.d:685 source/gx/tilix/prefeditor/prefdialog.d:1596
+msgid "New Window"
+msgstr "Novi prozor"
+
+#: data/pkg/desktop/com.gexperts.Tilix.desktop.in:21
+#: source/gx/tilix/prefeditor/prefdialog.d:1596 source/gx/tilix/session.d:1606
+msgid "New Session"
+msgstr "Nova sesija"
+
+#: data/pkg/desktop/com.gexperts.Tilix.desktop.in:25
+#: source/gx/tilix/appwindow.d:702 source/gx/tilix/prefeditor/prefdialog.d:263
+#: source/gx/tilix/prefeditor/prefdialog.d:414
+msgid "Preferences"
+msgstr "Postavke"
+
+#: data/resources/ui/shortcuts.ui:10 data/resources/ui/shortcuts.ui:15
+msgctxt "shortcut window"
+msgid "Application"
+msgstr "Program"
+
+#: data/resources/ui/shortcuts.ui:19
+msgctxt "shortcut window"
+msgid "Open a new window"
+msgstr "Otvori novi prozor"
+
+#: data/resources/ui/shortcuts.ui:25
+msgctxt "shortcut window"
+msgid "Open a new session"
+msgstr "Otvori novu sesiju"
+
+#: data/resources/ui/shortcuts.ui:31
+msgctxt "shortcut window"
+msgid "Open preferences"
+msgstr "Otvori postavke"
+
+#: data/resources/ui/shortcuts.ui:37
+msgctxt "shortcut window"
+msgid "Show keyboard shortcuts"
+msgstr "Pokaži tipkovne prečace"
+
+#: data/resources/ui/shortcuts.ui:45
+msgctxt "shortcut window"
+msgid "Window"
+msgstr "Prozor"
+
+#: data/resources/ui/shortcuts.ui:49
+msgctxt "shortcut window"
+msgid "Toggle fullscreen mode"
+msgstr "Uklj/Isklj cjeloekranski prikaz"
+
+#: data/resources/ui/shortcuts.ui:55
+msgctxt "shortcut window"
+msgid "View session sidebar"
+msgstr "Prikaži bočnu traku sesije"
+
+#: data/resources/ui/shortcuts.ui:61
+msgctxt "shortcut window"
+msgid "Switch to next session"
+msgstr "Prijeđi na sljedeću sesiju"
+
+#: data/resources/ui/shortcuts.ui:67
+msgctxt "shortcut window"
+msgid "Switch to previous session"
+msgstr "Prijeđi na prethodnu sesiju"
+
+#: data/resources/ui/shortcuts.ui:73
+msgctxt "shortcut window"
+msgid "Reorder to next session"
+msgstr "Promijeni redoslijed na sljedeću sesiju"
+
+#: data/resources/ui/shortcuts.ui:79
+msgctxt "shortcut window"
+msgid "Reorder to previous session"
+msgstr "Promijeni redoslijed na prethodnu sesiju"
+
+#: data/resources/ui/shortcuts.ui:85
+msgctxt "shortcut window"
+msgid "Switch to session 1"
+msgstr "Prijeđi na sesiju 1"
+
+#: data/resources/ui/shortcuts.ui:91
+msgctxt "shortcut window"
+msgid "Switch to session 2"
+msgstr "Prijeđi na sesiju 2"
+
+#: data/resources/ui/shortcuts.ui:97
+msgctxt "shortcut window"
+msgid "Switch to session 3"
+msgstr "Prijeđi na sesiju 3"
+
+#: data/resources/ui/shortcuts.ui:103
+msgctxt "shortcut window"
+msgid "Switch to session 4"
+msgstr "Prijeđi na sesiju 4"
+
+#: data/resources/ui/shortcuts.ui:109
+msgctxt "shortcut window"
+msgid "Switch to session 5"
+msgstr "Prijeđi na sesiju 5"
+
+#: data/resources/ui/shortcuts.ui:115
+msgctxt "shortcut window"
+msgid "Switch to session 6"
+msgstr "Prijeđi na sesiju 6"
+
+#: data/resources/ui/shortcuts.ui:121
+msgctxt "shortcut window"
+msgid "Switch to session 7"
+msgstr "Prijeđi na sesiju 7"
+
+#: data/resources/ui/shortcuts.ui:127
+msgctxt "shortcut window"
+msgid "Switch to session 8"
+msgstr "Prijeđi na sesiju 8"
+
+#: data/resources/ui/shortcuts.ui:133
+msgctxt "shortcut window"
+msgid "Switch to session 9"
+msgstr "Prijeđi na sesiju 9"
+
+#: data/resources/ui/shortcuts.ui:139
+msgctxt "shortcut window"
+msgid "Switch to session 10"
+msgstr "Prijeđi na sesiju 10"
+
+#: data/resources/ui/shortcuts.ui:150
+msgctxt "shortcut window"
+msgid "Session"
+msgstr "Sesija"
+
+#: data/resources/ui/shortcuts.ui:155
+msgctxt "shortcut window"
+msgid "File"
+msgstr "Datoteke"
+
+#: data/resources/ui/shortcuts.ui:159
+msgctxt "shortcut window"
+msgid "Close the current session"
+msgstr "Zatvori trenutačnu sesiju"
+
+#: data/resources/ui/shortcuts.ui:165
+msgctxt "shortcut window"
+msgid "Save the current session"
+msgstr "Spremi trenutačnu sesiju"
+
+#: data/resources/ui/shortcuts.ui:171
+msgctxt "shortcut window"
+msgid "Save the current session with new filename"
+msgstr "Spremi trenutačnu sesiju pod novim imenom"
+
+#: data/resources/ui/shortcuts.ui:177
+msgctxt "shortcut window"
+msgid "Open a saved session"
+msgstr "Otvori spremljenu sesiju"
+
+#: data/resources/ui/shortcuts.ui:185
+msgctxt "shortcut window"
+msgid "Add"
+msgstr "Dodaj"
+
+#: data/resources/ui/shortcuts.ui:189
+msgctxt "shortcut window"
+msgid "Add terminal right"
+msgstr "Dodaj terminal desno"
+
+#: data/resources/ui/shortcuts.ui:195
+msgctxt "shortcut window"
+msgid "Add terminal down"
+msgstr "Dodaj terminal dolje"
+
+#: data/resources/ui/shortcuts.ui:201
+msgctxt "shortcut window"
+msgid "Add terminal automatically"
+msgstr "Automatski dodaj terminal"
+
+#: data/resources/ui/shortcuts.ui:209
+msgctxt "shortcut window"
+msgid "Resize"
+msgstr "Promijeni veličinu"
+
+#: data/resources/ui/shortcuts.ui:213
+msgctxt "shortcut window"
+msgid "Resize the terminal up"
+msgstr "Promijeni veličinu terminala prema gore"
+
+#: data/resources/ui/shortcuts.ui:219
+msgctxt "shortcut window"
+msgid "Resize the terminal down"
+msgstr "Promijeni veličinu terminala prema dolje"
+
+#: data/resources/ui/shortcuts.ui:225
+msgctxt "shortcut window"
+msgid "Resize the terminal left"
+msgstr "Promijeni veličinu terminala na lijevo"
+
+#: data/resources/ui/shortcuts.ui:231
+msgctxt "shortcut window"
+msgid "Resize the terminal right"
+msgstr "Promijeni veličinu terminala na desno"
+
+#: data/resources/ui/shortcuts.ui:239 data/resources/ui/shortcuts.ui:511
+msgctxt "shortcut window"
+msgid "Other"
+msgstr "Ostalo"
+
+#: data/resources/ui/shortcuts.ui:243
+msgctxt "shortcut window"
+msgid "Edit the session name"
+msgstr "Uredi ime sesije"
+
+#: data/resources/ui/shortcuts.ui:249
+msgctxt "shortcut window"
+msgid "Synchronize the input"
+msgstr "Sinkroniziraj unos"
+
+#: data/resources/ui/shortcuts.ui:257 data/resources/ui/shortcuts.ui:299
+msgctxt "shortcut window"
+msgid "Switch"
+msgstr "Promijeni"
+
+#: data/resources/ui/shortcuts.ui:261
+msgctxt "shortcut window"
+msgid "Switch to next terminal"
+msgstr "Prijeđi na sljedeći terminal"
+
+#: data/resources/ui/shortcuts.ui:267
+msgctxt "shortcut window"
+msgid "Switch to previous terminal"
+msgstr "Prijeđi na prethodni terminal"
+
+#: data/resources/ui/shortcuts.ui:273
+msgctxt "shortcut window"
+msgid "Switch to the terminal up"
+msgstr "Prijeđi na terminal gore"
+
+#: data/resources/ui/shortcuts.ui:279
+msgctxt "shortcut window"
+msgid "Switch to the terminal down"
+msgstr "Prijeđi na terminal dolje"
+
+#: data/resources/ui/shortcuts.ui:285
+msgctxt "shortcut window"
+msgid "Switch to the terminal left"
+msgstr "Prijeđi na terminal lijevo"
+
+#: data/resources/ui/shortcuts.ui:291
+msgctxt "shortcut window"
+msgid "Switch to the terminal right"
+msgstr "Prijeđi na terminal desno"
+
+#: data/resources/ui/shortcuts.ui:303
+msgctxt "shortcut window"
+msgid "Switch to terminal 1"
+msgstr "Prijeđi na terminal 1"
+
+#: data/resources/ui/shortcuts.ui:309
+msgctxt "shortcut window"
+msgid "Switch to terminal 2"
+msgstr "Prijeđi na terminal 2"
+
+#: data/resources/ui/shortcuts.ui:315
+msgctxt "shortcut window"
+msgid "Switch to terminal 3"
+msgstr "Prijeđi na terminal 3"
+
+#: data/resources/ui/shortcuts.ui:321
+msgctxt "shortcut window"
+msgid "Switch to terminal 4"
+msgstr "Prijeđi na terminal 4"
+
+#: data/resources/ui/shortcuts.ui:327
+msgctxt "shortcut window"
+msgid "Switch to terminal 5"
+msgstr "Prijeđi na terminal 5"
+
+#: data/resources/ui/shortcuts.ui:333
+msgctxt "shortcut window"
+msgid "Switch to terminal 6"
+msgstr "Prijeđi na terminal 6"
+
+#: data/resources/ui/shortcuts.ui:339
+msgctxt "shortcut window"
+msgid "Switch to terminal 7"
+msgstr "Prijeđi na terminal 7"
+
+#: data/resources/ui/shortcuts.ui:345
+msgctxt "shortcut window"
+msgid "Switch to terminal 8"
+msgstr "Prijeđi na terminal 8"
+
+#: data/resources/ui/shortcuts.ui:351
+msgctxt "shortcut window"
+msgid "Switch to terminal 9"
+msgstr "Prijeđi na terminal 9"
+
+#: data/resources/ui/shortcuts.ui:357
+msgctxt "shortcut window"
+msgid "Switch to terminal 10"
+msgstr "Prijeđi na terminal 10"
+
+#: data/resources/ui/shortcuts.ui:368
+msgctxt "shortcut window"
+msgid "Terminal"
+msgstr "Terminal"
+
+#: data/resources/ui/shortcuts.ui:373 data/resources/ui/shortcuts.ui:377
+msgctxt "shortcut window"
+msgid "Find"
+msgstr "Nađi"
+
+#: data/resources/ui/shortcuts.ui:383
+msgctxt "shortcut window"
+msgid "Find next"
+msgstr "Nađi sljedeće"
+
+#: data/resources/ui/shortcuts.ui:389
+msgctxt "shortcut window"
+msgid "Find previous"
+msgstr "Nađi prethodno"
+
+#: data/resources/ui/shortcuts.ui:397
+msgctxt "shortcut window"
+msgid "Clipboard"
+msgstr "Međuspremnik"
+
+#: data/resources/ui/shortcuts.ui:401
+msgctxt "shortcut window"
+msgid "Copy"
+msgstr "Kopiraj"
+
+#: data/resources/ui/shortcuts.ui:407
+msgctxt "shortcut window"
+msgid "Copy As HTML"
+msgstr "Kopiraj kao HTML"
+
+#: data/resources/ui/shortcuts.ui:413
+msgctxt "shortcut window"
+msgid "Paste"
+msgstr "Umetni"
+
+#: data/resources/ui/shortcuts.ui:419
+msgctxt "shortcut window"
+msgid "Paste selection"
+msgstr "Umetni odabir"
+
+#: data/resources/ui/shortcuts.ui:425
+msgctxt "shortcut window"
+msgid "Advanced paste"
+msgstr "Napredno umetanje"
+
+#: data/resources/ui/shortcuts.ui:431
+msgctxt "shortcut window"
+msgid "Select all"
+msgstr "Odaberi sve"
+
+#: data/resources/ui/shortcuts.ui:437
+msgctxt "shortcut window"
+msgid "Unselect all"
+msgstr "Odznači sve"
+
+#: data/resources/ui/shortcuts.ui:445
+msgctxt "shortcut window"
+msgid "Zoom"
+msgstr "Uvećanje"
+
+#: data/resources/ui/shortcuts.ui:449
+msgctxt "shortcut window"
+msgid "Zoom in"
+msgstr "Uvećaj"
+
+#: data/resources/ui/shortcuts.ui:455
+msgctxt "shortcut window"
+msgid "Zoom out"
+msgstr "Umanji"
+
+#: data/resources/ui/shortcuts.ui:461
+msgctxt "shortcut window"
+msgid "Zoom normal size"
+msgstr "Normalno uvećanje"
+
+#: data/resources/ui/shortcuts.ui:469
+msgctxt "shortcut window"
+msgid "Navigation"
+msgstr "Navigacija"
+
+#: data/resources/ui/shortcuts.ui:473
+msgctxt "shortcut window"
+msgid "Scroll up"
+msgstr "Kliži gore"
+
+#: data/resources/ui/shortcuts.ui:479
+msgctxt "shortcut window"
+msgid "Scroll down"
+msgstr "Kliži dolje"
+
+#: data/resources/ui/shortcuts.ui:485
+msgctxt "shortcut window"
+msgid "Page up"
+msgstr "Stranicu gore"
+
+#: data/resources/ui/shortcuts.ui:491
+msgctxt "shortcut window"
+msgid "Page down"
+msgstr "Stranicu dolje"
+
+#: data/resources/ui/shortcuts.ui:497
+msgctxt "shortcut window"
+msgid "Previous prompt"
+msgstr "Prethodni upit"
+
+#: data/resources/ui/shortcuts.ui:503
+msgctxt "shortcut window"
+msgid "Next prompt"
+msgstr "Sljedeći upit"
+
+#: data/resources/ui/shortcuts.ui:515
+msgctxt "shortcut window"
+msgid "Save terminal contents"
+msgstr "Spremi sadržaj terminala"
+
+#: data/resources/ui/shortcuts.ui:521
+msgctxt "shortcut window"
+msgid "Close terminal"
+msgstr "Zatvori terminal"
+
+#: data/resources/ui/shortcuts.ui:527
+msgctxt "shortcut window"
+msgid "Maximize terminal"
+msgstr "Rastvori terminal"
+
+#: data/resources/ui/shortcuts.ui:533
+msgctxt "shortcut window"
+msgid "Current profile preferences"
+msgstr "Postavke trenutačnog profila"
+
+#: data/resources/ui/shortcuts.ui:539
+msgctxt "shortcut window"
+msgid "Reset the terminal"
+msgstr "Resetiraj terminal"
+
+#: data/resources/ui/shortcuts.ui:545
+msgctxt "shortcut window"
+msgid "Reset and clear the terminal"
+msgstr "Resetiraj i isprazni terminal"
+
+#: data/resources/ui/shortcuts.ui:551
+msgctxt "shortcut window"
+msgid "Toggle read only"
+msgstr "Uklj/isklj samo-za-čitanje"
+
+#: data/resources/ui/shortcuts.ui:557
+msgctxt "shortcut window"
+msgid "Layout options"
+msgstr "Opcije rasporeda"
+
+#: data/resources/ui/shortcuts.ui:563
+msgctxt "shortcut window"
+msgid "Insert terminal number"
+msgstr "Upiši broj terminala"
+
+#: data/resources/ui/shortcuts.ui:569
+msgctxt "shortcut window"
+msgid "Insert password"
+msgstr "Upiši lozinku"
+
+#: data/resources/ui/shortcuts.ui:575
+msgctxt "shortcut window"
+msgid "Select bookmark"
+msgstr "Odaberi oznaku"
+
+#: data/resources/ui/shortcuts.ui:581
+msgctxt "shortcut window"
+msgid "Add bookmark"
+msgstr "Dodaj oznaku"
+
+#: data/resources/ui/shortcuts.ui:587
+msgctxt "shortcut window"
+msgid "Cycle title style"
+msgstr "Prolistaj stilove naslova"
+
+#: data/resources/ui/shortcuts.ui:593
+msgctxt "shortcut window"
+msgid "Monitor silence"
+msgstr "Prati neaktivnost"
+
+#: data/resources/ui/shortcuts.ui:599
+msgctxt "shortcut window"
+msgid "Override input synchronization"
+msgstr "Nadjačaj sinkronizaciju unosa"
+
+#: data/resources/ui/shortcuts.ui:605
+msgctxt "shortcut window"
+msgid "Open file browser"
+msgstr "Otvori preglednik datoteka"
+
+#: data/resources/ui/shortcuts.ui:611
+msgctxt "shortcut window"
+msgid "Toggle margin"
+msgstr "Uklj/isklj marginu"
+
+#: data/resources/ui/shortcuts.ui:622
+msgctxt "shortcut window"
+msgid "Nautilus"
+msgstr "Nautilus"
+
+#: data/resources/ui/shortcuts.ui:627
+msgctxt "shortcut window"
+msgid "Open"
+msgstr "Otvori"
+
+#: data/resources/ui/shortcuts.ui:631
+msgctxt "shortcut window"
+msgid "Open in Tilix"
+msgstr "Otvori u Tilixu"
+
+#: data/resources/ui/shortcuts.ui:642 data/resources/ui/shortcuts.ui:647
+msgctxt "shortcut window"
+msgid "Profile"
+msgstr "Profil"
+
+#: source/app.d:140
+#, c-format
+msgid "Your GTK version is too old, you need at least GTK %d.%d.%d!"
+msgstr "Tvoja GTK verzija je pre stara, trebaš barem GTK %d.%d.%d!"
+
+#: source/app.d:150
+#, c-format
+msgid "Your VTE version is too old, you need at least VTE %d.%d!"
+msgstr "Tvoja VTE verzija je pre stara, trebaš barem VTE %d.%d!"
+
+#: source/app.d:166
+msgid "Unexpected exception occurred"
+msgstr "Dogodila se neočekivana iznimka"
+
+#: source/app.d:167
+msgid "Error: "
+msgstr "Greška: "
+
+#: source/app.d:177
+msgid "Versions"
+msgstr "Verzije"
+
+#: source/app.d:178
+#, c-format
+msgid "Tilix version: %s"
+msgstr "Tilix verzija: %s"
+
+#: source/app.d:179
+#, c-format
+msgid "VTE version: %s"
+msgstr "VTE verzija: %s"
+
+#: source/app.d:180
+#, c-format
+msgid "GTK Version: %d.%d.%d"
+msgstr "GTK verzija: %d.%d.%d"
+
+#: source/app.d:181
+msgid "Tilix Special Features"
+msgstr "Posebne Tilix funkcije"
+
+#: source/app.d:182
+msgid "Notifications enabled=%b"
+msgstr "Obavijesti aktivirane=%b"
+
+#: source/app.d:183
+msgid "Triggers enabled=%b"
+msgstr "Okidači aktivirani=%b"
+
+#: source/app.d:184
+msgid "Badges enabled=%b"
+msgstr "Značke aktivirane=%b"
+
+#: source/gx/gtk/actions.d:25
+msgid "disabled"
+msgstr "deaktivirano"
+
+#: source/gx/gtk/dialog.d:89 source/gx/tilix/closedialog.d:143
+msgid "Do not show this again"
+msgstr "Ovo više nemoj prikazivati"
+
+#. TRANSLATORS: Please add your name to the list of translators if you want to be credited for the translations you have done.
+#: source/gx/tilix/application.d:273
+msgid "translator-credits"
+msgstr "Milo Ivir <mail@milotype.de>"
+
+#: source/gx/tilix/application.d:282
+msgid "Credits"
+msgstr "Zasluge"
+
+#: source/gx/tilix/application.d:679
+msgid "DIRECTORY"
+msgstr "MAPA"
+
+#: source/gx/tilix/application.d:679
+msgid "Set the working directory of the terminal"
+msgstr "Postavi radnu mapu terminala"
+
+#: source/gx/tilix/application.d:680
+msgid "PROFILE_NAME"
+msgstr "IME_PROFILA"
+
+#: source/gx/tilix/application.d:680
+msgid "Set the starting profile"
+msgstr "Postavi početni profil"
+
+#: source/gx/tilix/application.d:681
+msgid "Set the title of the new terminal"
+msgstr "Postavi naslov novog terminala"
+
+#: source/gx/tilix/application.d:681
+msgid "TITLE"
+msgstr "NASLOV"
+
+#: source/gx/tilix/application.d:682
+msgid "Open the specified session"
+msgstr "Otvori navedenu sesiju"
+
+#: source/gx/tilix/application.d:682
+msgid "SESSION_NAME"
+msgstr "IME_SESIJE"
+
+#: source/gx/tilix/application.d:684
+msgid "ACTION_NAME"
+msgstr "IME_RADNJE"
+
+#: source/gx/tilix/application.d:684
+msgid "Send an action to current Tilix instance"
+msgstr "Pošalji jednu radnju trenutačnom Tilix primjerku"
+
+#: source/gx/tilix/application.d:686
+msgid "COMMAND"
+msgstr "NAREDBA"
+
+#: source/gx/tilix/application.d:686
+msgid "Execute the parameter as a command"
+msgstr "Izvrši parametar kao naredbu"
+
+#: source/gx/tilix/application.d:687
+msgid "Maximize the terminal window"
+msgstr "Rastvori prozor terminala"
+
+#: source/gx/tilix/application.d:688
+msgid "Minimize the terminal window"
+msgstr "Smanji prozor terminala"
+
+#: source/gx/tilix/application.d:689
+msgid ""
+"Override the preferred window style to use, one of: normal,disable-csd,"
+"disable-csd-hide-toolbar,borderless"
+msgstr ""
+"Nadjačaj favorizirani stil prozora, jednim od: normal,disable-csd,disable-"
+"csd-hide-toolbar,borderless (normalno, deaktiviraj dizajn klijenta, "
+"deaktiviraj dizajn klijenta i sakrij alatnu traku, bez rubova)"
+
+#: source/gx/tilix/application.d:689
+msgid "WINDOW_STYLE"
+msgstr "STIL_PROZORA"
+
+#: source/gx/tilix/application.d:690
+msgid "Full-screen the terminal window"
+msgstr "Cjeloekranski prikaz prozora terminala"
+
+#: source/gx/tilix/application.d:691
+msgid "Focus the existing window"
+msgstr "Fokusiraj postojeći prozor"
+
+#: source/gx/tilix/application.d:692
+msgid "Start additional instance as new process (Not Recommended)"
+msgstr "Započni novi primjerak kao novi proces (ne preporučuje se)"
+
+#: source/gx/tilix/application.d:693
+msgid "GEOMETRY"
+msgstr "GEOMETRIJA"
+
+#: source/gx/tilix/application.d:693
+msgid ""
+"Set the window size; for example: 80x24, or 80x24+200+200 (COLSxROWS+X+Y)"
+msgstr ""
+"Postavi veličinu prozora, npr.: 80×24 ili 80×24+200+200 (STUPCI×REDCI+X+Y)"
+
+#: source/gx/tilix/application.d:694
+msgid ""
+"Opens a window in quake mode or toggles existing quake mode window visibility"
+msgstr ""
+"Otvara prozor u Quake modusu ili mijenja vidljivost postojećeg prozora u "
+"Quake modusu"
+
+#: source/gx/tilix/application.d:695
+msgid "Show the Tilix and dependent component versions"
+msgstr "Prikaži verzije Tilixa i ovisnih komponenti"
+
+#: source/gx/tilix/application.d:696
+msgid "Show the Tilix preferences dialog directly"
+msgstr "Prikaži dijaloški okvir postavki Tilixa izravno"
+
+#: source/gx/tilix/application.d:697
+msgid "GROUP_NAME"
+msgstr "IME_GRUPE"
+
+#: source/gx/tilix/application.d:697
+msgid ""
+"Group tilix instances into different processes (Experimental, not "
+"recommended)"
+msgstr ""
+"Grupiraj tilix instance u različite procese (eksperimentalno, ne preporučuje "
+"se)"
+
+#: source/gx/tilix/application.d:700
+msgid "Hidden argument to pass terminal UUID"
+msgstr "Skriveni argument za proslijeđivanje UUID-a terminala"
+
+#: source/gx/tilix/application.d:700
+msgid "TERMINAL_UUID"
+msgstr "UUID_TERMINALA"
+
+#: source/gx/tilix/application.d:717
+#, c-format
+msgid "The application ID %s is not valid"
+msgstr "Programska ID oznaka %s nije valjana"
+
+#: source/gx/tilix/application.d:883
+msgid ""
+"There appears to be an issue with the configuration of the terminal.\n"
+"This issue is not serious, but correcting it will improve your experience.\n"
+"Click the link below for more information:"
+msgstr ""
+"Čini se da postoji problem s konfiguracijom terminala.\n"
+"Ne radi se o ozbiljnom problemu, ali ispravljanjem ćeš poboljšati tvoj "
+"doživljaj.\n"
+"Za daljnje informacije, pritisni donju poveznicu:"
+
+#: source/gx/tilix/application.d:884
+msgid "Configuration Issue Detected"
+msgstr "Otkriven je problem s konfiguracijom"
+
+#: source/gx/tilix/application.d:896
+msgid "Do not show this message again"
+msgstr "Ovu poruku više nemoj prikazivati"
+
+#: source/gx/tilix/appwindow.d:324
+msgid "Create a new session"
+msgstr "Stvori novu sesiju"
+
+#: source/gx/tilix/appwindow.d:338
+msgid "View session sidebar"
+msgstr "Prikaži bočnu traku sesije"
+
+#: source/gx/tilix/appwindow.d:373
+msgid "Add terminal right"
+msgstr "Dodaj terminal desno"
+
+#: source/gx/tilix/appwindow.d:377
+msgid "Add terminal down"
+msgstr "Dodaj terminal dolje"
+
+#: source/gx/tilix/appwindow.d:383
+msgid "Find text in terminal"
+msgstr "Nađi tekst u terminalu"
+
+#: source/gx/tilix/appwindow.d:606
+msgid "Enter a new name for the session"
+msgstr "Upiši novo ime za sesiju"
+
+#: source/gx/tilix/appwindow.d:608
+msgid "Change Session Name"
+msgstr "Promijeni ime sesije"
+
+#: source/gx/tilix/appwindow.d:689
+msgid "Open…"
+msgstr "Otvori …"
+
+#: source/gx/tilix/appwindow.d:690 source/gx/tilix/appwindow.d:1558
+#: source/gx/tilix/prefeditor/profileeditor.d:948
+#: source/gx/tilix/terminal/terminal.d:3665
+msgid "Save"
+msgstr "Spremi"
+
+#: source/gx/tilix/appwindow.d:691
+msgid "Save As…"
+msgstr "Spremi kao …"
+
+#: source/gx/tilix/appwindow.d:697
+msgid "Name…"
+msgstr "Ime …"
+
+#: source/gx/tilix/appwindow.d:698
+msgid "Synchronize Input"
+msgstr "Sinkroniziraj unos"
+
+#: source/gx/tilix/appwindow.d:703
+msgid "Keyboard Shortcuts"
+msgstr "Tipkovni prečaci"
+
+#: source/gx/tilix/appwindow.d:704
+msgid "About Tilix"
+msgstr "O Tilixu"
+
+#: source/gx/tilix/appwindow.d:711
+msgid "GC"
+msgstr "Sabiralište smeća (GC)"
+
+#: source/gx/tilix/appwindow.d:1088
+#: source/gx/tilix/prefeditor/prefdialog.d:1201 source/gx/tilix/session.d:1222
+msgid "Default"
+msgstr "Standardno"
+
+#: source/gx/tilix/appwindow.d:1197
+msgid "There are multiple sessions open, close anyway?"
+msgstr "Otvoreno je više sesija, svejedno zatvoriti?"
+
+#: source/gx/tilix/appwindow.d:1461
+#: source/gx/tilix/prefeditor/profileeditor.d:961
+msgid "All JSON Files"
+msgstr "Sve JSON datoteke"
+
+#: source/gx/tilix/appwindow.d:1465
+#: source/gx/tilix/prefeditor/prefdialog.d:1219
+#: source/gx/tilix/prefeditor/profileeditor.d:965
+#: source/gx/tilix/terminal/terminal.d:3675
+msgid "All Files"
+msgstr "Sve datoteke"
+
+#: source/gx/tilix/appwindow.d:1474
+#, c-format
+msgid "Filename '%s' does not exist"
+msgstr "Ime datoteke „%s” ne postoji"
+
+#: source/gx/tilix/appwindow.d:1506
+msgid "Load Session"
+msgstr "Učitaj sesiju"
+
+#: source/gx/tilix/appwindow.d:1509 source/gx/tilix/appwindow.d:1558
+#: source/gx/tilix/bookmark/bmchooser.d:127
+#: source/gx/tilix/bookmark/bmeditor.d:151 source/gx/tilix/closedialog.d:202
+#: source/gx/tilix/prefeditor/advdialog.d:192
+#: source/gx/tilix/prefeditor/advdialog.d:362
+#: source/gx/tilix/prefeditor/profileeditor.d:948
+#: source/gx/tilix/terminal/advpaste.d:137 source/gx/tilix/terminal/layout.d:33
+#: source/gx/tilix/terminal/password.d:371
+#: source/gx/tilix/terminal/password.d:493
+#: source/gx/tilix/terminal/terminal.d:3665
+msgid "Cancel"
+msgstr "Odustani"
+
+#: source/gx/tilix/appwindow.d:1509
+msgid "Open"
+msgstr "Otvori"
+
+#: source/gx/tilix/appwindow.d:1532
+msgid "Could not load session due to unexpected error."
+msgstr "Nije bilo moguće učitati sesiju zbog neočekivane greške."
+
+#: source/gx/tilix/appwindow.d:1532
+msgid "Error Loading Session"
+msgstr "Greška pri učitavanju sesije"
+
+#: source/gx/tilix/appwindow.d:1555
+msgid "Save Session"
+msgstr "Spremi sesiju"
+
+#: source/gx/tilix/appwindow.d:1590 source/gx/tilix/appwindow.d:1609
+msgid "Could not save session due to unexpected error."
+msgstr "Nije bilo moguće spremiti sesiju zbog neočekivane greške."
+
+#: source/gx/tilix/appwindow.d:1590 source/gx/tilix/appwindow.d:1609
+msgid "Error Saving Session"
+msgstr "Greška u spremanju sesije"
+
+#: source/gx/tilix/appwindow.d:1723
+msgid "Quake mode is not supported under Wayland, running as normal window"
+msgstr "Wayland ne podržava Quake modus, pokreće se kao normalni prozor"
+
+#: source/gx/tilix/appwindow.d:1725
+msgid "Quake Mode Not Supported"
+msgstr "Quake modus nije podržan"
+
+#: source/gx/tilix/appwindow.d:2200
+msgid "New output displayed"
+msgstr "Novi rezultat prikazan"
+
+#: source/gx/tilix/appwindow.d:2208
+msgid "Close session"
+msgstr "Zatvori sesiju"
+
+#: source/gx/tilix/bookmark/bmchooser.d:79
+msgid "Include return character with bookmark"
+msgstr "Uključi znak return s oznakom"
+
+#: source/gx/tilix/bookmark/bmchooser.d:126
+msgid "Select Bookmark"
+msgstr "Odaberi oznaku"
+
+#: source/gx/tilix/bookmark/bmchooser.d:126
+#: source/gx/tilix/bookmark/bmeditor.d:68
+msgid "Select Folder"
+msgstr "Odaberi mapu"
+
+#: source/gx/tilix/bookmark/bmchooser.d:127
+#: source/gx/tilix/bookmark/bmeditor.d:151 source/gx/tilix/closedialog.d:202
+#: source/gx/tilix/terminal/layout.d:33 source/gx/tilix/terminal/password.d:493
+msgid "OK"
+msgstr "U redu"
+
+#: source/gx/tilix/bookmark/bmeditor.d:74
+msgid "Select folder"
+msgstr "Odaberi mapu"
+
+#: source/gx/tilix/bookmark/bmeditor.d:86
+msgid "Clear folder"
+msgstr "Isprazni mapu"
+
+#: source/gx/tilix/bookmark/bmeditor.d:150
+msgid "Add Bookmark"
+msgstr "Dodaj oznaku"
+
+#: source/gx/tilix/bookmark/bmeditor.d:150
+msgid "Edit Bookmark"
+msgstr "Uredi oznaku"
+
+#: source/gx/tilix/bookmark/bmeditor.d:231
+#: source/gx/tilix/bookmark/bmtreeview.d:73 source/gx/tilix/session.d:1572
+#: source/gx/tilix/terminal/password.d:137
+#: source/gx/tilix/terminal/password.d:431
+msgid "Name"
+msgstr "Ime"
+
+#: source/gx/tilix/bookmark/bmeditor.d:292
+#: source/gx/tilix/bookmark/manager.d:687
+msgid "Path"
+msgstr "Staza"
+
+#: source/gx/tilix/bookmark/bmeditor.d:294
+msgid "Select Path"
+msgstr "Odaberi stazu"
+
+#: source/gx/tilix/bookmark/bmeditor.d:333
+#: source/gx/tilix/bookmark/bmeditor.d:428
+#: source/gx/tilix/bookmark/manager.d:687
+#: source/gx/tilix/prefeditor/advdialog.d:106
+#: source/gx/tilix/prefeditor/profileeditor.d:98
+#: source/gx/tilix/prefeditor/profileeditor.d:1136
+#: source/gx/tilix/terminal/layout.d:89
+msgid "Command"
+msgstr "Naredba"
+
+#: source/gx/tilix/bookmark/bmeditor.d:382
+msgid "Protocol"
+msgstr "Protokol"
+
+#: source/gx/tilix/bookmark/bmeditor.d:398
+msgid "Host"
+msgstr "Računalo"
+
+#: source/gx/tilix/bookmark/bmeditor.d:414
+msgid "User"
+msgstr "Korisnik"
+
+#: source/gx/tilix/bookmark/bmeditor.d:421
+msgid "Parameters"
+msgstr "Parametri"
+
+#: source/gx/tilix/bookmark/bmtreeview.d:70 source/gx/tilix/closedialog.d:129
+#: source/gx/tilix/prefeditor/profileeditor.d:447
+msgid "Icon"
+msgstr "Ikona"
+
+#: source/gx/tilix/bookmark/manager.d:233
+msgid "Error deserializing bookmark"
+msgstr "Greška pri deserijaliziranju oznake"
+
+#: source/gx/tilix/bookmark/manager.d:537
+msgid "Root"
+msgstr "Korijen"
+
+#: source/gx/tilix/bookmark/manager.d:615
+msgid "Could not load bookmarks due to unexpected error"
+msgstr "Nije bilo moguće učitati oznake zbog neočekivane greške"
+
+#: source/gx/tilix/bookmark/manager.d:687
+msgid "Folder"
+msgstr "Mapa"
+
+#: source/gx/tilix/bookmark/manager.d:687
+msgid "Remote"
+msgstr "Udaljeni repozitorij"
+
+#: source/gx/tilix/closedialog.d:123 source/gx/tilix/constants.d:152
+#: source/gx/tilix/terminal/layout.d:54
+msgid "Title"
+msgstr "Naslov"
+
+#: source/gx/tilix/closedialog.d:170
+#, c-format
+msgid "Window (%s)"
+msgstr "Prozor (%s)"
+
+#: source/gx/tilix/closedialog.d:173
+#, c-format
+msgid "Session (%s)"
+msgstr "Sesija (%s)"
+
+#: source/gx/tilix/closedialog.d:189
+msgid "Close Application"
+msgstr "Zatvori program"
+
+#: source/gx/tilix/closedialog.d:191
+msgid "Close Window"
+msgstr "Zatvori prozor"
+
+#: source/gx/tilix/closedialog.d:193 source/gx/tilix/closedialog.d:195
+msgid "Close Session"
+msgstr "Zatvori sesiju"
+
+#: source/gx/tilix/cmdparams.d:119 source/gx/tilix/cmdparams.d:123
+#, c-format
+msgid "Ignoring as '%s' is not a directory"
+msgstr "Zanemaruju se, jer „%s” nije mapa"
+
+#: source/gx/tilix/cmdparams.d:152
+#, c-format
+msgid "Geometry string '%s' is invalid and could not be parsed"
+msgstr "Znakovni niz „%s” za geometriju je neispravan i ne može se obraditi"
+
+#: source/gx/tilix/cmdparams.d:186
+msgid ""
+"You cannot load a session and set a profile/working directory/execute "
+"command option, please choose one or the other"
+msgstr ""
+"Ne možeš učitati sesiju i postaviti profil/radnu mapu/izvršiti naredbu. "
+"Odaberi jedno ili drugo"
+
+#: source/gx/tilix/cmdparams.d:193
+msgid "You can only use the action parameter within Tilix"
+msgstr "Parametar radnje možeš koristiti samo unutar Tilixa"
+
+#: source/gx/tilix/cmdparams.d:215
+msgid ""
+"You cannot use the quake mode with maximize, minimize or geometry parameters"
+msgstr ""
+"Quake modus ne možeš koristiti s povećavanjem, smanjivanjem ili parametrima "
+"geometrije"
+
+#: source/gx/tilix/colorschemes.d:188
+#, c-format
+msgid "File %s is not a color scheme compliant JSON file"
+msgstr "Datoteka %s nije JSON-kompatibilna datoteka shema boja"
+
+#: source/gx/tilix/colorschemes.d:251
+msgid "Color scheme palette requires 16 colors"
+msgstr "Paleta shema boja zahtijeva 16 boja"
+
+#: source/gx/tilix/constants.d:72
+msgid "A VTE based terminal emulator for Linux"
+msgstr "VTE-bazirani emulator terminala za Linux"
+
+#: source/gx/tilix/constants.d:73
+msgid ""
+"This Source Code Form is subject to the terms of the Mozilla Public License, "
+"v. 2.0. If a copy of the MPL was not distributed with this file, You can "
+"obtain one at http://mozilla.org/MPL/2.0/."
+msgstr ""
+"Ovaj obrazac izvornog koda podložan je uvjetima Mozilline javne licence "
+"(MPL), v. 2.0. Ako kopija MPL-a nije distribuirana s ovom datotekom, možeš "
+"je dobiti na http://mozilla.org/MPL/2.0/."
+
+#: source/gx/tilix/constants.d:78
+msgid "GTK VTE widget team, Tilix would not be possible without their work"
+msgstr ""
+"Tim GTK programčića virtualnih emulatora terminala (VTE). Tilix ne bi bio "
+"moguć bez njihovog rada"
+
+#: source/gx/tilix/constants.d:79
+msgid "GtkD for providing such an excellent GTK wrapper"
+msgstr "GtkD za omogućavanje izvrsnog GTK omotača"
+
+#: source/gx/tilix/constants.d:80
+msgid "Dlang.org for such an excellent language, D"
+msgstr "Dlang.org za odličan jezik, D"
+
+#: source/gx/tilix/constants.d:153
+msgid "Icon title"
+msgstr "Naslov ikone"
+
+#: source/gx/tilix/constants.d:154 source/gx/tilix/terminal/password.d:140
+msgid "ID"
+msgstr "ID"
+
+#: source/gx/tilix/constants.d:155
+msgid "Directory"
+msgstr "Mapa"
+
+#: source/gx/tilix/constants.d:156
+msgid "Hostname"
+msgstr "Ime računala"
+
+#: source/gx/tilix/constants.d:157
+msgid "Username"
+msgstr "Korisničko ime"
+
+#: source/gx/tilix/constants.d:158
+msgid "Columns"
+msgstr "Stupci"
+
+#: source/gx/tilix/constants.d:159
+msgid "Rows"
+msgstr "Redci"
+
+#: source/gx/tilix/constants.d:160
+msgid "Process"
+msgstr "Proces"
+
+#: source/gx/tilix/constants.d:161
+msgid "Status.Read-Only"
+msgstr "Stanje.Samo za čitanje"
+
+#: source/gx/tilix/constants.d:162
+msgid "Status.Silence"
+msgstr "Stanje.Neaktivnost"
+
+#: source/gx/tilix/constants.d:163
+msgid "Status.Input-Sync"
+msgstr "Stanje.Sinkronizacija unosa"
+
+#: source/gx/tilix/constants.d:178
+msgid "Terminal count"
+msgstr "Ukupni broj terminala"
+
+#: source/gx/tilix/constants.d:179
+msgid "Terminal number"
+msgstr "Broj terminala"
+
+#: source/gx/tilix/constants.d:180
+msgid "Active terminal title"
+msgstr "Naslov aktivnog terminala"
+
+#: source/gx/tilix/constants.d:197
+msgid "Application name"
+msgstr "Ime programa"
+
+#: source/gx/tilix/constants.d:198
+msgid "Session name"
+msgstr "Ime sesije"
+
+#: source/gx/tilix/constants.d:199
+msgid "Session number"
+msgstr "Broj sesije"
+
+#: source/gx/tilix/constants.d:200
+msgid "Session count"
+msgstr "Ukupni broj sesija"
+
+#: source/gx/tilix/encoding.d:18 source/gx/tilix/encoding.d:31
+#: source/gx/tilix/encoding.d:45 source/gx/tilix/encoding.d:67
+#: source/gx/tilix/encoding.d:78
+msgid "Western"
+msgstr "Zapadni"
+
+#: source/gx/tilix/encoding.d:19 source/gx/tilix/encoding.d:46
+#: source/gx/tilix/encoding.d:57 source/gx/tilix/encoding.d:76
+msgid "Central European"
+msgstr "Srednjoeuropski"
+
+#: source/gx/tilix/encoding.d:20
+msgid "South European"
+msgstr "Južnoeuropski"
+
+#: source/gx/tilix/encoding.d:21 source/gx/tilix/encoding.d:29
+#: source/gx/tilix/encoding.d:83
+msgid "Baltic"
+msgstr "Baltički"
+
+#: source/gx/tilix/encoding.d:22 source/gx/tilix/encoding.d:47
+#: source/gx/tilix/encoding.d:53 source/gx/tilix/encoding.d:54
+#: source/gx/tilix/encoding.d:59 source/gx/tilix/encoding.d:77
+msgid "Cyrillic"
+msgstr "Ćirilica"
+
+#: source/gx/tilix/encoding.d:23 source/gx/tilix/encoding.d:50
+#: source/gx/tilix/encoding.d:56 source/gx/tilix/encoding.d:82
+msgid "Arabic"
+msgstr "Arapski"
+
+#: source/gx/tilix/encoding.d:24 source/gx/tilix/encoding.d:62
+#: source/gx/tilix/encoding.d:79
+msgid "Greek"
+msgstr "Grčki"
+
+#: source/gx/tilix/encoding.d:25
+msgid "Hebrew Visual"
+msgstr "Hebrejski vizualni"
+
+#: source/gx/tilix/encoding.d:26 source/gx/tilix/encoding.d:49
+#: source/gx/tilix/encoding.d:65 source/gx/tilix/encoding.d:81
+msgid "Hebrew"
+msgstr "Hebrejski"
+
+#: source/gx/tilix/encoding.d:27 source/gx/tilix/encoding.d:48
+#: source/gx/tilix/encoding.d:69 source/gx/tilix/encoding.d:80
+msgid "Turkish"
+msgstr "Turski"
+
+#: source/gx/tilix/encoding.d:28
+msgid "Nordic"
+msgstr "Nordijski"
+
+#: source/gx/tilix/encoding.d:30
+msgid "Celtic"
+msgstr "Keltski"
+
+#: source/gx/tilix/encoding.d:32 source/gx/tilix/encoding.d:68
+msgid "Romanian"
+msgstr "Rumunjski"
+
+#: source/gx/tilix/encoding.d:33
+msgid "Unicode"
+msgstr "Unicode"
+
+#: source/gx/tilix/encoding.d:34
+msgid "Armenian"
+msgstr "Armenski"
+
+#: source/gx/tilix/encoding.d:35 source/gx/tilix/encoding.d:36
+#: source/gx/tilix/encoding.d:40
+msgid "Chinese Traditional"
+msgstr "Kineski tradicionalni"
+
+#: source/gx/tilix/encoding.d:37
+msgid "Cyrillic/Russian"
+msgstr "Ćirilica/Ruski"
+
+#: source/gx/tilix/encoding.d:38 source/gx/tilix/encoding.d:51
+#: source/gx/tilix/encoding.d:71
+msgid "Japanese"
+msgstr "Japanski"
+
+#: source/gx/tilix/encoding.d:39 source/gx/tilix/encoding.d:52
+#: source/gx/tilix/encoding.d:74
+msgid "Korean"
+msgstr "Korejski"
+
+#: source/gx/tilix/encoding.d:41 source/gx/tilix/encoding.d:42
+#: source/gx/tilix/encoding.d:43
+msgid "Chinese Simplified"
+msgstr "Kineski pojednostavljeni"
+
+#: source/gx/tilix/encoding.d:44
+msgid "Georgian"
+msgstr "Gruzijski"
+
+#: source/gx/tilix/encoding.d:55 source/gx/tilix/encoding.d:70
+msgid "Cyrillic/Ukrainian"
+msgstr "Ćirilica/Ukrajinski"
+
+#: source/gx/tilix/encoding.d:58
+msgid "Croatian"
+msgstr "Hrvatski"
+
+#: source/gx/tilix/encoding.d:60
+msgid "Hindi"
+msgstr "Hindi"
+
+#: source/gx/tilix/encoding.d:61
+msgid "Persian"
+msgstr "Perzijski"
+
+#: source/gx/tilix/encoding.d:63
+msgid "Gujarati"
+msgstr "Gujarati"
+
+#: source/gx/tilix/encoding.d:64
+msgid "Gurmukhi"
+msgstr "Gurmuki"
+
+#: source/gx/tilix/encoding.d:66
+msgid "Icelandic"
+msgstr "Islandski"
+
+#: source/gx/tilix/encoding.d:72 source/gx/tilix/encoding.d:75
+#: source/gx/tilix/encoding.d:84
+msgid "Vietnamese"
+msgstr "Vijetnamski"
+
+#: source/gx/tilix/encoding.d:73
+msgid "Thai"
+msgstr "Tajski"
+
+#: source/gx/tilix/prefeditor/advdialog.d:94
+#: source/gx/tilix/prefeditor/advdialog.d:261
+msgid "Regex"
+msgstr "Regularni izraz"
+
+#: source/gx/tilix/prefeditor/advdialog.d:118
+msgid "Case Insensitive"
+msgstr "Bez razlikovanja velikih/malih slova"
+
+#: source/gx/tilix/prefeditor/advdialog.d:134
+#: source/gx/tilix/prefeditor/advdialog.d:313
+#: source/gx/tilix/prefeditor/profileeditor.d:1303
+msgid "Add"
+msgstr "Dodaj"
+
+#: source/gx/tilix/prefeditor/advdialog.d:141
+#: source/gx/tilix/prefeditor/advdialog.d:319
+#: source/gx/tilix/prefeditor/prefdialog.d:556
+#: source/gx/tilix/prefeditor/profileeditor.d:1340
+#: source/gx/tilix/terminal/password.d:213
+msgid "Delete"
+msgstr "Izbriši"
+
+#: source/gx/tilix/prefeditor/advdialog.d:151
+msgid "Move up"
+msgstr "Pomakni gore"
+
+#: source/gx/tilix/prefeditor/advdialog.d:162
+msgid "Move down"
+msgstr "Pomakni dolje"
+
+#: source/gx/tilix/prefeditor/advdialog.d:192
+#: source/gx/tilix/prefeditor/advdialog.d:362
+#: source/gx/tilix/terminal/password.d:371
+msgid "Apply"
+msgstr "Primijeni"
+
+#: source/gx/tilix/prefeditor/advdialog.d:192
+msgid "Edit Custom Links"
+msgstr "Uredi prilagođene poveznice"
+
+#: source/gx/tilix/prefeditor/advdialog.d:287
+#: source/gx/tilix/prefeditor/prefdialog.d:765
+msgid "Action"
+msgstr "Radnja"
+
+#: source/gx/tilix/prefeditor/advdialog.d:299
+msgid "Parameter"
+msgstr "Parametar"
+
+#: source/gx/tilix/prefeditor/advdialog.d:337
+msgid "Limit number of lines for trigger processing to:"
+msgstr "Ograniči broj redaka za obradu okidača na:"
+
+#: source/gx/tilix/prefeditor/advdialog.d:362
+msgid "Edit Triggers"
+msgstr "Uredi okidače"
+
+#: source/gx/tilix/prefeditor/advdialog.d:405
+#, c-format
+msgid "Row %d: "
+msgstr "Redak %d: "
+
+#: source/gx/tilix/prefeditor/bookmarkeditor.d:62
+msgid "Add bookmark"
+msgstr "Dodaj oznaku"
+
+#: source/gx/tilix/prefeditor/bookmarkeditor.d:67
+msgid "Edit bookmark"
+msgstr "Uredi oznaku"
+
+#: source/gx/tilix/prefeditor/bookmarkeditor.d:72
+msgid "Delete bookmark"
+msgstr "Izbriši oznaku"
+
+#: source/gx/tilix/prefeditor/bookmarkeditor.d:77
+msgid "Unselect bookmark"
+msgstr "Odznači oznaku"
+
+#: source/gx/tilix/prefeditor/common.d:37
+msgid "Custom Links"
+msgstr "Prilagođene poveznice"
+
+#: source/gx/tilix/prefeditor/common.d:43
+msgid ""
+"A list of user defined links that can be clicked on in the terminal based on "
+"regular expression definitions."
+msgstr ""
+"Popis korisnički definiranih poveznica koje se mogu pritisnuti u terminalu "
+"na temelju definicija regularnih izraza."
+
+#: source/gx/tilix/prefeditor/common.d:46
+#: source/gx/tilix/prefeditor/common.d:77
+#: source/gx/tilix/prefeditor/profileeditor.d:1321
+#: source/gx/tilix/terminal/password.d:184
+msgid "Edit"
+msgstr "Uredi"
+
+#: source/gx/tilix/prefeditor/common.d:67
+msgid "Triggers"
+msgstr "Okidači"
+
+#: source/gx/tilix/prefeditor/common.d:74
+msgid ""
+"Triggers are regular expressions that are used to check against output text "
+"in the terminal. When a match is detected the configured action is executed."
+msgstr ""
+"Okidači su regularni izrazi koji se koriste za provjeru teksta rezultata u "
+"terminalu. Kad dođe do poklapanja, izvršava se konfigurirana radnja."
+
+#: source/gx/tilix/prefeditor/prefdialog.d:123
+msgid "Tilix Preferences"
+msgstr "Tilix postavke"
+
+#: source/gx/tilix/prefeditor/prefdialog.d:140
+#: source/gx/tilix/prefeditor/prefdialog.d:141
+#: source/gx/tilix/prefeditor/prefdialog.d:219
+msgid "Global"
+msgstr "Globalno"
+
+#: source/gx/tilix/prefeditor/prefdialog.d:144
+#: source/gx/tilix/prefeditor/prefdialog.d:145
+msgid "Appearance"
+msgstr "Izgled"
+
+#: source/gx/tilix/prefeditor/prefdialog.d:150
+#: source/gx/tilix/prefeditor/prefdialog.d:151
+msgid "Quake"
+msgstr "Quake"
+
+#: source/gx/tilix/prefeditor/prefdialog.d:155
+#: source/gx/tilix/prefeditor/prefdialog.d:156
+msgid "Bookmarks"
+msgstr "Oznake"
+
+#: source/gx/tilix/prefeditor/prefdialog.d:162
+#: source/gx/tilix/prefeditor/prefdialog.d:163
+#: source/gx/tilix/prefeditor/prefdialog.d:299
+msgid "Shortcuts"
+msgstr "Prečaci"
+
+#: source/gx/tilix/prefeditor/prefdialog.d:166
+#: source/gx/tilix/prefeditor/prefdialog.d:167
+#: source/gx/tilix/prefeditor/prefdialog.d:463
+#: source/gx/tilix/prefeditor/prefdialog.d:681
+#: source/gx/tilix/prefeditor/profileeditor.d:1087
+#: source/gx/tilix/terminal/terminal.d:858
+msgid "Encoding"
+msgstr "Kodiranje"
+
+#: source/gx/tilix/prefeditor/prefdialog.d:170
+#: source/gx/tilix/prefeditor/prefdialog.d:171
+#: source/gx/tilix/prefeditor/profileeditor.d:105
+#: source/gx/tilix/prefeditor/profileeditor.d:575
+msgid "Advanced"
+msgstr "Napredno"
+
+#: source/gx/tilix/prefeditor/prefdialog.d:176 source/gx/tilix/session.d:1583
+msgid "Profile"
+msgstr "Profil"
+
+#: source/gx/tilix/prefeditor/prefdialog.d:189
+msgid "Add profile"
+msgstr "Dodaj profil"
+
+#: source/gx/tilix/prefeditor/prefdialog.d:194
+msgid "Delete profile"
+msgstr "Izbriši profil"
+
+#: source/gx/tilix/prefeditor/prefdialog.d:283
+#: source/gx/tilix/terminal/terminal.d:842
+msgid "Profiles"
+msgstr "Profili"
+
+#: source/gx/tilix/prefeditor/prefdialog.d:312
+#: source/gx/tilix/prefeditor/prefdialog.d:320
+#, c-format
+msgid "Profile: %s"
+msgstr "Profil: %s"
+
+#: source/gx/tilix/prefeditor/prefdialog.d:366
+#, c-format
+msgid "Are you sure you want to delete '%s'?"
+msgstr "Stvarno želiš izbrisati „%s”?"
+
+#: source/gx/tilix/prefeditor/prefdialog.d:557
+msgid "Clone"
+msgstr "Kloniraj"
+
+#: source/gx/tilix/prefeditor/prefdialog.d:561
+msgid "Use for new terminals"
+msgstr "Koristi za nove terminale"
+
+#: source/gx/tilix/prefeditor/prefdialog.d:637
+msgid "Encodings showing in menu:"
+msgstr "Kodiranja prikazana u izborniku:"
+
+#: source/gx/tilix/prefeditor/prefdialog.d:679
+msgid "Enabled"
+msgstr "Aktivirano"
+
+#: source/gx/tilix/prefeditor/prefdialog.d:789
+msgid "Shortcut Key"
+msgstr "Tipka prečaca"
+
+#: source/gx/tilix/prefeditor/prefdialog.d:801
+msgid "Enable shortcuts"
+msgstr "Aktiviraj prečace"
+
+#: source/gx/tilix/prefeditor/prefdialog.d:805
+msgid "Restore default shortcut for this action"
+msgstr "Postavi standardni"
+
+#: source/gx/tilix/prefeditor/prefdialog.d:916
+msgid "Overwrite Existing Shortcut"
+msgstr "Prepiši postojeći prečac"
+
+#: source/gx/tilix/prefeditor/prefdialog.d:917
+#, c-format
+msgid ""
+"The shortcut %s is already assigned to %s.\n"
+"Disable the shortcut for the other action and assign here instead?"
+msgstr ""
+"Prečac %s je već dodijeljen za %s.\n"
+"Deaktivirati prečac za drugu radnju i umjesto toga ga ovdje dodijeliti?"
+
+#: source/gx/tilix/prefeditor/prefdialog.d:1172
+msgid "Window style"
+msgstr "Stil prozora"
+
+#: source/gx/tilix/prefeditor/prefdialog.d:1174
+msgid "Borderless"
+msgstr "Bez rubova"
+
+#: source/gx/tilix/prefeditor/prefdialog.d:1174
+msgid "Disable CSD"
+msgstr "Deaktiviraj dizajn klijenta (CSD)"
+
+#: source/gx/tilix/prefeditor/prefdialog.d:1174
+msgid "Disable CSD, hide toolbar"
+msgstr "Deaktiviraj dizajn klijenta (CSD), sakrij alatnu traku"
+
+#: source/gx/tilix/prefeditor/prefdialog.d:1174
+#: source/gx/tilix/prefeditor/prefdialog.d:1188
+msgid "Normal"
+msgstr "Normalni"
+
+#: source/gx/tilix/prefeditor/prefdialog.d:1178
+msgid "Window restart required"
+msgstr "Prozor se mora ponovo pokrenuti"
+
+#: source/gx/tilix/prefeditor/prefdialog.d:1187
+msgid "Terminal title style"
+msgstr "Stil naslova terminala"
+
+#: source/gx/tilix/prefeditor/prefdialog.d:1188
+#: source/gx/tilix/prefeditor/profileeditor.d:447
+msgid "None"
+msgstr "Bez"
+
+#: source/gx/tilix/prefeditor/prefdialog.d:1188
+msgid "Small"
+msgstr "Mali"
+
+#: source/gx/tilix/prefeditor/prefdialog.d:1193
+#: source/gx/tilix/prefeditor/prefdialog.d:1387
+msgid "Tab position"
+msgstr "Položaj kartice"
+
+#: source/gx/tilix/prefeditor/prefdialog.d:1194
+#: source/gx/tilix/prefeditor/prefdialog.d:1388
+#: source/gx/tilix/prefeditor/prefdialog.d:1395
+msgid "Bottom"
+msgstr "Dolje"
+
+#: source/gx/tilix/prefeditor/prefdialog.d:1194
+#: source/gx/tilix/prefeditor/prefdialog.d:1381
+#: source/gx/tilix/prefeditor/prefdialog.d:1388
+msgid "Left"
+msgstr "Lijevo"
+
+#: source/gx/tilix/prefeditor/prefdialog.d:1194
+#: source/gx/tilix/prefeditor/prefdialog.d:1381
+#: source/gx/tilix/prefeditor/prefdialog.d:1388
+msgid "Right"
+msgstr "Desno"
+
+#: source/gx/tilix/prefeditor/prefdialog.d:1194
+#: source/gx/tilix/prefeditor/prefdialog.d:1388
+#: source/gx/tilix/prefeditor/prefdialog.d:1395
+msgid "Top"
+msgstr "Gore"
+
+#: source/gx/tilix/prefeditor/prefdialog.d:1200
+msgid "Theme variant"
+msgstr "Varijanta teme"
+
+#: source/gx/tilix/prefeditor/prefdialog.d:1201
+msgid "Dark"
+msgstr "Tamna"
+
+#: source/gx/tilix/prefeditor/prefdialog.d:1201
+msgid "Light"
+msgstr "Svjetla"
+
+#: source/gx/tilix/prefeditor/prefdialog.d:1207
+msgid "Background image"
+msgstr "Slika pozadine"
+
+#: source/gx/tilix/prefeditor/prefdialog.d:1209
+msgid "Select Image"
+msgstr "Odaberi sliku"
+
+#: source/gx/tilix/prefeditor/prefdialog.d:1212
+msgid "All Image Files"
+msgstr "Sve slike"
+
+#: source/gx/tilix/prefeditor/prefdialog.d:1233
+msgid "Reset background image"
+msgstr "Resetiraj sliku pozadine"
+
+#: source/gx/tilix/prefeditor/prefdialog.d:1239
+#: source/gx/tilix/prefeditor/prefdialog.d:1381
+msgid "Center"
+msgstr "Centriraj"
+
+#: source/gx/tilix/prefeditor/prefdialog.d:1239
+msgid "Scale"
+msgstr "Skaliraj"
+
+#: source/gx/tilix/prefeditor/prefdialog.d:1239
+msgid "Stretch"
+msgstr "Rastegni"
+
+#: source/gx/tilix/prefeditor/prefdialog.d:1239
+msgid "Tile"
+msgstr "Poploči"
+
+#: source/gx/tilix/prefeditor/prefdialog.d:1258
+msgid "Default session name"
+msgstr "Standardno ime sesije"
+
+#: source/gx/tilix/prefeditor/prefdialog.d:1273
+msgid "Application title"
+msgstr "Naslov programa"
+
+#: source/gx/tilix/prefeditor/prefdialog.d:1291
+msgid "Enable transparency, requires re-start"
+msgstr "Aktiviraj prozirnost, zahtijeva ponovno pokretanje"
+
+#: source/gx/tilix/prefeditor/prefdialog.d:1297
+msgid "Use a wide handle for splitters"
+msgstr "Koristi široku ručku za dijeljenje terminala"
+
+#: source/gx/tilix/prefeditor/prefdialog.d:1302
+msgid "Place the sidebar on the right"
+msgstr "Smjesti bočnu traku desno"
+
+#: source/gx/tilix/prefeditor/prefdialog.d:1306
+msgid "Show the terminal title even if it's the only terminal"
+msgstr "Prikaži naslov terminala, čak i ako je jedini"
+
+#: source/gx/tilix/prefeditor/prefdialog.d:1311
+msgid "Use overlay scrollbars (Application restart required)"
+msgstr ""
+"Koristi preklapajuće klizne trake (zahtijeva ponovno pokretanje programa)"
+
+#: source/gx/tilix/prefeditor/prefdialog.d:1316
+msgid "Use tabs instead of sidebar (Application restart required)"
+msgstr ""
+"Koristi kartice umjesto bočne trake (zahtijeva ponovno pokretanje programa)"
+
+#: source/gx/tilix/prefeditor/prefdialog.d:1348
+msgid "Size"
+msgstr "Veličina"
+
+#: source/gx/tilix/prefeditor/prefdialog.d:1359
+msgid "Height percent"
+msgstr "Postotak visine"
+
+#: source/gx/tilix/prefeditor/prefdialog.d:1370
+msgid "Width percent"
+msgstr "Postotak širine"
+
+#: source/gx/tilix/prefeditor/prefdialog.d:1380
+msgid "Alignment"
+msgstr "Poravnanje"
+
+#: source/gx/tilix/prefeditor/prefdialog.d:1394
+msgid "Window position"
+msgstr "Pozicija prozora"
+
+#: source/gx/tilix/prefeditor/prefdialog.d:1403
+#: source/gx/tilix/prefeditor/profileeditor.d:556
+msgid "Options"
+msgstr "Opcije"
+
+#: source/gx/tilix/prefeditor/prefdialog.d:1411
+msgid "Show terminal on all workspaces"
+msgstr "Prikaži terminal na svim radnim prostorima"
+
+#: source/gx/tilix/prefeditor/prefdialog.d:1423
+msgid "Hide window when focus is lost"
+msgstr "Sakrij prozor kad se izgubi fokus"
+
+#: source/gx/tilix/prefeditor/prefdialog.d:1427
+msgid "Delay hiding window by (ms)"
+msgstr "Odgodi skrivanja prozora za (ms)"
+
+#: source/gx/tilix/prefeditor/prefdialog.d:1440
+msgid "Hide the toolbar of the window"
+msgstr "Sakrij alatnu traku na prozoru"
+
+#: source/gx/tilix/prefeditor/prefdialog.d:1455
+msgid "Keep window always on top"
+msgstr "Zadrži prozor uvijek ispred ostalih prozora"
+
+#: source/gx/tilix/prefeditor/prefdialog.d:1460
+msgid "Display terminal on active monitor"
+msgstr "Prikaži terminal na aktivnom monitoru"
+
+#: source/gx/tilix/prefeditor/prefdialog.d:1467
+msgid "Display on specific monitor"
+msgstr "Prikaži na određenom monitoru"
+
+#: source/gx/tilix/prefeditor/prefdialog.d:1470
+msgid "Primary Monitor"
+msgstr "Primarni monitor"
+
+#: source/gx/tilix/prefeditor/prefdialog.d:1473
+msgid "Monitor "
+msgstr "Monitor "
+
+#: source/gx/tilix/prefeditor/prefdialog.d:1533
+msgid "Behavior"
+msgstr "Ponašanje"
+
+#: source/gx/tilix/prefeditor/prefdialog.d:1539
+msgid "Prompt when creating a new session"
+msgstr "Upitaj prilikom stvaranja nove sesije"
+
+#: source/gx/tilix/prefeditor/prefdialog.d:1544
+msgid "Focus a terminal when the mouse moves over it"
+msgstr "Fokusiraj terminal kad miš prelazi preko njega"
+
+#: source/gx/tilix/prefeditor/prefdialog.d:1549
+msgid "Autohide the mouse pointer when typing"
+msgstr "Automatski sakrij pokazivača miša prilikom tipkanja"
+
+#: source/gx/tilix/prefeditor/prefdialog.d:1554
+msgid "Close terminal by clicking middle mouse button on title"
+msgstr "Zatvori terminal pritiskom srednje tipke miša na naslovu"
+
+#: source/gx/tilix/prefeditor/prefdialog.d:1559
+msgid "Zoom the terminal using <Control> and scroll wheel"
+msgstr "Biraj uvećanje terminala pomoću <Control> i kotačića miša"
+
+#: source/gx/tilix/prefeditor/prefdialog.d:1564
+msgid "Require the <Control> modifier to edit title on click"
+msgstr ""
+"Zahtijevaj modifikator <Control> za uređivanje naslova pritiskom na naslov"
+
+#: source/gx/tilix/prefeditor/prefdialog.d:1569
+msgid "Close window when last session is closed"
+msgstr "Zatvori prozor kad se zatvori zadnja sesija"
+
+#: source/gx/tilix/prefeditor/prefdialog.d:1574
+msgid "Save and restore window state"
+msgstr "Spremi i obnovi stanje prozora"
+
+#: source/gx/tilix/prefeditor/prefdialog.d:1579
+msgid "Always search using regular expressions"
+msgstr "Traži uvijek koristeći regularne izraze"
+
+#: source/gx/tilix/prefeditor/prefdialog.d:1585
+msgid "Send desktop notification on process complete"
+msgstr "Pošalji obavijest na radnu površinu kad proces završi"
+
+#: source/gx/tilix/prefeditor/prefdialog.d:1593
+msgid "On new instance"
+msgstr "Pri novom primjerku"
+
+#: source/gx/tilix/prefeditor/prefdialog.d:1596
+msgid "Focus Window"
+msgstr "Fokusiraj prozor"
+
+#: source/gx/tilix/prefeditor/prefdialog.d:1596
+msgid "Split Down"
+msgstr "Podijeli prema dolje"
+
+#: source/gx/tilix/prefeditor/prefdialog.d:1596
+msgid "Split Right"
+msgstr "Podijeli na desno"
+
+#: source/gx/tilix/prefeditor/prefdialog.d:1602
+#: source/gx/tilix/terminal/terminal.d:1851
+msgid "Clipboard"
+msgstr "Međuspremnik"
+
+#: source/gx/tilix/prefeditor/prefdialog.d:1608
+msgid "Always use advanced paste dialog"
+msgstr "Uvijek koristi dijalog za napredno umetanje"
+
+#: source/gx/tilix/prefeditor/prefdialog.d:1613
+msgid "Warn when attempting unsafe paste"
+msgstr "Upozori prilikom pokušaja nesigurnog umetanja"
+
+#: source/gx/tilix/prefeditor/prefdialog.d:1618
+msgid "Strip first character of paste if comment or variable declaration"
+msgstr "Ukloni prvi znak umetanja ako je komentar ili deklaracija varijable"
+
+#: source/gx/tilix/prefeditor/prefdialog.d:1623
+msgid "Strip trailing whitespaces and linebreak characters on paste"
+msgstr ""
+"Ukloni nepotrebne znakove razmaka, tabulatore i prekide redaka na kraju "
+"podataka tijekom umetanja"
+
+#: source/gx/tilix/prefeditor/prefdialog.d:1628
+msgid "Automatically copy text to clipboard when selecting"
+msgstr "Automatski kopiraj tekst u međuspremnik prilikom označavanja teksta"
+
+#: source/gx/tilix/prefeditor/profileeditor.d:97
+msgid "General"
+msgstr "Opće"
+
+#: source/gx/tilix/prefeditor/profileeditor.d:99
+msgid "Color"
+msgstr "Boja"
+
+#: source/gx/tilix/prefeditor/profileeditor.d:100
+msgid "Scrolling"
+msgstr "Klizanje"
+
+#: source/gx/tilix/prefeditor/profileeditor.d:101
+msgid "Compatibility"
+msgstr "Kompatibilnost"
+
+#: source/gx/tilix/prefeditor/profileeditor.d:103
+#: source/gx/tilix/prefeditor/profileeditor.d:693
+#: source/gx/tilix/prefeditor/profileeditor.d:1175
+#: source/gx/tilix/terminal/layout.d:68
+msgid "Badge"
+msgstr "Značka"
+
+#: source/gx/tilix/prefeditor/profileeditor.d:217
+msgid "Profile name"
+msgstr "Ime profila"
+
+#: source/gx/tilix/prefeditor/profileeditor.d:241
+msgid "Terminal title"
+msgstr "Naslov terminala"
+
+#: source/gx/tilix/prefeditor/profileeditor.d:254
+msgid "Text Appearance"
+msgstr "Izgled teksta"
+
+#: source/gx/tilix/prefeditor/profileeditor.d:262
+msgid "Terminal size"
+msgstr "Veličina terminala"
+
+#: source/gx/tilix/prefeditor/profileeditor.d:272
+msgid "columns"
+msgstr "stupci"
+
+#: source/gx/tilix/prefeditor/profileeditor.d:281
+msgid "rows"
+msgstr "redci"
+
+#: source/gx/tilix/prefeditor/profileeditor.d:289
+#: source/gx/tilix/prefeditor/profileeditor.d:328
+#: source/gx/tilix/terminal/terminal.d:853
+msgid "Reset"
+msgstr "Resetiraj"
+
+#: source/gx/tilix/prefeditor/profileeditor.d:301
+msgid "Cell spacing"
+msgstr "Razmaknutost ćelija"
+
+#: source/gx/tilix/prefeditor/profileeditor.d:311
+msgid "width"
+msgstr "širina"
+
+#: source/gx/tilix/prefeditor/profileeditor.d:320
+msgid "height"
+msgstr "visina"
+
+#: source/gx/tilix/prefeditor/profileeditor.d:347
+msgid "Margin"
+msgstr "Margina"
+
+#: source/gx/tilix/prefeditor/profileeditor.d:358
+msgid "Text blink mode"
+msgstr "Modus treperenje teksta"
+
+#: source/gx/tilix/prefeditor/profileeditor.d:361
+msgid "Always"
+msgstr "Uvijek"
+
+#: source/gx/tilix/prefeditor/profileeditor.d:361
+msgid "Focused"
+msgstr "Fokusirano"
+
+#: source/gx/tilix/prefeditor/profileeditor.d:361
+msgid "Never"
+msgstr "Nikada"
+
+#: source/gx/tilix/prefeditor/profileeditor.d:361
+msgid "Unfocused"
+msgstr "Nefokusirano"
+
+#: source/gx/tilix/prefeditor/profileeditor.d:380
+#: source/gx/tilix/prefeditor/profileeditor.d:1199
+msgid "Custom font"
+msgstr "Prilagođeni font"
+
+#: source/gx/tilix/prefeditor/profileeditor.d:392
+msgid "Choose A Terminal Font"
+msgstr "Odaberi font za terminal"
+
+#: source/gx/tilix/prefeditor/profileeditor.d:401
+msgid "Word-wise select chars"
+msgstr "Označavanje riječ po riječ"
+
+#: source/gx/tilix/prefeditor/profileeditor.d:409
+#: source/gx/tilix/prefeditor/profileeditor.d:417
+#: source/gx/tilix/prefeditor/profileeditor.d:659
+msgid "Cursor"
+msgstr "Pokazivač"
+
+#: source/gx/tilix/prefeditor/profileeditor.d:420
+msgid "Block"
+msgstr "Pravokutnik"
+
+#: source/gx/tilix/prefeditor/profileeditor.d:420
+msgid "IBeam"
+msgstr "Okomita crta"
+
+#: source/gx/tilix/prefeditor/profileeditor.d:420
+msgid "Underline"
+msgstr "Podvlaka"
+
+#: source/gx/tilix/prefeditor/profileeditor.d:428
+msgid "Cursor blink mode"
+msgstr "Modus treperenje pokazivača"
+
+#: source/gx/tilix/prefeditor/profileeditor.d:431
+msgid "Off"
+msgstr "Isključeno"
+
+#: source/gx/tilix/prefeditor/profileeditor.d:431
+msgid "On"
+msgstr "Uključeno"
+
+#: source/gx/tilix/prefeditor/profileeditor.d:431
+msgid "System"
+msgstr "Sustav"
+
+#: source/gx/tilix/prefeditor/profileeditor.d:436
+msgid "Notification"
+msgstr "Obavijest"
+
+#: source/gx/tilix/prefeditor/profileeditor.d:444
+#: source/gx/tilix/terminal/terminal.d:422
+msgid "Terminal bell"
+msgstr "Zvono terminala"
+
+#: source/gx/tilix/prefeditor/profileeditor.d:447
+msgid "Icon and sound"
+msgstr "Ikona i zvuk"
+
+#: source/gx/tilix/prefeditor/profileeditor.d:447
+msgid "Sound"
+msgstr "Zvuk"
+
+#: source/gx/tilix/prefeditor/profileeditor.d:465
+#, c-format
+msgid "ID: %s"
+msgstr "ID: %s"
+
+#: source/gx/tilix/prefeditor/profileeditor.d:513
+msgid "Color scheme"
+msgstr "Shema boja"
+
+#: source/gx/tilix/prefeditor/profileeditor.d:523
+#: source/gx/tilix/prefeditor/profileeditor.d:988
+msgid "Custom"
+msgstr "Prilagođeno"
+
+#: source/gx/tilix/prefeditor/profileeditor.d:536
+msgid "Export"
+msgstr "Izvezi"
+
+#: source/gx/tilix/prefeditor/profileeditor.d:548
+msgid "Color palette"
+msgstr "Paleta boja"
+
+#: source/gx/tilix/prefeditor/profileeditor.d:570
+msgid "Use theme colors for foreground/background"
+msgstr "Koristi prednju i stražnju boju teme"
+
+#: source/gx/tilix/prefeditor/profileeditor.d:580
+msgid "Show bold text in bright colors"
+msgstr "Prikaži podebljani tekst u svijetlim bojama"
+
+#: source/gx/tilix/prefeditor/profileeditor.d:592
+msgid "Transparency"
+msgstr "Prozirnost"
+
+#: source/gx/tilix/prefeditor/profileeditor.d:606
+msgid "Unfocused dim"
+msgstr "Zatamnjenje nefokusiranog"
+
+#: source/gx/tilix/prefeditor/profileeditor.d:654
+msgid "Text"
+msgstr "Tekst"
+
+#: source/gx/tilix/prefeditor/profileeditor.d:655
+#: source/gx/tilix/prefeditor/profileeditor.d:757
+msgid "Background"
+msgstr "Stražnja"
+
+#: source/gx/tilix/prefeditor/profileeditor.d:664
+msgid "Select Cursor Foreground Color"
+msgstr "Odaberi prednju boju pokazivača"
+
+#: source/gx/tilix/prefeditor/profileeditor.d:666
+msgid "Select Cursor Background Color"
+msgstr "Odaberi stražnju boju pokazivača"
+
+#: source/gx/tilix/prefeditor/profileeditor.d:671
+msgid "Highlight"
+msgstr "Isticanje"
+
+#: source/gx/tilix/prefeditor/profileeditor.d:676
+msgid "Select Highlight Foreground Color"
+msgstr "Odaberi prednju boju isticanja"
+
+#: source/gx/tilix/prefeditor/profileeditor.d:678
+msgid "Select Highlight Background Color"
+msgstr "Odaberi stražnju boju isticanja"
+
+#: source/gx/tilix/prefeditor/profileeditor.d:683
+msgid "Bold"
+msgstr "Podebljano"
+
+#: source/gx/tilix/prefeditor/profileeditor.d:688
+msgid "Select Bold Color"
+msgstr "Odaberi boju podebljanog teksta"
+
+#: source/gx/tilix/prefeditor/profileeditor.d:697
+msgid "Select Badge Color"
+msgstr "Odaberi boju značke"
+
+#: source/gx/tilix/prefeditor/profileeditor.d:746
+msgid "Select Background Color"
+msgstr "Odaberi stražnju boju"
+
+#: source/gx/tilix/prefeditor/profileeditor.d:762
+#: source/gx/tilix/prefeditor/profileeditor.d:778
+msgid "Select Foreground Color"
+msgstr "Odaberi prednju boju"
+
+#: source/gx/tilix/prefeditor/profileeditor.d:777
+msgid "Foreground"
+msgstr "Prednja"
+
+#: source/gx/tilix/prefeditor/profileeditor.d:781
+msgid "Black"
+msgstr "Crna"
+
+#: source/gx/tilix/prefeditor/profileeditor.d:781
+msgid "Blue"
+msgstr "Plava"
+
+#: source/gx/tilix/prefeditor/profileeditor.d:781
+msgid "Green"
+msgstr "Zelena"
+
+#: source/gx/tilix/prefeditor/profileeditor.d:781
+msgid "Grey"
+msgstr "Siva"
+
+#: source/gx/tilix/prefeditor/profileeditor.d:781
+msgid "Orange"
+msgstr "Narančasta"
+
+#: source/gx/tilix/prefeditor/profileeditor.d:781
+msgid "Purple"
+msgstr "Ljubičasta"
+
+#: source/gx/tilix/prefeditor/profileeditor.d:781
+msgid "Red"
+msgstr "Crvena"
+
+#: source/gx/tilix/prefeditor/profileeditor.d:781
+msgid "Turquoise"
+msgstr "Tirkizna"
+
+#: source/gx/tilix/prefeditor/profileeditor.d:787
+#, c-format
+msgid "Select %s Color"
+msgstr "Odaberi: %s boja"
+
+#: source/gx/tilix/prefeditor/profileeditor.d:794
+#, c-format
+msgid "Select %s Light Color"
+msgstr "Odaberi: svjetla %s boja"
+
+#: source/gx/tilix/prefeditor/profileeditor.d:945
+msgid "Export Color Scheme"
+msgstr "Izvezi shemu boja"
+
+#: source/gx/tilix/prefeditor/profileeditor.d:1022
+msgid "Show scrollbar"
+msgstr "Prikaži kliznu traku"
+
+#: source/gx/tilix/prefeditor/profileeditor.d:1026
+msgid "Scroll on output"
+msgstr "Kliži pri rezultatu"
+
+#: source/gx/tilix/prefeditor/profileeditor.d:1030
+msgid "Scroll on keystroke"
+msgstr "Kliži pri pritiskanju tipke"
+
+#: source/gx/tilix/prefeditor/profileeditor.d:1034
+msgid "Limit scrollback to:"
+msgstr "Ograniči broj prethodnih redaka na:"
+
+#: source/gx/tilix/prefeditor/profileeditor.d:1069
+msgid "Backspace key generates"
+msgstr "Backspace tipka generira"
+
+#: source/gx/tilix/prefeditor/profileeditor.d:1072
+#: source/gx/tilix/prefeditor/profileeditor.d:1081
+msgid "ASCII DEL"
+msgstr "ASCII DEL"
+
+#: source/gx/tilix/prefeditor/profileeditor.d:1072
+#: source/gx/tilix/prefeditor/profileeditor.d:1081
+msgid "Automatic"
+msgstr "Automatski"
+
+#: source/gx/tilix/prefeditor/profileeditor.d:1072
+#: source/gx/tilix/prefeditor/profileeditor.d:1081
+msgid "Control-H"
+msgstr "Control-H"
+
+#: source/gx/tilix/prefeditor/profileeditor.d:1072
+#: source/gx/tilix/prefeditor/profileeditor.d:1081
+msgid "Escape sequence"
+msgstr "Escape sekvenca"
+
+#: source/gx/tilix/prefeditor/profileeditor.d:1072
+#: source/gx/tilix/prefeditor/profileeditor.d:1081
+msgid "TTY"
+msgstr "TTY"
+
+#: source/gx/tilix/prefeditor/profileeditor.d:1078
+msgid "Delete key generates"
+msgstr "Delete tipka generira"
+
+#: source/gx/tilix/prefeditor/profileeditor.d:1102
+msgid "Ambiguous-width characters"
+msgstr "Znakovi nejednoznačnih širina"
+
+#: source/gx/tilix/prefeditor/profileeditor.d:1105
+msgid "Narrow"
+msgstr "Usko"
+
+#: source/gx/tilix/prefeditor/profileeditor.d:1105
+msgid "Wide"
+msgstr "Široko"
+
+#: source/gx/tilix/prefeditor/profileeditor.d:1126
+msgid "Run command as a login shell"
+msgstr "Pokreni naredbu kao ljusku prijave"
+
+#: source/gx/tilix/prefeditor/profileeditor.d:1130
+msgid "Run a custom command instead of my shell"
+msgstr "Pokreni prilalagođenu naredbu umjesto moje ljuske"
+
+#: source/gx/tilix/prefeditor/profileeditor.d:1147
+msgid "When command exits"
+msgstr "Kad naredba završi"
+
+#: source/gx/tilix/prefeditor/profileeditor.d:1149
+msgid "Exit the terminal"
+msgstr "Zatvori terminal"
+
+#: source/gx/tilix/prefeditor/profileeditor.d:1149
+msgid "Hold the terminal open"
+msgstr "Zadrži terminal otvorenim"
+
+#: source/gx/tilix/prefeditor/profileeditor.d:1149
+msgid "Restart the command"
+msgstr "Ponovo pokreni naredbu"
+
+#: source/gx/tilix/prefeditor/profileeditor.d:1189
+msgid "Badge position"
+msgstr "Položaj značke"
+
+#: source/gx/tilix/prefeditor/profileeditor.d:1193
+msgid "Northeast"
+msgstr "Sjeveroistok"
+
+#: source/gx/tilix/prefeditor/profileeditor.d:1193
+msgid "Northwest"
+msgstr "Sjeverozapad"
+
+#: source/gx/tilix/prefeditor/profileeditor.d:1193
+msgid "Southeast"
+msgstr "Jugoistok"
+
+#: source/gx/tilix/prefeditor/profileeditor.d:1193
+msgid "Southwest"
+msgstr "Jugozapad"
+
+#: source/gx/tilix/prefeditor/profileeditor.d:1211
+msgid "Choose A Badge Font"
+msgstr "Odaberi font za značke"
+
+#: source/gx/tilix/prefeditor/profileeditor.d:1249
+msgid "Notify New Activity"
+msgstr "Obavijesti o novoj aktivnosti"
+
+#: source/gx/tilix/prefeditor/profileeditor.d:1256
+msgid ""
+"A notification can be raised when new activity occurs after a specified "
+"period of silence."
+msgstr ""
+"Prikazuje obavijest kad se pojavi nova aktivnost nakon određenog razdoblja "
+"neaktivnosti."
+
+#: source/gx/tilix/prefeditor/profileeditor.d:1269
+msgid "Automatic Profile Switching"
+msgstr "Automatsko mijenjanje profila"
+
+#: source/gx/tilix/prefeditor/profileeditor.d:1278
+msgid ""
+"Profiles are automatically selected based on the values entered here.\n"
+"Values are entered using a <i>username@hostname:directory</i> format. Either "
+"the hostname or directory can be omitted but the colon must be present. "
+"Entries with neither hostname or directory are not permitted."
+msgstr ""
+"Profili se automatski biraju na temelju ovdje upisanih vrijednosti.\n"
+"Vrijednosti se unose u formatu <i>korisničko_ime@ime_računala:mapa</i>. Ime "
+"računala ili mapa mogu se izostaviti, ali dvotočka mora biti prisutna. Unosi "
+"bez imena računala i mape nisu dopušteni."
+
+#: source/gx/tilix/prefeditor/profileeditor.d:1280
+msgid ""
+"Profiles are automatically selected based on the values entered here.\n"
+"Values are entered using a <i>hostname:directory</i> format. Either the "
+"hostname or directory can be omitted but the colon must be present. Entries "
+"with neither hostname or directory are not permitted."
+msgstr ""
+"Profili se automatski biraju na temelju ovdje upisanih vrijednosti.\n"
+"Vrijednosti se unose u formatu <i>ime_računala:mapa</i>. Ime računala ili "
+"mapa mogu se izostaviti, ali dvotočka mora biti prisutna. Unosi bez imena "
+"računala i mape nisu dopušteni."
+
+#: source/gx/tilix/prefeditor/profileeditor.d:1292
+msgid "Match"
+msgstr "Poklapanje"
+
+#: source/gx/tilix/prefeditor/profileeditor.d:1307
+msgid "Enter username@hostname:directory to match"
+msgstr "Upiši korisničko_ime@ime_računala:mapa za poklapanje"
+
+#: source/gx/tilix/prefeditor/profileeditor.d:1309
+msgid "Enter hostname:directory to match"
+msgstr "Upiši ime_računala:mapa za poklapanje"
+
+#: source/gx/tilix/prefeditor/profileeditor.d:1311
+msgid "Add New Match"
+msgstr "Dodaj novo poklapanje"
+
+#: source/gx/tilix/prefeditor/profileeditor.d:1328
+msgid "Edit username@hostname:directory to match"
+msgstr "Uredi korisničko_ime@ime_računala:mapa za poklapanje"
+
+#: source/gx/tilix/prefeditor/profileeditor.d:1330
+msgid "Edit hostname:directory to match"
+msgstr "Uredi ime_računala:mapa za poklapanje"
+
+#: source/gx/tilix/prefeditor/profileeditor.d:1332
+msgid "Edit Match"
+msgstr "Uredi poklapanje"
+
+#: source/gx/tilix/prefeditor/profileeditor.d:1363
+msgid "Enable by default"
+msgstr "Standardno aktiviraj"
+
+#: source/gx/tilix/prefeditor/profileeditor.d:1372
+msgid "Threshold for continuous silence"
+msgstr "Prag za kontinuiranu neaktivnost"
+
+#: source/gx/tilix/prefeditor/profileeditor.d:1381
+msgid "(seconds)"
+msgstr "(sekunde)"
+
+#: source/gx/tilix/prefeditor/titleeditor.d:105
+#: source/gx/tilix/terminal/terminal.d:348
+#: source/gx/tilix/terminal/terminal.d:1309
+msgid "Terminal"
+msgstr "Terminal"
+
+#: source/gx/tilix/prefeditor/titleeditor.d:110
+msgid "Session"
+msgstr "Sesija"
+
+#: source/gx/tilix/prefeditor/titleeditor.d:116
+msgid "Window"
+msgstr "Prozor"
+
+#: source/gx/tilix/prefeditor/titleeditor.d:126
+#: source/gx/tilix/prefeditor/titleeditor.d:127
+msgid "Help"
+msgstr "Pomoć"
+
+#: source/gx/tilix/preferences.d:256
+msgid "UpdateState"
+msgstr "Aktualiziraj stanje"
+
+#: source/gx/tilix/preferences.d:257
+msgid "ExecuteCommand"
+msgstr "Izvrši naredbu"
+
+#: source/gx/tilix/preferences.d:258
+msgid "SendNotification"
+msgstr "Pošalji obavijest"
+
+#: source/gx/tilix/preferences.d:259
+msgid "UpdateTitle"
+msgstr "Aktualiziraj naslov"
+
+#: source/gx/tilix/preferences.d:260
+msgid "PlayBell"
+msgstr "Zazvoni"
+
+#: source/gx/tilix/preferences.d:261
+msgid "SendText"
+msgstr "Pošalji tekst"
+
+#: source/gx/tilix/preferences.d:262
+msgid "InsertPassword"
+msgstr "Upiši lozinku"
+
+#: source/gx/tilix/preferences.d:263
+msgid "UpdateBadge"
+msgstr "Aktualiziraj značku"
+
+#: source/gx/tilix/preferences.d:264
+msgid "RunProcess"
+msgstr "Pokreni proces"
+
+#: source/gx/tilix/preferences.d:374
+#, c-format
+msgid "%s (Copy)"
+msgstr "%s (kopija)"
+
+#: source/gx/tilix/session.d:568
+msgid "Could not locate dropped terminal"
+msgstr "Nije bilo moguće pronaći ispušteni terminal"
+
+#: source/gx/tilix/session.d:573
+msgid "Could not locate session for dropped terminal"
+msgstr "Nije bilo moguće pronaći sesiju za ispušteni terminal"
+
+#: source/gx/tilix/sidebar.d:546 source/gx/tilix/terminal/terminal.d:383
+#: source/gx/tilix/terminal/terminal.d:1861
+msgid "Close"
+msgstr "Zatvori"
+
+#: source/gx/tilix/terminal/advpaste.d:33
+msgid "This command is asking for Administrative access to your computer"
+msgstr "Ova naredba traži administrativni pristup tvom računalu"
+
+#: source/gx/tilix/terminal/advpaste.d:34
+msgid "Copying commands from the internet can be dangerous. "
+msgstr "Kopirati naredbe iz interneta može biti opasno. "
+
+#: source/gx/tilix/terminal/advpaste.d:35
+msgid "Be sure you understand what each part of this command does."
+msgstr "Razumij što čini svaki dio ove naredbe."
+
+#: source/gx/tilix/terminal/advpaste.d:96
+msgid "Transform"
+msgstr "Transformiraj"
+
+#: source/gx/tilix/terminal/advpaste.d:104
+msgid "Convert spaces to tabs"
+msgstr "Pretvori razmake u tabulatore"
+
+#: source/gx/tilix/terminal/advpaste.d:115
+msgid "Convert CRLF and CR to LF"
+msgstr "Pretvori prijelome redaka CRLF i CR u LF"
+
+#: source/gx/tilix/terminal/advpaste.d:137
+msgid "Advanced Paste"
+msgstr "Napredno umetanje"
+
+#: source/gx/tilix/terminal/advpaste.d:137
+#: source/gx/tilix/terminal/terminal.d:1825
+#: source/gx/tilix/terminal/terminal.d:1843
+msgid "Paste"
+msgstr "Umetni"
+
+#: source/gx/tilix/terminal/layout.d:33
+msgid "Layout Options"
+msgstr "Opcije rasporeda"
+
+#: source/gx/tilix/terminal/layout.d:48
+msgid "Active"
+msgstr "Aktivno"
+
+#: source/gx/tilix/terminal/layout.d:82
+msgid "Session Load"
+msgstr "Učitavanje sesije"
+
+#: source/gx/tilix/terminal/layout.d:98
+msgid ""
+"Active options are always in effect and apply immediately.\n"
+"Session Load options only apply when loading a session file."
+msgstr ""
+"Aktivne opcije su uvijek na snazi i primjenjuju se odmah.\n"
+"Opcije učitavanja sesije primjenjuju se samo prilikom učitavanja sesijske "
+"datoteke."
+
+#: source/gx/tilix/terminal/monitor.d:112
+msgid "Process monitoring is not enabled, this should never be called"
+msgstr "Praćenje procesa nije aktivirano, ovo se nikada ne treba pozivati"
+
+#: source/gx/tilix/terminal/password.d:161
+msgid "New"
+msgstr "Novi"
+
+#: source/gx/tilix/terminal/password.d:235
+msgid "Include return character with password"
+msgstr "Uključi znak return s lozinkom"
+
+#: source/gx/tilix/terminal/password.d:371
+msgid "Insert Password"
+msgstr "Upiši lozinku"
+
+#: source/gx/tilix/terminal/password.d:441
+msgid "Password"
+msgstr "Lozinka"
+
+#: source/gx/tilix/terminal/password.d:451
+msgid "Confirm Password"
+msgstr "Potvrdi lozinku"
+
+#: source/gx/tilix/terminal/password.d:499
+msgid "Add Password"
+msgstr "Dodaj lozinku"
+
+#: source/gx/tilix/terminal/password.d:504
+msgid "Edit Password"
+msgstr "Uredi lozinku"
+
+#: source/gx/tilix/terminal/search.d:128
+msgid "Search Options"
+msgstr "Opcije za traženje"
+
+#: source/gx/tilix/terminal/search.d:141
+msgid "Find next"
+msgstr "Nađi sljedeće"
+
+#: source/gx/tilix/terminal/search.d:147
+msgid "Find previous"
+msgstr "Nađi prethodno"
+
+#: source/gx/tilix/terminal/search.d:155
+msgid "Close search box"
+msgstr "Zatvori pretragu"
+
+#: source/gx/tilix/terminal/search.d:205
+msgid "Match case"
+msgstr "Usporedi velika/mala slova"
+
+#: source/gx/tilix/terminal/search.d:206
+msgid "Match entire word only"
+msgstr "Usporedi samo cijelu riječ"
+
+#: source/gx/tilix/terminal/search.d:207
+msgid "Wrap around"
+msgstr "Beskonačna pretraga"
+
+#: source/gx/tilix/terminal/search.d:208
+msgid "Match as regular expression"
+msgstr "Usporedi kao regularni izraz"
+
+#: source/gx/tilix/terminal/search.d:243
+#, c-format
+msgid ""
+"Search '%s' is not a valid regex\n"
+"%s"
+msgstr ""
+"Traženi izraz „%s” nije ispravan regularni izraz\n"
+"%s"
+
+#: source/gx/tilix/terminal/terminal.d:391
+#: source/gx/tilix/terminal/terminal.d:1349
+#: source/gx/tilix/terminal/terminal.d:1860
+msgid "Maximize"
+msgstr "Rastvori"
+
+#: source/gx/tilix/terminal/terminal.d:401
+#: source/gx/tilix/terminal/terminal.d:692
+msgid "Disable input synchronization for this terminal"
+msgstr "Dektiviraj sinkronizaciju unosa za ovaj terminal"
+
+#: source/gx/tilix/terminal/terminal.d:410
+#: source/gx/tilix/terminal/terminal.d:829
+msgid "Read-Only"
+msgstr "Samo-za-čitanje"
+
+#: source/gx/tilix/terminal/terminal.d:416
+msgid "New output"
+msgstr "Novi rezultat"
+
+#: source/gx/tilix/terminal/terminal.d:467
+msgid "Edit Profile"
+msgstr "Uredi profil"
+
+#: source/gx/tilix/terminal/terminal.d:485
+msgid "Edit Encodings"
+msgstr "Uredi kodiranja"
+
+#: source/gx/tilix/terminal/terminal.d:694
+msgid "Enable input synchronization for this terminal"
+msgstr "Aktiviraj sinkronizaciju unosa za ovaj terminal"
+
+#: source/gx/tilix/terminal/terminal.d:729
+msgid "Library Not Loaded"
+msgstr "Biblioteka nije učitana"
+
+#: source/gx/tilix/terminal/terminal.d:729
+#, c-format
+msgid ""
+"The library %s could not be loaded, password functionality is unavailable."
+msgstr ""
+"Nije bilo moguće učitati biblioteku %s, funkcionalnost lozinke nije dostupna."
+
+#: source/gx/tilix/terminal/terminal.d:828
+msgid "Find…"
+msgstr "Nađi …"
+
+#: source/gx/tilix/terminal/terminal.d:835
+msgid "Password..."
+msgstr "Lozinka …"
+
+#: source/gx/tilix/terminal/terminal.d:836
+msgid "Bookmark..."
+msgstr "Oznaka …"
+
+#: source/gx/tilix/terminal/terminal.d:837
+msgid "Add Bookmark..."
+msgstr "Dodaj oznaku …"
+
+#: source/gx/tilix/terminal/terminal.d:841
+msgid "Assistants"
+msgstr "Asistenti"
+
+#: source/gx/tilix/terminal/terminal.d:848
+msgid "Show File Browser..."
+msgstr "Prikaži preglednika datoteka …"
+
+#: source/gx/tilix/terminal/terminal.d:852
+msgid "Save Output…"
+msgstr "Spremi rezultat …"
+
+#: source/gx/tilix/terminal/terminal.d:854
+msgid "Reset and Clear"
+msgstr "Resetiraj i isprazni"
+
+#: source/gx/tilix/terminal/terminal.d:859
+msgid "Layout Options…"
+msgstr "Opcije rasporeda …"
+
+#: source/gx/tilix/terminal/terminal.d:863
+msgid "Monitor Silence"
+msgstr "Prati neaktivnost"
+
+#: source/gx/tilix/terminal/terminal.d:866
+msgid "Other"
+msgstr "Ostalo"
+
+#: source/gx/tilix/terminal/terminal.d:875
+msgid "Add Right"
+msgstr "Dodaj desno"
+
+#: source/gx/tilix/terminal/terminal.d:879
+msgid "Add Down"
+msgstr "Dodaj dolje"
+
+#: source/gx/tilix/terminal/terminal.d:989
+msgid "Terminal Activity"
+msgstr "Aktivnost terminala"
+
+#: source/gx/tilix/terminal/terminal.d:1325
+msgid "Not Enabled"
+msgstr "Nije aktivirano"
+
+#: source/gx/tilix/terminal/terminal.d:1346
+#: source/gx/tilix/terminal/terminal.d:1860
+msgid "Restore"
+msgstr "Obnovi"
+
+#: source/gx/tilix/terminal/terminal.d:1709
+msgid "Tilix Custom Notification"
+msgstr "Prilagođene Tilix obavijesti"
+
+#: source/gx/tilix/terminal/terminal.d:1810
+msgid "Open Link"
+msgstr "Otvori poveznicu"
+
+#: source/gx/tilix/terminal/terminal.d:1811
+msgid "Copy Link Address"
+msgstr "Kopiraj adresu poveznice"
+
+#: source/gx/tilix/terminal/terminal.d:1821
+#: source/gx/tilix/terminal/terminal.d:1831
+msgid "Copy"
+msgstr "Kopiraj"
+
+#: source/gx/tilix/terminal/terminal.d:1823
+#: source/gx/tilix/terminal/terminal.d:1837
+msgid "Copy as HTML"
+msgstr "Kopiraj kao HTML"
+
+#: source/gx/tilix/terminal/terminal.d:1826
+#: source/gx/tilix/terminal/terminal.d:1848
+msgid "Select All"
+msgstr "Označi sve"
+
+#: source/gx/tilix/terminal/terminal.d:1865
+msgid "Synchronize input"
+msgstr "Sinkroniziraj unos"
+
+#: source/gx/tilix/terminal/terminal.d:2018
+#, c-format
+msgid "Could not check file '%s' due to error '%s'"
+msgstr "Nije bilo moguće provjeriti datoteku „%s“ zbog greške „%s”"
+
+#: source/gx/tilix/terminal/terminal.d:2025
+#, c-format
+msgid ""
+"Remote file URIs are not supported with hyperlinks.\n"
+"URI was '%s'"
+msgstr ""
+"URI-adrese udaljenih datoteka nisu podržane putem hiperpoveznica.\n"
+"URI-adresa je bila „%s”"
+
+#: source/gx/tilix/terminal/terminal.d:2026
+msgid "Remote File URI Unsupported"
+msgstr "URI-adrese udaljenih datoteka nisu podržane"
+
+#: source/gx/tilix/terminal/terminal.d:2059
+#: source/gx/tilix/terminal/terminal.d:2613
+#, c-format
+msgid "Custom link regex '%s' has an error, ignoring"
+msgstr ""
+"Regularni izraz „%s” prilagođene poveznice sadrži grešku, zanemaruje se"
+
+#: source/gx/tilix/terminal/terminal.d:2060
+msgid "Regular Expression Error"
+msgstr "Greška u regularnom izrazu"
+
+#: source/gx/tilix/terminal/terminal.d:2073
+#, c-format
+msgid "Could not open match '%s'"
+msgstr "Nije bilo moguće otvoriti poklapanje „%s”"
+
+#: source/gx/tilix/terminal/terminal.d:2074
+msgid "Error Opening Match"
+msgstr "Greška pri otvaranju poklapanja"
+
+#: source/gx/tilix/terminal/terminal.d:2573
+#, c-format
+msgid "Unexpected error occurred when adding link regex: %s"
+msgstr ""
+"Dogodila se neočekivana greška prilikom dodavanja regularnog izraza: %s"
+
+#: source/gx/tilix/terminal/terminal.d:2773
+msgid "Unexpected error occurred, no additional information available"
+msgstr "Dogodila se neočekivana greška, nema dodatnih informacija"
+
+#: source/gx/tilix/terminal/terminal.d:2783
+#, c-format
+msgid "Unexpected error occurred: %s"
+msgstr "Dogodila se neočekivana greška: %s"
+
+#: source/gx/tilix/terminal/terminal.d:3662
+msgid "Save Terminal Output"
+msgstr "Spremi razultat terminala"
+
+#: source/gx/tilix/terminal/terminal.d:3671
+msgid "All Text Files"
+msgstr "Sve tekstualne datoteke"
+
+#: source/gx/tilix/terminal/terminal.d:4001
+msgid "Unknown"
+msgstr "Nepoznato"
+
+#: source/gx/tilix/terminal/terminal.d:4265
+#, c-format
+msgid "The child process exited normally with status %d"
+msgstr "Podređeni proces je normalno izašao sa stanjem %d"
+
+#: source/gx/tilix/terminal/terminal.d:4266
+#, c-format
+msgid "The child process was aborted by signal %d."
+msgstr "Signal %d je prekinuo podređeni proces."
+
+#: source/gx/tilix/terminal/terminal.d:4267
+msgid "The child process was aborted."
+msgstr "Podređeni proces je prekinut."
+
+#: source/gx/tilix/terminal/terminal.d:4273
+msgid "Relaunch"
+msgstr "Pokreni ponovo"
+
+#: source/gx/tilix/terminal/terminal.d:4340
+msgid "Don't Paste"
+msgstr "Nemoj umetnuti"
+
+#: source/gx/tilix/terminal/terminal.d:4341
+msgid "Paste Anyway"
+msgstr "Svejedno umetni"
+
+#~ msgid "A tiling terminal for Gnome"
+#~ msgstr "Pločasti terminal za GNOME"
+
+#~ msgid "About"
+#~ msgstr "Informacije"
+
+#~ msgid "Gerald Nunn"
+#~ msgstr "Gerald Nunn"
+
+#~ msgid "Quit"
+#~ msgstr "Zatvori program"
+
+#~ msgctxt "shortcut window"
+#~ msgid "View configured shortcuts"
+#~ msgstr "Pogledaj konfigurirane prečace"
+
+#~ msgid "com.gexperts.Tilix"
+#~ msgstr "com.gexperts.Tilix"
