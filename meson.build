@@ -1,5 +1,5 @@
 project(
-    'ModernTilix', 'd',
+    'Aiterm', 'd',
     version: '0.1.0',
     license: 'MPL-2.0',
     meson_version: '>= 0.56'
@@ -15,7 +15,7 @@ else
   d_link_args = []
 endif
 
-project_id = 'com.gexperts.Tilix'
+project_id = 'com.aiterm.Aiterm'
 project_name = meson.project_name()
 
 gnome = import('gnome')
@@ -24,13 +24,13 @@ i18n = import('i18n')
 prefix = get_option('prefix')
 bindir = prefix / get_option('bindir')
 datadir = prefix / get_option('datadir')
-# Data paths must stay "tilix" — constants.d and GSettings use com.gexperts.Tilix / tilix/
-pkgdatadir = datadir / 'tilix'
+# Data paths must stay "aiterm" — constants.d and GSettings use com.aiterm.Aiterm / aiterm/
+pkgdatadir = datadir / 'aiterm'
 schemadir = datadir / 'glib-2.0' / 'schemas'
 iconsdir = datadir / 'icons' / 'hicolor'
 appdir = datadir / 'applications'
 
-tilix_sources = [
+aiterm_sources = [
     'source/gx/gtk/actions.d',
     'source/gx/gtk/cairo.d',
     'source/gx/gtk/clipboard.d',
@@ -43,49 +43,49 @@ tilix_sources = [
     'source/gx/gtk/vte.d',
     'source/gx/gtk/x11.d',
     'source/gx/i18n/l10n.d',
-    'source/gx/tilix/bookmark/bmchooser.d',
-    'source/gx/tilix/bookmark/bmeditor.d',
-    'source/gx/tilix/bookmark/bmtreeview.d',
-    'source/gx/tilix/modern/store.d',
-    'source/gx/tilix/modern/aiproviders.d',
-    'source/gx/tilix/modern/llm.d',
-    'source/gx/tilix/modern/quickbar.d',
-    'source/gx/tilix/modern/aichat.d',
-    'source/gx/tilix/modern/sshhub.d',
-    'source/gx/tilix/modern/prompthub.d',
-    'source/gx/tilix/modern/chathub.d',
-    'source/gx/tilix/modern/prefpage.d',
-    'source/gx/tilix/bookmark/manager.d',
-    'source/gx/tilix/prefeditor/advdialog.d',
-    'source/gx/tilix/prefeditor/bookmarkeditor.d',
-    'source/gx/tilix/prefeditor/common.d',
-    'source/gx/tilix/prefeditor/prefdialog.d',
-    'source/gx/tilix/prefeditor/profileeditor.d',
-    'source/gx/tilix/prefeditor/titleeditor.d',
-    'source/gx/tilix/terminal/actions.d',
-    'source/gx/tilix/terminal/activeprocess.d',
-    'source/gx/tilix/terminal/advpaste.d',
-    'source/gx/tilix/terminal/exvte.d',
-    'source/gx/tilix/terminal/layout.d',
-    'source/gx/tilix/terminal/monitor.d',
-    'source/gx/tilix/terminal/password.d',
-    'source/gx/tilix/terminal/regex.d',
-    'source/gx/tilix/terminal/search.d',
-    'source/gx/tilix/terminal/terminal.d',
-    'source/gx/tilix/terminal/util.d',
-    'source/gx/tilix/application.d',
-    'source/gx/tilix/appwindow.d',
-    'source/gx/tilix/closedialog.d',
-    'source/gx/tilix/cmdparams.d',
-    'source/gx/tilix/colorschemes.d',
-    'source/gx/tilix/common.d',
-    'source/gx/tilix/constants.d',
-    'source/gx/tilix/customtitle.d',
-    'source/gx/tilix/encoding.d',
-    'source/gx/tilix/preferences.d',
-    'source/gx/tilix/session.d',
-    'source/gx/tilix/shortcuts.d',
-    'source/gx/tilix/sidebar.d',
+    'source/gx/aiterm/bookmark/bmchooser.d',
+    'source/gx/aiterm/bookmark/bmeditor.d',
+    'source/gx/aiterm/bookmark/bmtreeview.d',
+    'source/gx/aiterm/modern/store.d',
+    'source/gx/aiterm/modern/aiproviders.d',
+    'source/gx/aiterm/modern/llm.d',
+    'source/gx/aiterm/modern/quickbar.d',
+    'source/gx/aiterm/modern/aichat.d',
+    'source/gx/aiterm/modern/sshhub.d',
+    'source/gx/aiterm/modern/prompthub.d',
+    'source/gx/aiterm/modern/chathub.d',
+    'source/gx/aiterm/modern/prefpage.d',
+    'source/gx/aiterm/bookmark/manager.d',
+    'source/gx/aiterm/prefeditor/advdialog.d',
+    'source/gx/aiterm/prefeditor/bookmarkeditor.d',
+    'source/gx/aiterm/prefeditor/common.d',
+    'source/gx/aiterm/prefeditor/prefdialog.d',
+    'source/gx/aiterm/prefeditor/profileeditor.d',
+    'source/gx/aiterm/prefeditor/titleeditor.d',
+    'source/gx/aiterm/terminal/actions.d',
+    'source/gx/aiterm/terminal/activeprocess.d',
+    'source/gx/aiterm/terminal/advpaste.d',
+    'source/gx/aiterm/terminal/exvte.d',
+    'source/gx/aiterm/terminal/layout.d',
+    'source/gx/aiterm/terminal/monitor.d',
+    'source/gx/aiterm/terminal/password.d',
+    'source/gx/aiterm/terminal/regex.d',
+    'source/gx/aiterm/terminal/search.d',
+    'source/gx/aiterm/terminal/terminal.d',
+    'source/gx/aiterm/terminal/util.d',
+    'source/gx/aiterm/application.d',
+    'source/gx/aiterm/appwindow.d',
+    'source/gx/aiterm/closedialog.d',
+    'source/gx/aiterm/cmdparams.d',
+    'source/gx/aiterm/colorschemes.d',
+    'source/gx/aiterm/common.d',
+    'source/gx/aiterm/constants.d',
+    'source/gx/aiterm/customtitle.d',
+    'source/gx/aiterm/encoding.d',
+    'source/gx/aiterm/preferences.d',
+    'source/gx/aiterm/session.d',
+    'source/gx/aiterm/shortcuts.d',
+    'source/gx/aiterm/sidebar.d',
     'source/gx/util/array.d',
     'source/gx/util/path.d',
     'source/gx/util/string.d',
@@ -116,8 +116,8 @@ subdir('po')
 subdir('data')
 
 # Build & Test
-executable('moderntilix',
-    [tilix_sources, gresource],
+executable('aiterm',
+    [aiterm_sources, gresource],
     include_directories : sources_dir,
     dependencies : [gtkd_dep,
                     vted_dep,
@@ -129,8 +129,8 @@ executable('moderntilix',
     install : true
 )
 
-tilix_test_exe = executable('moderntilix_test',
-    [tilix_sources],
+aiterm_test_exe = executable('aiterm_test',
+    [aiterm_sources],
     include_directories : [sources_dir],
     dependencies : [gtkd_dep,
                     vted_dep,
@@ -139,6 +139,6 @@ tilix_test_exe = executable('moderntilix_test',
     link_args: d_link_args,
     d_unittest: true
 )
-test('tilix_test', tilix_test_exe)
+test('aiterm_test', aiterm_test_exe)
 
 meson.add_install_script('meson_post_install.py')

@@ -1,7 +1,7 @@
 #!/bin/sh
 set -e
 
-# This script is supposed to run inside the Tilix Docker container
+# This script is supposed to run inside the Aiterm Docker container
 # on the CI system.
 
 #

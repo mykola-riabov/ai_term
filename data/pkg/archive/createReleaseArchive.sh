@@ -1,22 +1,22 @@
-export TILIX_ARCHIVE_PATH="/tmp/tilix/archive";
+export AITERM_ARCHIVE_PATH="/tmp/aiterm/archive";
 
-rm -rf ${TILIX_ARCHIVE_PATH}
+rm -rf ${AITERM_ARCHIVE_PATH}
 
 CURRENT_DIR=$(pwd)
 
 echo "Building application..."
 cd ../../..
 dub build --build=release --compiler=ldc2
-strip tilix
+strip aiterm
 
-./install.sh ${TILIX_ARCHIVE_PATH}/usr
+./install.sh ${AITERM_ARCHIVE_PATH}/usr
 
 # Remove compiled schema
-rm ${TILIX_ARCHIVE_PATH}/usr/share/glib-2.0/schemas/gschemas.compiled
+rm ${AITERM_ARCHIVE_PATH}/usr/share/glib-2.0/schemas/gschemas.compiled
 
 echo "Creating archive"
-cd ${TILIX_ARCHIVE_PATH}
-zip -r tilix.zip *
+cd ${AITERM_ARCHIVE_PATH}
+zip -r aiterm.zip *
 
-cp tilix.zip ${CURRENT_DIR}/tilix.zip
+cp aiterm.zip ${CURRENT_DIR}/aiterm.zip
 cd ${CURRENT_DIR}

@@ -6,7 +6,7 @@ msgstr ""
 "POT-Creation-Date: 2023-11-08 21:52+0100\n"
 "PO-Revision-Date: 2024-03-15 23:34+0000\n"
 "Last-Translator: simmon <simmon@nplob.com>\n"
-"Language-Team: Korean <https://hosted.weblate.org/projects/tilix/"
+"Language-Team: Korean <https://hosted.weblate.org/projects/aiterm/"
 "translations/ko/>\n"
 "Language: ko\n"
 "MIME-Version: 1.0\n"
@@ -15,41 +15,41 @@ msgstr ""
 "Plural-Forms: nplurals=1; plural=0;\n"
 "X-Generator: Weblate 5.5-dev\n"
 
-#: data/metainfo/com.gexperts.Tilix.appdata.xml.rel.in:4
-#: data/pkg/desktop/com.gexperts.Tilix.desktop.in:4
-#: source/gx/tilix/application.d:321 source/gx/tilix/appwindow.d:1694
-msgid "Tilix"
-msgstr "Tilix"
+#: data/metainfo/com.aiterm.Aiterm.appdata.xml.rel.in:4
+#: data/pkg/desktop/com.aiterm.Aiterm.desktop.in:4
+#: source/gx/aiterm/application.d:321 source/gx/aiterm/appwindow.d:1694
+msgid "Aiterm"
+msgstr "Aiterm"
 
-#: data/metainfo/com.gexperts.Tilix.appdata.xml.rel.in:5
-#: data/pkg/desktop/com.gexperts.Tilix.desktop.in:5
+#: data/metainfo/com.aiterm.Aiterm.appdata.xml.rel.in:5
+#: data/pkg/desktop/com.aiterm.Aiterm.desktop.in:5
 msgid "A tiling terminal for GNOME"
 msgstr "그놈을 위한 타일링 터미널"
 
-#: data/metainfo/com.gexperts.Tilix.appdata.xml.rel.in:9
-msgid "Tilix is a tiling terminal emulator."
-msgstr "Tilix 는 타일링 터미널 에뮬레이터 입니다."
+#: data/metainfo/com.aiterm.Aiterm.appdata.xml.rel.in:9
+msgid "Aiterm is a tiling terminal emulator."
+msgstr "Aiterm 는 타일링 터미널 에뮬레이터 입니다."
 
-#: data/metainfo/com.gexperts.Tilix.appdata.xml.rel.in:12
+#: data/metainfo/com.aiterm.Aiterm.appdata.xml.rel.in:12
 msgid "It lets you:"
 msgstr "다음과 같은 것을 할 수 있게 해 줍니다:"
 
-#: data/metainfo/com.gexperts.Tilix.appdata.xml.rel.in:14
+#: data/metainfo/com.aiterm.Aiterm.appdata.xml.rel.in:14
 msgid ""
 "Layout terminals in any fashion by splitting them horizontally or vertically"
 msgstr "터미널을 가로 또는 세로로 분할하여 원하는 방식으로 배치하세요"
 
-#: data/metainfo/com.gexperts.Tilix.appdata.xml.rel.in:15
+#: data/metainfo/com.aiterm.Aiterm.appdata.xml.rel.in:15
 msgid ""
 "Terminals can be re-arranged using drag and drop both within and between "
 "windows"
 msgstr "창 안이나 창 사이에서 끌어옮겨 터미널을 재배열 할 수 있습니다"
 
-#: data/metainfo/com.gexperts.Tilix.appdata.xml.rel.in:16
+#: data/metainfo/com.aiterm.Aiterm.appdata.xml.rel.in:16
 msgid "Terminals can be detached into a new window via drag and drop"
 msgstr "터미널을 끌어옮겨 새 창으로 분리 할 수 있습니다"
 
-#: data/metainfo/com.gexperts.Tilix.appdata.xml.rel.in:17
+#: data/metainfo/com.aiterm.Aiterm.appdata.xml.rel.in:17
 msgid ""
 "Input can be synchronized between terminals so commands typed in one "
 "terminal are replicated to the others"
@@ -57,15 +57,15 @@ msgstr ""
 "터미널 사이 입력을 동기화 할 수 있으며 한 터미널에서의 입력이 다른 터미널에 "
 "복제 됩니다"
 
-#: data/metainfo/com.gexperts.Tilix.appdata.xml.rel.in:18
+#: data/metainfo/com.aiterm.Aiterm.appdata.xml.rel.in:18
 msgid "The grouping of terminals can be saved and loaded from disk"
 msgstr "터미널 그루핑은 디스크에 저장하거나 불러올 수 있습니다"
 
-#: data/metainfo/com.gexperts.Tilix.appdata.xml.rel.in:19
+#: data/metainfo/com.aiterm.Aiterm.appdata.xml.rel.in:19
 msgid "Terminals support custom titles"
 msgstr "터미널은 사용자 지정 제목을 지원합니다"
 
-#: data/metainfo/com.gexperts.Tilix.appdata.xml.rel.in:20
+#: data/metainfo/com.aiterm.Aiterm.appdata.xml.rel.in:20
 msgid ""
 "Color schemes are stored in files and custom color schemes can be created by "
 "simply creating a new file"
@@ -73,15 +73,15 @@ msgstr ""
 "색상 구성표는 파일에 저장되며 단순히 새 파일을 생성하여 사용자 지정 색상 구성"
 "표를 생성할 수 있습니다"
 
-#: data/metainfo/com.gexperts.Tilix.appdata.xml.rel.in:21
+#: data/metainfo/com.aiterm.Aiterm.appdata.xml.rel.in:21
 msgid "Transparent background"
 msgstr "투명한 배경"
 
-#: data/metainfo/com.gexperts.Tilix.appdata.xml.rel.in:22
+#: data/metainfo/com.aiterm.Aiterm.appdata.xml.rel.in:22
 msgid "Supports notifications when processes are completed out of view"
 msgstr "뷰 밖에서 프로세스를 끝날때에 대한 알림 지원"
 
-#: data/metainfo/com.gexperts.Tilix.appdata.xml.rel.in:24
+#: data/metainfo/com.aiterm.Aiterm.appdata.xml.rel.in:24
 msgid ""
 "The application was written using GTK 3 and an effort was made to conform to "
 "GNOME Human Interface Guidelines (HIG). As a result, it does use client-side-"
@@ -91,78 +91,78 @@ msgstr ""
 "자 노력 했습니다. 결과적으로, 이 앱은 클라이언트 측 데코레이션을 사용하며, 필"
 "요한 경우 비활성화 될 수 있습니다."
 
-#: data/metainfo/com.gexperts.Tilix.appdata.xml.rel.in:28
-msgid "Tilix has been tested with GNOME and with Unity."
-msgstr "Tilix 는 그놈과 유니티에서 시험되었습니다."
+#: data/metainfo/com.aiterm.Aiterm.appdata.xml.rel.in:28
+msgid "Aiterm has been tested with GNOME and with Unity."
+msgstr "Aiterm 는 그놈과 유니티에서 시험되었습니다."
 
-#: data/metainfo/com.gexperts.Tilix.appdata.xml.rel.in:58
-msgid "Tilix is still looking for a new maintainer!"
+#: data/metainfo/com.aiterm.Aiterm.appdata.xml.rel.in:58
+msgid "Aiterm is still looking for a new maintainer!"
 msgstr ""
-"Tilix 는 타일링 터미널 에뮬레이터 입니다.\n"
-"* Tilix는 아직도 새 유지관리자를 찾고 있습니다!"
+"Aiterm 는 타일링 터미널 에뮬레이터 입니다.\n"
+"* Aiterm는 아직도 새 유지관리자를 찾고 있습니다!"
 
-#: data/metainfo/com.gexperts.Tilix.appdata.xml.rel.in:59
-#: data/metainfo/com.gexperts.Tilix.appdata.xml.rel.in:85
+#: data/metainfo/com.aiterm.Aiterm.appdata.xml.rel.in:59
+#: data/metainfo/com.aiterm.Aiterm.appdata.xml.rel.in:85
 msgid "This release adds the following features:"
 msgstr "이 릴리스에는 다음 기능이 추가되었습니다:"
 
-#: data/metainfo/com.gexperts.Tilix.appdata.xml.rel.in:61
+#: data/metainfo/com.aiterm.Aiterm.appdata.xml.rel.in:61
 msgid "Disable advanced paste when there is no linebreak like iTerm2"
 msgstr "iTerm2와 같은 줄 바꿈이 없는 경우 진보된 붙여넣기 비활성화"
 
-#: data/metainfo/com.gexperts.Tilix.appdata.xml.rel.in:62
+#: data/metainfo/com.aiterm.Aiterm.appdata.xml.rel.in:62
 msgid "Add environment variable when in quake mode"
 msgstr "진동 모드일 때 환경 변수 추가"
 
-#: data/metainfo/com.gexperts.Tilix.appdata.xml.rel.in:63
+#: data/metainfo/com.aiterm.Aiterm.appdata.xml.rel.in:63
 msgid "Add possibility to configure always enabled regex"
 msgstr "항상 활성화된 정규식을 구성할 수 있는 가능성 추가"
 
-#: data/metainfo/com.gexperts.Tilix.appdata.xml.rel.in:65
-#: data/metainfo/com.gexperts.Tilix.appdata.xml.rel.in:91
-#: data/metainfo/com.gexperts.Tilix.appdata.xml.rel.in:120
-#: data/metainfo/com.gexperts.Tilix.appdata.xml.rel.in:130
+#: data/metainfo/com.aiterm.Aiterm.appdata.xml.rel.in:65
+#: data/metainfo/com.aiterm.Aiterm.appdata.xml.rel.in:91
+#: data/metainfo/com.aiterm.Aiterm.appdata.xml.rel.in:120
+#: data/metainfo/com.aiterm.Aiterm.appdata.xml.rel.in:130
 msgid "This release fixes the following bugs:"
 msgstr "이 릴리스는 다음 버그를 수정합니다:"
 
-#: data/metainfo/com.gexperts.Tilix.appdata.xml.rel.in:67
+#: data/metainfo/com.aiterm.Aiterm.appdata.xml.rel.in:67
 msgid "More appdata -&gt; metainfo move"
 msgstr "더 많은 앱데이터 -&gt; 메타정보 이동"
 
-#: data/metainfo/com.gexperts.Tilix.appdata.xml.rel.in:68
+#: data/metainfo/com.aiterm.Aiterm.appdata.xml.rel.in:68
 msgid "Add meson target for man page translations"
 msgstr "매뉴얼 페이지 번역용 meson 대상 추가"
 
-#: data/metainfo/com.gexperts.Tilix.appdata.xml.rel.in:69
+#: data/metainfo/com.aiterm.Aiterm.appdata.xml.rel.in:69
 msgid "Update flatpak manifest"
 msgstr "flatpak 업데이트 나타내기"
 
-#: data/metainfo/com.gexperts.Tilix.appdata.xml.rel.in:70
+#: data/metainfo/com.aiterm.Aiterm.appdata.xml.rel.in:70
 msgid "meson: drop unused argument for i18n.merge_file()"
 msgstr "meson: i18n.merge_file()에 대해 사용하지 않는 인수 삭제"
 
-#: data/metainfo/com.gexperts.Tilix.appdata.xml.rel.in:71
+#: data/metainfo/com.aiterm.Aiterm.appdata.xml.rel.in:71
 msgid "Stop using deprecated Meson features"
 msgstr "더 이상 사용되지 않는 Meson 기능 사용 중지"
 
-#: data/metainfo/com.gexperts.Tilix.appdata.xml.rel.in:72
+#: data/metainfo/com.aiterm.Aiterm.appdata.xml.rel.in:72
 msgid ""
 "Keep quake window open if focus is restored before timeout has been reached"
 msgstr "시간 초과에 도달하기 전에 초점이 복원된 경우 진동 창을 열어 두십시오"
 
-#: data/metainfo/com.gexperts.Tilix.appdata.xml.rel.in:73
+#: data/metainfo/com.aiterm.Aiterm.appdata.xml.rel.in:73
 msgid "Don't check GtkDragResult"
 msgstr "GtkDragResult 확인 안함"
 
-#: data/metainfo/com.gexperts.Tilix.appdata.xml.rel.in:74
+#: data/metainfo/com.aiterm.Aiterm.appdata.xml.rel.in:74
 msgid "Don't add application/x-rootwindow-drop to dragSourceSet targets"
 msgstr "dragSourceSet 대상에 application/x-rootwindow-drop 추가 안함"
 
-#: data/metainfo/com.gexperts.Tilix.appdata.xml.rel.in:76
+#: data/metainfo/com.aiterm.Aiterm.appdata.xml.rel.in:76
 msgid "With contributions from:"
 msgstr "기여자:"
 
-#: data/metainfo/com.gexperts.Tilix.appdata.xml.rel.in:77
+#: data/metainfo/com.aiterm.Aiterm.appdata.xml.rel.in:77
 msgid ""
 "Alan Scherger, Antoine Belvire, David King, Jan Beich, kohnish, luk1337, "
 "matishadow, Winston Hoy, Matthias Klumpp"
@@ -170,92 +170,92 @@ msgstr ""
 "Alan Scherger, Antoine Belvire, David King, Jan Beich, kohnish, luk1337, "
 "matishadow, Winston Hoy, Matthias Klumpp"
 
-#: data/metainfo/com.gexperts.Tilix.appdata.xml.rel.in:83
+#: data/metainfo/com.aiterm.Aiterm.appdata.xml.rel.in:83
 msgid ""
-"Tilix is looking for maintainers! At the moment, only very minimal "
+"Aiterm is looking for maintainers! At the moment, only very minimal "
 "maintenance is done, no new features will be implemented and pull-requests "
 "may be reviewed very slowly."
 msgstr ""
-"Tilix는 유지 관리자를 찾고 있습니다! 현재 매우 최소한의 유지 관리만 수행되며 "
+"Aiterm는 유지 관리자를 찾고 있습니다! 현재 매우 최소한의 유지 관리만 수행되며 "
 "새로운 기능은 구현되지 않으며 pull 요청은 매우 느리게 검토될 수 있습니다."
 
-#: data/metainfo/com.gexperts.Tilix.appdata.xml.rel.in:84
-msgid "If you are interested in helping Tilix, please chime in!"
-msgstr "Tilix를 돕는 데 관심이 있으시다면 참여해주세요!"
+#: data/metainfo/com.aiterm.Aiterm.appdata.xml.rel.in:84
+msgid "If you are interested in helping Aiterm, please chime in!"
+msgstr "Aiterm를 돕는 데 관심이 있으시다면 참여해주세요!"
 
-#: data/metainfo/com.gexperts.Tilix.appdata.xml.rel.in:87
+#: data/metainfo/com.aiterm.Aiterm.appdata.xml.rel.in:87
 msgid "Actually install Yaru color scheme"
 msgstr "실제로 Yaru 색상 구성표 설치"
 
-#: data/metainfo/com.gexperts.Tilix.appdata.xml.rel.in:88
+#: data/metainfo/com.aiterm.Aiterm.appdata.xml.rel.in:88
 msgid "Give every tab the ${title}"
 msgstr "모든 탭에 ${title} 부여"
 
-#: data/metainfo/com.gexperts.Tilix.appdata.xml.rel.in:89
+#: data/metainfo/com.aiterm.Aiterm.appdata.xml.rel.in:89
 msgid "Add option to strip trailing whitespace on paste"
 msgstr "붙여넣기에서 후행 공백을 제거하는 옵션 추가"
 
-#: data/metainfo/com.gexperts.Tilix.appdata.xml.rel.in:93
+#: data/metainfo/com.aiterm.Aiterm.appdata.xml.rel.in:93
 msgid "Fix saving of already saved session"
 msgstr "이미 저장된 세션의 저장 수정"
 
-#: data/metainfo/com.gexperts.Tilix.appdata.xml.rel.in:94
+#: data/metainfo/com.aiterm.Aiterm.appdata.xml.rel.in:94
 msgid "Add shortcut to \"Unselect all\""
 msgstr "\"모두 선택 취소\"에 단축키 추가"
 
-#: data/metainfo/com.gexperts.Tilix.appdata.xml.rel.in:95
+#: data/metainfo/com.aiterm.Aiterm.appdata.xml.rel.in:95
 msgid "Many Meson buildsystem fixes"
 msgstr "많은 Meson 빌드시스템 수정"
 
-#: data/metainfo/com.gexperts.Tilix.appdata.xml.rel.in:96
+#: data/metainfo/com.aiterm.Aiterm.appdata.xml.rel.in:96
 msgid "Avoid missing the previous command exit code when encoding URLs"
 msgstr "URL 인코딩 시 이전 명령 종료 코드 누락 방지"
 
-#: data/metainfo/com.gexperts.Tilix.appdata.xml.rel.in:97
+#: data/metainfo/com.aiterm.Aiterm.appdata.xml.rel.in:97
 msgid "Resolve some D deprecation messages"
 msgstr "일부 D 지원 중단 메시지 해결"
 
-#: data/metainfo/com.gexperts.Tilix.appdata.xml.rel.in:98
+#: data/metainfo/com.aiterm.Aiterm.appdata.xml.rel.in:98
 msgid "Mention powerline/fonts in README"
 msgstr "README에서 파워라인/글꼴 언급"
 
-#: data/metainfo/com.gexperts.Tilix.appdata.xml.rel.in:99
+#: data/metainfo/com.aiterm.Aiterm.appdata.xml.rel.in:99
 msgid "Avoid calling `values()` on a shared object"
 msgstr "공유된 객체에서 `values()` 호출 방지"
 
-#: data/metainfo/com.gexperts.Tilix.appdata.xml.rel.in:100
+#: data/metainfo/com.aiterm.Aiterm.appdata.xml.rel.in:100
 msgid "Update metainfo data"
 msgstr "메타정보 데이터 업데이트"
 
-#: data/metainfo/com.gexperts.Tilix.appdata.xml.rel.in:101
+#: data/metainfo/com.aiterm.Aiterm.appdata.xml.rel.in:101
 msgid "Drop compat code for older D frontend versions"
 msgstr "이전 D 프런트엔드 버전에 대한 호환성 코드 삭제"
 
-#: data/metainfo/com.gexperts.Tilix.appdata.xml.rel.in:102
+#: data/metainfo/com.aiterm.Aiterm.appdata.xml.rel.in:102
 msgid "Bump minimum VTE version to 0.46"
 msgstr "최소 VTE 버전을 0.46으로 부딪치기"
 
-#: data/metainfo/com.gexperts.Tilix.appdata.xml.rel.in:103
+#: data/metainfo/com.aiterm.Aiterm.appdata.xml.rel.in:103
 msgid "Remove deprecated Autotools support"
 msgstr "더 이상 사용되지 않는 자동도구 지원 제거"
 
-#: data/metainfo/com.gexperts.Tilix.appdata.xml.rel.in:104
+#: data/metainfo/com.aiterm.Aiterm.appdata.xml.rel.in:104
 msgid "Add release notes, NEWS file, automatic metainfo update"
 msgstr "릴리스 정보, 뉴스 파일, 자동 메타정보 업데이트 추가"
 
-#: data/metainfo/com.gexperts.Tilix.appdata.xml.rel.in:105
+#: data/metainfo/com.aiterm.Aiterm.appdata.xml.rel.in:105
 msgid "Update to GtkD 3.9.0"
 msgstr "GtkD 3.9.0으로 업데이트"
 
-#: data/metainfo/com.gexperts.Tilix.appdata.xml.rel.in:107
+#: data/metainfo/com.aiterm.Aiterm.appdata.xml.rel.in:107
 msgid "This release updates translations."
 msgstr "이 릴리스는 번역을 업데이트합니다."
 
-#: data/metainfo/com.gexperts.Tilix.appdata.xml.rel.in:112
+#: data/metainfo/com.aiterm.Aiterm.appdata.xml.rel.in:112
 msgid "This release fixes the following bug:"
 msgstr "이 릴리스는 다음 버그를 수정합니다:"
 
-#: data/metainfo/com.gexperts.Tilix.appdata.xml.rel.in:114
+#: data/metainfo/com.aiterm.Aiterm.appdata.xml.rel.in:114
 msgid ""
 "Fixes a problem with the session sidebar getting out of sync after having "
 "deleted a session. See issues #1680, #1637 and #1699."
@@ -263,79 +263,79 @@ msgstr ""
 "세션을 삭제한 후 세션 사이드바가 동기화되지 않는 문제를 수정합니다. 문제 "
 "#1680, #1637 및 #1699를 참조하십시오."
 
-#: data/metainfo/com.gexperts.Tilix.appdata.xml.rel.in:122
+#: data/metainfo/com.aiterm.Aiterm.appdata.xml.rel.in:122
 msgid "Remove app menu for gnome 3.32"
 msgstr "Gnome 3.32의 앱 메뉴 제거"
 
-#: data/metainfo/com.gexperts.Tilix.appdata.xml.rel.in:123
+#: data/metainfo/com.aiterm.Aiterm.appdata.xml.rel.in:123
 msgid "Update icon"
 msgstr "아이콘 업데이트"
 
-#: data/metainfo/com.gexperts.Tilix.appdata.xml.rel.in:124
+#: data/metainfo/com.aiterm.Aiterm.appdata.xml.rel.in:124
 msgid "Minor fixes"
 msgstr "사소한 수정"
 
-#: data/metainfo/com.gexperts.Tilix.appdata.xml.rel.in:132
+#: data/metainfo/com.aiterm.Aiterm.appdata.xml.rel.in:132
 msgid "Small release to update localizations"
 msgstr "현지화 업데이트를 위한 소규모 릴리스"
 
-#: data/metainfo/com.gexperts.Tilix.appdata.xml.rel.in:133
+#: data/metainfo/com.aiterm.Aiterm.appdata.xml.rel.in:133
 msgid "Update to GtkD 3.8.5 to fix library name in GtkD."
 msgstr "GtkD에서 라이브러리 이름을 수정하려면 GtkD 3.8.5로 업데이트하십시오."
 
-#: data/metainfo/com.gexperts.Tilix.appdata.xml.rel.in:139
+#: data/metainfo/com.aiterm.Aiterm.appdata.xml.rel.in:139
 msgid "Some new features and bug fixes."
 msgstr "몇 가지 새로운 기능과 버그 수정입니다."
 
-#: data/nautilus/open-tilix.py:119
-msgid "Open Remote Tilix"
-msgstr "원격 Tilix에서 열기"
+#: data/nautilus/open-aiterm.py:119
+msgid "Open Remote Aiterm"
+msgstr "원격 Aiterm에서 열기"
 
-#: data/nautilus/open-tilix.py:120
-msgid "Open Remote Tilix In {}"
-msgstr "{}에서 원격 Tilix 열기"
+#: data/nautilus/open-aiterm.py:120
+msgid "Open Remote Aiterm In {}"
+msgstr "{}에서 원격 Aiterm 열기"
 
-#: data/nautilus/open-tilix.py:126
-msgid "Open In Tilix"
-msgstr "Tilix에서 열기"
+#: data/nautilus/open-aiterm.py:126
+msgid "Open In Aiterm"
+msgstr "Aiterm에서 열기"
 
-#: data/nautilus/open-tilix.py:127
-msgid "Open Tilix In {}"
-msgstr "{}에서 Tilix 열기"
+#: data/nautilus/open-aiterm.py:127
+msgid "Open Aiterm In {}"
+msgstr "{}에서 Aiterm 열기"
 
-#: data/nautilus/open-tilix.py:138
-msgid "Open Remote Tilix Here"
-msgstr "여기서 원격 Tilix 열기"
+#: data/nautilus/open-aiterm.py:138
+msgid "Open Remote Aiterm Here"
+msgstr "여기서 원격 Aiterm 열기"
 
-#: data/nautilus/open-tilix.py:139
-msgid "Open Remote Tilix In This Directory"
-msgstr "이 디렉터리에서 원격 Tilix 열기"
+#: data/nautilus/open-aiterm.py:139
+msgid "Open Remote Aiterm In This Directory"
+msgstr "이 디렉터리에서 원격 Aiterm 열기"
 
-#: data/nautilus/open-tilix.py:144
-msgid "Open Tilix Here"
-msgstr "여기서 Tilix 열기"
+#: data/nautilus/open-aiterm.py:144
+msgid "Open Aiterm Here"
+msgstr "여기서 Aiterm 열기"
 
-#: data/nautilus/open-tilix.py:145
-msgid "Open Tilix In This Directory"
-msgstr "이 디렉터리에서 Tilix 열기"
+#: data/nautilus/open-aiterm.py:145
+msgid "Open Aiterm In This Directory"
+msgstr "이 디렉터리에서 Aiterm 열기"
 
-#: data/pkg/desktop/com.gexperts.Tilix.desktop.in:6
+#: data/pkg/desktop/com.aiterm.Aiterm.desktop.in:6
 msgid "shell;prompt;command;commandline;cmd;"
 msgstr "shell;prompt;command;commandline;cmd;셸;프롬프트;명령;명령줄;"
 
-#: data/pkg/desktop/com.gexperts.Tilix.desktop.in:17
-#: source/gx/tilix/appwindow.d:685 source/gx/tilix/prefeditor/prefdialog.d:1596
+#: data/pkg/desktop/com.aiterm.Aiterm.desktop.in:17
+#: source/gx/aiterm/appwindow.d:685 source/gx/aiterm/prefeditor/prefdialog.d:1596
 msgid "New Window"
 msgstr "새 창"
 
-#: data/pkg/desktop/com.gexperts.Tilix.desktop.in:21
-#: source/gx/tilix/prefeditor/prefdialog.d:1596 source/gx/tilix/session.d:1606
+#: data/pkg/desktop/com.aiterm.Aiterm.desktop.in:21
+#: source/gx/aiterm/prefeditor/prefdialog.d:1596 source/gx/aiterm/session.d:1606
 msgid "New Session"
 msgstr "새 세션"
 
-#: data/pkg/desktop/com.gexperts.Tilix.desktop.in:25
-#: source/gx/tilix/appwindow.d:702 source/gx/tilix/prefeditor/prefdialog.d:263
-#: source/gx/tilix/prefeditor/prefdialog.d:414
+#: data/pkg/desktop/com.aiterm.Aiterm.desktop.in:25
+#: source/gx/aiterm/appwindow.d:702 source/gx/aiterm/prefeditor/prefdialog.d:263
+#: source/gx/aiterm/prefeditor/prefdialog.d:414
 msgid "Preferences"
 msgstr "기본 설정"
 
@@ -841,8 +841,8 @@ msgstr "열기"
 
 #: data/resources/ui/shortcuts.ui:631
 msgctxt "shortcut window"
-msgid "Open in Tilix"
-msgstr "Tilix에서 열기"
+msgid "Open in Aiterm"
+msgstr "Aiterm에서 열기"
 
 #: data/resources/ui/shortcuts.ui:642 data/resources/ui/shortcuts.ui:647
 msgctxt "shortcut window"
@@ -874,8 +874,8 @@ msgstr "버전"
 
 #: source/app.d:178
 #, c-format
-msgid "Tilix version: %s"
-msgstr "Tilix 버전: %s"
+msgid "Aiterm version: %s"
+msgstr "Aiterm 버전: %s"
 
 #: source/app.d:179
 #, c-format
@@ -888,8 +888,8 @@ msgid "GTK Version: %d.%d.%d"
 msgstr "GTK 버전: %d.%d.%d"
 
 #: source/app.d:181
-msgid "Tilix Special Features"
-msgstr "Tilix 특별 기능"
+msgid "Aiterm Special Features"
+msgstr "Aiterm 특별 기능"
 
 #: source/app.d:182
 msgid "Notifications enabled=%b"
@@ -907,79 +907,79 @@ msgstr "배지 활성화됨=%b"
 msgid "disabled"
 msgstr "비활성화됨"
 
-#: source/gx/gtk/dialog.d:89 source/gx/tilix/closedialog.d:143
+#: source/gx/gtk/dialog.d:89 source/gx/aiterm/closedialog.d:143
 msgid "Do not show this again"
 msgstr "다시 표시하지 않음"
 
 #. TRANSLATORS: Please add your name to the list of translators if you want to be credited for the translations you have done.
-#: source/gx/tilix/application.d:273
+#: source/gx/aiterm/application.d:273
 msgid "translator-credits"
 msgstr ""
 "Youngbin Han\n"
 "revizes\n"
 "Junghee Lee"
 
-#: source/gx/tilix/application.d:282
+#: source/gx/aiterm/application.d:282
 msgid "Credits"
 msgstr "크레딧"
 
-#: source/gx/tilix/application.d:679
+#: source/gx/aiterm/application.d:679
 msgid "DIRECTORY"
 msgstr "디렉터리"
 
-#: source/gx/tilix/application.d:679
+#: source/gx/aiterm/application.d:679
 msgid "Set the working directory of the terminal"
 msgstr "터미널 작업 디렉터리 지정"
 
-#: source/gx/tilix/application.d:680
+#: source/gx/aiterm/application.d:680
 msgid "PROFILE_NAME"
 msgstr "프로필_이름"
 
-#: source/gx/tilix/application.d:680
+#: source/gx/aiterm/application.d:680
 msgid "Set the starting profile"
 msgstr "시작 프로필 지정"
 
-#: source/gx/tilix/application.d:681
+#: source/gx/aiterm/application.d:681
 msgid "Set the title of the new terminal"
 msgstr "새 터미널 제목 설정"
 
-#: source/gx/tilix/application.d:681
+#: source/gx/aiterm/application.d:681
 msgid "TITLE"
 msgstr "제목"
 
-#: source/gx/tilix/application.d:682
+#: source/gx/aiterm/application.d:682
 msgid "Open the specified session"
 msgstr "특정 세션 열기"
 
-#: source/gx/tilix/application.d:682
+#: source/gx/aiterm/application.d:682
 msgid "SESSION_NAME"
 msgstr "세션_이름"
 
-#: source/gx/tilix/application.d:684
+#: source/gx/aiterm/application.d:684
 msgid "ACTION_NAME"
 msgstr "작업_이름"
 
-#: source/gx/tilix/application.d:684
-msgid "Send an action to current Tilix instance"
-msgstr "현재 Tilix 인스턴스로 동작 보내기"
+#: source/gx/aiterm/application.d:684
+msgid "Send an action to current Aiterm instance"
+msgstr "현재 Aiterm 인스턴스로 동작 보내기"
 
-#: source/gx/tilix/application.d:686
+#: source/gx/aiterm/application.d:686
 msgid "COMMAND"
 msgstr "명령"
 
-#: source/gx/tilix/application.d:686
+#: source/gx/aiterm/application.d:686
 msgid "Execute the parameter as a command"
 msgstr "매개변수를 명령으로 실행"
 
-#: source/gx/tilix/application.d:687
+#: source/gx/aiterm/application.d:687
 msgid "Maximize the terminal window"
 msgstr "터미널 창 최대화"
 
-#: source/gx/tilix/application.d:688
+#: source/gx/aiterm/application.d:688
 msgid "Minimize the terminal window"
 msgstr "터미널 창 최소화"
 
-#: source/gx/tilix/application.d:689
+#: source/gx/aiterm/application.d:689
 msgid ""
 "Override the preferred window style to use, one of: normal,disable-csd,"
 "disable-csd-hide-toolbar,borderless"
@@ -987,68 +987,68 @@ msgstr ""
 "normal,disable-csd,disable-csd-hide-toolbar,borderless 중 하나를 사용할 기본 "
 "창 스타일 재정의"
 
-#: source/gx/tilix/application.d:689
+#: source/gx/aiterm/application.d:689
 msgid "WINDOW_STYLE"
 msgstr "창_스타일"
 
-#: source/gx/tilix/application.d:690
+#: source/gx/aiterm/application.d:690
 msgid "Full-screen the terminal window"
 msgstr "터미널 창을 전체화면으로"
 
-#: source/gx/tilix/application.d:691
+#: source/gx/aiterm/application.d:691
 msgid "Focus the existing window"
 msgstr "기존 창에 포커스 두기"
 
-#: source/gx/tilix/application.d:692
+#: source/gx/aiterm/application.d:692
 msgid "Start additional instance as new process (Not Recommended)"
 msgstr "새 프로세스로 추가적인 인스턴스 시작(권장하지 않음)"
 
-#: source/gx/tilix/application.d:693
+#: source/gx/aiterm/application.d:693
 msgid "GEOMETRY"
 msgstr "형상"
 
-#: source/gx/tilix/application.d:693
+#: source/gx/aiterm/application.d:693
 msgid ""
 "Set the window size; for example: 80x24, or 80x24+200+200 (COLSxROWS+X+Y)"
 msgstr "창 크기를 정하세요; 예시: 80x24, 또는 80x24+200+200 (행x열+X+Y)"
 
-#: source/gx/tilix/application.d:694
+#: source/gx/aiterm/application.d:694
 msgid ""
 "Opens a window in quake mode or toggles existing quake mode window visibility"
 msgstr "진동 모드에서 창을 열거나 기존 진동 모드 창 가시성을 전환합니다"
 
-#: source/gx/tilix/application.d:695
-msgid "Show the Tilix and dependent component versions"
-msgstr "Tilix 및 종속 구성 요소 버전 표시"
+#: source/gx/aiterm/application.d:695
+msgid "Show the Aiterm and dependent component versions"
+msgstr "Aiterm 및 종속 구성 요소 버전 표시"
 
-#: source/gx/tilix/application.d:696
-msgid "Show the Tilix preferences dialog directly"
-msgstr "Tilix 기본설정 대화상자 직접 표시"
+#: source/gx/aiterm/application.d:696
+msgid "Show the Aiterm preferences dialog directly"
+msgstr "Aiterm 기본설정 대화상자 직접 표시"
 
-#: source/gx/tilix/application.d:697
+#: source/gx/aiterm/application.d:697
 msgid "GROUP_NAME"
 msgstr "그룹_이름"
 
-#: source/gx/tilix/application.d:697
+#: source/gx/aiterm/application.d:697
 msgid ""
-"Group tilix instances into different processes (Experimental, not "
+"Group aiterm instances into different processes (Experimental, not "
 "recommended)"
-msgstr "Tilix 인스턴스를 다른 프로세스로 그룹화(실험적, 권장하지 않음)"
+msgstr "Aiterm 인스턴스를 다른 프로세스로 그룹화(실험적, 권장하지 않음)"
 
-#: source/gx/tilix/application.d:700
+#: source/gx/aiterm/application.d:700
 msgid "Hidden argument to pass terminal UUID"
 msgstr "터미널 UUID를 전달하기 위한 숨겨진 독립변수"
 
-#: source/gx/tilix/application.d:700
+#: source/gx/aiterm/application.d:700
 msgid "TERMINAL_UUID"
 msgstr "터미널_UUID"
 
-#: source/gx/tilix/application.d:717
+#: source/gx/aiterm/application.d:717
 #, c-format
 msgid "The application ID %s is not valid"
 msgstr "%s 응용프로그램 ID가 잘못되었습니다"
 
-#: source/gx/tilix/application.d:883
+#: source/gx/aiterm/application.d:883
 msgid ""
 "There appears to be an issue with the configuration of the terminal.\n"
 "This issue is not serious, but correcting it will improve your experience.\n"
@@ -1058,299 +1058,299 @@ msgstr ""
 "이 이슈는 심각하지 않습니다. 그러나 고친다면 사용 경험이 향상됩니다.\n"
 "자세한 정보는 아래 링크를 누르세요:"
 
-#: source/gx/tilix/application.d:884
+#: source/gx/aiterm/application.d:884
 msgid "Configuration Issue Detected"
 msgstr "설정 이슈 감지됨"
 
-#: source/gx/tilix/application.d:896
+#: source/gx/aiterm/application.d:896
 msgid "Do not show this message again"
 msgstr "이 메시지를 다시 표시하지 않음"
 
-#: source/gx/tilix/appwindow.d:324
+#: source/gx/aiterm/appwindow.d:324
 msgid "Create a new session"
 msgstr "새 세션 만들기"
 
-#: source/gx/tilix/appwindow.d:338
+#: source/gx/aiterm/appwindow.d:338
 msgid "View session sidebar"
 msgstr "세션 사이드바 보기"
 
-#: source/gx/tilix/appwindow.d:373
+#: source/gx/aiterm/appwindow.d:373
 msgid "Add terminal right"
 msgstr "오른쪽에 터미널 추가"
 
-#: source/gx/tilix/appwindow.d:377
+#: source/gx/aiterm/appwindow.d:377
 msgid "Add terminal down"
 msgstr "아래에 터미널 추가"
 
-#: source/gx/tilix/appwindow.d:383
+#: source/gx/aiterm/appwindow.d:383
 msgid "Find text in terminal"
 msgstr "터미널에서 텍스트 찾기"
 
-#: source/gx/tilix/appwindow.d:606
+#: source/gx/aiterm/appwindow.d:606
 msgid "Enter a new name for the session"
 msgstr "새 세션 이름 입력"
 
-#: source/gx/tilix/appwindow.d:608
+#: source/gx/aiterm/appwindow.d:608
 msgid "Change Session Name"
 msgstr "세션 이름 바꾸기"
 
-#: source/gx/tilix/appwindow.d:689
+#: source/gx/aiterm/appwindow.d:689
 msgid "Open…"
 msgstr "열기…"
 
-#: source/gx/tilix/appwindow.d:690 source/gx/tilix/appwindow.d:1558
-#: source/gx/tilix/prefeditor/profileeditor.d:948
-#: source/gx/tilix/terminal/terminal.d:3665
+#: source/gx/aiterm/appwindow.d:690 source/gx/aiterm/appwindow.d:1558
+#: source/gx/aiterm/prefeditor/profileeditor.d:948
+#: source/gx/aiterm/terminal/terminal.d:3665
 msgid "Save"
 msgstr "저장"
 
-#: source/gx/tilix/appwindow.d:691
+#: source/gx/aiterm/appwindow.d:691
 msgid "Save As…"
 msgstr "다른 이름으로 저장…"
 
-#: source/gx/tilix/appwindow.d:697
+#: source/gx/aiterm/appwindow.d:697
 msgid "Name…"
 msgstr "이름…"
 
-#: source/gx/tilix/appwindow.d:698
+#: source/gx/aiterm/appwindow.d:698
 msgid "Synchronize Input"
 msgstr "입력 동기화"
 
-#: source/gx/tilix/appwindow.d:703
+#: source/gx/aiterm/appwindow.d:703
 msgid "Keyboard Shortcuts"
 msgstr "키보드 단축키"
 
-#: source/gx/tilix/appwindow.d:704
-msgid "About Tilix"
-msgstr "Tilix 정보"
+#: source/gx/aiterm/appwindow.d:704
+msgid "About Aiterm"
+msgstr "Aiterm 정보"
 
-#: source/gx/tilix/appwindow.d:711
+#: source/gx/aiterm/appwindow.d:711
 msgid "GC"
 msgstr "GC"
 
-#: source/gx/tilix/appwindow.d:1088
-#: source/gx/tilix/prefeditor/prefdialog.d:1201 source/gx/tilix/session.d:1222
+#: source/gx/aiterm/appwindow.d:1088
+#: source/gx/aiterm/prefeditor/prefdialog.d:1201 source/gx/aiterm/session.d:1222
 msgid "Default"
 msgstr "기본값"
 
-#: source/gx/tilix/appwindow.d:1197
+#: source/gx/aiterm/appwindow.d:1197
 msgid "There are multiple sessions open, close anyway?"
 msgstr "여러 세션이 열려 있습니다. 그래도 닫을까요?"
 
-#: source/gx/tilix/appwindow.d:1461
-#: source/gx/tilix/prefeditor/profileeditor.d:961
+#: source/gx/aiterm/appwindow.d:1461
+#: source/gx/aiterm/prefeditor/profileeditor.d:961
 msgid "All JSON Files"
 msgstr "모든 JSON 파일"
 
-#: source/gx/tilix/appwindow.d:1465
-#: source/gx/tilix/prefeditor/prefdialog.d:1219
-#: source/gx/tilix/prefeditor/profileeditor.d:965
-#: source/gx/tilix/terminal/terminal.d:3675
+#: source/gx/aiterm/appwindow.d:1465
+#: source/gx/aiterm/prefeditor/prefdialog.d:1219
+#: source/gx/aiterm/prefeditor/profileeditor.d:965
+#: source/gx/aiterm/terminal/terminal.d:3675
 msgid "All Files"
 msgstr "모든 파일"
 
-#: source/gx/tilix/appwindow.d:1474
+#: source/gx/aiterm/appwindow.d:1474
 #, c-format
 msgid "Filename '%s' does not exist"
 msgstr "파일 이름 '%s'이(가) 없습니다"
 
-#: source/gx/tilix/appwindow.d:1506
+#: source/gx/aiterm/appwindow.d:1506
 msgid "Load Session"
 msgstr "세션 불러오기"
 
-#: source/gx/tilix/appwindow.d:1509 source/gx/tilix/appwindow.d:1558
-#: source/gx/tilix/bookmark/bmchooser.d:127
-#: source/gx/tilix/bookmark/bmeditor.d:151 source/gx/tilix/closedialog.d:202
-#: source/gx/tilix/prefeditor/advdialog.d:192
-#: source/gx/tilix/prefeditor/advdialog.d:362
-#: source/gx/tilix/prefeditor/profileeditor.d:948
-#: source/gx/tilix/terminal/advpaste.d:137 source/gx/tilix/terminal/layout.d:33
-#: source/gx/tilix/terminal/password.d:371
-#: source/gx/tilix/terminal/password.d:493
-#: source/gx/tilix/terminal/terminal.d:3665
+#: source/gx/aiterm/appwindow.d:1509 source/gx/aiterm/appwindow.d:1558
+#: source/gx/aiterm/bookmark/bmchooser.d:127
+#: source/gx/aiterm/bookmark/bmeditor.d:151 source/gx/aiterm/closedialog.d:202
+#: source/gx/aiterm/prefeditor/advdialog.d:192
+#: source/gx/aiterm/prefeditor/advdialog.d:362
+#: source/gx/aiterm/prefeditor/profileeditor.d:948
+#: source/gx/aiterm/terminal/advpaste.d:137 source/gx/aiterm/terminal/layout.d:33
+#: source/gx/aiterm/terminal/password.d:371
+#: source/gx/aiterm/terminal/password.d:493
+#: source/gx/aiterm/terminal/terminal.d:3665
 msgid "Cancel"
 msgstr "취소"
 
-#: source/gx/tilix/appwindow.d:1509
+#: source/gx/aiterm/appwindow.d:1509
 msgid "Open"
 msgstr "열기"
 
-#: source/gx/tilix/appwindow.d:1532
+#: source/gx/aiterm/appwindow.d:1532
 msgid "Could not load session due to unexpected error."
 msgstr "예상하지 못한 오류로 인해 세션을 불러올 수 없습니다."
 
-#: source/gx/tilix/appwindow.d:1532
+#: source/gx/aiterm/appwindow.d:1532
 msgid "Error Loading Session"
 msgstr "세션 불러오기 오류"
 
-#: source/gx/tilix/appwindow.d:1555
+#: source/gx/aiterm/appwindow.d:1555
 msgid "Save Session"
 msgstr "세션 저장"
 
-#: source/gx/tilix/appwindow.d:1590 source/gx/tilix/appwindow.d:1609
+#: source/gx/aiterm/appwindow.d:1590 source/gx/aiterm/appwindow.d:1609
 msgid "Could not save session due to unexpected error."
 msgstr "예상치 못한 오류로 인해 세션을 저장할 수 없습니다."
 
-#: source/gx/tilix/appwindow.d:1590 source/gx/tilix/appwindow.d:1609
+#: source/gx/aiterm/appwindow.d:1590 source/gx/aiterm/appwindow.d:1609
 msgid "Error Saving Session"
 msgstr "세션 저장 중 오류"
 
-#: source/gx/tilix/appwindow.d:1723
+#: source/gx/aiterm/appwindow.d:1723
 msgid "Quake mode is not supported under Wayland, running as normal window"
 msgstr "일반 창으로 실행되는 Wayland에서는 진동 모드가 지원되지 않습니다"
 
-#: source/gx/tilix/appwindow.d:1725
+#: source/gx/aiterm/appwindow.d:1725
 msgid "Quake Mode Not Supported"
 msgstr "진동 모드 지원되지 않음"
 
-#: source/gx/tilix/appwindow.d:2200
+#: source/gx/aiterm/appwindow.d:2200
 msgid "New output displayed"
 msgstr "새 출력 화면표시됨"
 
-#: source/gx/tilix/appwindow.d:2208
+#: source/gx/aiterm/appwindow.d:2208
 msgid "Close session"
 msgstr "세션 닫기"
 
-#: source/gx/tilix/bookmark/bmchooser.d:79
+#: source/gx/aiterm/bookmark/bmchooser.d:79
 msgid "Include return character with bookmark"
 msgstr "바로찾기에 반환 문자 포함"
 
-#: source/gx/tilix/bookmark/bmchooser.d:126
+#: source/gx/aiterm/bookmark/bmchooser.d:126
 msgid "Select Bookmark"
 msgstr "바로찾기 선택"
 
-#: source/gx/tilix/bookmark/bmchooser.d:126
-#: source/gx/tilix/bookmark/bmeditor.d:68
+#: source/gx/aiterm/bookmark/bmchooser.d:126
+#: source/gx/aiterm/bookmark/bmeditor.d:68
 msgid "Select Folder"
 msgstr "폴더 선택"
 
-#: source/gx/tilix/bookmark/bmchooser.d:127
-#: source/gx/tilix/bookmark/bmeditor.d:151 source/gx/tilix/closedialog.d:202
-#: source/gx/tilix/terminal/layout.d:33 source/gx/tilix/terminal/password.d:493
+#: source/gx/aiterm/bookmark/bmchooser.d:127
+#: source/gx/aiterm/bookmark/bmeditor.d:151 source/gx/aiterm/closedialog.d:202
+#: source/gx/aiterm/terminal/layout.d:33 source/gx/aiterm/terminal/password.d:493
 msgid "OK"
 msgstr "확인"
 
-#: source/gx/tilix/bookmark/bmeditor.d:74
+#: source/gx/aiterm/bookmark/bmeditor.d:74
 msgid "Select folder"
 msgstr "폴더 선택"
 
-#: source/gx/tilix/bookmark/bmeditor.d:86
+#: source/gx/aiterm/bookmark/bmeditor.d:86
 msgid "Clear folder"
 msgstr "폴더 지우기"
 
-#: source/gx/tilix/bookmark/bmeditor.d:150
+#: source/gx/aiterm/bookmark/bmeditor.d:150
 msgid "Add Bookmark"
 msgstr "바로찾기 추가"
 
-#: source/gx/tilix/bookmark/bmeditor.d:150
+#: source/gx/aiterm/bookmark/bmeditor.d:150
 msgid "Edit Bookmark"
 msgstr "바로찾기 편집"
 
-#: source/gx/tilix/bookmark/bmeditor.d:231
-#: source/gx/tilix/bookmark/bmtreeview.d:73 source/gx/tilix/session.d:1572
-#: source/gx/tilix/terminal/password.d:137
-#: source/gx/tilix/terminal/password.d:431
+#: source/gx/aiterm/bookmark/bmeditor.d:231
+#: source/gx/aiterm/bookmark/bmtreeview.d:73 source/gx/aiterm/session.d:1572
+#: source/gx/aiterm/terminal/password.d:137
+#: source/gx/aiterm/terminal/password.d:431
 msgid "Name"
 msgstr "이름"
 
-#: source/gx/tilix/bookmark/bmeditor.d:292
-#: source/gx/tilix/bookmark/manager.d:687
+#: source/gx/aiterm/bookmark/bmeditor.d:292
+#: source/gx/aiterm/bookmark/manager.d:687
 msgid "Path"
 msgstr "경로"
 
-#: source/gx/tilix/bookmark/bmeditor.d:294
+#: source/gx/aiterm/bookmark/bmeditor.d:294
 msgid "Select Path"
 msgstr "경로 선택"
 
-#: source/gx/tilix/bookmark/bmeditor.d:333
-#: source/gx/tilix/bookmark/bmeditor.d:428
-#: source/gx/tilix/bookmark/manager.d:687
-#: source/gx/tilix/prefeditor/advdialog.d:106
-#: source/gx/tilix/prefeditor/profileeditor.d:98
-#: source/gx/tilix/prefeditor/profileeditor.d:1136
-#: source/gx/tilix/terminal/layout.d:89
+#: source/gx/aiterm/bookmark/bmeditor.d:333
+#: source/gx/aiterm/bookmark/bmeditor.d:428
+#: source/gx/aiterm/bookmark/manager.d:687
+#: source/gx/aiterm/prefeditor/advdialog.d:106
+#: source/gx/aiterm/prefeditor/profileeditor.d:98
+#: source/gx/aiterm/prefeditor/profileeditor.d:1136
+#: source/gx/aiterm/terminal/layout.d:89
 msgid "Command"
 msgstr "명령"
 
-#: source/gx/tilix/bookmark/bmeditor.d:382
+#: source/gx/aiterm/bookmark/bmeditor.d:382
 msgid "Protocol"
 msgstr "프로토콜"
 
-#: source/gx/tilix/bookmark/bmeditor.d:398
+#: source/gx/aiterm/bookmark/bmeditor.d:398
 msgid "Host"
 msgstr "호스트"
 
-#: source/gx/tilix/bookmark/bmeditor.d:414
+#: source/gx/aiterm/bookmark/bmeditor.d:414
 msgid "User"
 msgstr "사용자"
 
-#: source/gx/tilix/bookmark/bmeditor.d:421
+#: source/gx/aiterm/bookmark/bmeditor.d:421
 msgid "Parameters"
 msgstr "매개변수"
 
-#: source/gx/tilix/bookmark/bmtreeview.d:70 source/gx/tilix/closedialog.d:129
-#: source/gx/tilix/prefeditor/profileeditor.d:447
+#: source/gx/aiterm/bookmark/bmtreeview.d:70 source/gx/aiterm/closedialog.d:129
+#: source/gx/aiterm/prefeditor/profileeditor.d:447
 msgid "Icon"
 msgstr "아이콘"
 
-#: source/gx/tilix/bookmark/manager.d:233
+#: source/gx/aiterm/bookmark/manager.d:233
 msgid "Error deserializing bookmark"
 msgstr "바로찾기 역직렬화 중 오류"
 
-#: source/gx/tilix/bookmark/manager.d:537
+#: source/gx/aiterm/bookmark/manager.d:537
 msgid "Root"
 msgstr "루트"
 
-#: source/gx/tilix/bookmark/manager.d:615
+#: source/gx/aiterm/bookmark/manager.d:615
 msgid "Could not load bookmarks due to unexpected error"
 msgstr "예기치 않은 오류로 인해 바로찾기를 불러올 수 없습니다"
 
-#: source/gx/tilix/bookmark/manager.d:687
+#: source/gx/aiterm/bookmark/manager.d:687
 msgid "Folder"
 msgstr "폴더"
 
-#: source/gx/tilix/bookmark/manager.d:687
+#: source/gx/aiterm/bookmark/manager.d:687
 msgid "Remote"
 msgstr "원격"
 
-#: source/gx/tilix/closedialog.d:123 source/gx/tilix/constants.d:152
-#: source/gx/tilix/terminal/layout.d:54
+#: source/gx/aiterm/closedialog.d:123 source/gx/aiterm/constants.d:152
+#: source/gx/aiterm/terminal/layout.d:54
 msgid "Title"
 msgstr "제목"
 
-#: source/gx/tilix/closedialog.d:170
+#: source/gx/aiterm/closedialog.d:170
 #, c-format
 msgid "Window (%s)"
 msgstr "창 (%s)"
 
-#: source/gx/tilix/closedialog.d:173
+#: source/gx/aiterm/closedialog.d:173
 #, c-format
 msgid "Session (%s)"
 msgstr "세션 (%s)"
 
-#: source/gx/tilix/closedialog.d:189
+#: source/gx/aiterm/closedialog.d:189
 msgid "Close Application"
 msgstr "응용프로그램 닫기"
 
-#: source/gx/tilix/closedialog.d:191
+#: source/gx/aiterm/closedialog.d:191
 msgid "Close Window"
 msgstr "창 닫기"
 
-#: source/gx/tilix/closedialog.d:193 source/gx/tilix/closedialog.d:195
+#: source/gx/aiterm/closedialog.d:193 source/gx/aiterm/closedialog.d:195
 msgid "Close Session"
 msgstr "세션 닫기"
 
-#: source/gx/tilix/cmdparams.d:119 source/gx/tilix/cmdparams.d:123
+#: source/gx/aiterm/cmdparams.d:119 source/gx/aiterm/cmdparams.d:123
 #, c-format
 msgid "Ignoring as '%s' is not a directory"
 msgstr "'%s'로 무시하는 것은 디렉터리가 아닙니다"
 
-#: source/gx/tilix/cmdparams.d:152
+#: source/gx/aiterm/cmdparams.d:152
 #, c-format
 msgid "Geometry string '%s' is invalid and could not be parsed"
 msgstr "'%s' 형상 문자열이 잘못되어 구문 분석할 수 없습니다"
 
-#: source/gx/tilix/cmdparams.d:186
+#: source/gx/aiterm/cmdparams.d:186
 msgid ""
 "You cannot load a session and set a profile/working directory/execute "
 "command option, please choose one or the other"
@@ -1358,30 +1358,30 @@ msgstr ""
 "세션을 불러오고 프로필/작업 디렉터리/명령 실행 옵션을 설정할 수 없습니다. 둘 "
 "중 하나를 선택하십시오."
 
-#: source/gx/tilix/cmdparams.d:193
-msgid "You can only use the action parameter within Tilix"
-msgstr "Tilix 내에서만 action 매개변수를 사용할 수 있습니다"
+#: source/gx/aiterm/cmdparams.d:193
+msgid "You can only use the action parameter within Aiterm"
+msgstr "Aiterm 내에서만 action 매개변수를 사용할 수 있습니다"
 
-#: source/gx/tilix/cmdparams.d:215
+#: source/gx/aiterm/cmdparams.d:215
 msgid ""
 "You cannot use the quake mode with maximize, minimize or geometry parameters"
 msgstr ""
 "최대화, 최소화 또는 형상 매개변수와 함께 진동 모드를 사용할 수 없습니다"
 
-#: source/gx/tilix/colorschemes.d:188
+#: source/gx/aiterm/colorschemes.d:188
 #, c-format
 msgid "File %s is not a color scheme compliant JSON file"
 msgstr "%s 파일은 색상 구성표와 호환되는 JSON 파일이 아닙니다"
 
-#: source/gx/tilix/colorschemes.d:251
+#: source/gx/aiterm/colorschemes.d:251
 msgid "Color scheme palette requires 16 colors"
 msgstr "색상 구성표 팔레트에는 16가지 색상이 필요합니다"
 
-#: source/gx/tilix/constants.d:72
+#: source/gx/aiterm/constants.d:72
 msgid "A VTE based terminal emulator for Linux"
 msgstr "리눅스용 VTE 기반 터미널 에뮬레이터"
 
-#: source/gx/tilix/constants.d:73
+#: source/gx/aiterm/constants.d:73
 msgid ""
 "This Source Code Form is subject to the terms of the Mozilla Public License, "
 "v. 2.0. If a copy of the MPL was not distributed with this file, You can "
@@ -1391,330 +1391,330 @@ msgstr ""
 "파일과 함께 배포되지 않은 경우, http://mozilla.org/MPL/2.0/ 에서 얻으실 수 있"
 "습니다."
 
-#: source/gx/tilix/constants.d:78
-msgid "GTK VTE widget team, Tilix would not be possible without their work"
-msgstr "GTK VTE 위젯 팀, 그들의 노력 없이 Tilix 는 불가능 했을 것입니다"
+#: source/gx/aiterm/constants.d:78
+msgid "GTK VTE widget team, Aiterm would not be possible without their work"
+msgstr "GTK VTE 위젯 팀, 그들의 노력 없이 Aiterm 는 불가능 했을 것입니다"
 
-#: source/gx/tilix/constants.d:79
+#: source/gx/aiterm/constants.d:79
 msgid "GtkD for providing such an excellent GTK wrapper"
 msgstr "GtkD - 훌룡한 GTK 래퍼 제공"
 
-#: source/gx/tilix/constants.d:80
+#: source/gx/aiterm/constants.d:80
 msgid "Dlang.org for such an excellent language, D"
 msgstr "Dlang.org - 훌룡한 언어, D 제공"
 
-#: source/gx/tilix/constants.d:153
+#: source/gx/aiterm/constants.d:153
 msgid "Icon title"
 msgstr "아이콘 제목"
 
-#: source/gx/tilix/constants.d:154 source/gx/tilix/terminal/password.d:140
+#: source/gx/aiterm/constants.d:154 source/gx/aiterm/terminal/password.d:140
 msgid "ID"
 msgstr "ID"
 
-#: source/gx/tilix/constants.d:155
+#: source/gx/aiterm/constants.d:155
 msgid "Directory"
 msgstr "디렉터리"
 
-#: source/gx/tilix/constants.d:156
+#: source/gx/aiterm/constants.d:156
 msgid "Hostname"
 msgstr "호스트 이름"
 
-#: source/gx/tilix/constants.d:157
+#: source/gx/aiterm/constants.d:157
 msgid "Username"
 msgstr "사용자 이름"
 
-#: source/gx/tilix/constants.d:158
+#: source/gx/aiterm/constants.d:158
 msgid "Columns"
 msgstr "행"
 
-#: source/gx/tilix/constants.d:159
+#: source/gx/aiterm/constants.d:159
 msgid "Rows"
 msgstr "열"
 
-#: source/gx/tilix/constants.d:160
+#: source/gx/aiterm/constants.d:160
 msgid "Process"
 msgstr "프로세스"
 
-#: source/gx/tilix/constants.d:161
+#: source/gx/aiterm/constants.d:161
 msgid "Status.Read-Only"
 msgstr "상태.읽기전용"
 
-#: source/gx/tilix/constants.d:162
+#: source/gx/aiterm/constants.d:162
 msgid "Status.Silence"
 msgstr "상태.무음"
 
-#: source/gx/tilix/constants.d:163
+#: source/gx/aiterm/constants.d:163
 msgid "Status.Input-Sync"
 msgstr "상태.입력-동기화"
 
-#: source/gx/tilix/constants.d:178
+#: source/gx/aiterm/constants.d:178
 msgid "Terminal count"
 msgstr "터미널 수"
 
-#: source/gx/tilix/constants.d:179
+#: source/gx/aiterm/constants.d:179
 msgid "Terminal number"
 msgstr "터미널 번호"
 
-#: source/gx/tilix/constants.d:180
+#: source/gx/aiterm/constants.d:180
 msgid "Active terminal title"
 msgstr "활성 터미널 제목"
 
-#: source/gx/tilix/constants.d:197
+#: source/gx/aiterm/constants.d:197
 msgid "Application name"
 msgstr "응용프로그램 이름"
 
-#: source/gx/tilix/constants.d:198
+#: source/gx/aiterm/constants.d:198
 msgid "Session name"
 msgstr "세션 이름"
 
-#: source/gx/tilix/constants.d:199
+#: source/gx/aiterm/constants.d:199
 msgid "Session number"
 msgstr "세션 번호"
 
-#: source/gx/tilix/constants.d:200
+#: source/gx/aiterm/constants.d:200
 msgid "Session count"
 msgstr "세션 수"
 
-#: source/gx/tilix/encoding.d:18 source/gx/tilix/encoding.d:31
-#: source/gx/tilix/encoding.d:45 source/gx/tilix/encoding.d:67
-#: source/gx/tilix/encoding.d:78
+#: source/gx/aiterm/encoding.d:18 source/gx/aiterm/encoding.d:31
+#: source/gx/aiterm/encoding.d:45 source/gx/aiterm/encoding.d:67
+#: source/gx/aiterm/encoding.d:78
 msgid "Western"
 msgstr "서유럽어"
 
-#: source/gx/tilix/encoding.d:19 source/gx/tilix/encoding.d:46
-#: source/gx/tilix/encoding.d:57 source/gx/tilix/encoding.d:76
+#: source/gx/aiterm/encoding.d:19 source/gx/aiterm/encoding.d:46
+#: source/gx/aiterm/encoding.d:57 source/gx/aiterm/encoding.d:76
 msgid "Central European"
 msgstr "중앙 유럽어"
 
-#: source/gx/tilix/encoding.d:20
+#: source/gx/aiterm/encoding.d:20
 msgid "South European"
 msgstr "남유럽어"
 
-#: source/gx/tilix/encoding.d:21 source/gx/tilix/encoding.d:29
-#: source/gx/tilix/encoding.d:83
+#: source/gx/aiterm/encoding.d:21 source/gx/aiterm/encoding.d:29
+#: source/gx/aiterm/encoding.d:83
 msgid "Baltic"
 msgstr "발트어"
 
-#: source/gx/tilix/encoding.d:22 source/gx/tilix/encoding.d:47
-#: source/gx/tilix/encoding.d:53 source/gx/tilix/encoding.d:54
-#: source/gx/tilix/encoding.d:59 source/gx/tilix/encoding.d:77
+#: source/gx/aiterm/encoding.d:22 source/gx/aiterm/encoding.d:47
+#: source/gx/aiterm/encoding.d:53 source/gx/aiterm/encoding.d:54
+#: source/gx/aiterm/encoding.d:59 source/gx/aiterm/encoding.d:77
 msgid "Cyrillic"
 msgstr "키릴어"
 
 # ************************************************
 # Encodings
 # ************************************************
-#: source/gx/tilix/encoding.d:23 source/gx/tilix/encoding.d:50
-#: source/gx/tilix/encoding.d:56 source/gx/tilix/encoding.d:82
+#: source/gx/aiterm/encoding.d:23 source/gx/aiterm/encoding.d:50
+#: source/gx/aiterm/encoding.d:56 source/gx/aiterm/encoding.d:82
 msgid "Arabic"
 msgstr "아랍어"
 
-#: source/gx/tilix/encoding.d:24 source/gx/tilix/encoding.d:62
-#: source/gx/tilix/encoding.d:79
+#: source/gx/aiterm/encoding.d:24 source/gx/aiterm/encoding.d:62
+#: source/gx/aiterm/encoding.d:79
 msgid "Greek"
 msgstr "그리스어"
 
-#: source/gx/tilix/encoding.d:25
+#: source/gx/aiterm/encoding.d:25
 msgid "Hebrew Visual"
 msgstr "시각 히브리어"
 
-#: source/gx/tilix/encoding.d:26 source/gx/tilix/encoding.d:49
-#: source/gx/tilix/encoding.d:65 source/gx/tilix/encoding.d:81
+#: source/gx/aiterm/encoding.d:26 source/gx/aiterm/encoding.d:49
+#: source/gx/aiterm/encoding.d:65 source/gx/aiterm/encoding.d:81
 msgid "Hebrew"
 msgstr "히브리어"
 
-#: source/gx/tilix/encoding.d:27 source/gx/tilix/encoding.d:48
-#: source/gx/tilix/encoding.d:69 source/gx/tilix/encoding.d:80
+#: source/gx/aiterm/encoding.d:27 source/gx/aiterm/encoding.d:48
+#: source/gx/aiterm/encoding.d:69 source/gx/aiterm/encoding.d:80
 msgid "Turkish"
 msgstr "터키어"
 
-#: source/gx/tilix/encoding.d:28
+#: source/gx/aiterm/encoding.d:28
 msgid "Nordic"
 msgstr "북유럽어"
 
-#: source/gx/tilix/encoding.d:30
+#: source/gx/aiterm/encoding.d:30
 msgid "Celtic"
 msgstr "켈트어"
 
-#: source/gx/tilix/encoding.d:32 source/gx/tilix/encoding.d:68
+#: source/gx/aiterm/encoding.d:32 source/gx/aiterm/encoding.d:68
 msgid "Romanian"
 msgstr "루마니아어"
 
-#: source/gx/tilix/encoding.d:33
+#: source/gx/aiterm/encoding.d:33
 msgid "Unicode"
 msgstr "유니코드"
 
-#: source/gx/tilix/encoding.d:34
+#: source/gx/aiterm/encoding.d:34
 msgid "Armenian"
 msgstr "미국어"
 
-#: source/gx/tilix/encoding.d:35 source/gx/tilix/encoding.d:36
-#: source/gx/tilix/encoding.d:40
+#: source/gx/aiterm/encoding.d:35 source/gx/aiterm/encoding.d:36
+#: source/gx/aiterm/encoding.d:40
 msgid "Chinese Traditional"
 msgstr "중국어 정체"
 
-#: source/gx/tilix/encoding.d:37
+#: source/gx/aiterm/encoding.d:37
 msgid "Cyrillic/Russian"
 msgstr "키릴/러시아어"
 
-#: source/gx/tilix/encoding.d:38 source/gx/tilix/encoding.d:51
-#: source/gx/tilix/encoding.d:71
+#: source/gx/aiterm/encoding.d:38 source/gx/aiterm/encoding.d:51
+#: source/gx/aiterm/encoding.d:71
 msgid "Japanese"
 msgstr "일본어"
 
-#: source/gx/tilix/encoding.d:39 source/gx/tilix/encoding.d:52
-#: source/gx/tilix/encoding.d:74
+#: source/gx/aiterm/encoding.d:39 source/gx/aiterm/encoding.d:52
+#: source/gx/aiterm/encoding.d:74
 msgid "Korean"
 msgstr "한국어"
 
-#: source/gx/tilix/encoding.d:41 source/gx/tilix/encoding.d:42
-#: source/gx/tilix/encoding.d:43
+#: source/gx/aiterm/encoding.d:41 source/gx/aiterm/encoding.d:42
+#: source/gx/aiterm/encoding.d:43
 msgid "Chinese Simplified"
 msgstr "중국어 간체"
 
-#: source/gx/tilix/encoding.d:44
+#: source/gx/aiterm/encoding.d:44
 msgid "Georgian"
 msgstr "조지아어"
 
-#: source/gx/tilix/encoding.d:55 source/gx/tilix/encoding.d:70
+#: source/gx/aiterm/encoding.d:55 source/gx/aiterm/encoding.d:70
 msgid "Cyrillic/Ukrainian"
 msgstr "키릴/우크라이나어"
 
-#: source/gx/tilix/encoding.d:58
+#: source/gx/aiterm/encoding.d:58
 msgid "Croatian"
 msgstr "크로아티아어"
 
-#: source/gx/tilix/encoding.d:60
+#: source/gx/aiterm/encoding.d:60
 msgid "Hindi"
 msgstr "힌디어"
 
-#: source/gx/tilix/encoding.d:61
+#: source/gx/aiterm/encoding.d:61
 msgid "Persian"
 msgstr "페르시아어"
 
-#: source/gx/tilix/encoding.d:63
+#: source/gx/aiterm/encoding.d:63
 msgid "Gujarati"
 msgstr "구즈라트어"
 
-#: source/gx/tilix/encoding.d:64
+#: source/gx/aiterm/encoding.d:64
 msgid "Gurmukhi"
 msgstr "구르무키어"
 
-#: source/gx/tilix/encoding.d:66
+#: source/gx/aiterm/encoding.d:66
 msgid "Icelandic"
 msgstr "아이슬란드어"
 
-#: source/gx/tilix/encoding.d:72 source/gx/tilix/encoding.d:75
-#: source/gx/tilix/encoding.d:84
+#: source/gx/aiterm/encoding.d:72 source/gx/aiterm/encoding.d:75
+#: source/gx/aiterm/encoding.d:84
 msgid "Vietnamese"
 msgstr "베트남어"
 
-#: source/gx/tilix/encoding.d:73
+#: source/gx/aiterm/encoding.d:73
 msgid "Thai"
 msgstr "태국어"
 
-#: source/gx/tilix/prefeditor/advdialog.d:94
-#: source/gx/tilix/prefeditor/advdialog.d:261
+#: source/gx/aiterm/prefeditor/advdialog.d:94
+#: source/gx/aiterm/prefeditor/advdialog.d:261
 msgid "Regex"
 msgstr "정규표현식"
 
-#: source/gx/tilix/prefeditor/advdialog.d:118
+#: source/gx/aiterm/prefeditor/advdialog.d:118
 msgid "Case Insensitive"
 msgstr "대소문자 구분 한함"
 
-#: source/gx/tilix/prefeditor/advdialog.d:134
-#: source/gx/tilix/prefeditor/advdialog.d:313
-#: source/gx/tilix/prefeditor/profileeditor.d:1303
+#: source/gx/aiterm/prefeditor/advdialog.d:134
+#: source/gx/aiterm/prefeditor/advdialog.d:313
+#: source/gx/aiterm/prefeditor/profileeditor.d:1303
 msgid "Add"
 msgstr "추가"
 
-#: source/gx/tilix/prefeditor/advdialog.d:141
-#: source/gx/tilix/prefeditor/advdialog.d:319
-#: source/gx/tilix/prefeditor/prefdialog.d:556
-#: source/gx/tilix/prefeditor/profileeditor.d:1340
-#: source/gx/tilix/terminal/password.d:213
+#: source/gx/aiterm/prefeditor/advdialog.d:141
+#: source/gx/aiterm/prefeditor/advdialog.d:319
+#: source/gx/aiterm/prefeditor/prefdialog.d:556
+#: source/gx/aiterm/prefeditor/profileeditor.d:1340
+#: source/gx/aiterm/terminal/password.d:213
 msgid "Delete"
 msgstr "삭제"
 
-#: source/gx/tilix/prefeditor/advdialog.d:151
+#: source/gx/aiterm/prefeditor/advdialog.d:151
 msgid "Move up"
 msgstr "위로 이동"
 
-#: source/gx/tilix/prefeditor/advdialog.d:162
+#: source/gx/aiterm/prefeditor/advdialog.d:162
 msgid "Move down"
 msgstr "아래로 이동"
 
-#: source/gx/tilix/prefeditor/advdialog.d:192
-#: source/gx/tilix/prefeditor/advdialog.d:362
-#: source/gx/tilix/terminal/password.d:371
+#: source/gx/aiterm/prefeditor/advdialog.d:192
+#: source/gx/aiterm/prefeditor/advdialog.d:362
+#: source/gx/aiterm/terminal/password.d:371
 msgid "Apply"
 msgstr "적용"
 
-#: source/gx/tilix/prefeditor/advdialog.d:192
+#: source/gx/aiterm/prefeditor/advdialog.d:192
 msgid "Edit Custom Links"
 msgstr "사용자 지정 링크 편집"
 
-#: source/gx/tilix/prefeditor/advdialog.d:287
-#: source/gx/tilix/prefeditor/prefdialog.d:765
+#: source/gx/aiterm/prefeditor/advdialog.d:287
+#: source/gx/aiterm/prefeditor/prefdialog.d:765
 msgid "Action"
 msgstr "동작"
 
-#: source/gx/tilix/prefeditor/advdialog.d:299
+#: source/gx/aiterm/prefeditor/advdialog.d:299
 msgid "Parameter"
 msgstr "매개변수"
 
-#: source/gx/tilix/prefeditor/advdialog.d:337
+#: source/gx/aiterm/prefeditor/advdialog.d:337
 msgid "Limit number of lines for trigger processing to:"
 msgstr "트리거 처리를 위한 줄 수를 다음과 같이 제한:"
 
-#: source/gx/tilix/prefeditor/advdialog.d:362
+#: source/gx/aiterm/prefeditor/advdialog.d:362
 msgid "Edit Triggers"
 msgstr "트리거 편집"
 
-#: source/gx/tilix/prefeditor/advdialog.d:405
+#: source/gx/aiterm/prefeditor/advdialog.d:405
 #, c-format
 msgid "Row %d: "
 msgstr "열 %d: "
 
-#: source/gx/tilix/prefeditor/bookmarkeditor.d:62
+#: source/gx/aiterm/prefeditor/bookmarkeditor.d:62
 msgid "Add bookmark"
 msgstr "바로찾기 추가"
 
-#: source/gx/tilix/prefeditor/bookmarkeditor.d:67
+#: source/gx/aiterm/prefeditor/bookmarkeditor.d:67
 msgid "Edit bookmark"
 msgstr "바로찾기 편집"
 
-#: source/gx/tilix/prefeditor/bookmarkeditor.d:72
+#: source/gx/aiterm/prefeditor/bookmarkeditor.d:72
 msgid "Delete bookmark"
 msgstr "바로찾기 삭제"
 
-#: source/gx/tilix/prefeditor/bookmarkeditor.d:77
+#: source/gx/aiterm/prefeditor/bookmarkeditor.d:77
 msgid "Unselect bookmark"
 msgstr "바로찾기 선택 해제"
 
-#: source/gx/tilix/prefeditor/common.d:37
+#: source/gx/aiterm/prefeditor/common.d:37
 msgid "Custom Links"
 msgstr "사용자 지정 링크"
 
-#: source/gx/tilix/prefeditor/common.d:43
+#: source/gx/aiterm/prefeditor/common.d:43
 msgid ""
 "A list of user defined links that can be clicked on in the terminal based on "
 "regular expression definitions."
 msgstr ""
 "정규식 정의를 기반으로 터미널에서 클릭할 수 있는 사용자 지정 링크 목록입니다."
 
-#: source/gx/tilix/prefeditor/common.d:46
-#: source/gx/tilix/prefeditor/common.d:77
-#: source/gx/tilix/prefeditor/profileeditor.d:1321
-#: source/gx/tilix/terminal/password.d:184
+#: source/gx/aiterm/prefeditor/common.d:46
+#: source/gx/aiterm/prefeditor/common.d:77
+#: source/gx/aiterm/prefeditor/profileeditor.d:1321
+#: source/gx/aiterm/terminal/password.d:184
 msgid "Edit"
 msgstr "편집"
 
-#: source/gx/tilix/prefeditor/common.d:67
+#: source/gx/aiterm/prefeditor/common.d:67
 msgid "Triggers"
 msgstr "트리거"
 
-#: source/gx/tilix/prefeditor/common.d:74
+#: source/gx/aiterm/prefeditor/common.d:74
 msgid ""
 "Triggers are regular expressions that are used to check against output text "
 "in the terminal. When a match is detected the configured action is executed."
@@ -1722,114 +1722,114 @@ msgstr ""
 "트리거는 터미널의 출력을 확인하기 위한 정규 표현식 입니다. 일치값이 감지되면 "
 "설정된 동작이 실행됩니다."
 
-#: source/gx/tilix/prefeditor/prefdialog.d:123
-msgid "Tilix Preferences"
-msgstr "Tilix 설정"
+#: source/gx/aiterm/prefeditor/prefdialog.d:123
+msgid "Aiterm Preferences"
+msgstr "Aiterm 설정"
 
-#: source/gx/tilix/prefeditor/prefdialog.d:140
-#: source/gx/tilix/prefeditor/prefdialog.d:141
-#: source/gx/tilix/prefeditor/prefdialog.d:219
+#: source/gx/aiterm/prefeditor/prefdialog.d:140
+#: source/gx/aiterm/prefeditor/prefdialog.d:141
+#: source/gx/aiterm/prefeditor/prefdialog.d:219
 msgid "Global"
 msgstr "전역"
 
-#: source/gx/tilix/prefeditor/prefdialog.d:144
-#: source/gx/tilix/prefeditor/prefdialog.d:145
+#: source/gx/aiterm/prefeditor/prefdialog.d:144
+#: source/gx/aiterm/prefeditor/prefdialog.d:145
 msgid "Appearance"
 msgstr "모양새"
 
-#: source/gx/tilix/prefeditor/prefdialog.d:150
-#: source/gx/tilix/prefeditor/prefdialog.d:151
+#: source/gx/aiterm/prefeditor/prefdialog.d:150
+#: source/gx/aiterm/prefeditor/prefdialog.d:151
 msgid "Quake"
 msgstr "진동"
 
-#: source/gx/tilix/prefeditor/prefdialog.d:155
-#: source/gx/tilix/prefeditor/prefdialog.d:156
+#: source/gx/aiterm/prefeditor/prefdialog.d:155
+#: source/gx/aiterm/prefeditor/prefdialog.d:156
 msgid "Bookmarks"
 msgstr "바로찾기"
 
-#: source/gx/tilix/prefeditor/prefdialog.d:162
-#: source/gx/tilix/prefeditor/prefdialog.d:163
-#: source/gx/tilix/prefeditor/prefdialog.d:299
+#: source/gx/aiterm/prefeditor/prefdialog.d:162
+#: source/gx/aiterm/prefeditor/prefdialog.d:163
+#: source/gx/aiterm/prefeditor/prefdialog.d:299
 msgid "Shortcuts"
 msgstr "바로 가기"
 
-#: source/gx/tilix/prefeditor/prefdialog.d:166
-#: source/gx/tilix/prefeditor/prefdialog.d:167
-#: source/gx/tilix/prefeditor/prefdialog.d:463
-#: source/gx/tilix/prefeditor/prefdialog.d:681
-#: source/gx/tilix/prefeditor/profileeditor.d:1087
-#: source/gx/tilix/terminal/terminal.d:858
+#: source/gx/aiterm/prefeditor/prefdialog.d:166
+#: source/gx/aiterm/prefeditor/prefdialog.d:167
+#: source/gx/aiterm/prefeditor/prefdialog.d:463
+#: source/gx/aiterm/prefeditor/prefdialog.d:681
+#: source/gx/aiterm/prefeditor/profileeditor.d:1087
+#: source/gx/aiterm/terminal/terminal.d:858
 msgid "Encoding"
 msgstr "인코딩"
 
-#: source/gx/tilix/prefeditor/prefdialog.d:170
-#: source/gx/tilix/prefeditor/prefdialog.d:171
-#: source/gx/tilix/prefeditor/profileeditor.d:105
-#: source/gx/tilix/prefeditor/profileeditor.d:575
+#: source/gx/aiterm/prefeditor/prefdialog.d:170
+#: source/gx/aiterm/prefeditor/prefdialog.d:171
+#: source/gx/aiterm/prefeditor/profileeditor.d:105
+#: source/gx/aiterm/prefeditor/profileeditor.d:575
 msgid "Advanced"
 msgstr "고급"
 
-#: source/gx/tilix/prefeditor/prefdialog.d:176 source/gx/tilix/session.d:1583
+#: source/gx/aiterm/prefeditor/prefdialog.d:176 source/gx/aiterm/session.d:1583
 msgid "Profile"
 msgstr "프로필"
 
-#: source/gx/tilix/prefeditor/prefdialog.d:189
+#: source/gx/aiterm/prefeditor/prefdialog.d:189
 msgid "Add profile"
 msgstr "프로필 추가"
 
-#: source/gx/tilix/prefeditor/prefdialog.d:194
+#: source/gx/aiterm/prefeditor/prefdialog.d:194
 msgid "Delete profile"
 msgstr "프로필 삭제"
 
-#: source/gx/tilix/prefeditor/prefdialog.d:283
-#: source/gx/tilix/terminal/terminal.d:842
+#: source/gx/aiterm/prefeditor/prefdialog.d:283
+#: source/gx/aiterm/terminal/terminal.d:842
 msgid "Profiles"
 msgstr "프로필"
 
-#: source/gx/tilix/prefeditor/prefdialog.d:312
-#: source/gx/tilix/prefeditor/prefdialog.d:320
+#: source/gx/aiterm/prefeditor/prefdialog.d:312
+#: source/gx/aiterm/prefeditor/prefdialog.d:320
 #, c-format
 msgid "Profile: %s"
 msgstr "프로필: %s"
 
-#: source/gx/tilix/prefeditor/prefdialog.d:366
+#: source/gx/aiterm/prefeditor/prefdialog.d:366
 #, c-format
 msgid "Are you sure you want to delete '%s'?"
 msgstr "'%s'을(를) 삭제하시겠습니까?"
 
-#: source/gx/tilix/prefeditor/prefdialog.d:557
+#: source/gx/aiterm/prefeditor/prefdialog.d:557
 msgid "Clone"
 msgstr "복제"
 
-#: source/gx/tilix/prefeditor/prefdialog.d:561
+#: source/gx/aiterm/prefeditor/prefdialog.d:561
 msgid "Use for new terminals"
 msgstr "새 터미널을 위해 사용"
 
-#: source/gx/tilix/prefeditor/prefdialog.d:637
+#: source/gx/aiterm/prefeditor/prefdialog.d:637
 msgid "Encodings showing in menu:"
 msgstr "메뉴에 표시되는 인코딩:"
 
-#: source/gx/tilix/prefeditor/prefdialog.d:679
+#: source/gx/aiterm/prefeditor/prefdialog.d:679
 msgid "Enabled"
 msgstr "활성화됨"
 
-#: source/gx/tilix/prefeditor/prefdialog.d:789
+#: source/gx/aiterm/prefeditor/prefdialog.d:789
 msgid "Shortcut Key"
 msgstr "단축키"
 
-#: source/gx/tilix/prefeditor/prefdialog.d:801
+#: source/gx/aiterm/prefeditor/prefdialog.d:801
 msgid "Enable shortcuts"
 msgstr "바로 가기 활성화"
 
-#: source/gx/tilix/prefeditor/prefdialog.d:805
+#: source/gx/aiterm/prefeditor/prefdialog.d:805
 msgid "Restore default shortcut for this action"
 msgstr "기본값으로 설정"
 
-#: source/gx/tilix/prefeditor/prefdialog.d:916
+#: source/gx/aiterm/prefeditor/prefdialog.d:916
 msgid "Overwrite Existing Shortcut"
 msgstr "기존 단축키 덮어쓰기"
 
-#: source/gx/tilix/prefeditor/prefdialog.d:917
+#: source/gx/aiterm/prefeditor/prefdialog.d:917
 #, c-format
 msgid ""
 "The shortcut %s is already assigned to %s.\n"
@@ -1838,702 +1838,702 @@ msgstr ""
 "단축키 %s 는 이미 %s 로 할당되어 있습니다.\n"
 "다른 작업에 대한 단축키를 비활성화하고 대신 여기에 할당하시겠습니까?"
 
-#: source/gx/tilix/prefeditor/prefdialog.d:1172
+#: source/gx/aiterm/prefeditor/prefdialog.d:1172
 msgid "Window style"
 msgstr "창 스타일"
 
-#: source/gx/tilix/prefeditor/prefdialog.d:1174
+#: source/gx/aiterm/prefeditor/prefdialog.d:1174
 msgid "Borderless"
 msgstr "테두리 없음"
 
-#: source/gx/tilix/prefeditor/prefdialog.d:1174
+#: source/gx/aiterm/prefeditor/prefdialog.d:1174
 msgid "Disable CSD"
 msgstr "CSD 비활성화"
 
-#: source/gx/tilix/prefeditor/prefdialog.d:1174
+#: source/gx/aiterm/prefeditor/prefdialog.d:1174
 msgid "Disable CSD, hide toolbar"
 msgstr "CSD 비활성화, 툴바 숨기기"
 
-#: source/gx/tilix/prefeditor/prefdialog.d:1174
-#: source/gx/tilix/prefeditor/prefdialog.d:1188
+#: source/gx/aiterm/prefeditor/prefdialog.d:1174
+#: source/gx/aiterm/prefeditor/prefdialog.d:1188
 msgid "Normal"
 msgstr "보통"
 
-#: source/gx/tilix/prefeditor/prefdialog.d:1178
+#: source/gx/aiterm/prefeditor/prefdialog.d:1178
 msgid "Window restart required"
 msgstr "창을 다시 시작해야 합니다"
 
-#: source/gx/tilix/prefeditor/prefdialog.d:1187
+#: source/gx/aiterm/prefeditor/prefdialog.d:1187
 msgid "Terminal title style"
 msgstr "터미널 제목 스타일"
 
-#: source/gx/tilix/prefeditor/prefdialog.d:1188
-#: source/gx/tilix/prefeditor/profileeditor.d:447
+#: source/gx/aiterm/prefeditor/prefdialog.d:1188
+#: source/gx/aiterm/prefeditor/profileeditor.d:447
 msgid "None"
 msgstr "없음"
 
-#: source/gx/tilix/prefeditor/prefdialog.d:1188
+#: source/gx/aiterm/prefeditor/prefdialog.d:1188
 msgid "Small"
 msgstr "작음"
 
-#: source/gx/tilix/prefeditor/prefdialog.d:1193
-#: source/gx/tilix/prefeditor/prefdialog.d:1387
+#: source/gx/aiterm/prefeditor/prefdialog.d:1193
+#: source/gx/aiterm/prefeditor/prefdialog.d:1387
 msgid "Tab position"
 msgstr "탭 위치"
 
-#: source/gx/tilix/prefeditor/prefdialog.d:1194
-#: source/gx/tilix/prefeditor/prefdialog.d:1388
-#: source/gx/tilix/prefeditor/prefdialog.d:1395
+#: source/gx/aiterm/prefeditor/prefdialog.d:1194
+#: source/gx/aiterm/prefeditor/prefdialog.d:1388
+#: source/gx/aiterm/prefeditor/prefdialog.d:1395
 msgid "Bottom"
 msgstr "하단"
 
-#: source/gx/tilix/prefeditor/prefdialog.d:1194
-#: source/gx/tilix/prefeditor/prefdialog.d:1381
-#: source/gx/tilix/prefeditor/prefdialog.d:1388
+#: source/gx/aiterm/prefeditor/prefdialog.d:1194
+#: source/gx/aiterm/prefeditor/prefdialog.d:1381
+#: source/gx/aiterm/prefeditor/prefdialog.d:1388
 msgid "Left"
 msgstr "왼쪽"
 
-#: source/gx/tilix/prefeditor/prefdialog.d:1194
-#: source/gx/tilix/prefeditor/prefdialog.d:1381
-#: source/gx/tilix/prefeditor/prefdialog.d:1388
+#: source/gx/aiterm/prefeditor/prefdialog.d:1194
+#: source/gx/aiterm/prefeditor/prefdialog.d:1381
+#: source/gx/aiterm/prefeditor/prefdialog.d:1388
 msgid "Right"
 msgstr "오른쪽"
 
-#: source/gx/tilix/prefeditor/prefdialog.d:1194
-#: source/gx/tilix/prefeditor/prefdialog.d:1388
-#: source/gx/tilix/prefeditor/prefdialog.d:1395
+#: source/gx/aiterm/prefeditor/prefdialog.d:1194
+#: source/gx/aiterm/prefeditor/prefdialog.d:1388
+#: source/gx/aiterm/prefeditor/prefdialog.d:1395
 msgid "Top"
 msgstr "상단"
 
-#: source/gx/tilix/prefeditor/prefdialog.d:1200
+#: source/gx/aiterm/prefeditor/prefdialog.d:1200
 msgid "Theme variant"
 msgstr "테마 종류"
 
-#: source/gx/tilix/prefeditor/prefdialog.d:1201
+#: source/gx/aiterm/prefeditor/prefdialog.d:1201
 msgid "Dark"
 msgstr "어두움"
 
-#: source/gx/tilix/prefeditor/prefdialog.d:1201
+#: source/gx/aiterm/prefeditor/prefdialog.d:1201
 msgid "Light"
 msgstr "밝음"
 
-#: source/gx/tilix/prefeditor/prefdialog.d:1207
+#: source/gx/aiterm/prefeditor/prefdialog.d:1207
 msgid "Background image"
 msgstr "배경 이미지"
 
-#: source/gx/tilix/prefeditor/prefdialog.d:1209
+#: source/gx/aiterm/prefeditor/prefdialog.d:1209
 msgid "Select Image"
 msgstr "이미지 선택"
 
-#: source/gx/tilix/prefeditor/prefdialog.d:1212
+#: source/gx/aiterm/prefeditor/prefdialog.d:1212
 msgid "All Image Files"
 msgstr "모든 이미지 파일"
 
-#: source/gx/tilix/prefeditor/prefdialog.d:1233
+#: source/gx/aiterm/prefeditor/prefdialog.d:1233
 msgid "Reset background image"
 msgstr "배경 이미지 초기화"
 
-#: source/gx/tilix/prefeditor/prefdialog.d:1239
-#: source/gx/tilix/prefeditor/prefdialog.d:1381
+#: source/gx/aiterm/prefeditor/prefdialog.d:1239
+#: source/gx/aiterm/prefeditor/prefdialog.d:1381
 msgid "Center"
 msgstr "가운데"
 
-#: source/gx/tilix/prefeditor/prefdialog.d:1239
+#: source/gx/aiterm/prefeditor/prefdialog.d:1239
 msgid "Scale"
 msgstr "크기"
 
-#: source/gx/tilix/prefeditor/prefdialog.d:1239
+#: source/gx/aiterm/prefeditor/prefdialog.d:1239
 msgid "Stretch"
 msgstr "늘리기"
 
-#: source/gx/tilix/prefeditor/prefdialog.d:1239
+#: source/gx/aiterm/prefeditor/prefdialog.d:1239
 msgid "Tile"
 msgstr "타일"
 
-#: source/gx/tilix/prefeditor/prefdialog.d:1258
+#: source/gx/aiterm/prefeditor/prefdialog.d:1258
 msgid "Default session name"
 msgstr "기본 세션 이름"
 
-#: source/gx/tilix/prefeditor/prefdialog.d:1273
+#: source/gx/aiterm/prefeditor/prefdialog.d:1273
 msgid "Application title"
 msgstr "응용프로그램 제목"
 
-#: source/gx/tilix/prefeditor/prefdialog.d:1291
+#: source/gx/aiterm/prefeditor/prefdialog.d:1291
 msgid "Enable transparency, requires re-start"
 msgstr "투명도 활성화 하기, 다시 시작 필요함"
 
-#: source/gx/tilix/prefeditor/prefdialog.d:1297
+#: source/gx/aiterm/prefeditor/prefdialog.d:1297
 msgid "Use a wide handle for splitters"
 msgstr "스플라이터에 대해 넓은 핸들 사용하기"
 
-#: source/gx/tilix/prefeditor/prefdialog.d:1302
+#: source/gx/aiterm/prefeditor/prefdialog.d:1302
 msgid "Place the sidebar on the right"
 msgstr "사이드바를 오른쪽에 두기"
 
-#: source/gx/tilix/prefeditor/prefdialog.d:1306
+#: source/gx/aiterm/prefeditor/prefdialog.d:1306
 msgid "Show the terminal title even if it's the only terminal"
 msgstr "터미널만 있어도 터미널 제목 표시"
 
-#: source/gx/tilix/prefeditor/prefdialog.d:1311
+#: source/gx/aiterm/prefeditor/prefdialog.d:1311
 msgid "Use overlay scrollbars (Application restart required)"
 msgstr "오버레이 스크롤바 사용 (응용프로그램 재시작 필요)"
 
-#: source/gx/tilix/prefeditor/prefdialog.d:1316
+#: source/gx/aiterm/prefeditor/prefdialog.d:1316
 msgid "Use tabs instead of sidebar (Application restart required)"
 msgstr "사이드바 대신 탭 사용 (응용프로그램 재시작 필요)"
 
-#: source/gx/tilix/prefeditor/prefdialog.d:1348
+#: source/gx/aiterm/prefeditor/prefdialog.d:1348
 msgid "Size"
 msgstr "크기"
 
-#: source/gx/tilix/prefeditor/prefdialog.d:1359
+#: source/gx/aiterm/prefeditor/prefdialog.d:1359
 msgid "Height percent"
 msgstr "높이 백분율"
 
-#: source/gx/tilix/prefeditor/prefdialog.d:1370
+#: source/gx/aiterm/prefeditor/prefdialog.d:1370
 msgid "Width percent"
 msgstr "너비 백분율"
 
-#: source/gx/tilix/prefeditor/prefdialog.d:1380
+#: source/gx/aiterm/prefeditor/prefdialog.d:1380
 msgid "Alignment"
 msgstr "정렬"
 
-#: source/gx/tilix/prefeditor/prefdialog.d:1394
+#: source/gx/aiterm/prefeditor/prefdialog.d:1394
 msgid "Window position"
 msgstr "창 위치"
 
-#: source/gx/tilix/prefeditor/prefdialog.d:1403
-#: source/gx/tilix/prefeditor/profileeditor.d:556
+#: source/gx/aiterm/prefeditor/prefdialog.d:1403
+#: source/gx/aiterm/prefeditor/profileeditor.d:556
 msgid "Options"
 msgstr "옵션"
 
-#: source/gx/tilix/prefeditor/prefdialog.d:1411
+#: source/gx/aiterm/prefeditor/prefdialog.d:1411
 msgid "Show terminal on all workspaces"
 msgstr "모든 작업공간에 터미널 표시"
 
-#: source/gx/tilix/prefeditor/prefdialog.d:1423
+#: source/gx/aiterm/prefeditor/prefdialog.d:1423
 msgid "Hide window when focus is lost"
 msgstr "포커스를 잃을 때 창 숨기기"
 
-#: source/gx/tilix/prefeditor/prefdialog.d:1427
+#: source/gx/aiterm/prefeditor/prefdialog.d:1427
 msgid "Delay hiding window by (ms)"
 msgstr "창 숨기기 지연시간(ms)"
 
-#: source/gx/tilix/prefeditor/prefdialog.d:1440
+#: source/gx/aiterm/prefeditor/prefdialog.d:1440
 msgid "Hide the toolbar of the window"
 msgstr "창 도구모음 숨김"
 
-#: source/gx/tilix/prefeditor/prefdialog.d:1455
+#: source/gx/aiterm/prefeditor/prefdialog.d:1455
 msgid "Keep window always on top"
 msgstr "창을 항상 맨 위에 유지"
 
-#: source/gx/tilix/prefeditor/prefdialog.d:1460
+#: source/gx/aiterm/prefeditor/prefdialog.d:1460
 msgid "Display terminal on active monitor"
 msgstr "활성된 모니터에 터미널 표시"
 
-#: source/gx/tilix/prefeditor/prefdialog.d:1467
+#: source/gx/aiterm/prefeditor/prefdialog.d:1467
 msgid "Display on specific monitor"
 msgstr "특정 모니터에서 보이기"
 
-#: source/gx/tilix/prefeditor/prefdialog.d:1470
+#: source/gx/aiterm/prefeditor/prefdialog.d:1470
 msgid "Primary Monitor"
 msgstr "기본 모니터"
 
-#: source/gx/tilix/prefeditor/prefdialog.d:1473
+#: source/gx/aiterm/prefeditor/prefdialog.d:1473
 msgid "Monitor "
 msgstr "모니터 "
 
-#: source/gx/tilix/prefeditor/prefdialog.d:1533
+#: source/gx/aiterm/prefeditor/prefdialog.d:1533
 msgid "Behavior"
 msgstr "행동"
 
-#: source/gx/tilix/prefeditor/prefdialog.d:1539
+#: source/gx/aiterm/prefeditor/prefdialog.d:1539
 msgid "Prompt when creating a new session"
 msgstr "새 세션을 만들 때 세션 설정 입력받기"
 
-#: source/gx/tilix/prefeditor/prefdialog.d:1544
+#: source/gx/aiterm/prefeditor/prefdialog.d:1544
 msgid "Focus a terminal when the mouse moves over it"
 msgstr "마우스가 위에서 움직일 때 터미널에 포커스 하기"
 
-#: source/gx/tilix/prefeditor/prefdialog.d:1549
+#: source/gx/aiterm/prefeditor/prefdialog.d:1549
 msgid "Autohide the mouse pointer when typing"
 msgstr "타이핑 할 때 마우스 포인터 자동으로 숨기기"
 
-#: source/gx/tilix/prefeditor/prefdialog.d:1554
+#: source/gx/aiterm/prefeditor/prefdialog.d:1554
 msgid "Close terminal by clicking middle mouse button on title"
 msgstr "제목에서 마우스 중간 버튼을 눌러 터미널 닫기"
 
-#: source/gx/tilix/prefeditor/prefdialog.d:1559
+#: source/gx/aiterm/prefeditor/prefdialog.d:1559
 msgid "Zoom the terminal using <Control> and scroll wheel"
 msgstr "<Control>과 스크롤 휠을 이용하여 터미널 확대하기"
 
-#: source/gx/tilix/prefeditor/prefdialog.d:1564
+#: source/gx/aiterm/prefeditor/prefdialog.d:1564
 msgid "Require the <Control> modifier to edit title on click"
 msgstr "클릭 시 제목을 편집하려면 <Control> 수정자가 필요합니다"
 
-#: source/gx/tilix/prefeditor/prefdialog.d:1569
+#: source/gx/aiterm/prefeditor/prefdialog.d:1569
 msgid "Close window when last session is closed"
 msgstr "마지막 세션이 닫힐 때 창 닫기"
 
-#: source/gx/tilix/prefeditor/prefdialog.d:1574
+#: source/gx/aiterm/prefeditor/prefdialog.d:1574
 msgid "Save and restore window state"
 msgstr "창 상태 저장 및 복원"
 
-#: source/gx/tilix/prefeditor/prefdialog.d:1579
+#: source/gx/aiterm/prefeditor/prefdialog.d:1579
 msgid "Always search using regular expressions"
 msgstr "항상 정규식을 사용하여 검색"
 
-#: source/gx/tilix/prefeditor/prefdialog.d:1585
+#: source/gx/aiterm/prefeditor/prefdialog.d:1585
 msgid "Send desktop notification on process complete"
 msgstr "프로세스가 완료될때 데스크톱 알림 보내기"
 
-#: source/gx/tilix/prefeditor/prefdialog.d:1593
+#: source/gx/aiterm/prefeditor/prefdialog.d:1593
 msgid "On new instance"
 msgstr "새 인스턴스 생성시"
 
-#: source/gx/tilix/prefeditor/prefdialog.d:1596
+#: source/gx/aiterm/prefeditor/prefdialog.d:1596
 msgid "Focus Window"
 msgstr "창에 포커스"
 
-#: source/gx/tilix/prefeditor/prefdialog.d:1596
+#: source/gx/aiterm/prefeditor/prefdialog.d:1596
 msgid "Split Down"
 msgstr "아래로 분할"
 
-#: source/gx/tilix/prefeditor/prefdialog.d:1596
+#: source/gx/aiterm/prefeditor/prefdialog.d:1596
 msgid "Split Right"
 msgstr "오른쪽으로 분할"
 
-#: source/gx/tilix/prefeditor/prefdialog.d:1602
-#: source/gx/tilix/terminal/terminal.d:1851
+#: source/gx/aiterm/prefeditor/prefdialog.d:1602
+#: source/gx/aiterm/terminal/terminal.d:1851
 msgid "Clipboard"
 msgstr "클립보드"
 
-#: source/gx/tilix/prefeditor/prefdialog.d:1608
+#: source/gx/aiterm/prefeditor/prefdialog.d:1608
 msgid "Always use advanced paste dialog"
 msgstr "항상 고급 붙여넣기 다이얼로그 사용"
 
-#: source/gx/tilix/prefeditor/prefdialog.d:1613
+#: source/gx/aiterm/prefeditor/prefdialog.d:1613
 msgid "Warn when attempting unsafe paste"
 msgstr "위험한 붙여넣기를 할 때 경고하기"
 
-#: source/gx/tilix/prefeditor/prefdialog.d:1618
+#: source/gx/aiterm/prefeditor/prefdialog.d:1618
 msgid "Strip first character of paste if comment or variable declaration"
 msgstr "붙여넣기 한 것이 주석 또는 변수 선언문일 경우 첫 문자 삭제하기"
 
-#: source/gx/tilix/prefeditor/prefdialog.d:1623
+#: source/gx/aiterm/prefeditor/prefdialog.d:1623
 msgid "Strip trailing whitespaces and linebreak characters on paste"
 msgstr "붙여넣기에서 후행 공백 및 줄 바꿈 문자 제거"
 
-#: source/gx/tilix/prefeditor/prefdialog.d:1628
+#: source/gx/aiterm/prefeditor/prefdialog.d:1628
 msgid "Automatically copy text to clipboard when selecting"
 msgstr "선택할 때 텍스트를 자동으로 클립보드로 복사하기"
 
-#: source/gx/tilix/prefeditor/profileeditor.d:97
+#: source/gx/aiterm/prefeditor/profileeditor.d:97
 msgid "General"
 msgstr "일반"
 
-#: source/gx/tilix/prefeditor/profileeditor.d:99
+#: source/gx/aiterm/prefeditor/profileeditor.d:99
 msgid "Color"
 msgstr "색상"
 
-#: source/gx/tilix/prefeditor/profileeditor.d:100
+#: source/gx/aiterm/prefeditor/profileeditor.d:100
 msgid "Scrolling"
 msgstr "스크롤링"
 
-#: source/gx/tilix/prefeditor/profileeditor.d:101
+#: source/gx/aiterm/prefeditor/profileeditor.d:101
 msgid "Compatibility"
 msgstr "호환성"
 
-#: source/gx/tilix/prefeditor/profileeditor.d:103
-#: source/gx/tilix/prefeditor/profileeditor.d:693
-#: source/gx/tilix/prefeditor/profileeditor.d:1175
-#: source/gx/tilix/terminal/layout.d:68
+#: source/gx/aiterm/prefeditor/profileeditor.d:103
+#: source/gx/aiterm/prefeditor/profileeditor.d:693
+#: source/gx/aiterm/prefeditor/profileeditor.d:1175
+#: source/gx/aiterm/terminal/layout.d:68
 msgid "Badge"
 msgstr "배지"
 
-#: source/gx/tilix/prefeditor/profileeditor.d:217
+#: source/gx/aiterm/prefeditor/profileeditor.d:217
 msgid "Profile name"
 msgstr "프로필 이름"
 
-#: source/gx/tilix/prefeditor/profileeditor.d:241
+#: source/gx/aiterm/prefeditor/profileeditor.d:241
 msgid "Terminal title"
 msgstr "터미널 제목"
 
-#: source/gx/tilix/prefeditor/profileeditor.d:254
+#: source/gx/aiterm/prefeditor/profileeditor.d:254
 msgid "Text Appearance"
 msgstr "텍스트 모양새"
 
-#: source/gx/tilix/prefeditor/profileeditor.d:262
+#: source/gx/aiterm/prefeditor/profileeditor.d:262
 msgid "Terminal size"
 msgstr "터미널 크기"
 
-#: source/gx/tilix/prefeditor/profileeditor.d:272
+#: source/gx/aiterm/prefeditor/profileeditor.d:272
 msgid "columns"
 msgstr "행"
 
-#: source/gx/tilix/prefeditor/profileeditor.d:281
+#: source/gx/aiterm/prefeditor/profileeditor.d:281
 msgid "rows"
 msgstr "열"
 
-#: source/gx/tilix/prefeditor/profileeditor.d:289
-#: source/gx/tilix/prefeditor/profileeditor.d:328
-#: source/gx/tilix/terminal/terminal.d:853
+#: source/gx/aiterm/prefeditor/profileeditor.d:289
+#: source/gx/aiterm/prefeditor/profileeditor.d:328
+#: source/gx/aiterm/terminal/terminal.d:853
 msgid "Reset"
 msgstr "초기화"
 
-#: source/gx/tilix/prefeditor/profileeditor.d:301
+#: source/gx/aiterm/prefeditor/profileeditor.d:301
 msgid "Cell spacing"
 msgstr "셀 간격"
 
-#: source/gx/tilix/prefeditor/profileeditor.d:311
+#: source/gx/aiterm/prefeditor/profileeditor.d:311
 msgid "width"
 msgstr "폭"
 
-#: source/gx/tilix/prefeditor/profileeditor.d:320
+#: source/gx/aiterm/prefeditor/profileeditor.d:320
 msgid "height"
 msgstr "높이"
 
-#: source/gx/tilix/prefeditor/profileeditor.d:347
+#: source/gx/aiterm/prefeditor/profileeditor.d:347
 msgid "Margin"
 msgstr "여백"
 
-#: source/gx/tilix/prefeditor/profileeditor.d:358
+#: source/gx/aiterm/prefeditor/profileeditor.d:358
 msgid "Text blink mode"
 msgstr "텍스트 깜박임 모드"
 
-#: source/gx/tilix/prefeditor/profileeditor.d:361
+#: source/gx/aiterm/prefeditor/profileeditor.d:361
 msgid "Always"
 msgstr "항상"
 
-#: source/gx/tilix/prefeditor/profileeditor.d:361
+#: source/gx/aiterm/prefeditor/profileeditor.d:361
 msgid "Focused"
 msgstr "창에 초점됨"
 
-#: source/gx/tilix/prefeditor/profileeditor.d:361
+#: source/gx/aiterm/prefeditor/profileeditor.d:361
 msgid "Never"
 msgstr "안함"
 
-#: source/gx/tilix/prefeditor/profileeditor.d:361
+#: source/gx/aiterm/prefeditor/profileeditor.d:361
 msgid "Unfocused"
 msgstr "초점이 맞지 않음"
 
-#: source/gx/tilix/prefeditor/profileeditor.d:380
-#: source/gx/tilix/prefeditor/profileeditor.d:1199
+#: source/gx/aiterm/prefeditor/profileeditor.d:380
+#: source/gx/aiterm/prefeditor/profileeditor.d:1199
 msgid "Custom font"
 msgstr "사용자 지정 글꼴"
 
-#: source/gx/tilix/prefeditor/profileeditor.d:392
+#: source/gx/aiterm/prefeditor/profileeditor.d:392
 msgid "Choose A Terminal Font"
 msgstr "터미널 글꼴 선택"
 
-#: source/gx/tilix/prefeditor/profileeditor.d:401
+#: source/gx/aiterm/prefeditor/profileeditor.d:401
 msgid "Word-wise select chars"
 msgstr "단어별 문자 선택"
 
-#: source/gx/tilix/prefeditor/profileeditor.d:409
-#: source/gx/tilix/prefeditor/profileeditor.d:417
-#: source/gx/tilix/prefeditor/profileeditor.d:659
+#: source/gx/aiterm/prefeditor/profileeditor.d:409
+#: source/gx/aiterm/prefeditor/profileeditor.d:417
+#: source/gx/aiterm/prefeditor/profileeditor.d:659
 msgid "Cursor"
 msgstr "커서"
 
-#: source/gx/tilix/prefeditor/profileeditor.d:420
+#: source/gx/aiterm/prefeditor/profileeditor.d:420
 msgid "Block"
 msgstr "블록"
 
-#: source/gx/tilix/prefeditor/profileeditor.d:420
+#: source/gx/aiterm/prefeditor/profileeditor.d:420
 msgid "IBeam"
 msgstr "I빔"
 
-#: source/gx/tilix/prefeditor/profileeditor.d:420
+#: source/gx/aiterm/prefeditor/profileeditor.d:420
 msgid "Underline"
 msgstr "밑줄"
 
-#: source/gx/tilix/prefeditor/profileeditor.d:428
+#: source/gx/aiterm/prefeditor/profileeditor.d:428
 msgid "Cursor blink mode"
 msgstr "커서 깜빡임 모드"
 
-#: source/gx/tilix/prefeditor/profileeditor.d:431
+#: source/gx/aiterm/prefeditor/profileeditor.d:431
 msgid "Off"
 msgstr "끔"
 
-#: source/gx/tilix/prefeditor/profileeditor.d:431
+#: source/gx/aiterm/prefeditor/profileeditor.d:431
 msgid "On"
 msgstr "켬"
 
-#: source/gx/tilix/prefeditor/profileeditor.d:431
+#: source/gx/aiterm/prefeditor/profileeditor.d:431
 msgid "System"
 msgstr "시스템"
 
-#: source/gx/tilix/prefeditor/profileeditor.d:436
+#: source/gx/aiterm/prefeditor/profileeditor.d:436
 msgid "Notification"
 msgstr "알림"
 
-#: source/gx/tilix/prefeditor/profileeditor.d:444
-#: source/gx/tilix/terminal/terminal.d:422
+#: source/gx/aiterm/prefeditor/profileeditor.d:444
+#: source/gx/aiterm/terminal/terminal.d:422
 msgid "Terminal bell"
 msgstr "터미널 벨"
 
-#: source/gx/tilix/prefeditor/profileeditor.d:447
+#: source/gx/aiterm/prefeditor/profileeditor.d:447
 msgid "Icon and sound"
 msgstr "아이콘 및 소리"
 
-#: source/gx/tilix/prefeditor/profileeditor.d:447
+#: source/gx/aiterm/prefeditor/profileeditor.d:447
 msgid "Sound"
 msgstr "소리"
 
-#: source/gx/tilix/prefeditor/profileeditor.d:465
+#: source/gx/aiterm/prefeditor/profileeditor.d:465
 #, c-format
 msgid "ID: %s"
 msgstr "ID: %s"
 
-#: source/gx/tilix/prefeditor/profileeditor.d:513
+#: source/gx/aiterm/prefeditor/profileeditor.d:513
 msgid "Color scheme"
 msgstr "색상 구성표"
 
-#: source/gx/tilix/prefeditor/profileeditor.d:523
-#: source/gx/tilix/prefeditor/profileeditor.d:988
+#: source/gx/aiterm/prefeditor/profileeditor.d:523
+#: source/gx/aiterm/prefeditor/profileeditor.d:988
 msgid "Custom"
 msgstr "사용자 지정"
 
-#: source/gx/tilix/prefeditor/profileeditor.d:536
+#: source/gx/aiterm/prefeditor/profileeditor.d:536
 msgid "Export"
 msgstr "내보내기"
 
-#: source/gx/tilix/prefeditor/profileeditor.d:548
+#: source/gx/aiterm/prefeditor/profileeditor.d:548
 msgid "Color palette"
 msgstr "색상 팔레트"
 
-#: source/gx/tilix/prefeditor/profileeditor.d:570
+#: source/gx/aiterm/prefeditor/profileeditor.d:570
 msgid "Use theme colors for foreground/background"
 msgstr "전경/배경 에 대해 테마 색상 사용"
 
-#: source/gx/tilix/prefeditor/profileeditor.d:580
+#: source/gx/aiterm/prefeditor/profileeditor.d:580
 msgid "Show bold text in bright colors"
 msgstr "밝은 색상으로 굵은 텍스트 표시"
 
-#: source/gx/tilix/prefeditor/profileeditor.d:592
+#: source/gx/aiterm/prefeditor/profileeditor.d:592
 msgid "Transparency"
 msgstr "투명도"
 
-#: source/gx/tilix/prefeditor/profileeditor.d:606
+#: source/gx/aiterm/prefeditor/profileeditor.d:606
 msgid "Unfocused dim"
 msgstr "포커스 해제시 어두운 색상"
 
-#: source/gx/tilix/prefeditor/profileeditor.d:654
+#: source/gx/aiterm/prefeditor/profileeditor.d:654
 msgid "Text"
 msgstr "글자색"
 
-#: source/gx/tilix/prefeditor/profileeditor.d:655
-#: source/gx/tilix/prefeditor/profileeditor.d:757
+#: source/gx/aiterm/prefeditor/profileeditor.d:655
+#: source/gx/aiterm/prefeditor/profileeditor.d:757
 msgid "Background"
 msgstr "배경색"
 
-#: source/gx/tilix/prefeditor/profileeditor.d:664
+#: source/gx/aiterm/prefeditor/profileeditor.d:664
 msgid "Select Cursor Foreground Color"
 msgstr "커서 전경 색상 선택"
 
-#: source/gx/tilix/prefeditor/profileeditor.d:666
+#: source/gx/aiterm/prefeditor/profileeditor.d:666
 msgid "Select Cursor Background Color"
 msgstr "커서 배경 색상 선택"
 
-#: source/gx/tilix/prefeditor/profileeditor.d:671
+#: source/gx/aiterm/prefeditor/profileeditor.d:671
 msgid "Highlight"
 msgstr "강조"
 
-#: source/gx/tilix/prefeditor/profileeditor.d:676
+#: source/gx/aiterm/prefeditor/profileeditor.d:676
 msgid "Select Highlight Foreground Color"
 msgstr "강조 전경 색상 선택"
 
-#: source/gx/tilix/prefeditor/profileeditor.d:678
+#: source/gx/aiterm/prefeditor/profileeditor.d:678
 msgid "Select Highlight Background Color"
 msgstr "강조 배경 색상 선택"
 
-#: source/gx/tilix/prefeditor/profileeditor.d:683
+#: source/gx/aiterm/prefeditor/profileeditor.d:683
 msgid "Bold"
 msgstr "굵은 글씨"
 
-#: source/gx/tilix/prefeditor/profileeditor.d:688
+#: source/gx/aiterm/prefeditor/profileeditor.d:688
 msgid "Select Bold Color"
 msgstr "굵은 글씨 색 선택"
 
-#: source/gx/tilix/prefeditor/profileeditor.d:697
+#: source/gx/aiterm/prefeditor/profileeditor.d:697
 msgid "Select Badge Color"
 msgstr "배지 색상 선택"
 
-#: source/gx/tilix/prefeditor/profileeditor.d:746
+#: source/gx/aiterm/prefeditor/profileeditor.d:746
 msgid "Select Background Color"
 msgstr "배경 색상 선택"
 
-#: source/gx/tilix/prefeditor/profileeditor.d:762
-#: source/gx/tilix/prefeditor/profileeditor.d:778
+#: source/gx/aiterm/prefeditor/profileeditor.d:762
+#: source/gx/aiterm/prefeditor/profileeditor.d:778
 msgid "Select Foreground Color"
 msgstr "전경 색상 선택"
 
-#: source/gx/tilix/prefeditor/profileeditor.d:777
+#: source/gx/aiterm/prefeditor/profileeditor.d:777
 msgid "Foreground"
 msgstr "전경"
 
-#: source/gx/tilix/prefeditor/profileeditor.d:781
+#: source/gx/aiterm/prefeditor/profileeditor.d:781
 msgid "Black"
 msgstr "검정"
 
-#: source/gx/tilix/prefeditor/profileeditor.d:781
+#: source/gx/aiterm/prefeditor/profileeditor.d:781
 msgid "Blue"
 msgstr "파랑"
 
-#: source/gx/tilix/prefeditor/profileeditor.d:781
+#: source/gx/aiterm/prefeditor/profileeditor.d:781
 msgid "Green"
 msgstr "녹색"
 
-#: source/gx/tilix/prefeditor/profileeditor.d:781
+#: source/gx/aiterm/prefeditor/profileeditor.d:781
 msgid "Grey"
 msgstr "회색"
 
-#: source/gx/tilix/prefeditor/profileeditor.d:781
+#: source/gx/aiterm/prefeditor/profileeditor.d:781
 msgid "Orange"
 msgstr "주황"
 
-#: source/gx/tilix/prefeditor/profileeditor.d:781
+#: source/gx/aiterm/prefeditor/profileeditor.d:781
 msgid "Purple"
 msgstr "보라"
 
-#: source/gx/tilix/prefeditor/profileeditor.d:781
+#: source/gx/aiterm/prefeditor/profileeditor.d:781
 msgid "Red"
 msgstr "빨강"
 
-#: source/gx/tilix/prefeditor/profileeditor.d:781
+#: source/gx/aiterm/prefeditor/profileeditor.d:781
 msgid "Turquoise"
 msgstr "청록"
 
-#: source/gx/tilix/prefeditor/profileeditor.d:787
+#: source/gx/aiterm/prefeditor/profileeditor.d:787
 #, c-format
 msgid "Select %s Color"
 msgstr "%s색 선택"
 
-#: source/gx/tilix/prefeditor/profileeditor.d:794
+#: source/gx/aiterm/prefeditor/profileeditor.d:794
 #, c-format
 msgid "Select %s Light Color"
 msgstr "밝은 %s색 선택"
 
-#: source/gx/tilix/prefeditor/profileeditor.d:945
+#: source/gx/aiterm/prefeditor/profileeditor.d:945
 msgid "Export Color Scheme"
 msgstr "색상 구성표 내보내기"
 
-#: source/gx/tilix/prefeditor/profileeditor.d:1022
+#: source/gx/aiterm/prefeditor/profileeditor.d:1022
 msgid "Show scrollbar"
 msgstr "스크롤바 표시"
 
-#: source/gx/tilix/prefeditor/profileeditor.d:1026
+#: source/gx/aiterm/prefeditor/profileeditor.d:1026
 msgid "Scroll on output"
 msgstr "출력시 스크롤하기"
 
-#: source/gx/tilix/prefeditor/profileeditor.d:1030
+#: source/gx/aiterm/prefeditor/profileeditor.d:1030
 msgid "Scroll on keystroke"
 msgstr "키 누를 때 스크롤하기"
 
-#: source/gx/tilix/prefeditor/profileeditor.d:1034
+#: source/gx/aiterm/prefeditor/profileeditor.d:1034
 msgid "Limit scrollback to:"
 msgstr "스크롤 제한:"
 
 # Terminix gettext pot file
-#: source/gx/tilix/prefeditor/profileeditor.d:1069
+#: source/gx/aiterm/prefeditor/profileeditor.d:1069
 msgid "Backspace key generates"
 msgstr "Backspace 키 누를 때 생성할 것"
 
-#: source/gx/tilix/prefeditor/profileeditor.d:1072
-#: source/gx/tilix/prefeditor/profileeditor.d:1081
+#: source/gx/aiterm/prefeditor/profileeditor.d:1072
+#: source/gx/aiterm/prefeditor/profileeditor.d:1081
 msgid "ASCII DEL"
 msgstr "ASCII DEL"
 
-#: source/gx/tilix/prefeditor/profileeditor.d:1072
-#: source/gx/tilix/prefeditor/profileeditor.d:1081
+#: source/gx/aiterm/prefeditor/profileeditor.d:1072
+#: source/gx/aiterm/prefeditor/profileeditor.d:1081
 msgid "Automatic"
 msgstr "자동"
 
-#: source/gx/tilix/prefeditor/profileeditor.d:1072
-#: source/gx/tilix/prefeditor/profileeditor.d:1081
+#: source/gx/aiterm/prefeditor/profileeditor.d:1072
+#: source/gx/aiterm/prefeditor/profileeditor.d:1081
 msgid "Control-H"
 msgstr "Control-H"
 
-#: source/gx/tilix/prefeditor/profileeditor.d:1072
-#: source/gx/tilix/prefeditor/profileeditor.d:1081
+#: source/gx/aiterm/prefeditor/profileeditor.d:1072
+#: source/gx/aiterm/prefeditor/profileeditor.d:1081
 msgid "Escape sequence"
 msgstr "확장열"
 
-#: source/gx/tilix/prefeditor/profileeditor.d:1072
-#: source/gx/tilix/prefeditor/profileeditor.d:1081
+#: source/gx/aiterm/prefeditor/profileeditor.d:1072
+#: source/gx/aiterm/prefeditor/profileeditor.d:1081
 msgid "TTY"
 msgstr "TTY"
 
-#: source/gx/tilix/prefeditor/profileeditor.d:1078
+#: source/gx/aiterm/prefeditor/profileeditor.d:1078
 msgid "Delete key generates"
 msgstr "삭제 키 생성"
 
-#: source/gx/tilix/prefeditor/profileeditor.d:1102
+#: source/gx/aiterm/prefeditor/profileeditor.d:1102
 msgid "Ambiguous-width characters"
 msgstr "모호한 폭의 문자"
 
-#: source/gx/tilix/prefeditor/profileeditor.d:1105
+#: source/gx/aiterm/prefeditor/profileeditor.d:1105
 msgid "Narrow"
 msgstr "좁음"
 
-#: source/gx/tilix/prefeditor/profileeditor.d:1105
+#: source/gx/aiterm/prefeditor/profileeditor.d:1105
 msgid "Wide"
 msgstr "넓음"
 
-#: source/gx/tilix/prefeditor/profileeditor.d:1126
+#: source/gx/aiterm/prefeditor/profileeditor.d:1126
 msgid "Run command as a login shell"
 msgstr "로그인 셸로 명령 실행"
 
-#: source/gx/tilix/prefeditor/profileeditor.d:1130
+#: source/gx/aiterm/prefeditor/profileeditor.d:1130
 msgid "Run a custom command instead of my shell"
 msgstr "내 셸 대신 사용자 지정 명령 실행"
 
-#: source/gx/tilix/prefeditor/profileeditor.d:1147
+#: source/gx/aiterm/prefeditor/profileeditor.d:1147
 msgid "When command exits"
 msgstr "명령이 종료될 때"
 
-#: source/gx/tilix/prefeditor/profileeditor.d:1149
+#: source/gx/aiterm/prefeditor/profileeditor.d:1149
 msgid "Exit the terminal"
 msgstr "터미널 끝내기"
 
-#: source/gx/tilix/prefeditor/profileeditor.d:1149
+#: source/gx/aiterm/prefeditor/profileeditor.d:1149
 msgid "Hold the terminal open"
 msgstr "터미널 열림 상태로 유지"
 
-#: source/gx/tilix/prefeditor/profileeditor.d:1149
+#: source/gx/aiterm/prefeditor/profileeditor.d:1149
 msgid "Restart the command"
 msgstr "명령 다시 시작"
 
-#: source/gx/tilix/prefeditor/profileeditor.d:1189
+#: source/gx/aiterm/prefeditor/profileeditor.d:1189
 msgid "Badge position"
 msgstr "배지 위치"
 
-#: source/gx/tilix/prefeditor/profileeditor.d:1193
+#: source/gx/aiterm/prefeditor/profileeditor.d:1193
 msgid "Northeast"
 msgstr "북동"
 
-#: source/gx/tilix/prefeditor/profileeditor.d:1193
+#: source/gx/aiterm/prefeditor/profileeditor.d:1193
 msgid "Northwest"
 msgstr "북서"
 
-#: source/gx/tilix/prefeditor/profileeditor.d:1193
+#: source/gx/aiterm/prefeditor/profileeditor.d:1193
 msgid "Southeast"
 msgstr "남동"
 
-#: source/gx/tilix/prefeditor/profileeditor.d:1193
+#: source/gx/aiterm/prefeditor/profileeditor.d:1193
 msgid "Southwest"
 msgstr "남서"
 
-#: source/gx/tilix/prefeditor/profileeditor.d:1211
+#: source/gx/aiterm/prefeditor/profileeditor.d:1211
 msgid "Choose A Badge Font"
 msgstr "배지 글꼴 선택하기"
 
-#: source/gx/tilix/prefeditor/profileeditor.d:1249
+#: source/gx/aiterm/prefeditor/profileeditor.d:1249
 msgid "Notify New Activity"
 msgstr "새 활동 알리기"
 
-#: source/gx/tilix/prefeditor/profileeditor.d:1256
+#: source/gx/aiterm/prefeditor/profileeditor.d:1256
 msgid ""
 "A notification can be raised when new activity occurs after a specified "
 "period of silence."
@@ -2541,11 +2541,11 @@ msgstr ""
 "지정된 무음 시간이 경과한 후 새로운 활동이 발생하면 알림이 발송될 수 있습니"
 "다."
 
-#: source/gx/tilix/prefeditor/profileeditor.d:1269
+#: source/gx/aiterm/prefeditor/profileeditor.d:1269
 msgid "Automatic Profile Switching"
 msgstr "자동 프로필 전환 중"
 
-#: source/gx/tilix/prefeditor/profileeditor.d:1278
+#: source/gx/aiterm/prefeditor/profileeditor.d:1278
 msgid ""
 "Profiles are automatically selected based on the values entered here.\n"
 "Values are entered using a <i>username@hostname:directory</i> format. Either "
@@ -2557,7 +2557,7 @@ msgstr ""
 "이름과 디렉터리는 생략할 수 있지만 콜론이 있어야 합니다. 호스트 이름이나 디렉"
 "터리가 없는 항목은 허용되지 않습니다."
 
-#: source/gx/tilix/prefeditor/profileeditor.d:1280
+#: source/gx/aiterm/prefeditor/profileeditor.d:1280
 msgid ""
 "Profiles are automatically selected based on the values entered here.\n"
 "Values are entered using a <i>hostname:directory</i> format. Either the "
@@ -2569,166 +2569,166 @@ msgstr ""
 "터리는 생략할 수 있지만 콜론이 있어야 합니다. 호스트 이름이나 디렉터리가 없"
 "는 항목은 허용되지 않습니다."
 
-#: source/gx/tilix/prefeditor/profileeditor.d:1292
+#: source/gx/aiterm/prefeditor/profileeditor.d:1292
 msgid "Match"
 msgstr "일치값"
 
-#: source/gx/tilix/prefeditor/profileeditor.d:1307
+#: source/gx/aiterm/prefeditor/profileeditor.d:1307
 msgid "Enter username@hostname:directory to match"
 msgstr "일치시킬 사용자이름@호스트이름:디렉터리 입력"
 
-#: source/gx/tilix/prefeditor/profileeditor.d:1309
+#: source/gx/aiterm/prefeditor/profileeditor.d:1309
 msgid "Enter hostname:directory to match"
 msgstr "일치시킬 호스트이름:디렉터리 입력"
 
-#: source/gx/tilix/prefeditor/profileeditor.d:1311
+#: source/gx/aiterm/prefeditor/profileeditor.d:1311
 msgid "Add New Match"
 msgstr "새 일치값 추가"
 
-#: source/gx/tilix/prefeditor/profileeditor.d:1328
+#: source/gx/aiterm/prefeditor/profileeditor.d:1328
 msgid "Edit username@hostname:directory to match"
 msgstr "일치시킬 사용자이름@호스트이름:디렉터리 편집"
 
-#: source/gx/tilix/prefeditor/profileeditor.d:1330
+#: source/gx/aiterm/prefeditor/profileeditor.d:1330
 msgid "Edit hostname:directory to match"
 msgstr "일치시킬 호스트이름:디렉터리 편집"
 
-#: source/gx/tilix/prefeditor/profileeditor.d:1332
+#: source/gx/aiterm/prefeditor/profileeditor.d:1332
 msgid "Edit Match"
 msgstr "일치값 편집"
 
-#: source/gx/tilix/prefeditor/profileeditor.d:1363
+#: source/gx/aiterm/prefeditor/profileeditor.d:1363
 msgid "Enable by default"
 msgstr "기본적으로 활성화"
 
-#: source/gx/tilix/prefeditor/profileeditor.d:1372
+#: source/gx/aiterm/prefeditor/profileeditor.d:1372
 msgid "Threshold for continuous silence"
 msgstr "지속적인 무음을 위한 임계값"
 
-#: source/gx/tilix/prefeditor/profileeditor.d:1381
+#: source/gx/aiterm/prefeditor/profileeditor.d:1381
 msgid "(seconds)"
 msgstr "(초)"
 
-#: source/gx/tilix/prefeditor/titleeditor.d:105
-#: source/gx/tilix/terminal/terminal.d:348
-#: source/gx/tilix/terminal/terminal.d:1309
+#: source/gx/aiterm/prefeditor/titleeditor.d:105
+#: source/gx/aiterm/terminal/terminal.d:348
+#: source/gx/aiterm/terminal/terminal.d:1309
 msgid "Terminal"
 msgstr "터미널"
 
-#: source/gx/tilix/prefeditor/titleeditor.d:110
+#: source/gx/aiterm/prefeditor/titleeditor.d:110
 msgid "Session"
 msgstr "세션"
 
-#: source/gx/tilix/prefeditor/titleeditor.d:116
+#: source/gx/aiterm/prefeditor/titleeditor.d:116
 msgid "Window"
 msgstr "창"
 
-#: source/gx/tilix/prefeditor/titleeditor.d:126
-#: source/gx/tilix/prefeditor/titleeditor.d:127
+#: source/gx/aiterm/prefeditor/titleeditor.d:126
+#: source/gx/aiterm/prefeditor/titleeditor.d:127
 msgid "Help"
 msgstr "도움말"
 
-#: source/gx/tilix/preferences.d:256
+#: source/gx/aiterm/preferences.d:256
 msgid "UpdateState"
 msgstr "상태업데이트"
 
-#: source/gx/tilix/preferences.d:257
+#: source/gx/aiterm/preferences.d:257
 msgid "ExecuteCommand"
 msgstr "명령실행"
 
-#: source/gx/tilix/preferences.d:258
+#: source/gx/aiterm/preferences.d:258
 msgid "SendNotification"
 msgstr "알림보내기"
 
-#: source/gx/tilix/preferences.d:259
+#: source/gx/aiterm/preferences.d:259
 msgid "UpdateTitle"
 msgstr "제목업데이트"
 
-#: source/gx/tilix/preferences.d:260
+#: source/gx/aiterm/preferences.d:260
 msgid "PlayBell"
 msgstr "벨울림"
 
-#: source/gx/tilix/preferences.d:261
+#: source/gx/aiterm/preferences.d:261
 msgid "SendText"
 msgstr "텍스트보내기"
 
-#: source/gx/tilix/preferences.d:262
+#: source/gx/aiterm/preferences.d:262
 msgid "InsertPassword"
 msgstr "비밀번호삽입"
 
-#: source/gx/tilix/preferences.d:263
+#: source/gx/aiterm/preferences.d:263
 msgid "UpdateBadge"
 msgstr "배지업데이트"
 
-#: source/gx/tilix/preferences.d:264
+#: source/gx/aiterm/preferences.d:264
 msgid "RunProcess"
 msgstr "프로세스실행"
 
-#: source/gx/tilix/preferences.d:374
+#: source/gx/aiterm/preferences.d:374
 #, c-format
 msgid "%s (Copy)"
 msgstr "%s (복사)"
 
-#: source/gx/tilix/session.d:568
+#: source/gx/aiterm/session.d:568
 msgid "Could not locate dropped terminal"
 msgstr "중단된 터미널을 위치시킬 수 없습니다"
 
-#: source/gx/tilix/session.d:573
+#: source/gx/aiterm/session.d:573
 msgid "Could not locate session for dropped terminal"
 msgstr "중단된 터미널을 위한 세션을 위치시킬 수 없습니다"
 
-#: source/gx/tilix/sidebar.d:546 source/gx/tilix/terminal/terminal.d:383
-#: source/gx/tilix/terminal/terminal.d:1861
+#: source/gx/aiterm/sidebar.d:546 source/gx/aiterm/terminal/terminal.d:383
+#: source/gx/aiterm/terminal/terminal.d:1861
 msgid "Close"
 msgstr "닫기"
 
-#: source/gx/tilix/terminal/advpaste.d:33
+#: source/gx/aiterm/terminal/advpaste.d:33
 msgid "This command is asking for Administrative access to your computer"
 msgstr "이 명령은 컴퓨터에 대한 관리 액세스 권한을 요청합니다"
 
-#: source/gx/tilix/terminal/advpaste.d:34
+#: source/gx/aiterm/terminal/advpaste.d:34
 msgid "Copying commands from the internet can be dangerous. "
 msgstr "인터넷에서 명령어를 복사하는 것은 위험할 수 있습니다. "
 
-#: source/gx/tilix/terminal/advpaste.d:35
+#: source/gx/aiterm/terminal/advpaste.d:35
 msgid "Be sure you understand what each part of this command does."
 msgstr "이 명령어의 각 부분이 수행하는 작업을 이해해야 합니다."
 
-#: source/gx/tilix/terminal/advpaste.d:96
+#: source/gx/aiterm/terminal/advpaste.d:96
 msgid "Transform"
 msgstr "변환"
 
-#: source/gx/tilix/terminal/advpaste.d:104
+#: source/gx/aiterm/terminal/advpaste.d:104
 msgid "Convert spaces to tabs"
 msgstr "공백을 탭으로 변환"
 
-#: source/gx/tilix/terminal/advpaste.d:115
+#: source/gx/aiterm/terminal/advpaste.d:115
 msgid "Convert CRLF and CR to LF"
 msgstr "CRLF와 CR을 LF로 면환"
 
-#: source/gx/tilix/terminal/advpaste.d:137
+#: source/gx/aiterm/terminal/advpaste.d:137
 msgid "Advanced Paste"
 msgstr "고급 붙여넣기"
 
-#: source/gx/tilix/terminal/advpaste.d:137
-#: source/gx/tilix/terminal/terminal.d:1825
-#: source/gx/tilix/terminal/terminal.d:1843
+#: source/gx/aiterm/terminal/advpaste.d:137
+#: source/gx/aiterm/terminal/terminal.d:1825
+#: source/gx/aiterm/terminal/terminal.d:1843
 msgid "Paste"
 msgstr "붙여넣기"
 
-#: source/gx/tilix/terminal/layout.d:33
+#: source/gx/aiterm/terminal/layout.d:33
 msgid "Layout Options"
 msgstr "레이아웃 옵션"
 
-#: source/gx/tilix/terminal/layout.d:48
+#: source/gx/aiterm/terminal/layout.d:48
 msgid "Active"
 msgstr "동작"
 
-#: source/gx/tilix/terminal/layout.d:82
+#: source/gx/aiterm/terminal/layout.d:82
 msgid "Session Load"
 msgstr "세션"
 
-#: source/gx/tilix/terminal/layout.d:98
+#: source/gx/aiterm/terminal/layout.d:98
 msgid ""
 "Active options are always in effect and apply immediately.\n"
 "Session Load options only apply when loading a session file."
@@ -2736,44 +2736,44 @@ msgstr ""
 "활성 옵션은 항상 영향을 주며 바로 적용됩니다.\n"
 "세션 불러오기 옵션은 세션 파일을 불러올 때만 적용됩니다."
 
-#: source/gx/tilix/terminal/monitor.d:112
+#: source/gx/aiterm/terminal/monitor.d:112
 msgid "Process monitoring is not enabled, this should never be called"
 msgstr ""
 "프로세스 모니터링이 활성화되지 않았으므로, 이것은 절대 호출되어서는 안됩니다"
 
-#: source/gx/tilix/terminal/password.d:161
+#: source/gx/aiterm/terminal/password.d:161
 msgid "New"
 msgstr "새로 만들기"
 
-#: source/gx/tilix/terminal/password.d:235
+#: source/gx/aiterm/terminal/password.d:235
 msgid "Include return character with password"
 msgstr "비밀번호에 반환 문자 포함"
 
-#: source/gx/tilix/terminal/password.d:371
+#: source/gx/aiterm/terminal/password.d:371
 msgid "Insert Password"
 msgstr "비밀번호 삽입"
 
-#: source/gx/tilix/terminal/password.d:441
+#: source/gx/aiterm/terminal/password.d:441
 msgid "Password"
 msgstr "비밀번호"
 
-#: source/gx/tilix/terminal/password.d:451
+#: source/gx/aiterm/terminal/password.d:451
 msgid "Confirm Password"
 msgstr "비밀번호 확인"
 
-#: source/gx/tilix/terminal/password.d:499
+#: source/gx/aiterm/terminal/password.d:499
 msgid "Add Password"
 msgstr "비밀번호 추가"
 
-#: source/gx/tilix/terminal/password.d:504
+#: source/gx/aiterm/terminal/password.d:504
 msgid "Edit Password"
 msgstr "비밀번호 편집"
 
-#: source/gx/tilix/terminal/search.d:128
+#: source/gx/aiterm/terminal/search.d:128
 msgid "Search Options"
 msgstr "검색 옵션"
 
-#: source/gx/tilix/terminal/search.d:141
+#: source/gx/aiterm/terminal/search.d:141
 msgid "Find next"
 msgstr "다음 찾기"
 
@@ -2782,31 +2782,31 @@ msgstr "다음 찾기"
 # in the Shortcut preferences and in the future
 # the shortcut overview if available in Gnome 3.20
 # ***********************************************
-#: source/gx/tilix/terminal/search.d:147
+#: source/gx/aiterm/terminal/search.d:147
 msgid "Find previous"
 msgstr "이전 찾기"
 
-#: source/gx/tilix/terminal/search.d:155
+#: source/gx/aiterm/terminal/search.d:155
 msgid "Close search box"
 msgstr "검색 상자 닫기"
 
-#: source/gx/tilix/terminal/search.d:205
+#: source/gx/aiterm/terminal/search.d:205
 msgid "Match case"
 msgstr "대소문자 일치"
 
-#: source/gx/tilix/terminal/search.d:206
+#: source/gx/aiterm/terminal/search.d:206
 msgid "Match entire word only"
 msgstr "전체 단어만 일치"
 
-#: source/gx/tilix/terminal/search.d:207
+#: source/gx/aiterm/terminal/search.d:207
 msgid "Wrap around"
 msgstr "주변 감싸기"
 
-#: source/gx/tilix/terminal/search.d:208
+#: source/gx/aiterm/terminal/search.d:208
 msgid "Match as regular expression"
 msgstr "정규 표현식으로 일치"
 
-#: source/gx/tilix/terminal/search.d:243
+#: source/gx/aiterm/terminal/search.d:243
 #, c-format
 msgid ""
 "Search '%s' is not a valid regex\n"
@@ -2815,151 +2815,151 @@ msgstr ""
 "'%s' 검색은 올바른 정규식\n"
 "%s이(가) 아닙니다"
 
-#: source/gx/tilix/terminal/terminal.d:391
-#: source/gx/tilix/terminal/terminal.d:1349
-#: source/gx/tilix/terminal/terminal.d:1860
+#: source/gx/aiterm/terminal/terminal.d:391
+#: source/gx/aiterm/terminal/terminal.d:1349
+#: source/gx/aiterm/terminal/terminal.d:1860
 msgid "Maximize"
 msgstr "최대화"
 
-#: source/gx/tilix/terminal/terminal.d:401
-#: source/gx/tilix/terminal/terminal.d:692
+#: source/gx/aiterm/terminal/terminal.d:401
+#: source/gx/aiterm/terminal/terminal.d:692
 msgid "Disable input synchronization for this terminal"
 msgstr "이 터미널에 대해 입력 동기화 비활성화 하기"
 
-#: source/gx/tilix/terminal/terminal.d:410
-#: source/gx/tilix/terminal/terminal.d:829
+#: source/gx/aiterm/terminal/terminal.d:410
+#: source/gx/aiterm/terminal/terminal.d:829
 msgid "Read-Only"
 msgstr "읽기전용"
 
-#: source/gx/tilix/terminal/terminal.d:416
+#: source/gx/aiterm/terminal/terminal.d:416
 msgid "New output"
 msgstr "새로운 출력"
 
-#: source/gx/tilix/terminal/terminal.d:467
+#: source/gx/aiterm/terminal/terminal.d:467
 msgid "Edit Profile"
 msgstr "프로필 편집"
 
-#: source/gx/tilix/terminal/terminal.d:485
+#: source/gx/aiterm/terminal/terminal.d:485
 msgid "Edit Encodings"
 msgstr "인코딩 편집"
 
-#: source/gx/tilix/terminal/terminal.d:694
+#: source/gx/aiterm/terminal/terminal.d:694
 msgid "Enable input synchronization for this terminal"
 msgstr "이 터미널에 대해 입력 동기화 활성화 하기"
 
-#: source/gx/tilix/terminal/terminal.d:729
+#: source/gx/aiterm/terminal/terminal.d:729
 msgid "Library Not Loaded"
 msgstr "라이브러리가 불러와지지 않음"
 
-#: source/gx/tilix/terminal/terminal.d:729
+#: source/gx/aiterm/terminal/terminal.d:729
 #, c-format
 msgid ""
 "The library %s could not be loaded, password functionality is unavailable."
 msgstr ""
 "%s 라이브러리를 불러올 수 없습니다, 비밀번호 기능을 이용할 수 없습니다."
 
-#: source/gx/tilix/terminal/terminal.d:828
+#: source/gx/aiterm/terminal/terminal.d:828
 msgid "Find…"
 msgstr "찾기…"
 
-#: source/gx/tilix/terminal/terminal.d:835
+#: source/gx/aiterm/terminal/terminal.d:835
 msgid "Password..."
 msgstr "비밀번호…"
 
-#: source/gx/tilix/terminal/terminal.d:836
+#: source/gx/aiterm/terminal/terminal.d:836
 msgid "Bookmark..."
 msgstr "바로찾기…"
 
-#: source/gx/tilix/terminal/terminal.d:837
+#: source/gx/aiterm/terminal/terminal.d:837
 msgid "Add Bookmark..."
 msgstr "바로찾기 추가…"
 
-#: source/gx/tilix/terminal/terminal.d:841
+#: source/gx/aiterm/terminal/terminal.d:841
 msgid "Assistants"
 msgstr "도우미"
 
-#: source/gx/tilix/terminal/terminal.d:848
+#: source/gx/aiterm/terminal/terminal.d:848
 msgid "Show File Browser..."
 msgstr "파일 브라우저 표시..."
 
-#: source/gx/tilix/terminal/terminal.d:852
+#: source/gx/aiterm/terminal/terminal.d:852
 msgid "Save Output…"
 msgstr "출력 저장…"
 
-#: source/gx/tilix/terminal/terminal.d:854
+#: source/gx/aiterm/terminal/terminal.d:854
 msgid "Reset and Clear"
 msgstr "재설정 및 지우기"
 
-#: source/gx/tilix/terminal/terminal.d:859
+#: source/gx/aiterm/terminal/terminal.d:859
 msgid "Layout Options…"
 msgstr "레이아웃 옵션…"
 
-#: source/gx/tilix/terminal/terminal.d:863
+#: source/gx/aiterm/terminal/terminal.d:863
 msgid "Monitor Silence"
 msgstr "모니터 무음"
 
-#: source/gx/tilix/terminal/terminal.d:866
+#: source/gx/aiterm/terminal/terminal.d:866
 msgid "Other"
 msgstr "기타"
 
-#: source/gx/tilix/terminal/terminal.d:875
+#: source/gx/aiterm/terminal/terminal.d:875
 msgid "Add Right"
 msgstr "오른쪽에 추가"
 
-#: source/gx/tilix/terminal/terminal.d:879
+#: source/gx/aiterm/terminal/terminal.d:879
 msgid "Add Down"
 msgstr "아래에 추가"
 
-#: source/gx/tilix/terminal/terminal.d:989
+#: source/gx/aiterm/terminal/terminal.d:989
 msgid "Terminal Activity"
 msgstr "터미널 활동"
 
-#: source/gx/tilix/terminal/terminal.d:1325
+#: source/gx/aiterm/terminal/terminal.d:1325
 msgid "Not Enabled"
 msgstr "활성화되지 않음"
 
-#: source/gx/tilix/terminal/terminal.d:1346
-#: source/gx/tilix/terminal/terminal.d:1860
+#: source/gx/aiterm/terminal/terminal.d:1346
+#: source/gx/aiterm/terminal/terminal.d:1860
 msgid "Restore"
 msgstr "복원"
 
-#: source/gx/tilix/terminal/terminal.d:1709
-msgid "Tilix Custom Notification"
-msgstr "Tilix 사용자 지정 알림"
+#: source/gx/aiterm/terminal/terminal.d:1709
+msgid "Aiterm Custom Notification"
+msgstr "Aiterm 사용자 지정 알림"
 
-#: source/gx/tilix/terminal/terminal.d:1810
+#: source/gx/aiterm/terminal/terminal.d:1810
 msgid "Open Link"
 msgstr "링크 열기"
 
-#: source/gx/tilix/terminal/terminal.d:1811
+#: source/gx/aiterm/terminal/terminal.d:1811
 msgid "Copy Link Address"
 msgstr "링크 주소 복사"
 
-#: source/gx/tilix/terminal/terminal.d:1821
-#: source/gx/tilix/terminal/terminal.d:1831
+#: source/gx/aiterm/terminal/terminal.d:1821
+#: source/gx/aiterm/terminal/terminal.d:1831
 msgid "Copy"
 msgstr "복사"
 
-#: source/gx/tilix/terminal/terminal.d:1823
-#: source/gx/tilix/terminal/terminal.d:1837
+#: source/gx/aiterm/terminal/terminal.d:1823
+#: source/gx/aiterm/terminal/terminal.d:1837
 msgid "Copy as HTML"
 msgstr "HTML로 저장"
 
-#: source/gx/tilix/terminal/terminal.d:1826
-#: source/gx/tilix/terminal/terminal.d:1848
+#: source/gx/aiterm/terminal/terminal.d:1826
+#: source/gx/aiterm/terminal/terminal.d:1848
 msgid "Select All"
 msgstr "모두 선택"
 
-#: source/gx/tilix/terminal/terminal.d:1865
+#: source/gx/aiterm/terminal/terminal.d:1865
 msgid "Synchronize input"
 msgstr "입력 동기화"
 
-#: source/gx/tilix/terminal/terminal.d:2018
+#: source/gx/aiterm/terminal/terminal.d:2018
 #, c-format
 msgid "Could not check file '%s' due to error '%s'"
 msgstr "'%s' 오류로 인해 '%s' 파일을 확인할 수 없습니다"
 
-#: source/gx/tilix/terminal/terminal.d:2025
+#: source/gx/aiterm/terminal/terminal.d:2025
 #, c-format
 msgid ""
 "Remote file URIs are not supported with hyperlinks.\n"
@@ -2968,79 +2968,79 @@ msgstr ""
 "원격 파일 URI는 하이퍼링크에서 지원되지 않습니다.\n"
 "URI는 '%s'입니다"
 
-#: source/gx/tilix/terminal/terminal.d:2026
+#: source/gx/aiterm/terminal/terminal.d:2026
 msgid "Remote File URI Unsupported"
 msgstr "지원되지 않는 원격 파일 URI"
 
-#: source/gx/tilix/terminal/terminal.d:2059
-#: source/gx/tilix/terminal/terminal.d:2613
+#: source/gx/aiterm/terminal/terminal.d:2059
+#: source/gx/aiterm/terminal/terminal.d:2613
 #, c-format
 msgid "Custom link regex '%s' has an error, ignoring"
 msgstr "사용자 지정 링크 정규식 '%s'에 오류가 있어 무시합니다"
 
-#: source/gx/tilix/terminal/terminal.d:2060
+#: source/gx/aiterm/terminal/terminal.d:2060
 msgid "Regular Expression Error"
 msgstr "정규 표현식 오류"
 
-#: source/gx/tilix/terminal/terminal.d:2073
+#: source/gx/aiterm/terminal/terminal.d:2073
 #, c-format
 msgid "Could not open match '%s'"
 msgstr "'%s' 일치항목을 열 수 없습니다"
 
-#: source/gx/tilix/terminal/terminal.d:2074
+#: source/gx/aiterm/terminal/terminal.d:2074
 msgid "Error Opening Match"
 msgstr "일치항목을 여는 중 오류"
 
-#: source/gx/tilix/terminal/terminal.d:2573
+#: source/gx/aiterm/terminal/terminal.d:2573
 #, c-format
 msgid "Unexpected error occurred when adding link regex: %s"
 msgstr "링크 정규식을 추가할 때 예기치 않은 오류가 발생함: %s"
 
-#: source/gx/tilix/terminal/terminal.d:2773
+#: source/gx/aiterm/terminal/terminal.d:2773
 msgid "Unexpected error occurred, no additional information available"
 msgstr ""
 "예상하지 못한 오류가 발생했습니다. 이용 가능한 추가적인 정보가 없습니다"
 
-#: source/gx/tilix/terminal/terminal.d:2783
+#: source/gx/aiterm/terminal/terminal.d:2783
 #, c-format
 msgid "Unexpected error occurred: %s"
 msgstr "예상하지 못한 오류가 발생했습니다. %s"
 
-#: source/gx/tilix/terminal/terminal.d:3662
+#: source/gx/aiterm/terminal/terminal.d:3662
 msgid "Save Terminal Output"
 msgstr "터미널 출력 저장"
 
-#: source/gx/tilix/terminal/terminal.d:3671
+#: source/gx/aiterm/terminal/terminal.d:3671
 msgid "All Text Files"
 msgstr "모든 텍스트 파일"
 
-#: source/gx/tilix/terminal/terminal.d:4001
+#: source/gx/aiterm/terminal/terminal.d:4001
 msgid "Unknown"
 msgstr "알 수 없음"
 
-#: source/gx/tilix/terminal/terminal.d:4265
+#: source/gx/aiterm/terminal/terminal.d:4265
 #, c-format
 msgid "The child process exited normally with status %d"
 msgstr "자식 프로세스가 다음과 같은 상태로 정상적으로 종료되었습니다. %d"
 
-#: source/gx/tilix/terminal/terminal.d:4266
+#: source/gx/aiterm/terminal/terminal.d:4266
 #, c-format
 msgid "The child process was aborted by signal %d."
 msgstr "자식 프로세스가 다음과 같은 신호에 의해 중지되었습니다 %d."
 
-#: source/gx/tilix/terminal/terminal.d:4267
+#: source/gx/aiterm/terminal/terminal.d:4267
 msgid "The child process was aborted."
 msgstr "자식 프로세스가 중지되었습니다."
 
-#: source/gx/tilix/terminal/terminal.d:4273
+#: source/gx/aiterm/terminal/terminal.d:4273
 msgid "Relaunch"
 msgstr "다시 시작"
 
-#: source/gx/tilix/terminal/terminal.d:4340
+#: source/gx/aiterm/terminal/terminal.d:4340
 msgid "Don't Paste"
 msgstr "붙여넣지 마세요"
 
-#: source/gx/tilix/terminal/terminal.d:4341
+#: source/gx/aiterm/terminal/terminal.d:4341
 msgid "Paste Anyway"
 msgstr "어떻게든 붙여넣기"
 

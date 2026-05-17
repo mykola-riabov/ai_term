@@ -31,17 +31,17 @@ if desktop_file_validate.found()
 endif
 
 # Merge release information into MetaInfo file
-tilix_metainfo_name = '@0@.appdata.xml'.format(project_id)
+aiterm_metainfo_name = '@0@.appdata.xml'.format(project_id)
 appstreamcli = find_program('appstreamcli')
 metainfo_with_releases = custom_target('metainfo-news-merge',
-    input : ['../NEWS', 'metainfo/@0@.in'.format(tilix_metainfo_name)],
+    input : ['../NEWS', 'metainfo/@0@.in'.format(aiterm_metainfo_name)],
     output : ['untranslated-@0@.appdata.xml'.format(project_id)],
     command : [appstreamcli, 'news-to-metainfo', '--limit=6', '@INPUT0@', '@INPUT1@', '@OUTPUT@']
 )
 
 # Install the MetaInfo file
 metainfo_file = i18n.merge_file(
-    output: tilix_metainfo_name,
+    output: aiterm_metainfo_name,
     input: metainfo_with_releases,
     po_dir: meson.project_source_root() / 'po',
     install: true,
@@ -54,15 +54,15 @@ if appstreamcli.found()
     'Validate metainfo file',
     appstreamcli,
     args: ['validate', '--no-net',
-           join_paths(meson.current_source_dir(), 'metainfo', '@0@.in'.format(tilix_metainfo_name))
+           join_paths(meson.current_source_dir(), 'metainfo', '@0@.in'.format(aiterm_metainfo_name))
     ]
   )
 endif
 
 # Build resources
 gresource = gnome.compile_resources(
-    'tilix',
-    'resources/tilix.gresource.xml',
+    'aiterm',
+    'resources/aiterm.gresource.xml',
     gresource_bundle: true,
     install: true,
     source_dir: 'resources/',
@@ -93,13 +93,13 @@ install_data(
 
 # Scripts
 install_data(
-    'scripts/tilix_int.sh',
+    'scripts/aiterm_int.sh',
     install_dir: pkgdatadir / 'scripts'
 )
 
 # Copying Nautilus extension
 install_data(
-    'nautilus/open-tilix.py',
+    'nautilus/open-aiterm.py',
     install_dir: datadir / 'nautilus-python' / 'extensions'
 )
 

@@ -22,13 +22,13 @@ import gx.i18n.l10n;
 import gx.gtk.util;
 import gx.gtk.vte;
 
-import gx.tilix.application;
-import gx.tilix.cmdparams;
-import gx.tilix.constants;
+import gx.aiterm.application;
+import gx.aiterm.cmdparams;
+import gx.aiterm.constants;
 
 int main(string[] args) {
     static if (USE_FILE_LOGGING) {
-        sharedLog = new shared FileLogger("/tmp/tilix.log");
+        sharedLog = new shared FileLogger("/tmp/aiterm.log");
     }
 
     bool newProcess = false;
@@ -97,14 +97,14 @@ int main(string[] args) {
     }
 
     //textdomain
-    textdomain(TILIX_DOMAIN);
+    textdomain(AITERM_DOMAIN);
     // Set application ID for GTK3 on Wayland
     Util.setPrgname(APPLICATION_ID);
     // Init GTK early so localization is available
     // Note used to pass empty args but was interfering with GTK default args
     Main.init(args);
 
-    trace(format("Starting tilix with %d arguments...", args.length));
+    trace(format("Starting aiterm with %d arguments...", args.length));
     foreach(i, arg; args) {
         trace(format("arg[%d] = %s",i, arg));
         // Workaround issue with Unity and older Gnome Shell when DBusActivatable sometimes CWD is set to /, see #285
@@ -125,14 +125,14 @@ int main(string[] args) {
             return 0;
         }
     }
-    //append TILIX_ID to args if present
+    //append AITERM_ID to args if present
     try {
-        string terminalUUID = environment["TILIX_ID"];
+        string terminalUUID = environment["AITERM_ID"];
         trace("Inserting terminal UUID " ~ terminalUUID);
         args ~= ("--" ~ CMD_TERMINAL_UUID ~ "=" ~ terminalUUID);
     }
     catch (Exception e) {
-        trace("No tilix UUID found");
+        trace("No aiterm UUID found");
     }
 
     //Version checking cribbed from grestful, thanks!
@@ -157,11 +157,11 @@ int main(string[] args) {
     }
 
     trace("Creating app");
-    auto tilixApp = new Tilix(newProcess, group);
+    auto aitermApp = new Aiterm(newProcess, group);
     int result;
     try {
         trace("Running application...");
-        result = tilixApp.run(args);
+        result = aitermApp.run(args);
         trace("App completed...");
     }
     catch (Exception e) {
@@ -177,10 +177,10 @@ private:
         import gtk.Version: Version;
 
         writeln(_("Versions"));
-        writeln("\t" ~ format(_("Tilix version: %s"), APPLICATION_VERSION));
+        writeln("\t" ~ format(_("Aiterm version: %s"), APPLICATION_VERSION));
         writeln("\t" ~ format(_("VTE version: %s"), getVTEVersion()));
         writeln("\t" ~ format(_("GTK Version: %d.%d.%d") ~ "\n", Version.getMajorVersion(), Version.getMinorVersion(), Version.getMicroVersion()));
-        writeln(_("Tilix Special Features"));
+        writeln(_("Aiterm Special Features"));
         writeln("\t" ~ format(_("Notifications enabled=%b"), checkVTEFeature(TerminalFeature.EVENT_NOTIFICATION)));
         writeln("\t" ~ format(_("Triggers enabled=%b"), checkVTEFeature(TerminalFeature.EVENT_SCREEN_CHANGED)));
         writeln("\t" ~ format(_("Badges enabled=%b"), isVTEBackgroundDrawEnabled));

@@ -1,12 +1,12 @@
 #!/bin/sh
 #
-# Compile & Install Tilix build dependencies
+# Compile & Install Aiterm build dependencies
 #
 set -e
 set -x
 export LANG=C.UTF-8
 
-mkdir -p _tilix-deps && cd _tilix-deps
+mkdir -p _aiterm-deps && cd _aiterm-deps
 
 # GtkD
 git clone --depth 1 --branch=v3.11.0 https://github.com/gtkd-developers/GtkD.git gtkd
@@ -24,4 +24,4 @@ make -j"$(nproc)" \
 cd ../
 
 # cleanup
-cd .. && rm -rf _tilix-deps
+cd .. && rm -rf _aiterm-deps

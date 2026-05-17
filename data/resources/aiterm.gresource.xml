@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<gresources>
+  <gresource prefix="/com/aiterm/Aiterm">
+    <file preprocess="to-pixdata">icons/16x16/actions/aiterm-add-horizontal-symbolic.symbolic.png</file>
+    <file preprocess="to-pixdata">icons/16x16/actions/aiterm-add-vertical-symbolic.symbolic.png</file>
+    <file preprocess="to-pixdata">icons/32x32/actions/aiterm-add-horizontal-symbolic.symbolic.png</file>
+    <file preprocess="to-pixdata">icons/32x32/actions/aiterm-add-vertical-symbolic.symbolic.png</file>
+    <file>css/aiterm.base.css</file>
+    <file>css/aiterm.base320.css</file>
+    <file>css/aiterm.base.theme.css</file>
+    <file>css/aiterm.Ambiance.css</file>
+    <file>css/aiterm.Radiance.css</file>
+    <file>css/aiterm.Adwaita.scrollbar.css</file>
+    <file>css/aiterm.Lavender.scrollbar.css</file>
+    <file>css/aiterm.Ambiance.scrollbar.css</file>
+    <file>css/aiterm.Radiance.scrollbar.css</file>
+    <file>css/aiterm.Arc.scrollbar.css</file>
+    <file>css/aiterm.Arc-Dark.scrollbar.css</file>
+    <file>css/aiterm.Arc-Darker.scrollbar.css</file>
+    <file compressed="true" preprocess="xml-stripblanks">ui/shortcuts.ui</file>
+  </gresource>
+</gresources>

@@ -1,4 +1,4 @@
-id: com.gexperts.Tilix
+id: com.aiterm.Aiterm
 branch: master
 runtime: org.gnome.Platform
 runtime-version: '3.34'
@@ -6,7 +6,7 @@ sdk: org.gnome.Sdk
 sdk-extensions:
   - org.freedesktop.Sdk.Extension.ldc
   - org.freedesktop.Sdk.Extension.dmd
-command: tilix
+command: aiterm
 finish-args:
   - --share=ipc
   - --socket=x11
@@ -15,7 +15,7 @@ finish-args:
   - --filesystem=~/.config/dconf:ro
   - --talk-name=ca.desrt.dconf
   - --env=DCONF_USER_CONFIG_DIR=.config/dconf
-  - --own-name=com.gexperts.Tilix
+  - --own-name=com.aiterm.Aiterm
   - --talk-name=org.freedesktop.Flatpak
   - --talk-name=org.freedesktop.secrets
   - --device=all
@@ -119,10 +119,10 @@ modules:
   - name: toolbox
     buildsystem: simple
     build-commands:
-      - 'gcc -o /app/bin/tilix-flatpak-toolbox tilix-flatpak-toolbox.c'
+      - 'gcc -o /app/bin/aiterm-flatpak-toolbox aiterm-flatpak-toolbox.c'
     sources:
       - type: file
-        path: tilix-flatpak-toolbox.c
+        path: aiterm-flatpak-toolbox.c
   - name: yaml
     sources:
       - type: archive
@@ -169,10 +169,10 @@ modules:
       - '/share/doc'
       - '/share/gettext'
       - '/share/installed-tests'
-  - name: tilix
+  - name: aiterm
     buildsystem: meson
     build-options:
       append-path: /usr/lib/sdk/dmd/bin
     sources:
       - type: git
-        url: https://github.com/gnunn1/tilix.git
+        url: https://github.com/gnunn1/aiterm.git

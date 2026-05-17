@@ -10,7 +10,7 @@ Features:
 Bugfixes:
  * nautilus: Don't import a specific version
  * nautilus: Add compatibility with Nautilus 43
- * nautilus: Avoid shell injection in open-tilix plugin
+ * nautilus: Avoid shell injection in open-aiterm plugin
  * Drop manpage country names
  * Replace std.xml with GMarkup-based parser
  * icon: Fix up prompt pictogram alignment
@@ -34,7 +34,7 @@ Version 1.9.5
 Released: 2022-02-22
 
 Notes:
- * Tilix is still looking for a new maintainer!
+ * Aiterm is still looking for a new maintainer!
 
 Features:
  * Disable advanced paste when there is no linebreak like iTerm2
@@ -60,10 +60,10 @@ Version 1.9.4
 Released: 2021-02-10
 
 Notes:
- * Tilix is looking for maintainers! At the moment, only very minimal maintenance is done,
+ * Aiterm is looking for maintainers! At the moment, only very minimal maintenance is done,
    no new features will be implemented and pull-requests may be reviewed very slowly.
 
-   If you are interested in helping Tilix, please chime in!
+   If you are interested in helping Aiterm, please chime in!
 
 Features:
  * Actually install Yaru color scheme

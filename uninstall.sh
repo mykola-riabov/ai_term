@@ -13,17 +13,17 @@ fi
 
 echo "Uninstalling from prefix ${PREFIX}"
 
-rm ${PREFIX}/bin/tilix
-rm ${PREFIX}/share/glib-2.0/schemas/com.gexperts.Tilix.gschema.xml
+rm ${PREFIX}/bin/aiterm
+rm ${PREFIX}/share/glib-2.0/schemas/com.aiterm.Aiterm.gschema.xml
 glib-compile-schemas ${PREFIX}/share/glib-2.0/schemas/
-rm -rf ${PREFIX}/share/tilix
+rm -rf ${PREFIX}/share/aiterm
 
-find ${PREFIX}/share/locale -type f -name "tilix.mo" -delete
-find ${PREFIX}/share/icons/hicolor -type f -name "com.gexperts.Tilix.png" -delete
-find ${PREFIX}/share/icons/hicolor -type f -name "com.gexperts.Tilix*.svg" -delete
-rm ${PREFIX}/share/nautilus-python/extensions/open-tilix.py
-rm ${PREFIX}/share/dbus-1/services/com.gexperts.Tilix.service
-rm ${PREFIX}/share/applications/com.gexperts.Tilix.desktop
-rm ${PREFIX}/share/metainfo/com.gexperts.Tilix.appdata.xml
-rm ${PREFIX}/share/man/man1/tilix.1.gz
-rm ${PREFIX}/share/man/*/man1/tilix.1.gz
+find ${PREFIX}/share/locale -type f -name "aiterm.mo" -delete
+find ${PREFIX}/share/icons/hicolor -type f -name "com.aiterm.Aiterm.png" -delete
+find ${PREFIX}/share/icons/hicolor -type f -name "com.aiterm.Aiterm*.svg" -delete
+rm ${PREFIX}/share/nautilus-python/extensions/open-aiterm.py
+rm ${PREFIX}/share/dbus-1/services/com.aiterm.Aiterm.service
+rm ${PREFIX}/share/applications/com.aiterm.Aiterm.desktop
+rm ${PREFIX}/share/metainfo/com.aiterm.Aiterm.appdata.xml
+rm ${PREFIX}/share/man/man1/aiterm.1.gz
+rm ${PREFIX}/share/man/*/man1/aiterm.1.gz

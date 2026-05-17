@@ -9,7 +9,7 @@ msgstr ""
 "POT-Creation-Date: 2022-02-22 17:30+0100\n"
 "PO-Revision-Date: 2022-05-18 17:14+0000\n"
 "Last-Translator: AHOHNMYC <lqwh2h2cwa@protonmail.com>\n"
-"Language-Team: Russian <https://hosted.weblate.org/projects/tilix/manpage/ru/"
+"Language-Team: Russian <https://hosted.weblate.org/projects/aiterm/manpage/ru/"
 ">\n"
 "Language: ru\n"
 "MIME-Version: 1.0\n"
@@ -20,119 +20,119 @@ msgstr ""
 "X-Generator: Weblate 4.13-dev\n"
 
 #. type: TH
-#: data/man/tilix.1:3
+#: data/man/aiterm.1:3
 #, no-wrap
 msgid "TILIX"
 msgstr "TILIX"
 
 #. type: TH
-#: data/man/tilix.1:3
+#: data/man/aiterm.1:3
 #, no-wrap
 msgid "26 December 2016"
 msgstr "26 декабря 2016"
 
 #. type: TH
-#: data/man/tilix.1:3
+#: data/man/aiterm.1:3
 #, no-wrap
 msgid "1.4.0"
 msgstr "1.4.0"
 
 #. type: TH
-#: data/man/tilix.1:3
+#: data/man/aiterm.1:3
 #, no-wrap
-msgid "Tilix Commands"
-msgstr "Команды Tilix"
+msgid "Aiterm Commands"
+msgstr "Команды Aiterm"
 
 #. type: SH
-#: data/man/tilix.1:4
+#: data/man/aiterm.1:4
 #, no-wrap
 msgid "NAME"
 msgstr "НАЗВАНИЕ"
 
 #. type: Plain text
-#: data/man/tilix.1:6
-msgid "B<tilix> - Tiling GTK3 terminal emulator for GNOME"
-msgstr "B<tilix> - Тайлинговый эмулятор терминала для GNOME, использующий GTK3"
+#: data/man/aiterm.1:6
+msgid "B<aiterm> - Tiling GTK3 terminal emulator for GNOME"
+msgstr "B<aiterm> - Тайлинговый эмулятор терминала для GNOME, использующий GTK3"
 
 #. type: SH
-#: data/man/tilix.1:6
+#: data/man/aiterm.1:6
 #, no-wrap
 msgid "SYNOPSIS"
 msgstr "АННОТАЦИЯ"
 
 #. type: Plain text
-#: data/man/tilix.1:9
-msgid "B<tilix> [I<options>]"
-msgstr "B<tilix> [I<опции>]"
+#: data/man/aiterm.1:9
+msgid "B<aiterm> [I<options>]"
+msgstr "B<aiterm> [I<опции>]"
 
 #. type: SH
-#: data/man/tilix.1:9
+#: data/man/aiterm.1:9
 #, no-wrap
 msgid "DESCRIPTION"
 msgstr "ОПИСАНИЕ"
 
 #. type: Plain text
-#: data/man/tilix.1:11
+#: data/man/aiterm.1:11
 msgid ""
-"B<tilix> is an advanced GTK3 tiling terminal emulator designed to adhere to "
+"B<aiterm> is an advanced GTK3 tiling terminal emulator designed to adhere to "
 "GNOME Human Interface Guidelines."
 msgstr ""
-"B<tilix> - это продвинутый плиточный эмулятор терминала, использующий GTK3 и "
+"B<aiterm> - это продвинутый плиточный эмулятор терминала, использующий GTK3 и "
 "спроектированный с учётом гайдлайнов по интерфейсу пользователя GNOME."
 
 #. type: SH
-#: data/man/tilix.1:11
+#: data/man/aiterm.1:11
 #, no-wrap
 msgid "OPTIONS"
 msgstr "ОПЦИИ"
 
 #. type: Plain text
-#: data/man/tilix.1:13
-msgid "The B<tilix> application accepts the following command line parameters:"
-msgstr "B<tilix> принимает следующие параметры командной строки:"
+#: data/man/aiterm.1:13
+msgid "The B<aiterm> application accepts the following command line parameters:"
+msgstr "B<aiterm> принимает следующие параметры командной строки:"
 
 #. type: TP
-#: data/man/tilix.1:13
+#: data/man/aiterm.1:13
 #, no-wrap
 msgid "B<-h --help>"
 msgstr "B<-h --help>"
 
 #. type: Plain text
-#: data/man/tilix.1:16
+#: data/man/aiterm.1:16
 msgid "Show help options."
 msgstr "Показать справку."
 
 #. type: TP
-#: data/man/tilix.1:16
+#: data/man/aiterm.1:16
 #, no-wrap
 msgid "B<-v --version>"
 msgstr "B<-v --version>"
 
 #. type: Plain text
-#: data/man/tilix.1:19
+#: data/man/aiterm.1:19
 msgid ""
-"Show the version of Tilix as well as the versions of dependent components."
-msgstr "Показать версию Tilix вместе с версиями зависимых компонентов."
+"Show the version of Aiterm as well as the versions of dependent components."
+msgstr "Показать версию Aiterm вместе с версиями зависимых компонентов."
 
 #. type: TP
-#: data/man/tilix.1:19
+#: data/man/aiterm.1:19
 #, no-wrap
 msgid "B<-w --working-directory=DIRECTORY>"
 msgstr "B<-w --working-directory=КАТАЛОГ>"
 
 #. type: Plain text
-#: data/man/tilix.1:22
+#: data/man/aiterm.1:22
 msgid "Set the working directory of the terminal."
 msgstr "Задать рабочий каталог терминала."
 
 #. type: TP
-#: data/man/tilix.1:22
+#: data/man/aiterm.1:22
 #, no-wrap
 msgid "B<-p --profile=PROFILE_NAME>"
 msgstr "B<-p --profile=ИМЯ_ПРОФИЛЯ>"
 
 #. type: Plain text
-#: data/man/tilix.1:25
+#: data/man/aiterm.1:25
 msgid ""
 "Set the starting profile using the name of one of the existing profiles. If "
 "it matches none of those, the default profile will be used."
@@ -141,24 +141,24 @@ msgstr ""
 "Если профиль не найден, будет использован профиль по умолчанию."
 
 #. type: TP
-#: data/man/tilix.1:25
+#: data/man/aiterm.1:25
 #, no-wrap
 msgid "B<-t --title=TITLE>"
 msgstr "B<-t --title=ЗАГОЛОВОК>"
 
 #. type: Plain text
-#: data/man/tilix.1:28
+#: data/man/aiterm.1:28
 msgid "Set the title of the new terminal."
 msgstr "Задать заголовок нового терминала."
 
 #. type: TP
-#: data/man/tilix.1:28
+#: data/man/aiterm.1:28
 #, no-wrap
 msgid "B<-s --session=SESSION_NAME>"
 msgstr "B<-s --session=ИМЯ_СЕАНСА>"
 
 #. type: Plain text
-#: data/man/tilix.1:31
+#: data/man/aiterm.1:31
 msgid ""
 "Specify a previously saved session to re-load the layout and layout options "
 "from. This will not restore the terminal to where it was left off, rather "
@@ -169,45 +169,45 @@ msgstr ""
 "котором он был оставлен - вместо этого будут созданы новые терминалы."
 
 #. type: TP
-#: data/man/tilix.1:31
+#: data/man/aiterm.1:31
 #, no-wrap
 msgid "B<-a --action=ACTION_NAME>"
 msgstr "B<-a --action=ИМЯ_ДЕЙСТВИЯ>"
 
 #. type: Plain text
-#: data/man/tilix.1:34
-msgid "Perform one of the following actions in the current Tilix instance:"
-msgstr "Выполнить одно из следующих действий в запущенном процессе Tilix:"
+#: data/man/aiterm.1:34
+msgid "Perform one of the following actions in the current Aiterm instance:"
+msgstr "Выполнить одно из следующих действий в запущенном процессе Aiterm:"
 
 #. type: Plain text
-#: data/man/tilix.1:37
+#: data/man/aiterm.1:37
 msgid "B<session-add-right> Add a new terminal rightwards of the current one."
 msgstr "B<session-add-right> Добавить новый терминал справа от текущего."
 
 #. type: Plain text
-#: data/man/tilix.1:40
+#: data/man/aiterm.1:40
 msgid "B<session-add-down> Add a new terminal below the current terminal."
 msgstr "B<session-add-down> Добавить новый терминал снизу текущего."
 
 #. type: Plain text
-#: data/man/tilix.1:43
+#: data/man/aiterm.1:43
 msgid ""
-"B<app-new-session> Create a new Tilix session within the current window."
-msgstr "B<app-new-session> Создать новую сессию Tilix внутри текущего окна."
+"B<app-new-session> Create a new Aiterm session within the current window."
+msgstr "B<app-new-session> Создать новую сессию Aiterm внутри текущего окна."
 
 #. type: Plain text
-#: data/man/tilix.1:46
-msgid "B<app-new-window> Create a new Tilix window."
-msgstr "B<app-new-window> Создать новое окно Tilix."
+#: data/man/aiterm.1:46
+msgid "B<app-new-window> Create a new Aiterm window."
+msgstr "B<app-new-window> Создать новое окно Aiterm."
 
 #. type: TP
-#: data/man/tilix.1:46
+#: data/man/aiterm.1:46
 #, no-wrap
 msgid "B<-e --command=COMMAND>"
 msgstr "B<-e --command=КОМАНДА>"
 
 #. type: Plain text
-#: data/man/tilix.1:49
+#: data/man/aiterm.1:49
 msgid ""
 "Execute all text after this parameter as a command, thus this parameter must "
 "be the last parameter."
@@ -216,74 +216,74 @@ msgstr ""
 "быть последним."
 
 #. type: TP
-#: data/man/tilix.1:49
+#: data/man/aiterm.1:49
 #, no-wrap
 msgid "B<--maximize>"
 msgstr "B<--maximize>"
 
 #. type: Plain text
-#: data/man/tilix.1:52
+#: data/man/aiterm.1:52
 msgid "Maximize the terminal window."
 msgstr "Развернуть окно терминала."
 
 #. type: TP
-#: data/man/tilix.1:52
+#: data/man/aiterm.1:52
 #, no-wrap
 msgid "B<--minimize>"
 msgstr "B<--minimize>"
 
 #. type: Plain text
-#: data/man/tilix.1:55
+#: data/man/aiterm.1:55
 msgid "Minimize the terminal window."
 msgstr "Свернуть окно терминала."
 
 #. type: TP
-#: data/man/tilix.1:55
+#: data/man/aiterm.1:55
 #, no-wrap
 msgid "B<--full-screen>"
 msgstr "B<--full-screen>"
 
 #. type: Plain text
-#: data/man/tilix.1:58
+#: data/man/aiterm.1:58
 msgid "Full-screen the terminal window."
 msgstr "Перевести окно терминала в полноэкранный режим."
 
 #. type: TP
-#: data/man/tilix.1:58
+#: data/man/aiterm.1:58
 #, no-wrap
 msgid "B<--focus-window>"
 msgstr "B<--focus-window>"
 
 #. type: Plain text
-#: data/man/tilix.1:61
+#: data/man/aiterm.1:61
 msgid "Focus the existing window."
 msgstr "Передать фокус существующему окну."
 
 #. type: TP
-#: data/man/tilix.1:61
+#: data/man/aiterm.1:61
 #, no-wrap
 msgid "B<--window-style=WINDOW_STYLE>"
 msgstr "B<--window-style=СТИЛЬ_ОКНА>"
 
 #. type: Plain text
-#: data/man/tilix.1:64
+#: data/man/aiterm.1:64
 msgid ""
 "Override the preferred window style, the following styles are supported:"
 msgstr ""
 "Переопределить предпочитаемый стиль окна. Поддерживаются следующие стили:"
 
 #. type: Plain text
-#: data/man/tilix.1:67
+#: data/man/aiterm.1:67
 msgid "B<normal> Normal window look."
 msgstr "B<normal> Нормальный вид окна."
 
 #. type: Plain text
-#: data/man/tilix.1:70
+#: data/man/aiterm.1:70
 msgid "B<disable-csd> Do not show client side decorations."
 msgstr "B<disable-csd> Не показывать клиентское обрамление окна."
 
 #. type: Plain text
-#: data/man/tilix.1:73
+#: data/man/aiterm.1:73
 msgid ""
 "B<disable-csd-hide-toolbar> Do not show client side decorations and toolbar."
 msgstr ""
@@ -291,53 +291,53 @@ msgstr ""
 "панель инструментов."
 
 #. type: Plain text
-#: data/man/tilix.1:76
+#: data/man/aiterm.1:76
 msgid "B<borderless> Do not show window borders."
 msgstr "B<borderless> Не показывать границы окна."
 
 #. type: TP
-#: data/man/tilix.1:76
+#: data/man/aiterm.1:76
 #, no-wrap
 msgid "B<--new-process>"
 msgstr "B<--new-process>"
 
 #. type: Plain text
-#: data/man/tilix.1:79
+#: data/man/aiterm.1:79
 msgid ""
-"Start an additional Tilix instance as a new process. By default and as per "
-"GTK+ version 3 guidelines, Tilix maintains a single process that all windows "
-"belong to. This option forces Tilix to start as a separate process. This is "
+"Start an additional Aiterm instance as a new process. By default and as per "
+"GTK+ version 3 guidelines, Aiterm maintains a single process that all windows "
+"belong to. This option forces Aiterm to start as a separate process. This is "
 "not recommended and only intended for debugging purposes. Its use will "
-"prevent different Tilix windows from communicating with each other."
+"prevent different Aiterm windows from communicating with each other."
 msgstr ""
-"Запустить дополнительный экземпляр Tilix в новом процессе. По умолчанию и "
-"согласно гайдлайнам GTK+ версии 3, Tilix работает в едином процессе, к "
-"которому принадлежат все окна. Эта опция заставляет Tilix запускаться в "
+"Запустить дополнительный экземпляр Aiterm в новом процессе. По умолчанию и "
+"согласно гайдлайнам GTK+ версии 3, Aiterm работает в едином процессе, к "
+"которому принадлежат все окна. Эта опция заставляет Aiterm запускаться в "
 "отдельном процессе. Это не рекомендуется и предназначено только для целей "
-"отладки. Использование этой опции не позволит разным окнам Tilix общаться "
+"отладки. Использование этой опции не позволит разным окнам Aiterm общаться "
 "друг с другом."
 
 #. type: TP
-#: data/man/tilix.1:79
+#: data/man/aiterm.1:79
 #, no-wrap
 msgid "B<--geometry=GEOMETRY>"
 msgstr "B<--geometry=ГЕОМЕТРИЯ>"
 
 #. type: Plain text
-#: data/man/tilix.1:82
+#: data/man/aiterm.1:82
 msgid ""
 "Set the window size; for example: 80x24, or 80x24+200+200 (COLSxROWS+X+Y)."
 msgstr ""
 "Задать размер окна, например: 80x24 или 80x24+200+200 (СТОЛБЦЫxСТРОКИ+X+Y)."
 
 #. type: TP
-#: data/man/tilix.1:82
+#: data/man/aiterm.1:82
 #, no-wrap
 msgid "B<-q --quake>"
 msgstr "B<-q --quake>"
 
 #. type: Plain text
-#: data/man/tilix.1:85
+#: data/man/aiterm.1:85
 msgid ""
 "Open a window in Quake mode or toggle existing Quake mode window visibility."
 msgstr ""
@@ -345,56 +345,56 @@ msgstr ""
 "окно."
 
 #. type: TP
-#: data/man/tilix.1:85
+#: data/man/aiterm.1:85
 #, no-wrap
 msgid "B<--preferences>"
 msgstr "B<--preferences>"
 
 #. type: Plain text
-#: data/man/tilix.1:88
-msgid "Show the Tilix preferences dialog directly."
-msgstr "Открыть диалог настроек Tilix."
+#: data/man/aiterm.1:88
+msgid "Show the Aiterm preferences dialog directly."
+msgstr "Открыть диалог настроек Aiterm."
 
 #. type: TP
-#: data/man/tilix.1:88
+#: data/man/aiterm.1:88
 #, no-wrap
 msgid "B<--display=DISPLAY>"
 msgstr "B<--display=ДИСПЛЕЙ>"
 
 #. type: Plain text
-#: data/man/tilix.1:91
+#: data/man/aiterm.1:91
 msgid "Use the specified X display."
 msgstr "Использовать указанный X-дисплей."
 
 #. type: SH
-#: data/man/tilix.1:91
+#: data/man/aiterm.1:91
 #, no-wrap
 msgid "SEE ALSO"
 msgstr "СМ. ТАКЖЕ"
 
 #. type: Plain text
-#: data/man/tilix.1:93
+#: data/man/aiterm.1:93
 msgid "None"
 msgstr "Отсутствует"
 
 #. type: SH
-#: data/man/tilix.1:93
+#: data/man/aiterm.1:93
 #, no-wrap
 msgid "BUGS"
 msgstr "БАГИ"
 
 #. type: Plain text
-#: data/man/tilix.1:95
-msgid "See bugs at https://github.com/gnunn1/tilix/issues"
-msgstr "Баги заносятся в https://github.com/gnunn1/tilix/issues"
+#: data/man/aiterm.1:95
+msgid "See bugs at https://github.com/gnunn1/aiterm/issues"
+msgstr "Баги заносятся в https://github.com/gnunn1/aiterm/issues"
 
 #. type: SH
-#: data/man/tilix.1:95
+#: data/man/aiterm.1:95
 #, no-wrap
 msgid "AUTHOR"
 msgstr "АВТОР"
 
 #. type: Plain text
-#: data/man/tilix.1:96
+#: data/man/aiterm.1:96
 msgid "Gerald Nunn and other contributors."
 msgstr "Gerald Nunn и другие участники."

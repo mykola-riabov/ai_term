@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# Install Tilix build dependencies
+# Install Aiterm build dependencies
 #
 set -e
 set -x

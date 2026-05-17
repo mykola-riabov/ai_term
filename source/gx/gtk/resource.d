@@ -38,7 +38,14 @@ enum ProviderPriority : uint {
  * Find and optionally register a resource
  */
 Resource findResource(string resourcePath, bool register = true) {
-    foreach (path; Util.getSystemDataDirs()) {
+    import std.process : environment;
+    string[] searchRoots;
+    const datadir = environment.get("AITERM_DATADIR", null);
+    if (datadir.length > 0) {
+        searchRoots ~= datadir;
+    }
+    searchRoots ~= Util.getSystemDataDirs();
+    foreach (path; searchRoots) {
         auto fullpath = buildPath(path, resourcePath);
         trace("looking for resource " ~ fullpath);
         if (exists(fullpath)) {
@@ -83,7 +90,7 @@ CssProvider addCssProvider(string filename, ProviderPriority priority, string[st
                 StyleContext.addProviderForScreen(Screen.getDefault(), provider, priority);
                 return provider;
             } else {
-                warning("Default screen is null, no CSS provider added and as a result Tilix UI may appear incorrect");
+                warning("Default screen is null, no CSS provider added and as a result Aiterm UI may appear incorrect");
                 return null;
             }
         }
