@@ -58,4 +58,4 @@ An optional working tree may exist under `example/` (gitignored, not published).
 
 ---
 
-**Note:** Aiterm is based on a modified fork of [Tilix](https://github.com/gnunn1/tilix) (tiling GTK terminal for Linux). The upstream project provided the terminal core; this repository adds the Modern layer and rebrands the application as **Aiterm**.
+**Note:** Aiterm is based on a modified fork of [Tilix](https://github.com/gnunn1/tilix) (tiling GTK terminal for Linux).
