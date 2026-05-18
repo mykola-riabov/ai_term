@@ -1,7 +1,8 @@
 /*
- * AI prompt categories / templates editor (nested categories for «Prompts» menu).
+ * Bash / shell command snippets for the quick panel «Commands» menu.
+ * Supports nested categories (e.g. Apps → Docker → commands).
  */
-module gx.aiterm.modern.prompthub;
+module gx.aiterm.modern.bashhub;
 
 import std.string;
 
@@ -25,31 +26,31 @@ import gx.aiterm.modern.store;
 
 alias VoidFn = void delegate();
 
-private ref ModernCategory[] promptCategories() {
-    return modernData().aiPrompts.categories;
+private ref ModernCategory[] bashCategories() {
+    return modernData().bashSnippets;
 }
 
-private ModernCategory* findPromptCategoryIn(ref ModernCategory[] cats, string id) {
+private ModernCategory* findBashCategoryIn(ref ModernCategory[] cats, string id) {
     foreach (ref c; cats) {
         if (c.id == id) return &c;
-        auto p = findPromptCategoryIn(c.children, id);
+        auto p = findBashCategoryIn(c.children, id);
         if (p !is null) return p;
     }
     return null;
 }
 
-private ModernCategory* findPromptCategory(string id) {
-    return findPromptCategoryIn(promptCategories(), id);
+private ModernCategory* findBashCategory(string id) {
+    return findBashCategoryIn(bashCategories(), id);
 }
 
-private ModernCommand* findPromptCommand(ModernCategory cat, string cmdId) {
+private ModernCommand* findBashCommand(ModernCategory cat, string cmdId) {
     foreach (ref cmd; cat.commands) {
         if (cmd.id == cmdId) return &cmd;
     }
     return null;
 }
 
-private bool removePromptCategoryById(ref ModernCategory[] cats, string id) {
+private bool removeBashCategoryById(ref ModernCategory[] cats, string id) {
     ModernCategory[] kept;
     bool removed;
     foreach (ref c; cats) {
@@ -57,7 +58,7 @@ private bool removePromptCategoryById(ref ModernCategory[] cats, string id) {
             removed = true;
             continue;
         }
-        if (removePromptCategoryById(c.children, id))
+        if (removeBashCategoryById(c.children, id))
             removed = true;
         kept ~= c;
     }
@@ -65,19 +66,19 @@ private bool removePromptCategoryById(ref ModernCategory[] cats, string id) {
     return removed;
 }
 
-private void removePromptCommandById(string cmdId) {
+private void removeBashCommandById(string cmdId) {
     void strip(ref ModernCategory c) {
         ModernCommand[] kept;
         foreach (x; c.commands) if (x.id != cmdId) kept ~= x;
         c.commands = kept;
         foreach (ref ch; c.children) strip(ch);
     }
-    foreach (ref c; promptCategories()) strip(c);
+    foreach (ref c; bashCategories()) strip(c);
 }
 
 private void fillCategoryCombo(ComboBoxText cb) {
     cb.removeAll();
-    foreach (ref c; promptCategories()) {
+    foreach (ref c; bashCategories()) {
         if (c.children.length == 0)
             cb.append(c.id, c.name);
         foreach (ref ch; c.children)
@@ -85,10 +86,10 @@ private void fillCategoryCombo(ComboBoxText cb) {
     }
 }
 
-void showAiPromptHubDialog(Window parent, VoidFn onChanged) {
+void showBashCommandsHubDialog(Window parent, VoidFn onChanged) {
     ensureDefaults(modernData());
     auto dlg = new Dialog();
-    dlg.setTitle("AI prompts");
+    dlg.setTitle("Bash commands");
     if (parent !is null) dlg.setTransientFor(parent);
     dlg.setModal(true);
     dlg.setDefaultSize(560, 480);
@@ -101,9 +102,9 @@ void showAiPromptHubDialog(Window parent, VoidFn onChanged) {
     content.setMarginBottom(12);
 
     auto hint = new Label(
-        "Categories and prompts for the quick bar «Prompts» menu. "
-        ~ "Top-level categories may contain subcategories. "
-        ~ "Selecting a prompt opens AI Chat with the template text.");
+        "Categories and commands for the quick bar «Commands» menu. "
+        ~ "Top-level categories may contain subcategories (e.g. Apps → Docker). "
+        ~ "Selecting a command runs it in the active terminal.");
     hint.setLineWrap(true);
     hint.setXalign(0);
     content.packStart(hint, false, false, 0);
@@ -132,13 +133,14 @@ void showAiPromptHubDialog(Window parent, VoidFn onChanged) {
             cmdRow.add(cmdLbl);
             list.add(cmdRow);
         }
-        foreach (ch; cat.children)
+        foreach (ch; cat.children) {
             addCategoryRows(ch, indent ~ "  ", "sub:");
+        }
     }
 
     void refreshList() {
         foreach (w; getChildren!Widget(list, false)) w.destroy();
-        foreach (cat; promptCategories())
+        foreach (cat; bashCategories())
             addCategoryRows(cat, "", "cat:");
         list.showAll();
     }
@@ -147,7 +149,7 @@ void showAiPromptHubDialog(Window parent, VoidFn onChanged) {
         ModernCategory c;
         bool isNew = catId.length == 0;
         if (!isNew) {
-            auto p = findPromptCategory(catId);
+            auto p = findBashCategory(catId);
             if (p is null) return;
             c = *p;
         } else {
@@ -160,14 +162,14 @@ void showAiPromptHubDialog(Window parent, VoidFn onChanged) {
         ed.setModal(true);
         auto eName = new Entry();
         eName.setText(c.name);
-        eName.setPlaceholderText(parentId.length > 0 ? "e.g. DevOps, Security" : "e.g. General, Network");
+        eName.setPlaceholderText(parentId.length > 0 ? "e.g. Docker, Git" : "e.g. Network, Apps");
         auto box = new Box(Orientation.VERTICAL, 8);
         box.setMarginStart(12);
         box.setMarginEnd(12);
         box.setMarginTop(12);
         box.setMarginBottom(12);
         if (parentId.length > 0) {
-            auto pp = findPromptCategory(parentId);
+            auto pp = findBashCategory(parentId);
             string parentName = pp !is null ? pp.name : "";
             auto lblParent = new Label("Parent: " ~ parentName);
             lblParent.setXalign(0);
@@ -186,13 +188,13 @@ void showAiPromptHubDialog(Window parent, VoidFn onChanged) {
         c.name = eName.getText().strip();
         if (isNew) {
             if (parentId.length > 0) {
-                auto pp = findPromptCategory(parentId);
+                auto pp = findBashCategory(parentId);
                 if (pp !is null) pp.children ~= c;
             } else {
-                promptCategories() ~= c;
+                bashCategories() ~= c;
             }
         } else {
-            auto p = findPromptCategory(catId);
+            auto p = findBashCategory(catId);
             if (p !is null) p.name = c.name;
         }
         saveModernStore();
@@ -202,20 +204,20 @@ void showAiPromptHubDialog(Window parent, VoidFn onChanged) {
         ed.destroy();
     }
 
-    void editPrompt(string catId, string cmdId) {
-        auto cp = findPromptCategory(catId);
+    void editCommand(string catId, string cmdId) {
+        auto cp = findBashCategory(catId);
         if (cp is null && catId.length > 0) return;
         ModernCommand cmd;
         bool isNew = cmdId.length == 0;
         if (!isNew && cp !is null) {
-            auto p = findPromptCommand(*cp, cmdId);
+            auto p = findBashCommand(*cp, cmdId);
             if (p is null) return;
             cmd = *p;
         } else {
             cmd.id = genId();
         }
         auto ed = new Dialog();
-        ed.setTitle(isNew ? "New prompt" : "Edit prompt");
+        ed.setTitle(isNew ? "New command" : "Edit command");
         ed.setTransientFor(dlg);
         ed.setModal(true);
         auto cbCat = new ComboBoxText();
@@ -226,6 +228,7 @@ void showAiPromptHubDialog(Window parent, VoidFn onChanged) {
         eLabel.setPlaceholderText("Short name in menus");
         auto tv = new TextView();
         tv.setWrapMode(WrapMode.WORD);
+        tv.setMonospace(true);
         tv.getBuffer().setText(cmd.text);
         tv.setSizeRequest(-1, 120);
         auto box = new Box(Orientation.VERTICAL, 8);
@@ -237,7 +240,7 @@ void showAiPromptHubDialog(Window parent, VoidFn onChanged) {
         box.packStart(cbCat, false, false, 0);
         box.packStart(new Label("Label"), false, false, 0);
         box.packStart(eLabel, false, false, 0);
-        box.packStart(new Label("Prompt text (inserted into AI Chat)"), false, false, 0);
+        box.packStart(new Label("Command (sent to terminal)"), false, false, 0);
         box.packStart(tv, true, true, 0);
         ed.getContentArea().packStart(box, true, true, 0);
         ed.addButton("Cancel", ResponseType.CANCEL);
@@ -256,8 +259,8 @@ void showAiPromptHubDialog(Window parent, VoidFn onChanged) {
         TextIter s, e;
         tv.getBuffer().getBounds(s, e);
         cmd.text = tv.getBuffer().getText(s, e, true);
-        removePromptCommandById(cmd.id);
-        auto tp = findPromptCategory(targetCatId);
+        removeBashCommandById(cmd.id);
+        auto tp = findBashCategory(targetCatId);
         if (tp !is null) tp.commands ~= cmd;
         saveModernStore();
         refreshList();
@@ -269,7 +272,7 @@ void showAiPromptHubDialog(Window parent, VoidFn onChanged) {
     auto rowBtns = new Box(Orientation.HORIZONTAL, 6);
     auto btnAddCat = new Button("Add category");
     auto btnAddSub = new Button("Add subcategory");
-    auto btnAddCmd = new Button("Add prompt");
+    auto btnAddCmd = new Button("Add command");
     auto btnEdit = new Button("Edit");
     auto btnDel = new Button("Delete");
     rowBtns.packStart(btnAddCat, false, false, 0);
@@ -285,8 +288,8 @@ void showAiPromptHubDialog(Window parent, VoidFn onChanged) {
         string parentId = "";
         if (r !is null && r.getName().startsWith("cat:"))
             parentId = r.getName()[4 .. $];
-        else if (promptCategories().length > 0)
-            parentId = promptCategories()[0].id;
+        else if (bashCategories().length > 0)
+            parentId = bashCategories()[0].id;
         editCategory("", parentId);
     });
     btnAddCmd.addOnClicked(delegate(Button) {
@@ -303,7 +306,7 @@ void showAiPromptHubDialog(Window parent, VoidFn onChanged) {
                 catId = name[4 .. $];
         }
         if (catId.length == 0) {
-            foreach (ref c; promptCategories()) {
+            foreach (ref c; bashCategories()) {
                 if (c.children.length > 0) {
                     catId = c.children[0].id;
                     break;
@@ -312,7 +315,7 @@ void showAiPromptHubDialog(Window parent, VoidFn onChanged) {
                 break;
             }
         }
-        editPrompt(catId, "");
+        editCommand(catId, "");
     });
     btnEdit.addOnClicked(delegate(Button) {
         auto r = list.getSelectedRow();
@@ -322,7 +325,7 @@ void showAiPromptHubDialog(Window parent, VoidFn onChanged) {
         else if (name.startsWith("sub:")) editCategory(name[4 .. $], "");
         else if (name.startsWith("cmd:")) {
             auto parts = name[4 .. $].split(":");
-            if (parts.length >= 2) editPrompt(parts[0], parts[1]);
+            if (parts.length >= 2) editCommand(parts[0], parts[1]);
         }
     });
     btnDel.addOnClicked(delegate(Button) {
@@ -331,11 +334,11 @@ void showAiPromptHubDialog(Window parent, VoidFn onChanged) {
         string name = r.getName();
         if (name.startsWith("cat:") || name.startsWith("sub:")) {
             string id = name[4 .. $];
-            removePromptCategoryById(promptCategories(), id);
+            removeBashCategoryById(bashCategories(), id);
         } else if (name.startsWith("cmd:")) {
             auto parts = name[4 .. $].split(":");
             if (parts.length >= 2) {
-                auto cp = findPromptCategory(parts[0]);
+                auto cp = findBashCategory(parts[0]);
                 if (cp !is null) {
                     ModernCommand[] kept;
                     foreach (x; cp.commands) if (x.id != parts[1]) kept ~= x;

@@ -1,5 +1,5 @@
 /*
- * AI chat history manager (Preferences → Modern, same data as AI Chat window).
+ * AI chat history manager (Preferences → AI, same data as AI Chat window).
  */
 module gx.aiterm.modern.chathub;
 

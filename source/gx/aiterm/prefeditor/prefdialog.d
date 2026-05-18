@@ -91,7 +91,6 @@ import gx.aiterm.constants;
 import gx.aiterm.encoding;
 import gx.aiterm.preferences;
 
-import gx.aiterm.prefeditor.bookmarkeditor;
 import gx.aiterm.prefeditor.common;
 import gx.aiterm.prefeditor.profileeditor;
 import gx.aiterm.prefeditor.titleeditor;
@@ -112,13 +111,24 @@ private:
     Button btnDeleteProfile;
 
     ProfileEditor pe;
-    GlobalBookmarkEditor bmEditor;
-    ModernPreferencesPage modernPrefs;
+    AiPreferencesPage aiPrefs;
+    NetworkPreferencesPage networkPrefs;
+    CommandsPreferencesPage commandsPrefs;
 
     bool _wayland;
 
     int nonProfileRowCount = 0;
 
+    /** Wrap preference page content so tall sections (e.g. AI) scroll instead of clipping. */
+    Widget wrapPreferencePageScroll(Widget page) {
+        auto scroll = new ScrolledWindow();
+        scroll.setPolicy(PolicyType.NEVER, PolicyType.AUTOMATIC);
+        scroll.setShadowType(ShadowType.NONE);
+        scroll.setHexpand(true);
+        scroll.setVexpand(true);
+        scroll.add(page);
+        return scroll;
+    }
 
     void createUI() {
 
@@ -138,48 +148,41 @@ private:
         pages.setHexpand(true);
         pages.setVexpand(true);
 
+        aiPrefs = new AiPreferencesPage();
+        pages.addTitled(wrapPreferencePageScroll(aiPrefs), N_("AI"), _("AI"));
+        addNonProfileRow(new GenericPreferenceRow(N_("AI"), _("AI")));
+
+        networkPrefs = new NetworkPreferencesPage();
+        pages.addTitled(wrapPreferencePageScroll(networkPrefs), N_("Network"), _("Network"));
+        addNonProfileRow(new GenericPreferenceRow(N_("Network"), _("Network")));
+
+        commandsPrefs = new CommandsPreferencesPage();
+        pages.addTitled(wrapPreferencePageScroll(commandsPrefs), N_("Commands"), _("Commands"));
+        addNonProfileRow(new GenericPreferenceRow(N_("Commands"), _("Commands")));
+
         GlobalPreferences gp = new GlobalPreferences(gsSettings);
-        pages.addTitled(gp, N_("Global"), _("Global"));
+        pages.addTitled(wrapPreferencePageScroll(gp), N_("Global"), _("Global"));
         addNonProfileRow(new GenericPreferenceRow(N_("Global"), _("Global")));
 
         AppearancePreferences ap = new AppearancePreferences(gsSettings);
-        pages.addTitled(ap, N_("Appearance"), _("Appearance"));
+        pages.addTitled(wrapPreferencePageScroll(ap), N_("Appearance"), _("Appearance"));
         addNonProfileRow(new GenericPreferenceRow(N_("Appearance"), _("Appearance")));
-
-        // Quake disabled in Wayland, see #1314
-        if (!isWayland(null)) {
-            QuakePreferences qp = new QuakePreferences(gsSettings, _wayland);
-            pages.addTitled(qp, N_("Quake"), _("Quake"));
-            addNonProfileRow(new GenericPreferenceRow(N_("Quake"), _("Quake")));
-        }
-
-        bmEditor = new GlobalBookmarkEditor();
-        pages.addTitled(bmEditor, N_("Bookmarks"), _("Bookmarks"));
-        addNonProfileRow(new GenericPreferenceRow(N_("Bookmarks"), _("Bookmarks")));
-
-        modernPrefs = new ModernPreferencesPage();
-        pages.addTitled(modernPrefs, N_("Modern"), _("Modern"));
-        addNonProfileRow(new GenericPreferenceRow(N_("Modern"), _("Modern")));
 
         ShortcutPreferences sp = new ShortcutPreferences(gsSettings);
         searchButton.addOnToggled(delegate(ToggleButton button) {
             sp.toggleShortcutsFind();
         });
-        pages.addTitled(sp, N_("Shortcuts"), _("Shortcuts"));
+        pages.addTitled(wrapPreferencePageScroll(sp), N_("Shortcuts"), _("Shortcuts"));
         addNonProfileRow(new GenericPreferenceRow(N_("Shortcuts"), _("Shortcuts")));
 
         EncodingPreferences ep = new EncodingPreferences(gsSettings);
-        pages.addTitled(ep, N_("Encoding"), _("Encoding"));
+        pages.addTitled(wrapPreferencePageScroll(ep), N_("Encoding"), _("Encoding"));
         addNonProfileRow(new GenericPreferenceRow(N_("Encoding"), _("Encoding")));
-
-        AdvancedPreferences advp = new AdvancedPreferences(gsSettings);
-        pages.addTitled(advp, N_("Advanced"), _("Advanced"));
-        addNonProfileRow(new GenericPreferenceRow(N_("Advanced"), _("Advanced")));
 
         // Profile Editor - Re-used for all profiles
         pe = new ProfileEditor();
         pe.onProfileNameChanged.connect(&profileNameChanged);
-        pages.addTitled(pe, N_("Profile"), _("Profile"));
+        pages.addTitled(wrapPreferencePageScroll(pe), N_("Profile"), _("Profile"));
         addNonProfileRow(createProfileTitleRow());
         loadProfiles();
 
@@ -221,8 +224,10 @@ private:
         sgMain.addWidget(hbMain);
         sgMain.addWidget(pages);
 
-        //Set initial title
-        hbMain.setTitle(_("Global"));
+        // Default to AI section (first in sidebar)
+        lbSide.selectRow(lbSide.getRowAtIndex(0));
+        pages.setVisibleChildName(N_("AI"));
+        hbMain.setTitle(_("AI"));
     }
 
     // Keep track of non-profile rows
@@ -424,11 +429,14 @@ public:
         setShowMenubar(false);
         gsSettings = new GSettings(SETTINGS_ID);
         _wayland = isWayland(window);
+        setDefaultSize(900, 620);
         createUI();
         updateUI();
         this.addOnDestroy(delegate(Widget) {
             trace("Preference window is destroyed");
-            if (modernPrefs !is null) modernPrefs.saveToStore();
+            if (aiPrefs !is null) aiPrefs.saveToStore();
+            if (networkPrefs !is null) networkPrefs.saveToStore();
+            if (commandsPrefs !is null) commandsPrefs.saveToStore();
             pe.onProfileNameChanged.disconnect(&profileNameChanged);
             gsSettings.destroy();
             gsSettings = null;
@@ -1341,187 +1349,6 @@ class AppearancePreferences: Box {
         }
 }
 
-class QuakePreferences : Box {
-
-private:
-    BindingHelper bh;
-
-    void createUI(bool wayland) {
-        setMarginTop(18);
-        setMarginBottom(18);
-        setMarginLeft(18);
-        setMarginRight(18);
-
-        Label lblSize = new Label(format("<b>%s</b>", _("Size")));
-        lblSize.setUseMarkup(true);
-        lblSize.setHalign(GtkAlign.START);
-        add(lblSize);
-
-        Grid grid = new Grid();
-        grid.setColumnSpacing(12);
-        grid.setRowSpacing(6);
-        int row = 0;
-
-        // Terminal Height
-        grid.attach(createLabel(_("Height percent")), 0, row, 1, 1);
-        Scale sHeight = new Scale(Orientation.HORIZONTAL, 10, 90, 10);
-        sHeight.setValuePos(GtkPositionType.RIGHT);
-        sHeight.setHexpand(true);
-        sHeight.setHalign(GtkAlign.FILL);
-        bh.bind(SETTINGS_QUAKE_HEIGHT_PERCENT_KEY, sHeight.getAdjustment(), "value", GSettingsBindFlags.DEFAULT);
-        grid.attach(sHeight, 1, row, 1, 1);
-        row++;
-
-        if (!wayland) {
-            // Terminal Width
-            grid.attach(createLabel(_("Width percent")), 0, row, 1, 1);
-            Scale sWidth = new Scale(Orientation.HORIZONTAL, 10, 100, 10);
-            sWidth.setValuePos(GtkPositionType.RIGHT);
-            sWidth.setHexpand(true);
-            sWidth.setHalign(GtkAlign.FILL);
-            bh.bind(SETTINGS_QUAKE_WIDTH_PERCENT_KEY, sWidth.getAdjustment(), "value", GSettingsBindFlags.DEFAULT);
-            grid.attach(sWidth, 1, row, 1, 1);
-            row++;
-
-            //Alignment
-            grid.attach(createLabel(_("Alignment")), 0, row, 1, 1);
-            ComboBox cbAlignment = createNameValueCombo([_("Left"), _("Center"), _("Right")], [SETTINGS_QUAKE_ALIGNMENT_LEFT_VALUE, SETTINGS_QUAKE_ALIGNMENT_CENTER_VALUE, SETTINGS_QUAKE_ALIGNMENT_RIGHT_VALUE]);
-            bh.bind(SETTINGS_QUAKE_ALIGNMENT_KEY, cbAlignment, "active-id", GSettingsBindFlags.DEFAULT);
-            grid.attach(cbAlignment, 1, row, 1, 1);
-            row++;
-        }
-
-        grid.attach(createLabel(_("Tab position")), 0, row, 1, 1);
-        ComboBox cbTabPosition = createNameValueCombo([_("Left"), _("Right"), _("Top"), _("Bottom")], SETTINGS_TAB_POSITION_VALUES);
-        bh.bind(SETTINGS_QUAKE_TAB_POSITION_KEY, cbTabPosition, "active-id", GSettingsBindFlags.DEFAULT);
-        grid.attach(cbTabPosition, 1, row, 1, 1);
-        row++;
-
-        if (!wayland) {
-            grid.attach(createLabel(_("Window position")), 0, row, 1, 1);
-            ComboBox cbWinPosition = createNameValueCombo([_("Top"), _("Bottom")], SETTINGS_QUAKE_WINDOW_POSITION_VALUES);
-            bh.bind(SETTINGS_QUAKE_WINDOW_POSITION_KEY, cbWinPosition, "active-id", GSettingsBindFlags.DEFAULT);
-            grid.attach(cbWinPosition, 1, row, 1, 1);
-            row++;
-        }
-
-        add(grid);
-
-        Label lblOptions = new Label(format("<b>%s</b>", _("Options")));
-        lblOptions.setUseMarkup(true);
-        lblOptions.setHalign(GtkAlign.START);
-        add(lblOptions);
-
-        Box bContent = new Box(Orientation.VERTICAL, 6);
-
-        //Show on all workspaces
-        CheckButton cbAllWorkspaces = new CheckButton(_("Show terminal on all workspaces"));
-        bh.bind(SETTINGS_QUAKE_SHOW_ON_ALL_WORKSPACES_KEY, cbAllWorkspaces, "active", GSettingsBindFlags.DEFAULT);
-        bContent.add(cbAllWorkspaces);
-
-        //Disable animations
-        /*
-        CheckButton cbDisableAnimations = new CheckButton(_("Set hint for window manager to disable animation"));
-        bh.bind(SETTINGS_QUAKE_DISABLE_ANIMATION_KEY, cbDisableAnimations, "active", GSettingsBindFlags.DEFAULT);
-        bContent.add(cbDisableAnimations);
-        */
-
-        //Hide window on lose focus, note issue #858
-        CheckButton cbHideOnLoseFocus = new CheckButton(_("Hide window when focus is lost"));
-        bh.bind(SETTINGS_QUAKE_HIDE_LOSE_FOCUS_KEY, cbHideOnLoseFocus, "active", GSettingsBindFlags.DEFAULT);
-        bContent.add(cbHideOnLoseFocus);
-
-        Label lblDelay = new Label(_("Delay hiding window by (ms)"));
-        SpinButton sbDelay = new SpinButton(50, 1000, 50);
-        bh.bind(SETTINGS_QUAKE_HIDE_LOSE_FOCUS_DELAY_KEY, sbDelay, "value", GSettingsBindFlags.DEFAULT);
-        bh.bind(SETTINGS_QUAKE_HIDE_LOSE_FOCUS_KEY, sbDelay, "sensitive", GSettingsBindFlags.DEFAULT);
-        bh.bind(SETTINGS_QUAKE_HIDE_LOSE_FOCUS_KEY, lblDelay, "sensitive", GSettingsBindFlags.DEFAULT);
-
-        Box bDelay = new Box(Orientation.HORIZONTAL, 6);
-        bDelay.add(lblDelay);
-        bDelay.add(sbDelay);
-        bDelay.setMarginLeft(48);
-        bContent.add(bDelay);
-
-        //Hide headerbar
-        CheckButton cbHideHeaderbar = new CheckButton(_("Hide the toolbar of the window"));
-        bh.bind(SETTINGS_QUAKE_HIDE_HEADERBAR_KEY, cbHideHeaderbar, "active", GSettingsBindFlags.DEFAULT);
-        bContent.add(cbHideHeaderbar);
-
-        /*
-        //Keep window on top
-        CheckButton cbKeepOnTop = new CheckButton(_("Always keep window on top"));
-        bh.bind(SETTINGS_QUAKE_KEEP_ON_TOP_KEY, cbKeepOnTop, "active", GSettingsBindFlags.DEFAULT);
-        bContent.add(cbKeepOnTop);
-        */
-
-        // Wayland doesn't let you put a window on a specific monitor so don't show this
-        if (!wayland) {
-
-            //Always on top
-            CheckButton cbKeepOnTop = new CheckButton(_("Keep window always on top"));
-            bh.bind(SETTINGS_QUAKE_KEEP_ON_TOP_KEY, cbKeepOnTop, "active", GSettingsBindFlags.DEFAULT);
-            bContent.add(cbKeepOnTop);
-
-            //Active Monitor
-            CheckButton cbActiveMonitor = new CheckButton(_("Display terminal on active monitor"));
-            bh.bind(SETTINGS_QUAKE_ACTIVE_MONITOR_KEY, cbActiveMonitor, "active", GSettingsBindFlags.DEFAULT);
-            bContent.add(cbActiveMonitor);
-
-            //Specific Monitor
-            Box bSpecific = new Box(Orientation.HORIZONTAL, 6);
-            bSpecific.setMarginLeft(36);
-            Label lblSpecific = new Label(_("Display on specific monitor"));
-            bh.bind(SETTINGS_QUAKE_ACTIVE_MONITOR_KEY, lblSpecific, "sensitive", GSettingsBindFlags.INVERT_BOOLEAN);
-            bSpecific.add(lblSpecific);
-            string[] names = [_("Primary Monitor")];
-            int[] values = [-1];
-            for(int monitor; monitor < Screen.getDefault().getNMonitors(); monitor++) {
-                names ~= _("Monitor ") ~ to!string(monitor);
-                values ~= monitor;
-            }
-
-            ComboBox cbScreen = TComboBox!(int).createComboBox(names, values);
-            cbScreen.addOnChanged(delegate(ComboBox cb) {
-                TreeIter iter;
-                if (cb.getActiveIter(iter)) {
-                    ListStore ls = cast(ListStore)cb.getModel();
-                    bh.settings.setInt(SETTINGS_QUAKE_SPECIFIC_MONITOR_KEY, ls.getValueInt(iter, 1));
-                } else {
-                    bh.settings.setInt(SETTINGS_QUAKE_SPECIFIC_MONITOR_KEY,-1);
-                }
-            });
-            int index = 0;
-            foreach(TreeIter iter; TreeIterRange(cbScreen.getModel())) {
-                if (cbScreen.getModel().getValueInt(iter, 1) == bh.settings.getInt(SETTINGS_QUAKE_SPECIFIC_MONITOR_KEY)) {
-                    cbScreen.setActive(index);
-                    break;
-                }
-                index++;
-            }
-            //bh.bind(SETTINGS_QUAKE_SPECIFIC_MONITOR_KEY, cbScreen, "active-id", GSettingsBindFlags.DEFAULT);
-            bh.bind(SETTINGS_QUAKE_ACTIVE_MONITOR_KEY, cbScreen, "sensitive", GSettingsBindFlags.INVERT_BOOLEAN);
-            bSpecific.add(cbScreen);
-
-            bContent.add(bSpecific);
-        }
-
-        add(bContent);
-    }
-
-public:
-
-    this(GSettings gsSettings, bool wayland) {
-        super(Orientation.VERTICAL, 6);
-        bh = new BindingHelper(gsSettings);
-        createUI(wayland);
-        addOnDestroy(delegate(Widget) {
-            bh.unbind();
-            bh = null;
-        });
-    }
-}
-
 /**
  * Global preferences page *
  */
@@ -1648,40 +1475,6 @@ public:
             bh = null;
         });
     }
-}
-
-/**
- * Global preferences page *
- */
-class AdvancedPreferences : Box {
-private:
-    GSettings gsSettings;
-
-    void createUI() {
-        setAllMargins(this, 18);
-        Grid grid = new Grid();
-        grid.setHalign(GtkAlign.FILL);
-        grid.setColumnSpacing(12);
-        grid.setRowSpacing(6);
-
-        uint row = 0;
-        createAdvancedUI(grid, row, &getSettings);
-
-        this.add(grid);
-    }
-
-    GSettings getSettings() {
-        return gsSettings;
-    }
-
-public:
-
-    this(GSettings gsSettings) {
-        super(Orientation.VERTICAL, 6);
-        this.gsSettings = gsSettings;
-        createUI();
-    }
-
 }
 
 // Function to create a right aligned label with appropriate margins

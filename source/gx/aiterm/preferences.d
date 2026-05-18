@@ -37,8 +37,6 @@ enum SETTINGS_BASE_PATH = "/com/aiterm/Aiterm";
 // Settings for links and triggers that can be set at both global and profile level
 enum SETTINGS_ALL_CUSTOM_HYPERLINK_KEY = "custom-hyperlinks";
 enum SETTINGS_ALL_TRIGGERS_KEY = "triggers";
-enum SETTINGS_TRIGGERS_LINES_KEY = "triggers-lines";
-enum SETTINGS_TRIGGERS_UNLIMITED_LINES_KEY = "trigger-unlimit-lines";
 
 // Theme Settings
 enum SETTINGS_THEME_VARIANT_KEY = "theme-variant";
@@ -93,9 +91,6 @@ enum SETTINGS_TERMINAL_FOCUS_FOLLOWS_MOUSE_KEY = "focus-follow-mouse";
 enum SETTINGS_ENCODINGS_KEY = "encodings";
 enum SETTINGS_MIDDLE_CLICK_CLOSE_KEY = "middle-click-close";
 enum SETTINGS_CONTROL_SCROLL_ZOOM_KEY = "control-scroll-zoom";
-enum SETTINGS_PASSWORD_INCLUDE_RETURN_KEY = "password-include-return";
-enum SETTINGS_BOOKMARK_INCLUDE_RETURN_KEY = "bookmark-include-return";
-
 enum SETTINGS_SEARCH_DEFAULT_MATCH_CASE = "search-default-match-case";
 enum SETTINGS_SEARCH_DEFAULT_MATCH_ENTIRE_WORD = "search-default-match-entire-word";
 enum SETTINGS_SEARCH_DEFAULT_MATCH_AS_REGEX = "search-default-match-as-regex";
@@ -119,26 +114,6 @@ enum SETTINGS_PROMPT_ON_CLOSE_KEY = "prompt-on-close";
 enum SETTINGS_PROMPT_ON_CLOSE_PROCESS_KEY = "prompt-on-close-process";
 enum SETTINGS_PROMPT_ON_DELETE_PROFILE_KEY="prompt-on-delete-profile";
 
-//Quake Settings
-enum SETTINGS_QUAKE_WIDTH_PERCENT_KEY = "quake-width-percent";
-enum SETTINGS_QUAKE_HEIGHT_PERCENT_KEY = "quake-height-percent";
-enum SETTINGS_QUAKE_ACTIVE_MONITOR_KEY = "quake-active-monitor";
-enum SETTINGS_QUAKE_SPECIFIC_MONITOR_KEY = "quake-specific-monitor";
-enum SETTINGS_QUAKE_SHOW_ON_ALL_WORKSPACES_KEY = "quake-show-on-all-workspaces";
-/*
-enum SETTINGS_QUAKE_DISABLE_ANIMATION_KEY = "quake-disable-animation";
-*/
-enum SETTINGS_QUAKE_HIDE_LOSE_FOCUS_KEY = "quake-hide-lose-focus";
-enum SETTINGS_QUAKE_HIDE_LOSE_FOCUS_DELAY_KEY = "quake-hide-lose-focus-delay";
-enum SETTINGS_QUAKE_ALIGNMENT_KEY = "quake-alignment";
-enum SETTINGS_QUAKE_ALIGNMENT_LEFT_VALUE = "left";
-enum SETTINGS_QUAKE_ALIGNMENT_CENTER_VALUE = "center";
-enum SETTINGS_QUAKE_ALIGNMENT_RIGHT_VALUE = "right";
-enum SETTINGS_QUAKE_HIDE_HEADERBAR_KEY = "quake-hide-headerbar";
-enum SETTINGS_QUAKE_TAB_POSITION_KEY = "quake-tab-position";
-enum SETTINGS_QUAKE_KEEP_ON_TOP_KEY = "quake-keep-on-top";
-enum SETTINGS_QUAKE_WINDOW_POSITION_KEY = "quake-window-position";
-
 //Advanced Paste Settings
 enum SETTINGS_ADVANCED_PASTE_REPLACE_TABS_KEY = "advanced-paste-replace-tabs";
 enum SETTINGS_ADVANCED_PASTE_SPACE_COUNT_KEY = "advanced-paste-space-count";
@@ -147,7 +122,6 @@ enum SETTINGS_ADVANCED_PASTE_REPLACE_CRLF_KEY = "advanced-paste-replace-crlf";
 enum SETTINGS_USE_TABS_KEY = "use-tabs";
 enum SETTINGS_TAB_POSITION_KEY = "tab-position";
 immutable string[] SETTINGS_TAB_POSITION_VALUES = ["left", "right", "top", "bottom"];
-immutable string[] SETTINGS_QUAKE_WINDOW_POSITION_VALUES = ["top", "bottom"];
 
 enum SETTINGS_PROCESS_MONITOR = "process-monitor";
 
@@ -259,7 +233,6 @@ immutable string SETTINGS_PROFILE_TRIGGER_SEND_NOTIFICATION_VALUE = N_("SendNoti
 immutable string SETTINGS_PROFILE_TRIGGER_UPDATE_TITLE_VALUE = N_("UpdateTitle");
 immutable string SETTINGS_PROFILE_TRIGGER_PLAY_BELL_VALUE = N_("PlayBell");
 immutable string SETTINGS_PROFILE_TRIGGER_SEND_TEXT_VALUE = N_("SendText");
-immutable string SETTINGS_PROFILE_TRIGGER_INSERT_PASSWORD_VALUE = N_("InsertPassword");
 immutable string SETTINGS_PROFILE_TRIGGER_UPDATE_BADGE_VALUE = N_("UpdateBadge");
 immutable string SETTINGS_PROFILE_TRIGGER_RUN_PROCESS_VALUE = N_("RunProcess");
 
@@ -269,7 +242,6 @@ immutable string[] SETTINGS_PROFILE_TRIGGER_ACTION_VALUES = [SETTINGS_PROFILE_TR
                                                              SETTINGS_PROFILE_TRIGGER_UPDATE_TITLE_VALUE,
                                                              SETTINGS_PROFILE_TRIGGER_PLAY_BELL_VALUE,
                                                              SETTINGS_PROFILE_TRIGGER_SEND_TEXT_VALUE,
-                                                             SETTINGS_PROFILE_TRIGGER_INSERT_PASSWORD_VALUE,
                                                              SETTINGS_PROFILE_TRIGGER_UPDATE_BADGE_VALUE,
                                                              SETTINGS_PROFILE_TRIGGER_RUN_PROCESS_VALUE];
 

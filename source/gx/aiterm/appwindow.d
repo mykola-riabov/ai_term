@@ -185,9 +185,6 @@ private:
     // Track size changes, only invalidate if size really changed
     int lastWidth, lastHeight;
 
-    // True if window is in quake mode
-    bool _quake;
-
     // True if window is being destroyed
     bool _destroyed;
 
@@ -213,14 +210,12 @@ private:
     // Save file dialog paths between invocations
     string[DialogPath] dialogPaths;
 
-    uint timeoutID;
-
     bool isCSDDisabled() {
         return windowStyle > 0;
     }
 
     bool hideToolbar() {
-        return (isQuake() && gsSettings.getBoolean(SETTINGS_QUAKE_HIDE_HEADERBAR_KEY)) || windowStyle > 1;
+        return windowStyle > 1;
     }
 
     /**
@@ -292,7 +287,7 @@ private:
         //Could be a Box or a Headerbar depending on value of disable_csd
         hb = createHeaderBar();
 
-        if (isQuake() || isCSDDisabled()) {
+        if (isCSDDisabled()) {
             hb.getStyleContext().addClass("aiterm-embedded-headerbar");
             Box box = new Box(Orientation.VERTICAL, 0);
             box.add(hb);
@@ -301,9 +296,6 @@ private:
             box.add(modernBar);
             if (overlay !is null) box.add(overlay);
             else box.add(nb);
-            if (isQuake()) {
-                box.getStyleContext().addClass("aiterm-quake-frame");
-            }
             add(box);
             hb.setNoShowAll(hideToolbar());
         } else {
@@ -1251,16 +1243,6 @@ private:
         } else if (aiterm.getGlobalOverrides().fullscreen) {
             changeActionState(ACTION_WIN_FULLSCREEN, new GVariant(true));
             fullscreen();
-        } else if (isQuake()) {
-            moveAndSizeQuake();
-            applyPreference(SETTINGS_QUAKE_KEEP_ON_TOP_KEY);
-            trace("Focus terminal");
-            activateFocus();
-            if (getActiveTerminal() !is null) {
-                getActiveTerminal().focusTerminal();
-            } else if (getCurrentSession() !is null) {
-                getCurrentSession().focusTerminal(1);
-            }
         } else if (aiterm.getGlobalOverrides().geometry.flag == GeometryFlag.NONE && !isWayland(this) && gsSettings.getBoolean(SETTINGS_WINDOW_SAVE_STATE_KEY)) {
             GdkWindowState state = cast(GdkWindowState)gsSettings.getInt(SETTINGS_WINDOW_STATE_KEY);
             if (state & GdkWindowState.MAXIMIZED) {
@@ -1277,15 +1259,11 @@ private:
     }
 
     void onWindowRealized(Widget) {
-        if (isQuake()) {
-            applyPreference(SETTINGS_QUAKE_HEIGHT_PERCENT_KEY);
-        } else {
-            handleGeometry();
-        }
+        handleGeometry();
     }
 
     bool handleGeometry() {
-        if (!isQuake() && aiterm.getGlobalOverrides().geometry.flag == GeometryFlag.FULL && !isWayland(this)) {
+        if (aiterm.getGlobalOverrides().geometry.flag == GeometryFlag.FULL && !isWayland(this)) {
             int x, y;
             Geometry geometry = aiterm.getGlobalOverrides().geometry;
             Gravity gravity = Gravity.NORTH_WEST;
@@ -1318,11 +1296,7 @@ private:
 
     void updateTabPosition() {
         if (useTabs) {
-            if (isQuake) {
-                nb.setTabPos(cast(GtkPositionType) gsSettings.getEnum(SETTINGS_QUAKE_TAB_POSITION_KEY));
-            } else {
-                nb.setTabPos(cast(GtkPositionType) gsSettings.getEnum(SETTINGS_TAB_POSITION_KEY));
-            }
+            nb.setTabPos(cast(GtkPositionType) gsSettings.getEnum(SETTINGS_TAB_POSITION_KEY));
             for (int i=0; i<nb.getNPages; i++) {
                 SessionTabLabel label = cast(SessionTabLabel) nb.getTabLabel(nb.getNthPage(i));
                 label.updatePositionType(nb.getTabPos);
@@ -1331,141 +1305,9 @@ private:
     }
 
     void applyPreference(string key) {
-        switch(key) {
-            case SETTINGS_QUAKE_WIDTH_PERCENT_KEY, SETTINGS_QUAKE_HEIGHT_PERCENT_KEY, SETTINGS_QUAKE_ACTIVE_MONITOR_KEY, SETTINGS_QUAKE_SPECIFIC_MONITOR_KEY, SETTINGS_QUAKE_ALIGNMENT_KEY:
-                if (isQuake) {
-                    moveAndSizeQuake();
-                }
-                break;
-            case SETTINGS_QUAKE_SHOW_ON_ALL_WORKSPACES_KEY:
-                if (isQuake) {
-                    if (gsSettings.getBoolean(SETTINGS_QUAKE_SHOW_ON_ALL_WORKSPACES_KEY)) stick();
-                    else unstick();
-                }
-                break;
-            case SETTINGS_QUAKE_TAB_POSITION_KEY:
-                updateTabPosition();
-                break;
-            case SETTINGS_TAB_POSITION_KEY:
-                updateTabPosition();
-                break;
-            /*
-            case SETTINGS_QUAKE_DISABLE_ANIMATION_KEY:
-                if (isQuake) {
-                    if (gsSettings.getBoolean(SETTINGS_QUAKE_DISABLE_ANIMATION_KEY)) {
-                        setTypeHint(GdkWindowTypeHint.UTILITY);
-                    } else {
-                        setTypeHint(GdkWindowTypeHint.NORMAL);
-                    }
-                }
-                break;
-            */
-            case SETTINGS_QUAKE_HIDE_HEADERBAR_KEY:
-                if (isQuake) {
-                    bool hide = gsSettings.getBoolean(SETTINGS_QUAKE_HIDE_HEADERBAR_KEY);
-                    hb.setNoShowAll(hide);
-                    if (hide) hb.hide();
-                    else hb.show();
-                }
-                break;
-            case SETTINGS_QUAKE_KEEP_ON_TOP_KEY:
-                if (isQuake) {
-                    setKeepAbove(gsSettings.getBoolean(SETTINGS_QUAKE_KEEP_ON_TOP_KEY));
-                }
-                break;
-            default:
-                break;
+        if (key == SETTINGS_TAB_POSITION_KEY) {
+            updateTabPosition();
         }
-    }
-
-    void moveAndSizeQuake() {
-        if (getWindow() is null) return;
-        GdkRectangle rect;
-        getQuakePosition(rect);
-        trace("Actually move/resize quake window");
-        if (getWindow() !is null) {
-            getWindow().moveResize(rect.x, rect.y, rect.width, rect.height);
-        } else {
-            move(rect.x, rect.y);
-            resize(rect.width, rect.height);
-        }
-    }
-
-    void getQuakePosition(out GdkRectangle rect) {
-        bool wayland = isWayland(this);
-        Screen screen = getScreen();
-
-        int monitor = screen.getPrimaryMonitor();
-        if (!wayland) {
-            if (gsSettings.getBoolean(SETTINGS_QUAKE_ACTIVE_MONITOR_KEY)) {
-                int x, y = 0;
-                GdkModifierType mask;
-                Screen tempScreen;
-                screen.getDisplay().getPointer(tempScreen, x, y, mask);
-                if (tempScreen !is null) {
-                    monitor = tempScreen.getMonitorAtPoint(x, y);
-                } else if (screen.getActiveWindow() !is null) {
-                    monitor = screen.getMonitorAtWindow(screen.getActiveWindow());
-                }
-            } else {
-                int altMonitor = gsSettings.getInt(SETTINGS_QUAKE_SPECIFIC_MONITOR_KEY);
-                if (altMonitor>=0 && altMonitor < getScreen().getNMonitors()) {
-                    monitor = altMonitor;
-                } else {
-                    monitor = getScreen().getPrimaryMonitor();
-                }
-            }
-        }
-        screen.getMonitorWorkarea(monitor, rect);
-        tracef("Monitor geometry: monitor=%d, x=%d, y=%d, width=%d, height=%d", monitor, rect.x, rect.y, rect.width, rect.height);
-
-        // Wayland works with screen factor natively whereas X11 does not
-        int scaleFactor = screen.getMonitorScaleFactor(monitor);
-        if (wayland && scaleFactor > 1) {
-            rect.width = rect.width / scaleFactor;
-            rect.height = rect.height / scaleFactor;
-            tracef("Scaled monitor geometry: monitor=%d, scaleFactor=%d, x=%d, y=%d, width=%d, height=%d", monitor, scaleFactor, rect.x, rect.y, rect.width, rect.height);
-        }
-
-        double widthPercent = to!double(gsSettings.getInt(SETTINGS_QUAKE_WIDTH_PERCENT_KEY))/100.0;
-        double heightPercent = to!double(gsSettings.getInt(SETTINGS_QUAKE_HEIGHT_PERCENT_KEY))/100.0;
-        if (wayland) {
-            widthPercent = 1;
-        }
-
-        if (widthPercent == 1 && heightPercent == 1) {
-            maximize();
-            return;
-        }
-
-        // Calculate Height and offset for bottom positioning
-        int height = to!int(rect.height * heightPercent);
-        if (!wayland && heightPercent < 1 && gsSettings.getString(SETTINGS_QUAKE_WINDOW_POSITION_KEY)==SETTINGS_QUAKE_WINDOW_POSITION_VALUES[1]) {
-            rect.y = rect.height - height;
-        }
-        rect.height = height;
-
-        //Width
-        // Window only gets positioned properly in Wayland when width is 100%,
-        // not sure if this kludge is really a good idea and will work consistently.
-        if (widthPercent < 1) {
-            int width = to!int(rect.width * widthPercent);
-            tracef("Calculated width %d", width);
-            switch (gsSettings.getString(SETTINGS_QUAKE_ALIGNMENT_KEY)) {
-                case SETTINGS_QUAKE_ALIGNMENT_LEFT_VALUE:
-                    break;
-                case SETTINGS_QUAKE_ALIGNMENT_CENTER_VALUE:
-                    rect.x = rect.x + (rect.width - width)/2;
-                    break;
-                case SETTINGS_QUAKE_ALIGNMENT_RIGHT_VALUE:
-                    rect.x = rect.x + rect.width - width;
-                    break;
-                default:
-                    break;
-            }
-            rect.width = width;
-        }
-        tracef("Quake window: monitor=%d, x=%d, y=%d, width=%d, height=%d", monitor, rect.x, rect.y, rect.width, rect.height);
     }
 
 public Session getCurrentSession() {
@@ -1689,13 +1531,6 @@ public Session getCurrentSession() {
         }
     }
 
-    void removeTimeout() {
-        if (timeoutID > 0) {
-            g_source_remove(timeoutID);
-            timeoutID = 0;
-        }
-    }
-
     void setWindowStyle() {
         windowStyle = gsSettings.getEnum(SETTINGS_WINDOW_STYLE_KEY);
         if (aiterm.getGlobalOverrides().windowStyle.length > 0) {
@@ -1736,27 +1571,8 @@ public:
         if (gsSettings.getBoolean(SETTINGS_ENABLE_TRANSPARENCY_KEY)) {
             updateVisual();
         }
-        if (aiterm.getGlobalOverrides().quake && !isWayland(null)) {
-            _quake = true;
+        if (windowStyle == 3) {
             setDecorated(false);
-            // Todo: Should this be NORTH instead?
-            setGravity(GdkGravity.STATIC);
-            setSkipTaskbarHint(true);
-            setSkipPagerHint(true);
-            applyPreference(SETTINGS_QUAKE_HEIGHT_PERCENT_KEY);
-            applyPreference(SETTINGS_QUAKE_SHOW_ON_ALL_WORKSPACES_KEY);
-            // On Ubuntu this causes terminal to use default size, see #602
-            //setResizable(false);
-            setRole("quake");
-        } else {
-            if (aiterm.getGlobalOverrides.quake) {
-                string message = _("Quake mode is not supported under Wayland, running as normal window");
-                error(message);
-                sendNotification("quake", _("Quake Mode Not Supported"), message);
-            }
-            if (windowStyle == 3) {
-                setDecorated(false);
-            }
         }
         setShowMenubar(false);
 
@@ -1765,14 +1581,6 @@ public:
         addOnDelete(&onWindowClosed);
         addOnDestroy(&onWindowDestroyed);
         addOnRealize(&onWindowRealized);
-        /*
-        addOnMap(delegate(Widget) {
-            if (isQuake()) {
-                applyPreference(SETTINGS_QUAKE_DISABLE_ANIMATION_KEY);
-            }
-        }, ConnectFlags.AFTER);
-        */
-
         addOnShow(&onWindowShow, ConnectFlags.AFTER);
         addOnSizeAllocate(delegate(GdkRectangle* rect, Widget) {
             if (lastWidth != rect.width || lastHeight != rect.height) {
@@ -1786,37 +1594,7 @@ public:
             }
         }, ConnectFlags.AFTER);
         addOnCompositedChanged(&onCompositedChanged);
-        addOnFocusOut(delegate(Event e, Widget widget) {
-            if (isQuake && gsSettings.getBoolean(SETTINGS_QUAKE_HIDE_LOSE_FOCUS_KEY)) {
-                Window window = aiterm.getActiveWindow();
-                if (window !is null) {
-                    if (window.getWindowStruct() == this.getWindowStruct()) {
-                        ListG list = window.listToplevels();
-                        Window[] windows = list.toArray!(Window)();
-                        tracef("Top level windows = %d", windows.length);
-                        foreach(Window child; windows) {
-                            Dialog dialog = cast(Dialog)child;
-                            if (dialog !is null && dialog.getTransientFor() !is null && dialog.getTransientFor().getWindowStruct() == this.getWindowStruct()) return false;
-                        }
-                    }
-                }
-
-                trace("Focus lost, waiting to hide quake window");
-                // store a reference to this timeout so that it may be canceled if we regain focus
-                timeoutID = threadsAddTimeoutDelegate(gsSettings.getInt(SETTINGS_QUAKE_HIDE_LOSE_FOCUS_DELAY_KEY), delegate() {
-                    trace("Focus lost and timeout reached, hiding quake window");
-                    if (isVisible()) {
-                        this.hide();
-                    }
-                    return false;
-                });
-            }
-            return false;
-        }, ConnectFlags.AFTER);
         addOnFocusIn(delegate(Event e, Widget widget) {
-            // if we're restoring focus to quake window, we want to keep it open
-            removeTimeout();
-
             aiterm.withdrawNotification(uuid);
             if (getCurrentSession() !is null) {
                 getCurrentSession().withdrawNotification();
@@ -1828,7 +1606,7 @@ public:
             if ((state.newWindowState & GdkWindowState.FULLSCREEN) == GdkWindowState.FULLSCREEN) {
                 trace("Window state is fullscreen");
             }
-            if (getWindow() !is null && !isQuake() && gsSettings.getBoolean(SETTINGS_WINDOW_SAVE_STATE_KEY)) {
+            if (getWindow() !is null && gsSettings.getBoolean(SETTINGS_WINDOW_SAVE_STATE_KEY)) {
                 gsSettings.setInt(SETTINGS_WINDOW_STATE_KEY, getWindow().getState());
             }
             return false;
@@ -2079,46 +1857,6 @@ public:
         return isBGImage;
     }
 
-// Quake methods
-private:
-    bool wasFullscreen = false;
-
-public:
-
-    /**
-     * Returns true if this window is in quake mode.
-     */
-    bool isQuake() {
-        return _quake;
-    }
-
-    /**
-     * Override hide to handle hiding quake window when full screened
-     */
-    override void hide() {
-        if (isQuake()) {
-            if (getWindow() !is null && ((getWindow().getState() & GdkWindowState.FULLSCREEN) == GdkWindowState.FULLSCREEN)) {
-                unfullscreen();
-                wasFullscreen = true;
-            } else {
-                wasFullscreen = false;
-            }
-        }
-        super.hide();
-    }
-
-    /**
-     * If quake window was hidden when fullscreen, restore fullscreen
-     */
-    override void present() {
-        super.present();
-        if (isQuake()) {
-            if (getWindow() !is null && wasFullscreen) {
-                wasFullscreen = false;
-                fullscreen();
-            }
-        }
-    }
 }
 
 /**

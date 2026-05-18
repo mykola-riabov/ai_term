@@ -200,13 +200,6 @@ private void deleteAllChats() {
     notifyModernDataChanged();
 }
 
-private string extractBashFence(string content) {
-    import std.regex;
-    auto re = regex(`(?s)` ~ "```{1,3}\\s*bash\\s*\\n(.*?)\\n```");
-    auto m = matchFirst(content, re);
-    if (!m.empty) return m[1].strip();
-    return "";
-}
 
 void sendInterruptToActiveTerminal() {
     Window win = _parentWin !is null ? _parentWin : _chatWin;
@@ -286,7 +279,7 @@ void showAiChatDialog(Window parent, string prefilled = "") {
     btnDel.addOnClicked(delegate(Button) { deleteActiveChat(); });
     btnClear.addOnClicked(delegate(Button) { deleteAllChats(); });
 
-    auto hint = new Label("Non-modal: focus terminal + Ctrl+C to stop commands. API: Preferences → Modern.");
+    auto hint = new Label("Non-modal: focus terminal + Ctrl+C to stop commands. API: Preferences → AI.");
     hint.setLineWrap(true);
     content.packStart(hint, false, false, 0);
 
@@ -352,13 +345,18 @@ void showAiChatDialog(Window parent, string prefilled = "") {
         }
 
         if (modernData().ai.agentExec) {
-            string body = extractBashFence(res.content);
+            string body = extractAgentCommands(res.content);
             auto term = activeTerminalFrom(parent);
             if (body.length > 0 && term !is null) {
                 string payload = body;
                 if (!payload.endsWith("\n")) payload ~= "\n";
                 term.injectCommand(payload);
                 appendLog("[Ran commands in terminal — use Stop or Ctrl+C in terminal]");
+            } else if (body.length == 0) {
+                appendLog("[Agent: no commands found in reply. Try Preferences -> AI -> "
+                    ~ "Agent prompt: «Strict» or «Plain commands» for Ollama.]");
+            } else {
+                appendLog("[Agent: focus a terminal tab to run commands]");
             }
         }
         if (modernData().ai.persistHistory) saveModernStore();

@@ -43,21 +43,19 @@ aiterm_sources = [
     'source/gx/gtk/vte.d',
     'source/gx/gtk/x11.d',
     'source/gx/i18n/l10n.d',
-    'source/gx/aiterm/bookmark/bmchooser.d',
-    'source/gx/aiterm/bookmark/bmeditor.d',
-    'source/gx/aiterm/bookmark/bmtreeview.d',
     'source/gx/aiterm/modern/store.d',
     'source/gx/aiterm/modern/aiproviders.d',
     'source/gx/aiterm/modern/llm.d',
     'source/gx/aiterm/modern/quickbar.d',
     'source/gx/aiterm/modern/aichat.d',
     'source/gx/aiterm/modern/sshhub.d',
+    'source/gx/aiterm/modern/aiservershub.d',
+    'source/gx/aiterm/modern/agentprompts.d',
     'source/gx/aiterm/modern/prompthub.d',
+    'source/gx/aiterm/modern/bashhub.d',
     'source/gx/aiterm/modern/chathub.d',
     'source/gx/aiterm/modern/prefpage.d',
-    'source/gx/aiterm/bookmark/manager.d',
     'source/gx/aiterm/prefeditor/advdialog.d',
-    'source/gx/aiterm/prefeditor/bookmarkeditor.d',
     'source/gx/aiterm/prefeditor/common.d',
     'source/gx/aiterm/prefeditor/prefdialog.d',
     'source/gx/aiterm/prefeditor/profileeditor.d',
@@ -68,7 +66,6 @@ aiterm_sources = [
     'source/gx/aiterm/terminal/exvte.d',
     'source/gx/aiterm/terminal/layout.d',
     'source/gx/aiterm/terminal/monitor.d',
-    'source/gx/aiterm/terminal/password.d',
     'source/gx/aiterm/terminal/regex.d',
     'source/gx/aiterm/terminal/search.d',
     'source/gx/aiterm/terminal/terminal.d',
@@ -89,16 +86,6 @@ aiterm_sources = [
     'source/gx/util/array.d',
     'source/gx/util/path.d',
     'source/gx/util/string.d',
-    'source/secret/Collection.d',
-    'source/secret/Item.d',
-    'source/secret/Prompt.d',
-    'source/secret/Schema.d',
-    'source/secret/SchemaAttribute.d',
-    'source/secret/Secret.d',
-    'source/secret/Service.d',
-    'source/secret/Value.d',
-    'source/secretc/secret.d',
-    'source/secretc/secrettypes.d',
     'source/x11/X.d',
     'source/x11/Xlib.d',
     'source/app.d'
@@ -110,8 +97,6 @@ sources_dir = include_directories('source/')
 gtkd_dep = dependency('gtkd-3', version: '>=3.10.0')
 vted_dep = dependency('vted-3', version: '>=3.10.0')
 xlib_dep = dependency('x11')
-libsecret_dep = dependency('libsecret-1', required: false)
-
 subdir('po')
 subdir('data')
 
@@ -121,8 +106,7 @@ executable('aiterm',
     include_directories : sources_dir,
     dependencies : [gtkd_dep,
                     vted_dep,
-                    xlib_dep,
-                    libsecret_dep],
+                    xlib_dep],
     d_args: d_extra_args,
     d_module_versions: ['StdLoggerDisableTrace'],
     link_args: d_link_args,

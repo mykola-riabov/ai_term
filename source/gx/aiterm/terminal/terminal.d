@@ -131,9 +131,6 @@ import gx.i18n.l10n;
 import gx.util.array;
 
 import gx.aiterm.application;
-import gx.aiterm.bookmark.bmchooser;
-import gx.aiterm.bookmark.bmeditor;
-import gx.aiterm.bookmark.manager;
 import gx.aiterm.closedialog;
 import gx.aiterm.cmdparams;
 import gx.aiterm.common;
@@ -144,7 +141,6 @@ import gx.aiterm.terminal.actions;
 import gx.aiterm.terminal.advpaste;
 import gx.aiterm.terminal.exvte;
 import gx.aiterm.terminal.layout;
-import gx.aiterm.terminal.password;
 import gx.aiterm.terminal.regex;
 import gx.aiterm.terminal.search;
 import gx.aiterm.terminal.util;
@@ -706,30 +702,6 @@ private:
             }
         }, null, null);
 
-        //Insert Password
-        registerActionWithSettings(group, ACTION_PREFIX, ACTION_INSERT_PASSWORD, gsShortcuts, delegate(GVariant state, SimpleAction sa) {
-            import gtkc.Loader: Linker;
-            import secretc.secret: LIBRARY_SECRET;
-            if (Linker.isLoaded(LIBRARY_SECRET)) {
-                tracef("Library %s was loaded", LIBRARY_SECRET);
-                PasswordManagerDialog pdm = new PasswordManagerDialog(cast(Window)this.getToplevel());
-                scope(exit) {pdm.destroy();}
-                pdm.showAll();
-                if (pdm.run() == ResponseType.APPLY) {
-                    string password = pdm.password;
-                    vte.feedChild(password);
-                    static if (!USE_COMMIT_SYNCHRONIZATION) {
-                        if (isSynchronizedInput()) {
-                            SyncInputEvent se = SyncInputEvent(_terminalUUID, SyncInputEventType.INSERT_TEXT, null, password);
-                            onSyncInput.emit(this, se);
-                        }
-                    }
-                }
-            } else {
-                showErrorDialog(cast(Window)getToplevel(), format(_("The library %s could not be loaded, password functionality is unavailable."), LIBRARY_SECRET), _("Library Not Loaded"));
-            }
-        }, null, null);
-
         //SaveAs
         registerActionWithSettings(group, ACTION_PREFIX, ACTION_SAVE, gsShortcuts, delegate(GVariant state, SimpleAction sa) { saveTerminalOutput(); }, null, null);
 
@@ -759,16 +731,6 @@ private:
             sa.setState(value);
             vte.setEncoding(value.getString(l));
         }, encoding.getType(), encoding);
-
-        // Add Bookmark
-        registerActionWithSettings(group, ACTION_PREFIX, ACTION_ADD_BOOKMARK, gsShortcuts, delegate(GVariant, SimpleAction) {
-            addBookmark();
-        }, null, null);
-
-        // Select Bookmark
-        registerActionWithSettings(group, ACTION_PREFIX, ACTION_SELECT_BOOKMARK, gsShortcuts, delegate(GVariant value, SimpleAction sa) {
-            selectBookmark();
-        }, null, null);
 
         // Scroll Up
         registerActionWithSettings(group, ACTION_PREFIX, ACTION_SCROLL_UP, gsShortcuts, delegate(GVariant value, SimpleAction sa) {
@@ -829,20 +791,11 @@ private:
         menuSection.append(_("Read-Only"), getActionDetailedName(ACTION_PREFIX, ACTION_READ_ONLY));
         model.appendSection(null, menuSection);
 
-        // Assistants
-        GMenu submenu = new GMenu();
         menuSection = new GMenu();
-        menuSection.append(_("Password..."), getActionDetailedName(ACTION_PREFIX, ACTION_INSERT_PASSWORD));
-        menuSection.append(_("Bookmark..."), getActionDetailedName(ACTION_PREFIX, ACTION_SELECT_BOOKMARK));
-        menuSection.append(_("Add Bookmark..."), getActionDetailedName(ACTION_PREFIX, ACTION_ADD_BOOKMARK));
-        submenu.appendSection(null, menuSection);
-
-        menuSection = new GMenu();
-        menuSection.appendSubmenu(_("Assistants"), submenu);
         menuSection.appendSubmenu(_("Profiles"), profileMenu);
         model.appendSection(null, menuSection);
 
-        submenu = new GMenu();
+        GMenu submenu = new GMenu();
 
         menuSection = new GMenu();
         menuSection.append(_("Show File Browser..."), getActionDetailedName(ACTION_PREFIX, ACTION_FILE_BROWSER));
@@ -1376,57 +1329,6 @@ private:
     }
 
     /**
-     * Select a bookmark and insert it into
-     * terminal.
-     */
-    void selectBookmark() {
-        BookmarkChooser bc = new BookmarkChooser(cast(Window)getToplevel(), BMSelectionMode.LEAF);
-        scope(exit) {bc.destroy();}
-        bc.showAll();
-        if (bc.run() == ResponseType.OK && bc.bookmark !is null) {
-            string text = bc.bookmark.terminalCommand;
-            if (gsSettings.getBoolean(SETTINGS_BOOKMARK_INCLUDE_RETURN_KEY)) {
-                trace("Add new line");
-                text ~= '\n';
-            }
-            vte.feedChild(text);
-            static if (!USE_COMMIT_SYNCHRONIZATION) {
-                if (isSynchronizedInput()) {
-                    SyncInputEvent se = SyncInputEvent(_terminalUUID, SyncInputEventType.INSERT_TEXT, null, text);
-                    onSyncInput.emit(this, se);
-                }
-            }
-            vte.grabFocus();
-        }
-    }
-
-    /**
-     * Add a bookmark based on current state.
-     */
-    void addBookmark() {
-        Bookmark bm;
-        if (gst.hasState(TerminalStateType.REMOTE)) {
-            RemoteBookmark rb = new RemoteBookmark();
-            rb.protocolType = ProtocolType.SSH;
-            rb.host = gst.currentHostname;
-            rb.user = gst.currentUsername;
-            bm = rb;
-        } else {
-            PathBookmark pb = new PathBookmark();
-            pb.path = gst.currentDirectory();
-            bm = pb;
-        }
-        BookmarkEditor be = new BookmarkEditor(cast(Window)getToplevel(), BookmarkEditorMode.ADD, bm, true);
-        scope(exit) {be.destroy();}
-        be.showAll();
-        if (be.run() == ResponseType.OK) {
-            FolderBookmark fb = be.folder;
-            bm = be.create();
-            bmMgr.add(fb, bm);
-        }
-    }
-
-    /**
      * Tests if the paste is unsafe, currently just looks for sudo and
      * carriage return.
      */
@@ -1731,13 +1633,6 @@ private:
             case TriggerAction.SEND_TEXT:
                 string value = replaceMatchTokens(trigger.parameters, groups);
                 vte.feedChild(value);
-                break;
-            case TriggerAction.INSERT_PASSWORD:
-                trace("Processing insert password trigger");
-                SimpleAction sa = cast(SimpleAction)sagTerminalActions.lookupAction(ACTION_INSERT_PASSWORD);
-                if (sa !is null) {
-                    sa.activate(null);
-                }
                 break;
             case TriggerAction.RUN_PROCESS:
                 string process = replaceMatchTokens(trigger.parameters, groups);
@@ -2389,12 +2284,6 @@ private:
         case SETTINGS_ALL_TRIGGERS_KEY:
             loadTriggers();
             break;
-        case SETTINGS_TRIGGERS_LINES_KEY:
-            maxLines = gsSettings.getInt(SETTINGS_TRIGGERS_LINES_KEY);
-            break;
-        case SETTINGS_TRIGGERS_UNLIMITED_LINES_KEY:
-            unlimitedLines = gsSettings.getBoolean(SETTINGS_TRIGGERS_UNLIMITED_LINES_KEY);
-            break;
         case SETTINGS_PROFILE_BADGE_TEXT_KEY:
             if (isVTEBackgroundDrawEnabled()) {
                 updateBadge();
@@ -2497,8 +2386,6 @@ private:
             SETTINGS_PROFILE_USE_HIGHLIGHT_COLOR_KEY,
             SETTINGS_ALL_CUSTOM_HYPERLINK_KEY,
             SETTINGS_ALL_TRIGGERS_KEY,
-            SETTINGS_TRIGGERS_LINES_KEY,
-            SETTINGS_TRIGGERS_UNLIMITED_LINES_KEY,
             SETTINGS_PROFILE_BADGE_TEXT_KEY,
             SETTINGS_PROFILE_BADGE_COLOR_KEY,
             SETTINGS_PROFILE_BADGE_POSITION_KEY,
@@ -2547,8 +2434,7 @@ private:
 
     void loadTriggers() {
         TerminalTrigger[] tmpTriggers;
-        string[] trgDefs = gsSettings.getStrv(SETTINGS_ALL_TRIGGERS_KEY);
-        trgDefs ~= gsProfile.getStrv(SETTINGS_ALL_TRIGGERS_KEY);
+        string[] trgDefs = gsProfile.getStrv(SETTINGS_ALL_TRIGGERS_KEY);
         foreach (trgDef; trgDefs) {
             foreach(value; csvReader!(Tuple!(string, string, string))(trgDef)) {
                 TerminalTrigger trigger = new TerminalTrigger(value[0], value[1], value[2]);
@@ -2590,8 +2476,7 @@ private:
         */
 
         //Re-load custom regex
-        string[] links = gsSettings.getStrv(SETTINGS_ALL_CUSTOM_HYPERLINK_KEY);
-        links ~= gsProfile.getStrv(SETTINGS_ALL_CUSTOM_HYPERLINK_KEY);
+        string[] links = gsProfile.getStrv(SETTINGS_ALL_CUSTOM_HYPERLINK_KEY);
         foreach(link; links) {
             foreach(value; csvReader!(Tuple!(string, string, string))(link)) {
                 bool caseInsensitive = false;
@@ -2732,9 +2617,6 @@ private:
             }
         }
         string[] envv = ["AITERM_ID=" ~ uuid];
-        if (aiterm.isQuake) {
-            envv ~= ["AITERM_QUAKE=1"];
-        }
         foreach (arg; args)
             trace("Argument: " ~ arg);
         try {
@@ -4384,7 +4266,6 @@ enum TriggerAction {
     UPDATE_TITLE,
     PLAY_BELL,
     SEND_TEXT,
-    INSERT_PASSWORD,
     UPDATE_BADGE,
     RUN_PROCESS
 }
@@ -4426,9 +4307,6 @@ public:
                 break;
             case SETTINGS_PROFILE_TRIGGER_SEND_TEXT_VALUE:
                 action = TriggerAction.SEND_TEXT;
-                break;
-            case SETTINGS_PROFILE_TRIGGER_INSERT_PASSWORD_VALUE:
-                action = TriggerAction.INSERT_PASSWORD;
                 break;
             case SETTINGS_PROFILE_TRIGGER_RUN_PROCESS_VALUE:
                 action = TriggerAction.RUN_PROCESS;

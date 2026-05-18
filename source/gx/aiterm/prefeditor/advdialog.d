@@ -226,7 +226,7 @@ private:
 
     string[string] localizedActions;
 
-    void createUI(GSettings gs, bool showLineSettings) {
+    void createUI(GSettings gs) {
 
         string[] triggers = gs.getStrv(SETTINGS_ALL_TRIGGERS_KEY);
 
@@ -328,25 +328,6 @@ private:
         box.add(buttons);
         getContentArea().add(box);
 
-        if (showLineSettings) {
-            // Maximum number of lines to check for triggers when content change is
-            // received from VTE with a block of text
-            Box bLines = new Box(Orientation.HORIZONTAL, 6);
-            bLines.setMarginTop(6);
-
-            CheckButton cbTriggerLimit = new CheckButton(_("Limit number of lines for trigger processing to:"));
-            gs.bind(SETTINGS_TRIGGERS_UNLIMITED_LINES_KEY, cbTriggerLimit, "active", GSettingsBindFlags.DEFAULT | GSettingsBindFlags.INVERT_BOOLEAN);
-
-            SpinButton sbLines = new SpinButton(256.0, double.max, 256.0);
-            gs.bind(SETTINGS_TRIGGERS_LINES_KEY, sbLines, "value", GSettingsBindFlags.DEFAULT);
-            gs.bind(SETTINGS_TRIGGERS_UNLIMITED_LINES_KEY, sbLines, "sensitive",
-                    GSettingsBindFlags.GET | GSettingsBindFlags.NO_SENSITIVITY | GSettingsBindFlags.INVERT_BOOLEAN);
-
-            bLines.add(cbTriggerLimit);
-            bLines.add(sbLines);
-
-            getContentArea().add(bLines);
-        }
         lblErrors = createErrorLabel();
         getContentArea().add(lblErrors);
         updateUI();
@@ -358,10 +339,10 @@ private:
     }
 
 public:
-    this(Window parent, GSettings gs, bool showLineSettings = false) {
+    this(Window parent, GSettings gs) {
         super(_("Edit Triggers"), parent, GtkDialogFlags.MODAL + GtkDialogFlags.USE_HEADER_BAR, [_("Apply"), _("Cancel")], [GtkResponseType.APPLY, GtkResponseType.CANCEL]);
         setDefaultResponse(GtkResponseType.APPLY);
-        createUI(gs, showLineSettings);
+        createUI(gs);
     }
 
     string[] getTriggers() {

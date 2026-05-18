@@ -72,7 +72,6 @@ import gx.aiterm.constants;
 import gx.aiterm.preferences;
 import gx.aiterm.shortcuts;
 
-import gx.aiterm.bookmark.manager;
 
 import gx.aiterm.modern.store;
 import gx.aiterm.prefeditor.prefdialog;
@@ -373,22 +372,8 @@ private:
         trace("Activating app");
 
         if (acl.getIsRemote()) {
-            // Check if quake mode or preferences was passed and we have quake window already then
-            // just toggle visibility or create quake window. If there isn't a quake window
-            // fall through and let activate create one
             if (cp.preferences) {
                 presentPreferences();
-            } else if (cp.quake) {
-                AppWindow qw = getQuakeWindow();
-                if (qw !is null) {
-                    if (qw.isVisible) {
-                        qw.hide();
-                    } else {
-                        activateWindow(qw);
-                        qw.getActiveTerminal().focusTerminal();
-                    }
-                    return 0;
-                }
             } else {
                 AppWindow aw = getActiveAppWindow();
                 if (aw !is null) {
@@ -491,8 +476,6 @@ private:
         });
 
         initProfileManager();
-        initBookmarkManager();
-        bmMgr.load();
         loadModernStore();
         applyPreferences();
         setupPrimaryMenuActions();
@@ -531,9 +514,6 @@ private:
 
     void onAppShutdown(GApplication) {
         trace("Quit App Signal");
-        if (bmMgr.hasChanged()) {
-            bmMgr.save();
-        }
         aiterm = null;
     }
 
@@ -573,7 +553,6 @@ private:
                     Settings.getDefault().setProperty(GTK_APP_PREFER_DARK_THEME, darkMode);
                 }
                 onThemeChange.emit();
-                clearBookmarkIconCache();
                 break;
             case SETTINGS_MENU_ACCELERATOR_KEY:
                 if (defaultMenuAccel is null) {
@@ -646,17 +625,6 @@ private:
         return null;
     }
 
-    AppWindow getQuakeWindow() {
-        ListG list = getWindows();
-        if (list is null) return null;
-        Window[] windows = list.toArray!(Window)();
-        foreach(window; windows) {
-            AppWindow appWindow = cast(AppWindow) window;
-            if (appWindow !is null && appWindow.isQuake()) return appWindow;
-        }
-        return null;
-    }
-
     /**
      * Add main options supported by application
      */
@@ -676,7 +644,6 @@ private:
         addMainOption(CMD_FOCUS_WINDOW, '\0', GOptionFlags.NONE, GOptionArg.NONE, _("Focus the existing window"), null);
         addMainOption(CMD_NEW_PROCESS, '\0', GOptionFlags.NONE, GOptionArg.NONE, _("Start additional instance as new process (Not Recommended)"), null);
         addMainOption(CMD_GEOMETRY, '\0', GOptionFlags.NONE, GOptionArg.STRING, _("Set the window size; for example: 80x24, or 80x24+200+200 (COLSxROWS+X+Y)"), _("GEOMETRY"));
-        addMainOption(CMD_QUAKE, 'q', GOptionFlags.NONE, GOptionArg.NONE, _("Opens a window in quake mode or toggles existing quake mode window visibility"), null);
         addMainOption(CMD_VERSION, 'v', GOptionFlags.NONE, GOptionArg.NONE, _("Show the Aiterm and dependent component versions"), null);
         addMainOption(CMD_PREFERENCES, '\0', GOptionFlags.NONE, GOptionArg.NONE, _("Show the Aiterm preferences dialog directly"), null);
         addMainOption(CMD_GROUP, 'g', GOptionFlags.NONE, GOptionArg.STRING, _("Group aiterm instances into different processes (Experimental, not recommended)"), _("GROUP_NAME"));
@@ -723,14 +690,6 @@ public:
     void executeCommand(string command, string terminalID, string cmdLine) {
         GVariant[] param = [new GVariant(command), new GVariant(terminalID), new GVariant(cmdLine)];
         activateAction(ACTION_COMMAND, new GVariant(param));
-    }
-
-    bool isQuake() {
-        AppWindow appWindow = cast(AppWindow) getActiveWindow();
-        if (appWindow !is null && appWindow.isQuake()) {
-            return true;
-        }
-        return cp.quake;
     }
 
     void addAppWindow(AppWindow window) {

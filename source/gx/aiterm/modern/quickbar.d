@@ -1,11 +1,9 @@
 /*
- * Aiterm toolbar: GTK dropdown menus (category → items) for quick data.
- * Manage lists in Preferences → Modern.
+ * Aiterm toolbar: GTK nested menus (category → subcategory → command) for quick data.
+ * Manage lists in Preferences → AI / Network / Commands.
  */
 module gx.aiterm.modern.quickbar;
 
-import std.algorithm;
-import std.conv;
 import std.format;
 
 import gio.Menu : GMenu = Menu;
@@ -41,6 +39,7 @@ private:
     ModernCommand[] _pickFeed;
     ModernCommand[] _pickPrompt;
     ModernSshHost[] _pickSsh;
+    Popover _openPopover;
 
 public:
     this(TerminalFeedFn feed) {
@@ -58,43 +57,75 @@ public:
         foreach (w; gx.gtk.util.getChildren!Widget(this, false)) w.destroy();
         resetActions();
         auto d = modernData();
+        auto ui = d.quickBar;
         _pickFeed = [];
         _pickPrompt = [];
         _pickSsh = [];
+        _openPopover = null;
+
+        if (!modernQuickBarHasItems()) {
+            setVisible(false);
+            return;
+        }
+        setVisible(true);
+
+        bool hasLeft;
+        bool hasRight;
 
         auto lbl = new Label("Quick:");
         lbl.setMarginEnd(4);
         packStart(lbl, false, false, 0);
 
-        if (hasAnyCommands(d.quick.categories))
-            packStart(createMenuButton("Commands", buildCategoryRootMenu(d.quick.categories, ModernMenuAction.FEED)), false, false, 0);
+        if (ui.showBashCheat) {
+            packStart(createCategoryMenuButton("Commands", d.bashSnippets, ModernMenuAction.FEED,
+                "(no commands — Preferences → Commands)"), false, false, 0);
+            hasLeft = true;
+        }
 
-        packStart(createMenuButton("SSH", buildSshMenu()), false, false, 0);
+        if (ui.showSsh) {
+            packStart(createSshMenuButton("SSH", d.sshSnippets,
+                "(no servers — Preferences → Network)"), false, false, 0);
+            hasLeft = true;
+        }
 
-        if (hasAnyCommands(d.aiPrompts.categories))
-            packStart(createMenuButton("Prompts", buildCategoryRootMenu(d.aiPrompts.categories, ModernMenuAction.PROMPT)), false, false, 0);
+        if (ui.showPrompts) {
+            packStart(createCategoryMenuButton("Prompts", d.aiPrompts.categories, ModernMenuAction.PROMPT,
+                "(no prompts — Preferences → AI → Edit categories and prompts…)"), false, false, 0);
+            hasLeft = true;
+        }
 
-        packStart(new Separator(Orientation.VERTICAL), false, false, 0);
+        if (ui.showAgent) {
+            _btnAgent = new ToggleButton("Agent");
+            _btnAgent.setTooltipText("Run AI ```bash``` blocks in the active terminal");
+            _btnAgent.setActive(d.ai.agentExec);
+            _btnAgent.addOnToggled(delegate(ToggleButton b) {
+                modernData().ai.agentExec = b.getActive();
+                saveModernStore();
+            });
+            hasRight = true;
+        }
 
-        _btnAgent = new ToggleButton("⚡ Agent");
-        _btnAgent.setTooltipText("Run AI ```bash``` blocks in the active terminal");
-        _btnAgent.setActive(d.ai.agentExec);
-        _btnAgent.addOnToggled(delegate(ToggleButton b) {
-            modernData().ai.agentExec = b.getActive();
-            saveModernStore();
-        });
-        packStart(_btnAgent, false, false, 0);
+        Button btnAi;
+        if (ui.showAiChat) {
+            btnAi = new Button("AI Chat");
+            btnAi.setTooltipText("Open AI chat window");
+            btnAi.addOnClicked(delegate(Button) {
+                auto win = cast(Window)getToplevel();
+                if (win !is null) {
+                    showAiChatDialog(win);
+                    reloadAiChatFromStore();
+                }
+            });
+            hasRight = true;
+        }
 
-        auto btnAi = new Button("AI Chat");
-        btnAi.setTooltipText("Open AI chat window");
-        btnAi.addOnClicked(delegate(Button) {
-            auto win = cast(Window)getToplevel();
-            if (win !is null) {
-                showAiChatDialog(win);
-                reloadAiChatFromStore();
-            }
-        });
-        packStart(btnAi, false, false, 0);
+        if (hasLeft && hasRight)
+            packStart(new Separator(Orientation.VERTICAL), false, false, 0);
+
+        if (ui.showAgent)
+            packStart(_btnAgent, false, false, 0);
+        if (ui.showAiChat)
+            packStart(btnAi, false, false, 0);
 
         showAll();
     }
@@ -106,6 +137,13 @@ private:
         auto noop = new SimpleAction("noop", null);
         noop.addOnActivate(delegate(GVariant, SimpleAction) { });
         _actions.addAction(noop);
+    }
+
+    void closeOpenPopover() {
+        if (_openPopover !is null) {
+            _openPopover.popdown();
+            _openPopover = null;
+        }
     }
 
     string bindMenuAction(ModernMenuAction kind, uint idx) {
@@ -139,35 +177,81 @@ private:
         default:
             break;
         }
+        closeOpenPopover();
     }
 
-    MenuButton createMenuButton(string title, GMenu model) {
+    MenuButton createCategoryMenuButton(string title, ModernCategory[] categories,
+            ModernMenuAction kind, string emptyHint) {
         auto mb = new MenuButton();
         mb.setLabel(title);
-        mb.setUsePopover(true);
         mb.insertActionGroup("modern", _actions);
-        mb.setPopover(new Popover(mb, model));
+        GMenu model = buildCategoryRootMenu(categories, kind);
+        if (!categoriesHaveContent(categories)) {
+            model = new GMenu();
+            model.append(emptyHint, "modern.noop");
+        }
+        mb.setPopover(wrapModelPopover(mb, model));
         return mb;
     }
 
-    bool hasAnyCommands(ModernCategory[] cats) {
-        foreach (c; cats) if (c.commands.length > 0) return true;
+    MenuButton createSshMenuButton(string title, ModernCategory[] categories, string emptyHint) {
+        auto mb = new MenuButton();
+        mb.setLabel(title);
+        mb.insertActionGroup("modern", _actions);
+        GMenu model = buildSshRootMenu(categories);
+        if (!categoriesHaveContent(categories)) {
+            model = new GMenu();
+            model.append(emptyHint, "modern.noop");
+        }
+        mb.setPopover(wrapModelPopover(mb, model));
+        return mb;
+    }
+
+    Popover wrapModelPopover(MenuButton mb, GMenu model) {
+        auto pop = new Popover(mb, model);
+        pop.setPosition(PositionType.BOTTOM);
+        pop.addOnClosed(delegate(Popover p) {
+            if (_openPopover is p) _openPopover = null;
+        });
+        pop.addOnMap(delegate(Widget) { _openPopover = pop; });
+        return pop;
+    }
+
+    bool categoriesHaveContent(ModernCategory[] categories) {
+        foreach (c; categories)
+            if (modernCategoryHasContent(c)) return true;
         return false;
     }
 
     GMenu buildCategoryRootMenu(ModernCategory[] categories, ModernMenuAction kind) {
         auto root = new GMenu();
-        foreach (cat; categories) {
-            if (cat.commands.length == 0) continue;
-            auto sub = new GMenu();
-            foreach (cmd; cat.commands) {
-                string lab = cmd.label.length > 0 ? cmd.label : cmd.text;
-                uint idx = registerPick(kind, cmd);
-                sub.append(lab, bindMenuAction(kind, idx));
-            }
-            root.appendSubmenu(cat.name, sub);
-        }
+        foreach (cat; categories)
+            appendCategoryToGMenu(root, cat, kind);
         return root;
+    }
+
+    /** Category → submenu; nested children become nested submenus (Apps → Docker → commands). */
+    bool appendCategoryToGMenu(GMenu menu, ModernCategory cat, ModernMenuAction kind) {
+        if (!modernCategoryHasContent(cat)) return false;
+
+        auto sub = new GMenu();
+        bool hasItems;
+
+        foreach (cmd; cat.commands) {
+            string lab = cmd.label.length > 0 ? cmd.label : cmd.text;
+            uint idx = registerPick(kind, cmd);
+            sub.append(lab, bindMenuAction(kind, idx));
+            hasItems = true;
+        }
+
+        foreach (ch; cat.children) {
+            if (appendCategoryToGMenu(sub, ch, kind))
+                hasItems = true;
+        }
+
+        if (!hasItems) return false;
+        menu.appendSubmenu(cat.name, sub);
+        return true;
     }
 
     uint registerPick(ModernMenuAction kind, ModernCommand cmd) {
@@ -183,17 +267,35 @@ private:
         }
     }
 
-    GMenu buildSshMenu() {
+    GMenu buildSshRootMenu(ModernCategory[] categories) {
         auto root = new GMenu();
-        foreach (h; modernData().sshHosts) {
+        foreach (cat; categories)
+            appendSshCategoryToGMenu(root, cat);
+        return root;
+    }
+
+    bool appendSshCategoryToGMenu(GMenu menu, ModernCategory cat) {
+        if (!modernCategoryHasContent(cat)) return false;
+
+        auto sub = new GMenu();
+        bool hasItems;
+
+        foreach (h; cat.sshHosts) {
             string lab = h.label.length > 0 ? h.label : h.host;
             _pickSsh ~= h;
             uint idx = cast(uint)(_pickSsh.length - 1);
-            root.append(lab, bindMenuAction(ModernMenuAction.SSH, idx));
+            sub.append(lab, bindMenuAction(ModernMenuAction.SSH, idx));
+            hasItems = true;
         }
-        if (modernData().sshHosts.length == 0)
-            root.append("(no servers — Preferences → Modern)", "modern.noop");
-        return root;
+
+        foreach (ch; cat.children) {
+            if (appendSshCategoryToGMenu(sub, ch))
+                hasItems = true;
+        }
+
+        if (!hasItems) return false;
+        menu.appendSubmenu(cat.name, sub);
+        return true;
     }
 
 }

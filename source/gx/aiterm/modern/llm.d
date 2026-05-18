@@ -9,8 +9,10 @@ import std.conv;
 import std.format;
 import std.json;
 import std.process;
+import std.regex;
 import std.string;
 
+import gx.aiterm.modern.agentprompts;
 import gx.aiterm.modern.aiproviders;
 import gx.aiterm.modern.store;
 
@@ -289,10 +291,11 @@ LlmChatResult llmChat(JSONValue[] messages) {
     string model = ai.model.strip();
     if (model.length == 0) model = defaultModelForProvider(ai.provider);
     if (model.length == 0) model = "gpt-4o-mini";
+    double temp = modernData().ai.agentExec ? 0.15 : 0.5;
     JSONValue body = JSONValue([
         "model": JSONValue(model),
         "messages": JSONValue(messages),
-        "temperature": JSONValue(0.5),
+        "temperature": JSONValue(temp),
         "max_tokens": JSONValue(4096),
     ]);
     string url = base ~ "/chat/completions";
@@ -328,9 +331,58 @@ string buildSystemPrompt() {
     auto ai = modernData().ai;
     string base = "You are a helpful assistant for Linux shell commands, scripts, and networks. Be concise.";
     if (!ai.agentExec) return base;
-    return base ~ "\n\n" ~
-        "CRITICAL: Aiterm terminal agent is ON. The user runs a real bash session. " ~
-        "To run commands, output exactly ONE fenced block tagged bash with command lines only. " ~
-        "Example:\n```bash\nping -c 3 8.8.8.8\n```\n" ~
-        "The app executes that block. Brief explanation may be outside the fence.";
+    return base ~ "\n\n" ~ resolveAgentPromptText();
+}
+
+private bool lineLooksLikeProse(string line) {
+    immutable prefixes = ["I ", "You ", "The ", "This ", "Here", "Sure", "Note:", "**", "To "];
+    foreach (p; prefixes)
+        if (line.startsWith(p)) return true;
+    return false;
+}
+
+private string stripShellPromptPrefix(string line) {
+    string t = line.strip;
+    if (t.startsWith("$ ")) return t[2 .. $].strip;
+    if (t.startsWith("# ") && !t.startsWith("#!")) return t[2 .. $].strip;
+    return t;
+}
+
+private bool looksLikePlainShellBlock(string content) {
+    string[] lines;
+    foreach (line; content.splitLines()) {
+        string t = stripShellPromptPrefix(line);
+        if (t.length == 0) continue;
+        if (lineLooksLikeProse(t)) return false;
+        lines ~= t;
+    }
+    return lines.length > 0 && lines.length <= 12;
+}
+
+private string joinCommandLines(string[] lines) {
+    string body;
+    foreach (line; lines) {
+        string t = stripShellPromptPrefix(line);
+        if (t.length == 0) continue;
+        body ~= t ~ "\n";
+    }
+    return body.strip;
+}
+
+/** Pull shell commands from model output when agent mode is on. */
+string extractAgentCommands(string content) {
+    if (content.strip.length == 0) return "";
+    immutable fence = "```";
+    foreach (tag; ["bash", "sh", "shell", "zsh"]) {
+        string pat = "(?s)" ~ fence ~ "{1,3}\\s*" ~ tag ~ "\\s*\\r?\\n(.*?)\\r?\\n" ~ fence;
+        auto re = regex(pat);
+        auto m = matchFirst(content, re);
+        if (!m.empty) return m[1].strip;
+    }
+    auto generic = regex("(?s)" ~ fence ~ "(?:\\w*)?\\s*\\r?\\n(.*?)\\r?\\n" ~ fence);
+    auto gm = matchFirst(content, generic);
+    if (!gm.empty) return gm[1].strip;
+    if (looksLikePlainShellBlock(content))
+        return joinCommandLines(content.splitLines());
+    return "";
 }

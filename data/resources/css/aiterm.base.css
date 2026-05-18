@@ -156,17 +156,6 @@ revealer.right > scrolledwindow {
     border-radius: 0;
 }
 
-/* Quake window border */
-.aiterm-quake-frame {
-    border: 1px solid rgba(0, 0, 0, .7);
-}
-
-/*
-.aiterm-quake-frame > border {
-    border-width: 0px;
-}
-*/
-
 .aiterm-error {
     color: @error_color;
 }

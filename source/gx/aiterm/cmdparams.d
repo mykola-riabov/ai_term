@@ -35,7 +35,6 @@ enum CMD_FOCUS_WINDOW = "focus-window";
 enum CMD_GEOMETRY = "geometry";
 enum CMD_NEW_PROCESS = "new-process";
 enum CMD_TITLE = "title";
-enum CMD_QUAKE = "quake";
 enum CMD_VERSION = "version";
 enum CMD_PREFERENCES = "preferences";
 enum CMD_WINDOW_STYLE = "window-style";
@@ -82,7 +81,6 @@ private:
     bool _fullscreen;
     bool _focusWindow;
     bool _newProcess;
-    bool _quake;
     bool _version;
     bool _preferences;
 
@@ -202,7 +200,6 @@ public:
         _fullscreen = vd.contains(CMD_FULL_SCREEN);
         _focusWindow = vd.contains(CMD_FOCUS_WINDOW);
         _newProcess = vd.contains(CMD_NEW_PROCESS);
-        _quake = vd.contains(CMD_QUAKE);
         _version = vd.contains(CMD_VERSION);
         _preferences = vd.contains(CMD_PREFERENCES);
         _exit = _version;
@@ -210,12 +207,6 @@ public:
         string geometryParam = getValue(vd, CMD_GEOMETRY, vts);
         if (geometryParam.length > 0)
             parseGeometry(geometryParam);
-
-        if (_quake && (_maximize || _minimize || _geometry.flag != GeometryFlag.NONE)) {
-                writeln(_("You cannot use the quake mode with maximize, minimize or geometry parameters"));
-                _exitCode = 3;
-                _exit = true;
-        }
 
         trace("Command line parameters:");
         trace("\tworking-directory=" ~ _workingDir);
@@ -226,9 +217,6 @@ public:
         trace("\tcommand=" ~ _command);
         trace("\tcwd=" ~ _cwd);
         trace("\tpwd=" ~ _pwd);
-        if (_quake) {
-            trace("\tquake");
-        }
     }
 
     void clear() {
@@ -248,7 +236,6 @@ public:
         _fullscreen = false;
         _focusWindow = false;
         _newProcess = false;
-        _quake = false;
         _geometry = Geometry(0, 0, 0, 0, false, false, GeometryFlag.NONE);
         _exit = false;
         _title.length = 0;
@@ -339,10 +326,6 @@ public:
 
     @property string title() {
         return _title;
-    }
-
-    @property bool quake() {
-        return _quake;
     }
 
     @property bool outputVersion() {

@@ -32,7 +32,7 @@ import gx.aiterm.prefeditor.advdialog;
  * don't use a delegate the references to the event handlers become pinned to
  * one object instance.
  */
-void createAdvancedUI(Grid grid, ref uint row, GSettings delegate() scb, bool showTriggerLineSettings = false) {
+void createAdvancedUI(Grid grid, ref uint row, GSettings delegate() scb) {
     // Custom Links Section
     Label lblCustomLinks = new Label(format("<b>%s</b>", _("Custom Links")));
     lblCustomLinks.setUseMarkup(true);
@@ -80,7 +80,7 @@ void createAdvancedUI(Grid grid, ref uint row, GSettings delegate() scb, bool sh
 
         btnEditTriggers.addOnClicked(delegate(Button) {
             GSettings gs = scb();
-            EditTriggersDialog dlg = new EditTriggersDialog(cast(Window) grid.getToplevel(), gs, showTriggerLineSettings);
+            EditTriggersDialog dlg = new EditTriggersDialog(cast(Window) grid.getToplevel(), gs);
             scope (exit) {
                 dlg.destroy();
             }

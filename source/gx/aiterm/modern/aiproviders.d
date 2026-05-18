@@ -4,6 +4,7 @@
 module gx.aiterm.modern.aiproviders;
 
 import std.algorithm;
+import std.conv;
 import std.string;
 
 import gx.aiterm.modern.store;
@@ -70,6 +71,52 @@ void applyProviderDefaults(ref ModernAiSettings ai, bool overwriteBase = true) {
 
 string defaultModelForProvider(string providerId) {
     return aiProviderPreset(providerId).defaultModel;
+}
+
+/** LM Studio / Ollama — saved local server list in preferences. */
+bool providerSupportsSavedServers(string providerId) {
+    switch (normalizeProviderId(providerId)) {
+    case "lmstudio", "ollama":
+        return true;
+    default:
+        return false;
+    }
+}
+
+private bool urlAuthorityHasPort(string u) {
+    size_t scheme = u.indexOf("://");
+    string rest = scheme < u.length ? u[scheme + 3 .. $] : u;
+    size_t slash = rest.indexOf("/");
+    if (slash < rest.length) rest = rest[0 .. slash];
+    return rest.indexOf(":") < rest.length;
+}
+
+private string insertUrlPort(string u, int port) {
+    size_t scheme = u.indexOf("://");
+    if (scheme >= u.length) return u;
+    string prefix = u[0 .. scheme + 3];
+    string rest = u[scheme + 3 .. $];
+    size_t slash = rest.indexOf("/");
+    string host = slash < rest.length ? rest[0 .. slash] : rest;
+    string path = slash < rest.length ? rest[slash .. $] : "";
+    if (host.indexOf(":") < host.length) return u;
+    return prefix ~ host ~ ":" ~ to!string(port) ~ path;
+}
+
+/** Normalize host or full URL to OpenAI-compatible …/v1 base. */
+string normalizeAiBaseUrl(string url, string providerId) {
+    string u = url.strip();
+    if (u.length == 0) return u;
+    if (u.indexOf("://") < 0) u = "http://" ~ u;
+    while (u.length > 1 && u.endsWith("/")) u = u[0 .. $ - 1];
+    string p = normalizeProviderId(providerId);
+    if (!urlAuthorityHasPort(u)) {
+        if (p == "ollama") u = insertUrlPort(u, 11434);
+        else if (p == "lmstudio") u = insertUrlPort(u, 1234);
+    }
+    if ((p == "lmstudio" || p == "ollama") && !u.endsWith("/v1"))
+        u ~= "/v1";
+    return u;
 }
 
 /** Cloud providers where an API key should be validated explicitly. */
